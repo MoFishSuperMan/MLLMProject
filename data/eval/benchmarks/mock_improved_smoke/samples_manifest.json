@@ -1,0 +1,440 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000000",
+    "question": "How many food item is shown in the bar graph?",
+    "gold_answers": [
+      "14"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\mock_improved_cache\\chartqa\\chartqa_000000.png",
+    "ocr_text_chars": 454,
+    "ocr_box_count": 42,
+    "ocr_boxes": [
+      {
+        "text": "Long-term",
+        "bbox": [
+          10,
+          12,
+          128,
+          43
+        ],
+        "confidence": 0.7480388649523992
+      },
+      {
+        "text": "index in food commodities, 1850-2015, World, 1934",
+        "bbox": [
+          183,
+          7,
+          727,
+          45
+        ],
+        "confidence": 0.5795321041597239
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "Commodity price index in food items dating 1850-2015,",
+        "bbox": [
+          15,
+          39,
+          367,
+          59
+        ],
+        "confidence": 0.7026229501289034
+      },
+      {
+        "text": "measured relative t0 real prices in 1900 (ie. 1900",
+        "bbox": [
+          371,
+          41,
+          691,
+          59
+        ],
+        "confidence": 0.7874640392578793
+      },
+      {
+        "text": "100).",
+        "bbox": [
+          703,
+          43,
+          739,
+          59
+        ],
+        "confidence": 0.603005068506051
+      },
+      {
+        "text": "Lamb",
+        "bbox": [
+          25,
+          79,
+          65,
+          95
+        ],
+        "confidence": 0.9999879598617554
+      },
+      {
+        "text": "103.",
+        "bbox": [
+          789,
+          79,
+          815,
+          95
+        ],
+        "confidence": 0.9224285677469614
+      },
+      {
+        "text": "Corn",
+        "bbox": [
+          31,
+          113,
+          65,
+          127
+        ],
+        "confidence": 0.9919008612632751
+      },
+      {
+        "text": "103.13",
+        "bbox": [
+          783,
+          109,
+          829,
+          127
+        ],
+        "confidence": 0.5321273936765603
+      },
+      {
+        "text": "Barley",
+        "bbox": [
+          20,
+          144,
+          65,
+          163
+        ],
+        "confidence": 0.9999133232489278
+      },
+      {
+        "text": "102.45",
+        "bbox": [
+          779,
+          145,
+          825,
+          161
+        ],
+        "confidence": 0.9489494886103386
+      },
+      {
+        "text": "Rye",
+        "bbox": [
+          37,
+          179,
+          65,
+          195
+        ],
+        "confidence": 0.9999832065931312
+      },
+      {
+        "text": "87.37",
+        "bbox": [
+          675,
+          179,
+          711,
+          193
+        ],
+        "confidence": 0.6005318696577541
+      },
+      {
+        "text": "Beef",
+        "bbox": [
+          33,
+          211,
+          65,
+          227
+        ],
+        "confidence": 0.9998617172241211
+      },
+      {
+        "text": "85.27",
+        "bbox": [
+          661,
+          211,
+          697,
+          227
+        ],
+        "confidence": 0.9115203090818659
+      },
+      {
+        "text": "Wheat",
+        "bbox": [
+          21,
+          245,
+          65,
+          259
+        ],
+        "confidence": 0.8815644302874645
+      },
+      {
+        "text": "83.73",
+        "bbox": [
+          651,
+          245,
+          687,
+          259
+        ],
+        "confidence": 0.9789336985703166
+      },
+      {
+        "text": "Coffee",
+        "bbox": [
+          19,
+          277,
+          65,
+          293
+        ],
+        "confidence": 0.9896454055426414
+      },
+      {
+        "text": "82.2",
+        "bbox": [
+          639,
+          277,
+          669,
+          293
+        ],
+        "confidence": 0.997980566611098
+      },
+      {
+        "text": "Tea",
+        "bbox": [
+          41,
+          311,
+          63,
+          325
+        ],
+        "confidence": 0.9999443891907138
+      },
+      {
+        "text": "68.48",
+        "bbox": [
+          545,
+          311,
+          581,
+          325
+        ],
+        "confidence": 0.6035554186817877
+      },
+      {
+        "text": "Peanuts",
+        "bbox": [
+          9,
+          343,
+          65,
+          359
+        ],
+        "confidence": 0.9148370229132612
+      },
+      {
+        "text": "64.71",
+        "bbox": [
+          519,
+          343,
+          555,
+          359
+        ],
+        "confidence": 0.9993508480309891
+      },
+      {
+        "text": "Palm oil",
+        "bbox": [
+          9,
+          375,
+          65,
+          391
+        ],
+        "confidence": 0.9166864840691797
+      },
+      {
+        "text": "57.6",
+        "bbox": [
+          469,
+          375,
+          499,
+          391
+        ],
+        "confidence": 0.9412605343213086
+      },
+      {
+        "text": "Pork",
+        "bbox": [
+          31,
+          409,
+          65,
+          423
+        ],
+        "confidence": 0.9978144764900208
+      },
+      {
+        "text": "55.36",
+        "bbox": [
+          453,
+          405,
+          491,
+          423
+        ],
+        "confidence": 0.9969045115742902
+      },
+      {
+        "text": "Rice",
+        "bbox": [
+          33,
+          441,
+          65,
+          457
+        ],
+        "confidence": 0.9999985694885254
+      },
+      {
+        "text": "42.48",
+        "bbox": [
+          365,
+          441,
+          403,
+          457
+        ],
+        "confidence": 0.994442550272217
+      },
+      {
+        "text": "Sugar",
+        "bbox": [
+          23,
+          475,
+          65,
+          491
+        ],
+        "confidence": 0.9522315398277137
+      },
+      {
+        "text": "25.56",
+        "bbox": [
+          247,
+          473,
+          285,
+          489
+        ],
+        "confidence": 0.9570359322396339
+      },
+      {
+        "text": "cocoa",
+        "bbox": [
+          21,
+          507,
+          63,
+          523
+        ],
+        "confidence": 0.8737923311440814
+      },
+      {
+        "text": "18.81",
+        "bbox": [
+          201,
+          507,
+          237,
+          523
+        ],
+        "confidence": 0.9998392627499215
+      },
+      {
+        "text": "20",
+        "bbox": [
+          193,
+          541,
+          217,
+          561
+        ],
+        "confidence": 0.9232551395863041
+      },
+      {
+        "text": "100",
+        "bbox": [
+          743,
+          541,
+          773,
+          561
+        ],
+        "confidence": 0.9998117645890491
+      },
+      {
+        "text": "Source: Commodity Prices since 1850",
+        "bbox": [
+          15,
+          571,
+          231,
+          587
+        ],
+        "confidence": 0.8098702891438141
+      },
+      {
+        "text": "Jacks (2016)",
+        "bbox": [
+          237,
+          571,
+          315,
+          587
+        ],
+        "confidence": 0.9986888694918306
+      },
+      {
+        "text": "OurW NorldlnData org food-prices/ -",
+        "bbox": [
+          601,
+          571,
+          787,
+          587
+        ],
+        "confidence": 0.2562271462872071
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          793,
+          569,
+          835,
+          585
+        ],
+        "confidence": 0.995986227212439
+      },
+      {
+        "text": "price",
+        "bbox": [
+          125,
+          11,
+          187,
+          42
+        ],
+        "confidence": 0.9999940823642687
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 7729.8548999997365
+  }
+]

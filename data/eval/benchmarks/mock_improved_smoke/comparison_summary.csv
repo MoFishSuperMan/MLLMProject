@@ -1,0 +1,3 @@
+﻿dataset,mode,count,em,anls,answer_match_rate,latency_ms
+chartqa,mm_rag,1.0,0.0,0.0,0.0,0.6048999994163751
+chartqa,text_rag,1.0,0.0,0.0,0.0,0.3702000003613648

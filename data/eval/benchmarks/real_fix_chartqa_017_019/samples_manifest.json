@@ -1,0 +1,458 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000017",
+    "question": "When does the line have the sharpest increase?",
+    "gold_answers": [
+      "2011"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000017.png",
+    "ocr_text_chars": 422,
+    "ocr_box_count": 20,
+    "ocr_boxes": [
+      {
+        "text": "Number of unsheltered homeless people in England, 2010 to 2014",
+        "bbox": [
+          12,
+          12,
+          726,
+          44
+        ],
+        "confidence": 0.6772423689845704
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "Estimated number of unsheltered homeless people in England. Figures correspond to 'point-in-time' estimates",
+        "bbox": [
+          15,
+          42,
+          717,
+          62
+        ],
+        "confidence": 0.8303972743055933
+      },
+      {
+        "text": "obtained by counting 'rough sleepers' in autumn",
+        "bbox": [
+          15,
+          61,
+          325,
+          77
+        ],
+        "confidence": 0.7384225443814202
+      },
+      {
+        "text": "England",
+        "bbox": [
+          752,
+          88,
+          807,
+          108
+        ],
+        "confidence": 0.9998978093186214
+      },
+      {
+        "text": "2,500",
+        "bbox": [
+          13,
+          119,
+          59,
+          139
+        ],
+        "confidence": 0.9999816073348611
+      },
+      {
+        "text": "2,000",
+        "bbox": [
+          15,
+          201,
+          59,
+          221
+        ],
+        "confidence": 0.999830999226776
+      },
+      {
+        "text": "1,500",
+        "bbox": [
+          13,
+          281,
+          59,
+          301
+        ],
+        "confidence": 0.9999815007105989
+      },
+      {
+        "text": "000",
+        "bbox": [
+          27,
+          363,
+          59,
+          381
+        ],
+        "confidence": 0.19883837502102256
+      },
+      {
+        "text": "500",
+        "bbox": [
+          27,
+          443,
+          57,
+          463
+        ],
+        "confidence": 0.9987852597189295
+      },
+      {
+        "text": "2010",
+        "bbox": [
+          41,
+          541,
+          81,
+          561
+        ],
+        "confidence": 0.9999985098838806
+      },
+      {
+        "text": "2011",
+        "bbox": [
+          213,
+          541,
+          251,
+          561
+        ],
+        "confidence": 0.9999973773956299
+      },
+      {
+        "text": "2012",
+        "bbox": [
+          385,
+          541,
+          425,
+          561
+        ],
+        "confidence": 0.5725102821874717
+      },
+      {
+        "text": "2013",
+        "bbox": [
+          557,
+          541,
+          599,
+          561
+        ],
+        "confidence": 0.8538093392498939
+      },
+      {
+        "text": "2014",
+        "bbox": [
+          729,
+          541,
+          771,
+          561
+        ],
+        "confidence": 0.5637695345446794
+      },
+      {
+        "text": "Source: Rough Sleeping in England in the 2010s",
+        "bbox": [
+          15,
+          569,
+          291,
+          587
+        ],
+        "confidence": 0.7804676484871063
+      },
+      {
+        "text": "OWID based on UK National Statistics (2018)",
+        "bbox": [
+          297,
+          569,
+          555,
+          587
+        ],
+        "confidence": 0.8814297157279721
+      },
+      {
+        "text": "Ouri orldlnData org homelessness",
+        "bbox": [
+          585,
+          571,
+          785,
+          587
+        ],
+        "confidence": 0.4304562363565746
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          793,
+          569,
+          835,
+          585
+        ],
+        "confidence": 0.995986227212439
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 6058.859799999482
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000019",
+    "question": "Is the sum of largest two bars is greater then the sum of smallest 3 bars?",
+    "gold_answers": [
+      "No"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000019.png",
+    "ocr_text_chars": 410,
+    "ocr_box_count": 22,
+    "ocr_boxes": [
+      {
+        "text": "Share that agrees that vaccines are important for children to have, 2018",
+        "bbox": [
+          12,
+          11,
+          728,
+          43
+        ],
+        "confidence": 0.804483428263097
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "The share of people who responded that they \"strongly agree\" or \"somewhat agree\" with the statement 'Vaccines",
+        "bbox": [
+          15,
+          40,
+          735,
+          60
+        ],
+        "confidence": 0.7897362318105511
+      },
+      {
+        "text": "are important for children t0 have'",
+        "bbox": [
+          13,
+          59,
+          229,
+          75
+        ],
+        "confidence": 0.6579682913701346
+      },
+      {
+        "text": "United Arab Emirates",
+        "bbox": [
+          11,
+          117,
+          151,
+          133
+        ],
+        "confidence": 0.9752854148702594
+      },
+      {
+        "text": "94%",
+        "bbox": [
+          801,
+          117,
+          833,
+          133
+        ],
+        "confidence": 0.9844409609159025
+      },
+      {
+        "text": "Mauritania",
+        "bbox": [
+          79,
+          207,
+          149,
+          221
+        ],
+        "confidence": 0.9998744257538889
+      },
+      {
+        "text": "91%",
+        "bbox": [
+          777,
+          205,
+          809,
+          221
+        ],
+        "confidence": 0.49332162737846375
+      },
+      {
+        "text": "Spain",
+        "bbox": [
+          111,
+          295,
+          151,
+          313
+        ],
+        "confidence": 0.9988683235619473
+      },
+      {
+        "text": "88%",
+        "bbox": [
+          759,
+          295,
+          789,
+          311
+        ],
+        "confidence": 0.9811284649416291
+      },
+      {
+        "text": "Armenia",
+        "bbox": [
+          93,
+          385,
+          149,
+          399
+        ],
+        "confidence": 0.9858775577500697
+      },
+      {
+        "text": "73%",
+        "bbox": [
+          659,
+          385,
+          689,
+          399
+        ],
+        "confidence": 0.9452613782765992
+      },
+      {
+        "text": "South Korea",
+        "bbox": [
+          67,
+          473,
+          149,
+          489
+        ],
+        "confidence": 0.9911407636178864
+      },
+      {
+        "text": "7290",
+        "bbox": [
+          653,
+          473,
+          683,
+          489
+        ],
+        "confidence": 0.3282482922077179
+      },
+      {
+        "text": "20%",
+        "bbox": [
+          271,
+          541,
+          307,
+          561
+        ],
+        "confidence": 0.8299716401517732
+      },
+      {
+        "text": "40%",
+        "bbox": [
+          411,
+          543,
+          445,
+          561
+        ],
+        "confidence": 0.9499733587138101
+      },
+      {
+        "text": "50%",
+        "bbox": [
+          549,
+          543,
+          583,
+          561
+        ],
+        "confidence": 0.6055408010663715
+      },
+      {
+        "text": "80%",
+        "bbox": [
+          683,
+          541,
+          719,
+          561
+        ],
+        "confidence": 0.8774026001025791
+      },
+      {
+        "text": "Source: Wellcome Trust Global Monitor (2019)",
+        "bbox": [
+          15,
+          569,
+          277,
+          587
+        ],
+        "confidence": 0.6062893083477643
+      },
+      {
+        "text": "OurWorldlnData orgtvaccination",
+        "bbox": [
+          603,
+          569,
+          785,
+          587
+        ],
+        "confidence": 0.6006255010144548
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          793,
+          571,
+          835,
+          585
+        ],
+        "confidence": 0.9345143490402779
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1666.9390999995812
+  }
+]

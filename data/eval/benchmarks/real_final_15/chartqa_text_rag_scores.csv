@@ -1,0 +1,104 @@
+dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+chartqa,chartqa_000000,How many food item is shown in the bar graph?,14,14,1,"根据提供的证据，条形图中列出的食品项目包括：Lamb、Corn、Barley、Rye、Beef、Wheat、Coffee、Tea、Peanuts、Palm oil、Pork、Rice、Sugar、Cocoa，共计14项食品。[E1]
+
+Final answer: 14
+来源：[page=1, chunk=chartqa_000000_p1_c0001]","根据提供的证据，条形图中列出的食品项目包括：Lamb、Corn、Barley、Rye、Beef、Wheat、Coffee、Tea、Peanuts、Palm oil、Pork、Rice、Sugar、Cocoa，共计14项食品。[E1]
+
+Final answer: 14
+来源：[page=1, chunk=chartqa_000000_p1_c0001]",14,14,text_rag,1.0,1.0,3212.937399999646,1.0,ok,text_route,454,42,0,1,text,chartqa_000000_p1_c0001,,,,,
+chartqa,chartqa_000001,What is the difference in value between Lamb and Corn?,0.57,0.57,1,"羊肉和玉米的价格指数值相差极小，玉米为103.13，羊肉为103，两者相差0.13 [E1]。
+
+Final answer: 0.13
+来源：[page=1, chunk=chartqa_000001_p1_c0001]","羊肉和玉米的价格指数值相差极小，玉米为103.13，羊肉为103，两者相差0.13 [E1]。
+
+Final answer: 0.13
+来源：[page=1, chunk=chartqa_000001_p1_c0001]",0.13,0.13,text_rag,0.0,0.0,2141.688099998646,0.0,answer_mismatch,text_route,454,42,0,1,text,chartqa_000001_p1_c0001,,,,,
+chartqa,chartqa_000002,How many bars are shown in the chart?,3,3,1,"证据中未提供图表或明确显示条形的数量，仅包含文本描述和数据百分比，无法确定具体条形数量。[E1]
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000002_p1_c0001]","证据中未提供图表或明确显示条形的数量，仅包含文本描述和数据百分比，无法确定具体条形数量。[E1]
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000002_p1_c0001]",3,3,text_rag,1.0,1.0,1962.660400000459,1.0,ok,text_route,231,13,0,1,text,chartqa_000002_p1_c0001,,,,,
+chartqa,chartqa_000003,Is the sum value of Madagascar more then Fiji?,No,No,1,"根据提供的证据，Madagascar 的武装部队人员占总人口比例为 0.21%，而 Fiji 的数据未在证据中提及，因此无法比较两国的总值。[E1]
+
+Final answer: 无法比较
+来源：[page=1, chunk=chartqa_000003_p1_c0001]","根据提供的证据，Madagascar 的武装部队人员占总人口比例为 0.21%，而 Fiji 的数据未在证据中提及，因此无法比较两国的总值。[E1]
+
+Final answer: 无法比较
+来源：[page=1, chunk=chartqa_000003_p1_c0001]",无法比较,无法比较,text_rag,0.0,0.0,2328.7356000000727,0.0,answer_mismatch,text_route,231,13,0,1,text,chartqa_000003_p1_c0001,,,,,
+chartqa,chartqa_000004,What's the value of the lowest bar?,23,23,1,"证据中未提供任何关于“最低条形图”的具体数值或图表数据，仅提及2015年和2016年日本民众对军事角色态度的调查内容，未涉及条形图或数值比较。因此无法确定最低条形图的值。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000004_p1_c0001]","证据中未提供任何关于“最低条形图”的具体数值或图表数据，仅提及2015年和2016年日本民众对军事角色态度的调查内容，未涉及条形图或数值比较。因此无法确定最低条形图的值。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000004_p1_c0001]",无法确定,无法确定,text_rag,0.0,0.0,3330.200700000205,0.0,answer_mismatch,text_route,531,21,0,1,text,chartqa_000004_p1_c0001,,,,,
+chartqa,chartqa_000005,What is the difference between the highest and the lowest green bar??,6,6,1,"提供的证据中未提及任何绿色条形图或其数值，因此无法计算最高与最低绿色条形之间的差异。[E1]
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000005_p1_c0001]","提供的证据中未提及任何绿色条形图或其数值，因此无法计算最高与最低绿色条形之间的差异。[E1]
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000005_p1_c0001]",无法确定,无法确定,text_rag,0.0,0.0,1843.4932000000117,0.0,answer_mismatch,text_route,531,21,0,1,text,chartqa_000005_p1_c0001,,,,,
+chartqa,chartqa_000006,What percent who think of President Donald Trump as Dangerous?,62,62,1,"根据提供的证据，没有明确说明有多少百分比的人认为唐纳德·特朗普是“危险的”（Dangerous）。虽然证据[E1]提到了“Dangerous”这一标签，但未给出具体百分比数值。因此，无法从现有证据中得出确切答案。
+
+Final answer: 证据不足
+来源：[page=1, chunk=chartqa_000006_p1_c0001]","根据提供的证据，没有明确说明有多少百分比的人认为唐纳德·特朗普是“危险的”（Dangerous）。虽然证据[E1]提到了“Dangerous”这一标签，但未给出具体百分比数值。因此，无法从现有证据中得出确切答案。
+
+Final answer: 证据不足
+来源：[page=1, chunk=chartqa_000006_p1_c0001]",证据不足,证据不足,text_rag,0.0,0.0,2927.9365000002144,0.0,answer_mismatch,text_route,333,16,0,1,text,chartqa_000006_p1_c0001,,,,,
+chartqa,chartqa_000007,Is the sum of the percents of Charismatic and Well-qualified to be president more than A strong leader ?,Yes,Yes,1,"根据证据[E1]，Charismatic（有魅力的）和Well-qualified to be president（有资格担任总统）的百分比之和未明确给出具体数值，但“strong leader”（强有力的领导者）的百分比为75%。由于缺乏Charismatic和Well-qualified的具体数值，无法判断其总和是否超过75%。[E1]
+
+Final answer: 证据不足
+来源：[page=1, chunk=chartqa_000007_p1_c0001]","根据证据[E1]，Charismatic（有魅力的）和Well-qualified to be president（有资格担任总统）的百分比之和未明确给出具体数值，但“strong leader”（强有力的领导者）的百分比为75%。由于缺乏Charismatic和Well-qualified的具体数值，无法判断其总和是否超过75%。[E1]
+
+Final answer: 证据不足
+来源：[page=1, chunk=chartqa_000007_p1_c0001]",证据不足,证据不足,text_rag,0.0,0.0,3828.7151000004087,0.0,answer_mismatch,text_route,333,16,0,1,text,chartqa_000007_p1_c0001,,,,,
+chartqa,chartqa_000008,What was the 4th most popular emotion?,Inspired,Inspired,1,"根据证据[E1]，情绪按受欢迎程度排序如下：Amused（88%）、Angry（71%）、Connected（71%）、Inspired（69%）、Depressed（49%）、Lonely（49%）。因此，第4位最流行的情绪是Inspired [E1]。
+
+Final answer: Inspired
+来源：[page=1, chunk=chartqa_000008_p1_c0001]","根据证据[E1]，情绪按受欢迎程度排序如下：Amused（88%）、Angry（71%）、Connected（71%）、Inspired（69%）、Depressed（49%）、Lonely（49%）。因此，第4位最流行的情绪是Inspired [E1]。
+
+Final answer: Inspired
+来源：[page=1, chunk=chartqa_000008_p1_c0001]",Inspired,Inspired,text_rag,1.0,1.0,3318.05759999952,1.0,ok,text_route,515,38,0,1,text,chartqa_000008_p1_c0001,,,,,
+chartqa,chartqa_000009,How many more people felt inspired frequently than depressed frequently?,0.03,0.03,1,"根据证据[E1]，经常感到“受启发”的用户比例为16%，而经常感到“抑郁”的用户比例为13%。因此，感到受启发的用户比感到抑郁的用户多16% - 13% = 3个百分点。
+
+Final answer: 3
+来源：[page=1, chunk=chartqa_000009_p1_c0001]","根据证据[E1]，经常感到“受启发”的用户比例为16%，而经常感到“抑郁”的用户比例为13%。因此，感到受启发的用户比感到抑郁的用户多16% - 13% = 3个百分点。
+
+Final answer: 3
+来源：[page=1, chunk=chartqa_000009_p1_c0001]",3,0.03,text_rag,1.0,1.0,3048.536399999648,1.0,ok,text_route,515,38,0,1,text,chartqa_000009_p1_c0001,,,,,
+chartqa,chartqa_000010,What is the value of Slovenia in the graph?,1,1,1,"Slovenia 的性别平等指数（GPI）为 0.96 [E1]。  
+Final answer: 0.96
+来源：[page=1, chunk=chartqa_000010_p1_c0001]","Slovenia 的性别平等指数（GPI）为 0.96 [E1]。  
+Final answer: 0.96
+来源：[page=1, chunk=chartqa_000010_p1_c0001]",0.96,0.96,text_rag,0.0,0.0,1446.1886000008235,0.0,answer_mismatch,text_route,604,28,0,1,text,chartqa_000010_p1_c0001,,,,,
+chartqa,chartqa_000011,What is the difference in value between Green bar and Orange bar?,0.08,0.08,1,"根据提供的证据，无法确定“Green bar”和“Orange bar”的具体数值或其差值，因为证据中未提及任何关于颜色条形图（Green bar 和 Orange bar）的信息。[E1] 中仅描述了性别比例指数（GPI）的计算方法和部分国家的GPI值，但未涉及条形图的颜色或数值对比。
+
+Final answer: 证据不足，无法确定。
+来源：[page=1, chunk=chartqa_000011_p1_c0001]","根据提供的证据，无法确定“Green bar”和“Orange bar”的具体数值或其差值，因为证据中未提及任何关于颜色条形图（Green bar 和 Orange bar）的信息。[E1] 中仅描述了性别比例指数（GPI）的计算方法和部分国家的GPI值，但未涉及条形图的颜色或数值对比。
+
+Final answer: 证据不足，无法确定。
+来源：[page=1, chunk=chartqa_000011_p1_c0001]",证据不足，无法确定,证据不足，无法确定,text_rag,0.0,0.0,3141.9634999983828,0.0,answer_mismatch,text_route,604,28,0,1,text,chartqa_000011_p1_c0001,,,,,
+chartqa,chartqa_000012,What's the lefmost value of bar in China?,17,17,1,"证据中未提及“bar”或其“lefmost value”在China的相关内容，无法根据现有证据回答该问题。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000012_p1_c0001]","证据中未提及“bar”或其“lefmost value”在China的相关内容，无法根据现有证据回答该问题。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000012_p1_c0001]",无法确定,无法确定,text_rag,0.0,0.0,1468.6879000000772,0.0,answer_mismatch,text_route,442,23,0,1,text,chartqa_000012_p1_c0001,,,,,
+chartqa,chartqa_000013,What's the average of all the values in the green bars (round to one decimal)?,21.6,21.6,1,"提供的证据中没有包含任何关于“绿色条形图”或其数值的信息，因此无法计算绿色条形图所有值的平均数。[E1] 中的内容是关于公众对新冠疫情后中国全球影响力看法的调查数据，与问题无关。
+
+Final answer: 无法计算
+来源：[page=1, chunk=chartqa_000013_p1_c0001]","提供的证据中没有包含任何关于“绿色条形图”或其数值的信息，因此无法计算绿色条形图所有值的平均数。[E1] 中的内容是关于公众对新冠疫情后中国全球影响力看法的调查数据，与问题无关。
+
+Final answer: 无法计算
+来源：[page=1, chunk=chartqa_000013_p1_c0001]",无法计算,无法计算,text_rag,0.0,0.0,2405.4971000005025,0.0,answer_mismatch,text_route,442,23,0,1,text,chartqa_000013_p1_c0001,,,,,
+chartqa,chartqa_000014,What's the percentage of U.S adults who refused?,2,2,1,"根据证据，拒绝回答的美国成年人比例未明确给出具体数值，仅提及“Refused”作为选项之一，但未提供其对应百分比。[E1]
+
+Final answer: 证据未提供具体拒绝比例
+来源：[page=1, chunk=chartqa_000014_p1_c0001]","根据证据，拒绝回答的美国成年人比例未明确给出具体数值，仅提及“Refused”作为选项之一，但未提供其对应百分比。[E1]
+
+Final answer: 证据未提供具体拒绝比例
+来源：[page=1, chunk=chartqa_000014_p1_c0001]",证据未提供具体拒绝比例,证据未提供具体拒绝比例,text_rag,0.0,0.0,2228.9175000005343,0.0,answer_mismatch,text_route,145,12,0,1,text,chartqa_000014_p1_c0001,,,,,

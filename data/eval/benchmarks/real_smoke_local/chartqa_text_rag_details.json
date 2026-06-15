@@ -1,0 +1,22 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000000",
+    "question": "How many food item is shown in the bar graph?",
+    "gold_answer": "14",
+    "gold_answers": "14",
+    "gold_page": 1,
+    "prediction": "图中显示了14种食品项目：Lamb、Corn、Barley、Rye、Beef、Wheat、Coffee、Tea、Peanuts、Palm oil、Pork、Rice、Sugar、Cocoa [E1]。\n来源：[page=1, chunk=chartqa_000000_p1_c0001]",
+    "mode": "text_rag",
+    "em": 0.0,
+    "anls": 0.0,
+    "latency_ms": 26109.087000000727,
+    "answer_match": 0.0,
+    "failure_label": "answer_mismatch",
+    "route": "text_route",
+    "ocr_text_chars": 454,
+    "evidence_count": 1,
+    "top_evidence_types": "text",
+    "top_evidence_ids": "chartqa_000000_p1_c0001"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_49153",
+    "question": "What is the ‘actual’ value per 1000, during the year 1975?",
+    "gold_answers": [
+      "0.28"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\mock_cache\\docvqa\\docvqa_49153.png",
+    "ocr_text_chars": 219,
+    "metadata": {
+      "question_types": [
+        "figure/diagram"
+      ],
+      "docId": 14465,
+      "ucsf_document_id": "pybv0228",
+      "ucsf_document_page_no": "81"
+    },
+    "prepare_latency_ms": 12065.157799999952
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000000",
+    "question": "How many food item is shown in the bar graph?",
+    "gold_answers": [
+      "14"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\mock_cache\\chartqa\\chartqa_000000.png",
+    "ocr_text_chars": 454,
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1969.8006000000987
+  }
+]

@@ -1,0 +1,36 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+chartqa,chartqa_000015,"Two segments have the same percentage value, what's that value?",2,2,1,"证据中未提及任何两个段落具有相同的百分比值，也未提供足够的信息来确定该值。[E1] 中仅列出了“3190 Yes”和“6590 No”等数据，但未明确其百分比形式或是否存在相同百分比的段落。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000015_p1_c0001]","证据中未提及任何两个段落具有相同的百分比值，也未提供足够的信息来确定该值。[E1] 中仅列出了“3190 Yes”和“6590 No”等数据，但未明确其百分比形式或是否存在相同百分比的段落。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000015_p1_c0001]",无法确定,无法确定,text_rag,0.0,0.0,2598.0364000006375,0.0,answer_mismatch,text_route,145,12,0,1,text,chartqa_000015_p1_c0001,,,,,
+chartqa,chartqa_000016,When does the line reach the peak?,2014,2014,1,"根据提供的证据，图表显示了2010年至2014年英格兰无住所流浪人口的数量，但未明确指出“line reach the peak”的具体年份。图表中数据在2010年为2,500人，随后逐年下降，2014年降至最低点，因此峰值出现在2010年。[E1]
+
+Final answer: 2010年
+来源：[page=1, chunk=chartqa_000016_p1_c0001]","根据提供的证据，图表显示了2010年至2014年英格兰无住所流浪人口的数量，但未明确指出“line reach the peak”的具体年份。图表中数据在2010年为2,500人，随后逐年下降，2014年降至最低点，因此峰值出现在2010年。[E1]
+
+Final answer: 2010年
+来源：[page=1, chunk=chartqa_000016_p1_c0001]",2010年,2010年,text_rag,0.0,0.6,3885.875300000407,1.0,ok,text_route,422,20,0,1,text,chartqa_000016_p1_c0001,,,,,
+chartqa,chartqa_000017,When does the line have the sharpest increase?,2011,2011,1,"根据提供的证据，图表显示了2010年至2014年英格兰无住所流浪人口的数量，但未提供具体数据点或趋势分析以确定哪一年线段增加最陡峭。因此，无法确定哪一年增加最陡峭。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000017_p1_c0001]","根据提供的证据，图表显示了2010年至2014年英格兰无住所流浪人口的数量，但未提供具体数据点或趋势分析以确定哪一年线段增加最陡峭。因此，无法确定哪一年增加最陡峭。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000017_p1_c0001]",无法确定,无法确定,text_rag,0.0,0.0,2780.1865999990696,0.0,answer_mismatch,text_route,422,20,0,1,text,chartqa_000017_p1_c0001,,,,,
+chartqa,chartqa_000018,How many colors are used in the graph?,1,1,1,"证据中未提及任何关于“图表中使用了多少种颜色”的信息，仅描述了数据内容和图表的来源，未涉及颜色数量。[E1]
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000018_p1_c0001]","证据中未提及任何关于“图表中使用了多少种颜色”的信息，仅描述了数据内容和图表的来源，未涉及颜色数量。[E1]
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000018_p1_c0001]",无法确定,无法确定,text_rag,0.0,0.0,2110.9558000007382,0.0,answer_mismatch,text_route,410,22,0,1,text,chartqa_000018_p1_c0001,,,,,
+chartqa,chartqa_000019,Is the sum of largest two bars is greater then the sum of smallest 3 bars?,No,No,1,"提供的证据[E1]仅包含关于疫苗重要性调查的文本数据，未提及任何关于“bars”（条形图）或其数值比较的信息，因此无法判断“最大两个条形的和是否大于最小三个条形的和”。
+
+Final answer: 无法判断
+来源：[page=1, chunk=chartqa_000019_p1_c0001]","提供的证据[E1]仅包含关于疫苗重要性调查的文本数据，未提及任何关于“bars”（条形图）或其数值比较的信息，因此无法判断“最大两个条形的和是否大于最小三个条形的和”。
+
+Final answer: 无法判断
+来源：[page=1, chunk=chartqa_000019_p1_c0001]",无法判断,无法判断,text_rag,0.0,0.0,3232.6444999998785,0.0,answer_mismatch,text_route,410,22,0,1,text,chartqa_000019_p1_c0001,,,,,

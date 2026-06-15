@@ -1,0 +1,1358 @@
+[
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57364",
+    "question": "What is the name of the choco fills advertised?",
+    "gold_answers": [
+      "dark fantasy",
+      "Dark fantasy"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57364.png",
+    "ocr_text_chars": 1101,
+    "ocr_box_count": 53,
+    "ocr_boxes": [
+      {
+        "text": "ITC Limited REPORT AND ACCOUNTS 2013",
+        "bbox": [
+          63,
+          69,
+          377,
+          89
+        ],
+        "confidence": 0.7666787729630388
+      },
+      {
+        "text": "ITC's Brands: An Asset for the Nation",
+        "bbox": [
+          59,
+          167,
+          661,
+          212
+        ],
+        "confidence": 0.6985097451217387
+      },
+      {
+        "text": "The consumer needs and aspirations",
+        "bbox": [
+          67,
+          247,
+          319,
+          265
+        ],
+        "confidence": 0.7408421026827542
+      },
+      {
+        "text": "fiama",
+        "bbox": [
+          789,
+          241,
+          837,
+          257
+        ],
+        "confidence": 0.9171564828756144
+      },
+      {
+        "text": "they fulfil, the benefit",
+        "bbox": [
+          65,
+          267,
+          207,
+          285
+        ],
+        "confidence": 0.9984878322195776
+      },
+      {
+        "text": "generate for",
+        "bbox": [
+          241,
+          269,
+          325,
+          287
+        ],
+        "confidence": 0.991452747443447
+      },
+      {
+        "text": "millions across ITC s value chains_",
+        "bbox": [
+          65,
+          287,
+          293,
+          307
+        ],
+        "confidence": 0.5851022185677132
+      },
+      {
+        "text": "the",
+        "bbox": [
+          297,
+          291,
+          323,
+          305
+        ],
+        "confidence": 0.999988712624007
+      },
+      {
+        "text": "Houttahmncni",
+        "bbox": [
+          604,
+          310,
+          664,
+          318
+        ],
+        "confidence": 0.03352310465784803
+      },
+      {
+        "text": "future-ready capabilities that support",
+        "bbox": [
+          65,
+          311,
+          317,
+          329
+        ],
+        "confidence": 0.7423764971275915
+      },
+      {
+        "text": "Honaaaed",
+        "bbox": [
+          606,
+          320,
+          658,
+          328
+        ],
+        "confidence": 0.00489841291838618
+      },
+      {
+        "text": "them; and the value that they create for",
+        "bbox": [
+          65,
+          333,
+          331,
+          349
+        ],
+        "confidence": 0.5263474002238042
+      },
+      {
+        "text": "the",
+        "bbox": [
+          65,
+          353,
+          91,
+          367
+        ],
+        "confidence": 0.9023686051368713
+      },
+      {
+        "text": "country; have made ITC s brands",
+        "bbox": [
+          89,
+          348,
+          316,
+          372
+        ],
+        "confidence": 0.7151452245222403
+      },
+      {
+        "text": "AASHIRVAAD",
+        "bbox": [
+          499,
+          353,
+          605,
+          373
+        ],
+        "confidence": 0.9947548290057237
+      },
+      {
+        "text": "national assets, adding t0 Indias",
+        "bbox": [
+          65,
+          371,
+          289,
+          391
+        ],
+        "confidence": 0.7374326906483155
+      },
+      {
+        "text": "MutTlarins",
+        "bbox": [
+          506,
+          369,
+          600,
+          397
+        ],
+        "confidence": 0.11010426612978894
+      },
+      {
+        "text": "competitiveness",
+        "bbox": [
+          67,
+          395,
+          179,
+          411
+        ],
+        "confidence": 0.9995977565959585
+      },
+      {
+        "text": "It is ITC s aspiration t0 be the No",
+        "bbox": [
+          65,
+          425,
+          287,
+          445
+        ],
+        "confidence": 0.598393692275442
+      },
+      {
+        "text": "FMCG player in the country; driven by",
+        "bbox": [
+          64,
+          444,
+          324,
+          468
+        ],
+        "confidence": 0.7947097000111032
+      },
+      {
+        "text": "its new",
+        "bbox": [
+          65,
+          471,
+          117,
+          485
+        ],
+        "confidence": 0.9711675829461923
+      },
+      {
+        "text": "FMCG businesses__",
+        "bbox": [
+          115,
+          467,
+          243,
+          487
+        ],
+        "confidence": 0.5314488640931587
+      },
+      {
+        "text": "A recent",
+        "bbox": [
+          249,
+          471,
+          309,
+          487
+        ],
+        "confidence": 0.9766960002382994
+      },
+      {
+        "text": "LOvE DELIGHTFULLY",
+        "bbox": [
+          713,
+          475,
+          823,
+          489
+        ],
+        "confidence": 0.6555990466266336
+      },
+      {
+        "text": "SOFT SKIN?",
+        "bbox": [
+          713,
+          487,
+          777,
+          499
+        ],
+        "confidence": 0.9685791791195012
+      },
+      {
+        "text": "Nielsen report has highlighted that ITC'$",
+        "bbox": [
+          67,
+          489,
+          337,
+          509
+        ],
+        "confidence": 0.7252666390898089
+      },
+      {
+        "text": "rdis FiaSt GEL BAR",
+        "bbox": [
+          728,
+          498,
+          802,
+          506
+        ],
+        "confidence": 0.11070612555453425
+      },
+      {
+        "text": "MIH S0JMCOR MTICNER?",
+        "bbox": [
+          714,
+          506,
+          798,
+          514
+        ],
+        "confidence": 0.04590509448204798
+      },
+      {
+        "text": "new",
+        "bbox": [
+          65,
+          515,
+          97,
+          527
+        ],
+        "confidence": 0.978391555589222
+      },
+      {
+        "text": "FMCG businesses are the fastest",
+        "bbox": [
+          95,
+          509,
+          323,
+          529
+        ],
+        "confidence": 0.8650818469055804
+      },
+      {
+        "text": "growing among the top consumer",
+        "bbox": [
+          67,
+          533,
+          295,
+          551
+        ],
+        "confidence": 0.9382733181827824
+      },
+      {
+        "text": "goods companies operating in India_",
+        "bbox": [
+          67,
+          553,
+          311,
+          571
+        ],
+        "confidence": 0.9137794316191168
+      },
+      {
+        "text": "ITC takes justifiable pride that, along",
+        "bbox": [
+          64,
+          570,
+          314,
+          594
+        ],
+        "confidence": 0.8723505484655554
+      },
+      {
+        "text": "with generating economic value, these",
+        "bbox": [
+          65,
+          595,
+          327,
+          613
+        ],
+        "confidence": 0.7219851421856013
+      },
+      {
+        "text": "celebrated Indian brands also drive the",
+        "bbox": [
+          67,
+          615,
+          333,
+          633
+        ],
+        "confidence": 0.9520773345351707
+      },
+      {
+        "text": "2",
+        "bbox": [
+          785,
+          609,
+          825,
+          625
+        ],
+        "confidence": 0.35925383171667136
+      },
+      {
+        "text": "creation of larger societal capital",
+        "bbox": [
+          67,
+          636,
+          289,
+          656
+        ],
+        "confidence": 0.9305113302581198
+      },
+      {
+        "text": "CDark",
+        "bbox": [
+          473,
+          609,
+          574,
+          654
+        ],
+        "confidence": 0.6772889006568517
+      },
+      {
+        "text": "#BeYOUNG",
+        "bbox": [
+          694,
+          634,
+          842,
+          658
+        ],
+        "confidence": 0.9750517395795153
+      },
+      {
+        "text": "through the virtuous cycle of",
+        "bbox": [
+          65,
+          657,
+          261,
+          677
+        ],
+        "confidence": 0.6836070907453231
+      },
+      {
+        "text": "Fantasy",
+        "bbox": [
+          479,
+          638,
+          592,
+          675
+        ],
+        "confidence": 0.9999161480180845
+      },
+      {
+        "text": "Clcca",
+        "bbox": [
+          499,
+          667,
+          545,
+          685
+        ],
+        "confidence": 0.08773368803919857
+      },
+      {
+        "text": "sustainable and inclusive growth:",
+        "bbox": [
+          65,
+          678,
+          291,
+          697
+        ],
+        "confidence": 0.9193421045807078
+      },
+      {
+        "text": "Conacecnlc?",
+        "bbox": [
+          601,
+          685,
+          715,
+          703
+        ],
+        "confidence": 0.005914196226995821
+      },
+      {
+        "text": "Cdon",
+        "bbox": [
+          631,
+          701,
+          681,
+          717
+        ],
+        "confidence": 0.04354771971702576
+      },
+      {
+        "text": "dexskg'",
+        "bbox": [
+          325,
+          785,
+          409,
+          845
+        ],
+        "confidence": 0.1725977260278827
+      },
+      {
+        "text": "derud",
+        "bbox": [
+          328,
+          808,
+          378,
+          838
+        ],
+        "confidence": 0.21471846944893921
+      },
+      {
+        "text": "Kroe",
+        "bbox": [
+          565,
+          853,
+          599,
+          865
+        ],
+        "confidence": 0.008770735003054142
+      },
+      {
+        "text": "WILLS",
+        "bbox": [
+          584,
+          1136,
+          656,
+          1162
+        ],
+        "confidence": 0.9995736530871053
+      },
+      {
+        "text": "LIFESTYLE",
+        "bbox": [
+          585,
+          1161,
+          655,
+          1175
+        ],
+        "confidence": 0.9806885363195492
+      },
+      {
+        "text": "Source: https Ilwww industrydocuments ucsf eduldocslsnbx0223",
+        "bbox": [
+          198,
+          1253,
+          716,
+          1279
+        ],
+        "confidence": 0.7875709395450453
+      },
+      {
+        "text": "they",
+        "bbox": [
+          205,
+          266,
+          241,
+          288
+        ],
+        "confidence": 0.9916504621505737
+      },
+      {
+        "text": "(BINGol",
+        "bbox": [
+          146,
+          1015,
+          259,
+          1076
+        ],
+        "confidence": 0.7538236562265138
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "Image/Photo"
+      ],
+      "docId": 4733,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "22"
+    },
+    "prepare_latency_ms": 8989.692700000887
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57366",
+    "question": "What is the name of the fashion wear/clothing advertise",
+    "gold_answers": [
+      "wills lifestyle",
+      "Wills Lifestyle"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57366.png",
+    "ocr_text_chars": 1101,
+    "ocr_box_count": 53,
+    "ocr_boxes": [
+      {
+        "text": "ITC Limited REPORT AND ACCOUNTS 2013",
+        "bbox": [
+          63,
+          69,
+          377,
+          89
+        ],
+        "confidence": 0.7666787729630388
+      },
+      {
+        "text": "ITC's Brands: An Asset for the Nation",
+        "bbox": [
+          59,
+          167,
+          661,
+          212
+        ],
+        "confidence": 0.6985097451217387
+      },
+      {
+        "text": "The consumer needs and aspirations",
+        "bbox": [
+          67,
+          247,
+          319,
+          265
+        ],
+        "confidence": 0.7408421026827542
+      },
+      {
+        "text": "fiama",
+        "bbox": [
+          789,
+          241,
+          837,
+          257
+        ],
+        "confidence": 0.9171564828756144
+      },
+      {
+        "text": "they fulfil, the benefit",
+        "bbox": [
+          65,
+          267,
+          207,
+          285
+        ],
+        "confidence": 0.9984878322195776
+      },
+      {
+        "text": "generate for",
+        "bbox": [
+          241,
+          269,
+          325,
+          287
+        ],
+        "confidence": 0.991452747443447
+      },
+      {
+        "text": "millions across ITC s value chains_",
+        "bbox": [
+          65,
+          287,
+          293,
+          307
+        ],
+        "confidence": 0.5851022185677132
+      },
+      {
+        "text": "the",
+        "bbox": [
+          297,
+          291,
+          323,
+          305
+        ],
+        "confidence": 0.999988712624007
+      },
+      {
+        "text": "Houttahmncni",
+        "bbox": [
+          604,
+          310,
+          664,
+          318
+        ],
+        "confidence": 0.03352310465784803
+      },
+      {
+        "text": "future-ready capabilities that support",
+        "bbox": [
+          65,
+          311,
+          317,
+          329
+        ],
+        "confidence": 0.7423764971275915
+      },
+      {
+        "text": "Honaaaed",
+        "bbox": [
+          606,
+          320,
+          658,
+          328
+        ],
+        "confidence": 0.00489841291838618
+      },
+      {
+        "text": "them; and the value that they create for",
+        "bbox": [
+          65,
+          333,
+          331,
+          349
+        ],
+        "confidence": 0.5263474002238042
+      },
+      {
+        "text": "the",
+        "bbox": [
+          65,
+          353,
+          91,
+          367
+        ],
+        "confidence": 0.9023686051368713
+      },
+      {
+        "text": "country; have made ITC s brands",
+        "bbox": [
+          89,
+          348,
+          316,
+          372
+        ],
+        "confidence": 0.7151452245222403
+      },
+      {
+        "text": "AASHIRVAAD",
+        "bbox": [
+          499,
+          353,
+          605,
+          373
+        ],
+        "confidence": 0.9947548290057237
+      },
+      {
+        "text": "national assets, adding t0 Indias",
+        "bbox": [
+          65,
+          371,
+          289,
+          391
+        ],
+        "confidence": 0.7374326906483155
+      },
+      {
+        "text": "MutTlarins",
+        "bbox": [
+          506,
+          369,
+          600,
+          397
+        ],
+        "confidence": 0.11010426612978894
+      },
+      {
+        "text": "competitiveness",
+        "bbox": [
+          67,
+          395,
+          179,
+          411
+        ],
+        "confidence": 0.9995977565959585
+      },
+      {
+        "text": "It is ITC s aspiration t0 be the No",
+        "bbox": [
+          65,
+          425,
+          287,
+          445
+        ],
+        "confidence": 0.598393692275442
+      },
+      {
+        "text": "FMCG player in the country; driven by",
+        "bbox": [
+          64,
+          444,
+          324,
+          468
+        ],
+        "confidence": 0.7947097000111032
+      },
+      {
+        "text": "its new",
+        "bbox": [
+          65,
+          471,
+          117,
+          485
+        ],
+        "confidence": 0.9711675829461923
+      },
+      {
+        "text": "FMCG businesses__",
+        "bbox": [
+          115,
+          467,
+          243,
+          487
+        ],
+        "confidence": 0.5314488640931587
+      },
+      {
+        "text": "A recent",
+        "bbox": [
+          249,
+          471,
+          309,
+          487
+        ],
+        "confidence": 0.9766960002382994
+      },
+      {
+        "text": "LOvE DELIGHTFULLY",
+        "bbox": [
+          713,
+          475,
+          823,
+          489
+        ],
+        "confidence": 0.6555990466266336
+      },
+      {
+        "text": "SOFT SKIN?",
+        "bbox": [
+          713,
+          487,
+          777,
+          499
+        ],
+        "confidence": 0.9685791791195012
+      },
+      {
+        "text": "Nielsen report has highlighted that ITC'$",
+        "bbox": [
+          67,
+          489,
+          337,
+          509
+        ],
+        "confidence": 0.7252666390898089
+      },
+      {
+        "text": "rdis FiaSt GEL BAR",
+        "bbox": [
+          728,
+          498,
+          802,
+          506
+        ],
+        "confidence": 0.11070612555453425
+      },
+      {
+        "text": "MIH S0JMCOR MTICNER?",
+        "bbox": [
+          714,
+          506,
+          798,
+          514
+        ],
+        "confidence": 0.04590509448204798
+      },
+      {
+        "text": "new",
+        "bbox": [
+          65,
+          515,
+          97,
+          527
+        ],
+        "confidence": 0.978391555589222
+      },
+      {
+        "text": "FMCG businesses are the fastest",
+        "bbox": [
+          95,
+          509,
+          323,
+          529
+        ],
+        "confidence": 0.8650818469055804
+      },
+      {
+        "text": "growing among the top consumer",
+        "bbox": [
+          67,
+          533,
+          295,
+          551
+        ],
+        "confidence": 0.9382733181827824
+      },
+      {
+        "text": "goods companies operating in India_",
+        "bbox": [
+          67,
+          553,
+          311,
+          571
+        ],
+        "confidence": 0.9137794316191168
+      },
+      {
+        "text": "ITC takes justifiable pride that, along",
+        "bbox": [
+          64,
+          570,
+          314,
+          594
+        ],
+        "confidence": 0.8723505484655554
+      },
+      {
+        "text": "with generating economic value, these",
+        "bbox": [
+          65,
+          595,
+          327,
+          613
+        ],
+        "confidence": 0.7219851421856013
+      },
+      {
+        "text": "celebrated Indian brands also drive the",
+        "bbox": [
+          67,
+          615,
+          333,
+          633
+        ],
+        "confidence": 0.9520773345351707
+      },
+      {
+        "text": "2",
+        "bbox": [
+          785,
+          609,
+          825,
+          625
+        ],
+        "confidence": 0.35925383171667136
+      },
+      {
+        "text": "creation of larger societal capital",
+        "bbox": [
+          67,
+          636,
+          289,
+          656
+        ],
+        "confidence": 0.9305113302581198
+      },
+      {
+        "text": "CDark",
+        "bbox": [
+          473,
+          609,
+          574,
+          654
+        ],
+        "confidence": 0.6772889006568517
+      },
+      {
+        "text": "#BeYOUNG",
+        "bbox": [
+          694,
+          634,
+          842,
+          658
+        ],
+        "confidence": 0.9750517395795153
+      },
+      {
+        "text": "through the virtuous cycle of",
+        "bbox": [
+          65,
+          657,
+          261,
+          677
+        ],
+        "confidence": 0.6836070907453231
+      },
+      {
+        "text": "Fantasy",
+        "bbox": [
+          479,
+          638,
+          592,
+          675
+        ],
+        "confidence": 0.9999161480180845
+      },
+      {
+        "text": "Clcca",
+        "bbox": [
+          499,
+          667,
+          545,
+          685
+        ],
+        "confidence": 0.08773368803919857
+      },
+      {
+        "text": "sustainable and inclusive growth:",
+        "bbox": [
+          65,
+          678,
+          291,
+          697
+        ],
+        "confidence": 0.9193421045807078
+      },
+      {
+        "text": "Conacecnlc?",
+        "bbox": [
+          601,
+          685,
+          715,
+          703
+        ],
+        "confidence": 0.005914196226995821
+      },
+      {
+        "text": "Cdon",
+        "bbox": [
+          631,
+          701,
+          681,
+          717
+        ],
+        "confidence": 0.04354771971702576
+      },
+      {
+        "text": "dexskg'",
+        "bbox": [
+          325,
+          785,
+          409,
+          845
+        ],
+        "confidence": 0.1725977260278827
+      },
+      {
+        "text": "derud",
+        "bbox": [
+          328,
+          808,
+          378,
+          838
+        ],
+        "confidence": 0.21471846944893921
+      },
+      {
+        "text": "Kroe",
+        "bbox": [
+          565,
+          853,
+          599,
+          865
+        ],
+        "confidence": 0.008770735003054142
+      },
+      {
+        "text": "WILLS",
+        "bbox": [
+          584,
+          1136,
+          656,
+          1162
+        ],
+        "confidence": 0.9995736530871053
+      },
+      {
+        "text": "LIFESTYLE",
+        "bbox": [
+          585,
+          1161,
+          655,
+          1175
+        ],
+        "confidence": 0.9806885363195492
+      },
+      {
+        "text": "Source: https Ilwww industrydocuments ucsf eduldocslsnbx0223",
+        "bbox": [
+          198,
+          1253,
+          716,
+          1279
+        ],
+        "confidence": 0.7875709395450453
+      },
+      {
+        "text": "they",
+        "bbox": [
+          205,
+          266,
+          241,
+          288
+        ],
+        "confidence": 0.9916504621505737
+      },
+      {
+        "text": "(BINGol",
+        "bbox": [
+          146,
+          1015,
+          259,
+          1076
+        ],
+        "confidence": 0.7538236562265138
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "Image/Photo"
+      ],
+      "docId": 4733,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "22"
+    },
+    "prepare_latency_ms": 5150.648700000602
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000013",
+    "question": "What's the average of all the values in the green bars (round to one decimal)?",
+    "gold_answers": [
+      "21.6"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000013.png",
+    "ocr_text_chars": 442,
+    "ocr_box_count": 23,
+    "ocr_boxes": [
+      {
+        "text": "Many think China's global influence will",
+        "bbox": [
+          0,
+          12,
+          308,
+          36
+        ],
+        "confidence": 0.809769851987898
+      },
+      {
+        "text": "decline after the coronavirus outbreak",
+        "bbox": [
+          1,
+          35,
+          295,
+          53
+        ],
+        "confidence": 0.8645498376286916
+      },
+      {
+        "text": "%3 who say each till have",
+        "bbox": [
+          1,
+          59,
+          139,
+          75
+        ],
+        "confidence": 0.5221540129965785
+      },
+      {
+        "text": "influence int world offairs",
+        "bbox": [
+          159,
+          61,
+          299,
+          77
+        ],
+        "confidence": 0.26072009909430083
+      },
+      {
+        "text": "after the coronavirus outbreak comnpared t0 before the",
+        "bbox": [
+          1,
+          76,
+          297,
+          91
+        ],
+        "confidence": 0.3329902689088499
+      },
+      {
+        "text": "oulbreak",
+        "bbox": [
+          1,
+          93,
+          53,
+          105
+        ],
+        "confidence": 0.5386735472122572
+      },
+      {
+        "text": "More",
+        "bbox": [
+          67,
+          111,
+          97,
+          123
+        ],
+        "confidence": 0.9998975992202759
+      },
+      {
+        "text": "About the",
+        "bbox": [
+          153,
+          109,
+          207,
+          123
+        ],
+        "confidence": 0.7131123150202229
+      },
+      {
+        "text": "Less",
+        "bbox": [
+          255,
+          111,
+          283,
+          123
+        ],
+        "confidence": 0.9999692440032959
+      },
+      {
+        "text": "same",
+        "bbox": [
+          165,
+          125,
+          197,
+          137
+        ],
+        "confidence": 0.914599268688011
+      },
+      {
+        "text": "2918",
+        "bbox": [
+          91,
+          147,
+          119,
+          161
+        ],
+        "confidence": 0.4358011782169342
+      },
+      {
+        "text": "415",
+        "bbox": [
+          161,
+          147,
+          187,
+          159
+        ],
+        "confidence": 0.27771641469963493
+      },
+      {
+        "text": "29%",
+        "bbox": [
+          247,
+          145,
+          275,
+          161
+        ],
+        "confidence": 0.8632131231962106
+      },
+      {
+        "text": "Cnina",
+        "bbox": [
+          15,
+          233,
+          49,
+          245
+        ],
+        "confidence": 0.946278140819901
+      },
+      {
+        "text": "Note; No answe",
+        "bbox": [
+          1,
+          269,
+          73,
+          283
+        ],
+        "confidence": 0.9430793994373092
+      },
+      {
+        "text": "resnonses not showin;",
+        "bbox": [
+          77,
+          269,
+          179,
+          281
+        ],
+        "confidence": 0.3883313903245173
+      },
+      {
+        "text": "Snurce; Sunvey fU,S adults conducted Anrl 29-May -",
+        "bbox": [
+          1,
+          283,
+          245,
+          295
+        ],
+        "confidence": 0.24976212211175647
+      },
+      {
+        "text": "2020.",
+        "bbox": [
+          253,
+          283,
+          283,
+          295
+        ],
+        "confidence": 0.5868589056247404
+      },
+      {
+        "text": "#Americans Give Higher Ratinps",
+        "bbox": [
+          1,
+          297,
+          147,
+          311
+        ],
+        "confidence": 0.5445357324936544
+      },
+      {
+        "text": "South Korea and Germany Than",
+        "bbox": [
+          157,
+          297,
+          305,
+          309
+        ],
+        "confidence": 0.7273993136641781
+      },
+      {
+        "text": "Ving With Coronavinus\"",
+        "bbox": [
+          55,
+          309,
+          155,
+          323
+        ],
+        "confidence": 0.4541876598670686
+      },
+      {
+        "text": "PEW RESEARCH CENTER",
+        "bbox": [
+          1,
+          327,
+          119,
+          341
+        ],
+        "confidence": 0.9009306733660998
+      },
+      {
+        "text": "0ca",
+        "bbox": [
+          35,
+          308,
+          57,
+          321
+        ],
+        "confidence": 0.0982929083608957
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1440.944699999818
+  }
+]

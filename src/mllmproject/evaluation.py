@@ -47,6 +47,7 @@ def run_evaluation(
             retrieved_evidence_ids=retrieved_evidence_ids,
             route=result.route,
             latency_ms=latency_ms,
+            gold_pages=normalize_gold_pages_from_sample(sample),
         )
         predictions.append(prediction)
         score_row = enrich_score_row(score_prediction(prediction), prediction, sample)
@@ -133,6 +134,7 @@ def enrich_score_row(
         "question_type": sample.get("question_type", ""),
         "gold_type": sample.get("gold_type", ""),
         "gold_page": prediction.gold_page,
+        "gold_pages": "|".join(str(page) for page in prediction.gold_pages),
         "top1_page": prediction.retrieved_pages[0] if prediction.retrieved_pages else None,
         "retrieved_pages": "|".join(str(page) for page in prediction.retrieved_pages),
         "cited_pages": "|".join(str(page) for page in prediction.cited_pages),
@@ -196,6 +198,20 @@ def count_by(rows: list[dict[str, Any]], key: str) -> dict[str, int]:
 
 def normalize_mode_label(mode: str) -> str:
     return mode.strip().lower().replace(" ", "_").replace("-", "_")
+
+
+def normalize_gold_pages_from_sample(sample: dict[str, Any]) -> list[int]:
+    raw_pages = sample.get("gold_pages")
+    if raw_pages is None:
+        raw_pages = []
+    if isinstance(raw_pages, int):
+        pages = [raw_pages]
+    else:
+        pages = [int(page) for page in raw_pages if page is not None]
+    gold_page = sample.get("gold_page")
+    if gold_page is not None and int(gold_page) not in pages:
+        pages.append(int(gold_page))
+    return pages
 
 
 def build_runner(doc_path: str | Path, normalized_mode: str):

@@ -9,20 +9,9 @@ wheels/
 # Virtual environments
 .venv
 
-# Demo runtime artifacts
-data/processed/
-data/processed_text_baseline_check/
-data/uploads/
-data/indexes/
-data/eval/results/
-data/eval/results*/
-outputs/
-*.log
 
-# Frontend runtime artifacts
-node_modules/
-frontend/node_modules/
-frontend/dist/
-frontend/*.tsbuildinfo
-frontend/vite.config.js
-frontend/vite.config.d.ts
+
+
+
+# Local model weights
+model/

@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000013",
+    "question": "What's the average of all the values in the green bars (round to one decimal)?",
+    "gold_answer": "21.6",
+    "gold_answers": "21.6",
+    "gold_page": 1,
+    "prediction": "提供的证据中没有包含任何关于“绿色条形图”或其数值的信息，因此无法计算绿色条形图所有值的平均数。[E1] 中的内容是关于公众对新冠疫情后中国全球影响力看法的调查数据，与问题无关。\n\nFinal answer: 无法计算\n来源：[page=1, chunk=chartqa_000013_p1_c0001]",
+    "raw_prediction": "提供的证据中没有包含任何关于“绿色条形图”或其数值的信息，因此无法计算绿色条形图所有值的平均数。[E1] 中的内容是关于公众对新冠疫情后中国全球影响力看法的调查数据，与问题无关。\n\nFinal answer: 无法计算\n来源：[page=1, chunk=chartqa_000013_p1_c0001]",
+    "extracted_answer": "无法计算",
+    "normalized_answer": "无法计算",
+    "mode": "text_rag",
+    "em": 0.0,
+    "anls": 0.0,
+    "latency_ms": 3077.55250000082,
+    "answer_match": 0.0,
+    "failure_label": "answer_mismatch",
+    "route": "text_route",
+    "ocr_text_chars": 442,
+    "ocr_box_count": 23,
+    "region_chunk_count": 0,
+    "evidence_count": 1,
+    "top_evidence_types": "text",
+    "top_evidence_ids": "chartqa_000013_p1_c0001",
+    "top_evidence_image_paths": "",
+    "top_region_page_bboxes": "",
+    "chart_question_type": "",
+    "chart_numbers": "",
+    "chart_labels": ""
+  }
+]

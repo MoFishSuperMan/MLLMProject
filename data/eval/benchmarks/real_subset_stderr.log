@@ -1,0 +1,119 @@
+docvqa samples:   0%|          | 0/20 [00:00<?, ?it/s]Using CPU. Note: This module is much faster with a GPU.
+
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 391/391 [00:00<00:00, 52235.09it/s]
+
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 393/393 [00:00<00:00, 12042.82it/s]
+
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 1/750 [00:00<03:49,  3.27it/s][A
+Loading weights:   0%|          | 2/750 [00:00<04:19,  2.88it/s][A
+Loading weights:   2%|▏         | 12/750 [00:00<00:34, 21.48it/s][A
+Loading weights:   3%|▎         | 21/750 [00:00<00:20, 36.03it/s][A
+Loading weights:   4%|▎         | 28/750 [00:01<00:16, 43.09it/s][A
+Loading weights:   5%|▌         | 39/750 [00:01<00:12, 56.80it/s][A
+Loading weights:   7%|▋         | 50/750 [00:01<00:10, 66.32it/s][A
+Loading weights:   8%|▊         | 61/750 [00:01<00:09, 72.86it/s][A
+Loading weights:  10%|▉         | 72/750 [00:01<00:08, 78.48it/s][A
+Loading weights:  11%|█         | 83/750 [00:01<00:08, 81.57it/s][A
+Loading weights:  13%|█▎        | 94/750 [00:01<00:08, 81.88it/s][A
+Loading weights:  14%|█▍        | 105/750 [00:01<00:07, 81.71it/s][A
+Loading weights:  15%|█▌        | 116/750 [00:02<00:07, 83.25it/s][A
+Loading weights:  17%|█▋        | 127/750 [00:02<00:07, 86.05it/s][A
+Loading weights:  18%|█▊        | 138/750 [00:02<00:06, 87.79it/s][A
+Loading weights:  20%|█▉        | 149/750 [00:02<00:06, 89.01it/s][A
+Loading weights:  21%|██▏       | 160/750 [00:02<00:06, 89.51it/s][A
+Loading weights:  23%|██▎       | 170/750 [00:02<00:06, 91.81it/s][A
+Loading weights:  24%|██▍       | 181/750 [00:02<00:06, 89.29it/s][A
+Loading weights:  26%|██▌       | 192/750 [00:02<00:06, 87.35it/s][A
+Loading weights:  27%|██▋       | 203/750 [00:02<00:06, 87.37it/s][A
+Loading weights:  29%|██▊       | 214/750 [00:03<00:06, 88.97it/s][A
+Loading weights:  30%|███       | 225/750 [00:03<00:05, 89.77it/s][A
+Loading weights:  31%|███▏      | 235/750 [00:03<00:05, 90.39it/s][A
+Loading weights:  33%|███▎      | 246/750 [00:03<00:05, 89.85it/s][A
+Loading weights:  34%|███▍      | 257/750 [00:03<00:05, 91.30it/s][A
+Loading weights:  36%|███▌      | 268/750 [00:03<00:05, 90.95it/s][A
+Loading weights:  37%|███▋      | 279/750 [00:03<00:05, 90.32it/s][A
+Loading weights:  39%|███▊      | 290/750 [00:03<00:05, 89.31it/s][A
+Loading weights:  40%|████      | 301/750 [00:04<00:05, 89.21it/s][A
+Loading weights:  42%|████▏     | 312/750 [00:04<00:05, 81.13it/s][A
+Loading weights:  43%|████▎     | 324/750 [00:04<00:05, 82.23it/s][A
+Loading weights:  45%|████▍     | 334/750 [00:04<00:04, 85.40it/s][A
+Loading weights:  46%|████▌     | 345/750 [00:04<00:04, 86.36it/s][A
+Loading weights:  47%|████▋     | 356/750 [00:04<00:04, 87.45it/s][A
+Loading weights:  49%|████▉     | 367/750 [00:04<00:04, 85.39it/s][A
+Loading weights:  50%|█████     | 377/750 [00:04<00:04, 81.86it/s][A
+Loading weights:  52%|█████▏    | 389/750 [00:05<00:04, 85.16it/s][A
+Loading weights:  54%|█████▍    | 407/750 [00:05<00:03, 108.46it/s][A
+Loading weights:  69%|██████▊   | 515/750 [00:05<00:00, 361.01it/s][A
+Loading weights:  83%|████████▎ | 623/750 [00:05<00:00, 554.98it/s][A
+Loading weights:  97%|█████████▋| 725/750 [00:05<00:00, 680.74it/s][ALoading weights: 100%|██████████| 750/750 [00:05<00:00, 133.59it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+docvqa samples:   0%|          | 0/20 [01:32<?, ?it/s]
+Traceback (most recent call last):
+  File "C:\Users\杨毅涵\Desktop\多模态大作业\MLLMProject\scripts\run_benchmark_eval.py", line 374, in <module>
+    main()
+  File "C:\Users\杨毅涵\Desktop\多模态大作业\MLLMProject\scripts\run_benchmark_eval.py", line 356, in main
+    row = run_mode(sample, mode_document, mode, model_stack, shared, args.top_k)
+  File "C:\Users\杨毅涵\Desktop\多模态大作业\MLLMProject\scripts\run_benchmark_eval.py", line 210, in run_mode
+    result, latency_ms = pipeline.answer(sample.question, mode=mode, top_k=top_k)
+  File "C:\Users\杨毅涵\Desktop\多模态大作业\MLLMProject\src\mllmproject\pipeline.py", line 85, in answer
+    answer, citations = self.generator.generate_answer(question, evidences, route=route, route_reason=reason)
+  File "C:\Users\杨毅涵\Desktop\多模态大作业\MLLMProject\src\mllmproject\real_models.py", line 162, in generate_answer
+    raw_answer = self._generate(content)
+  File "C:\Users\杨毅涵\Desktop\多模态大作业\MLLMProject\src\mllmproject\real_models.py", line 186, in _generate
+    generated_ids = model.generate(**inputs, max_new_tokens=self.config.max_new_tokens, do_sample=False)
+  File "C:\anaconda\envs\first\lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\generation\utils.py", line 2543, in generate
+    result = decoding_method(
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\generation\utils.py", line 2736, in _sample
+    outputs = self._prefill(
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\generation\utils.py", line 3768, in _prefill
+    return self(**model_inputs, return_dict=True)
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\utils\generic.py", line 876, in wrapper
+    output = func(self, *args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\models\qwen3_vl\modeling_qwen3_vl.py", line 1507, in forward
+    outputs = self.model(
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\utils\generic.py", line 876, in wrapper
+    output = func(self, *args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\models\qwen3_vl\modeling_qwen3_vl.py", line 1346, in forward
+    outputs = self.language_model(
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\utils\generic.py", line 952, in wrapper
+    output = func(self, *args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\utils\output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\models\qwen3_vl\modeling_qwen3_vl.py", line 916, in forward
+    layer_outputs = decoder_layer(
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\modeling_layers.py", line 93, in __call__
+    return super().__call__(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\models\qwen3_vl\modeling_qwen3_vl.py", line 548, in forward
+    hidden_states, _ = self.self_attn(
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\models\qwen3_vl\modeling_qwen3_vl.py", line 492, in forward
+    attn_output, attn_weights = attention_interface(
+  File "C:\anaconda\envs\first\lib\site-packages\transformers\integrations\sdpa_attention.py", line 92, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

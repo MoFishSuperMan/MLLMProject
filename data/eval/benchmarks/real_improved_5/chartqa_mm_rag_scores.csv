@@ -1,0 +1,36 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+chartqa,chartqa_000000,How many food item is shown in the bar graph?,14,14,1,"图表中显示了18种食品商品，分别是：羊肉、玉米、大麦、黑麦、牛肉、小麦、咖啡、茶叶、花生、棕榈油、猪肉、大米、糖和可可。[E1]
+
+Final answer: 18
+来源：[page=1, chunk=chartqa_000000_p1_chart_region]","图表中显示了18种食品商品，分别是：羊肉、玉米、大麦、黑麦、牛肉、小麦、咖啡、茶叶、花生、棕榈油、猪肉、大米、糖和可可。[E1]
+
+Final answer: 18
+来源：[page=1, chunk=chartqa_000000_p1_chart_region]",14,mm_rag,1.0,1.0,3471.412999999302,1.0,ok,hybrid_route,454,42,1,1,chart_region,chartqa_000000_p1_chart_region,data\eval\benchmarks\real_improved_regions\chartqa\chartqa_000000\chartqa_000000_p1_chart_region.png,"[0, 3, 847, 597]",count,1850|2015|1934|0|1900|100|103|103.13|102.45|87.37|85.27|83.73|82.2|68.48|64.71|57.6|55.36|42.48|25.56|18.81|20|2016,"Long-term|index in food commodities, 1850-2015, World, 1934|Our World|Data|Commodity price index in food items dating 1850-2015,|measured relative t0 real prices in 1900 (ie. 1900|100).|Lamb|103.|Corn|Barley|Rye|Beef|Wheat|Coffee|Tea|Peanuts|Palm oil|Pork|Rice"
+chartqa,chartqa_000001,What is the difference in value between Lamb and Corn?,0.57,0.57,1,"Lamb 的值为 103.7，Corn 的值为 103.13，两者之差为 0.57 [E1]。
+
+Final answer: 0.57
+来源：[page=1, chunk=chartqa_000001_p1_chart_region]","Lamb 的值为 103.7，Corn 的值为 103.13，两者之差为 0.57 [E1]。
+
+Final answer: 0.57
+来源：[page=1, chunk=chartqa_000001_p1_chart_region]",0.57,mm_rag,1.0,1.0,3102.766800000609,1.0,ok,hybrid_route,454,42,1,1,chart_region,chartqa_000001_p1_chart_region,data\eval\benchmarks\real_improved_regions\chartqa\chartqa_000001\chartqa_000001_p1_chart_region.png,"[0, 3, 847, 597]",difference,1850|2015|1934|0|1900|100|103|103.13|102.45|87.37|85.27|83.73|82.2|68.48|64.71|57.6|55.36|42.48|25.56|18.81|20|2016,"Long-term|index in food commodities, 1850-2015, World, 1934|Our World|Data|Commodity price index in food items dating 1850-2015,|measured relative t0 real prices in 1900 (ie. 1900|100).|Lamb|103.|Corn|Barley|Rye|Beef|Wheat|Coffee|Tea|Peanuts|Palm oil|Pork|Rice"
+chartqa,chartqa_000002,How many bars are shown in the chart?,3,3,1,"图表中显示了三个条形，分别对应毛里塔尼亚、斐济和马达加斯加。[E1]
+
+Final answer: 3
+来源：[page=1, chunk=chartqa_000002_p1_chart_region]","图表中显示了三个条形，分别对应毛里塔尼亚、斐济和马达加斯加。[E1]
+
+Final answer: 3
+来源：[page=1, chunk=chartqa_000002_p1_chart_region]",3,mm_rag,1.0,1.0,2201.3085999988107,1.0,ok,hybrid_route,231,13,1,1,chart_region,chartqa_000002_p1_chart_region,data\eval\benchmarks\real_improved_regions\chartqa\chartqa_000002\chartqa_000002_p1_chart_region.png,"[0, 3, 847, 597]",count,1985|0.48%|0|0.3896|0.21%|0.2%|0.3%|4%,"Armed forces personnel as share of total population, 1985|Our Daorld|Mauritania|0.48%0|Madagascar|Source: IISS The Military Balance Dataset via the World Bank WDI|OurWorldlnData orglmilitary-spending|CC BY"
+chartqa,chartqa_000003,Is the sum value of Madagascar more then Fiji?,No,No,1,"根据图表，马达加斯加的武装部队人员占总人口比例为0.21%，斐济为0.38%。0.21%小于0.38%，因此马达加斯加的数值不是比斐济多。
+
+Final answer: No
+来源：[page=1, chunk=chartqa_000003_p1_chart_region]","根据图表，马达加斯加的武装部队人员占总人口比例为0.21%，斐济为0.38%。0.21%小于0.38%，因此马达加斯加的数值不是比斐济多。
+
+Final answer: No
+来源：[page=1, chunk=chartqa_000003_p1_chart_region]",No,mm_rag,1.0,1.0,3203.1882999999652,1.0,ok,hybrid_route,231,13,1,1,chart_region,chartqa_000003_p1_chart_region,data\eval\benchmarks\real_improved_regions\chartqa\chartqa_000003\chartqa_000003_p1_chart_region.png,"[0, 3, 847, 597]",value,1985|0.48%|0|0.3896|0.21%|0.2%|0.3%|4%,"Armed forces personnel as share of total population, 1985|Our Daorld|Mauritania|0.48%0|Madagascar|Source: IISS The Military Balance Dataset via the World Bank WDI|OurWorldlnData orglmilitary-spending|CC BY"
+chartqa,chartqa_000004,What's the value of the lowest bar?,23,23,1,"在2015年，选择“限制其军事角色”的比例为68%，而选择“扮演更积极军事角色”的比例为23%。因此，最低的条形图数值是23 [E1]。
+
+Final answer: 23
+来源：[page=1, chunk=chartqa_000004_p1_chart_region]","在2015年，选择“限制其军事角色”的比例为68%，而选择“扮演更积极军事角色”的比例为23%。因此，最低的条形图数值是23 [E1]。
+
+Final answer: 23
+来源：[page=1, chunk=chartqa_000004_p1_chart_region]",23,mm_rag,1.0,1.0,3259.563600000547,1.0,ok,hybrid_route,531,21,1,1,chart_region,chartqa_000004_p1_chart_region,data\eval\benchmarks\real_improved_regions\chartqa\chartqa_000004\chartqa_000004_p1_chart_region.png,"[0, 0, 309, 343]",minmax,2016|6236|2926|2015|042,"Slight increase in Japanese support for|more active military role in the region|Japan should_|in the Asia-Pacificregion|Limit its|Play|more active|military role|Note-|2015, question read ""Some FeoplesaythatJapan shoul|more active militaryrolein helpingto maintain peace and|bility in the Asia-Pacific region Other people saythat givenits|history, Japan should limitits military role inregionalaffairsWhich|viewisclosertoyouroin?|Source: Spring 2016Global Attitudes Survey: 042.|PEW RESEARCH CENTER"

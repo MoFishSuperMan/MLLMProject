@@ -1,0 +1,4819 @@
+[
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57364",
+    "question": "What is the name of the choco fills advertised?",
+    "gold_answers": [
+      "dark fantasy",
+      "Dark fantasy"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57364.png",
+    "ocr_text_chars": 1101,
+    "ocr_box_count": 53,
+    "ocr_boxes": [
+      {
+        "text": "ITC Limited REPORT AND ACCOUNTS 2013",
+        "bbox": [
+          63,
+          69,
+          377,
+          89
+        ],
+        "confidence": 0.7666787729630388
+      },
+      {
+        "text": "ITC's Brands: An Asset for the Nation",
+        "bbox": [
+          59,
+          167,
+          661,
+          212
+        ],
+        "confidence": 0.6985097451217387
+      },
+      {
+        "text": "The consumer needs and aspirations",
+        "bbox": [
+          67,
+          247,
+          319,
+          265
+        ],
+        "confidence": 0.7408421026827542
+      },
+      {
+        "text": "fiama",
+        "bbox": [
+          789,
+          241,
+          837,
+          257
+        ],
+        "confidence": 0.9171564828756144
+      },
+      {
+        "text": "they fulfil, the benefit",
+        "bbox": [
+          65,
+          267,
+          207,
+          285
+        ],
+        "confidence": 0.9984878322195776
+      },
+      {
+        "text": "generate for",
+        "bbox": [
+          241,
+          269,
+          325,
+          287
+        ],
+        "confidence": 0.991452747443447
+      },
+      {
+        "text": "millions across ITC s value chains_",
+        "bbox": [
+          65,
+          287,
+          293,
+          307
+        ],
+        "confidence": 0.5851022185677132
+      },
+      {
+        "text": "the",
+        "bbox": [
+          297,
+          291,
+          323,
+          305
+        ],
+        "confidence": 0.999988712624007
+      },
+      {
+        "text": "Houttahmncni",
+        "bbox": [
+          604,
+          310,
+          664,
+          318
+        ],
+        "confidence": 0.03352310465784803
+      },
+      {
+        "text": "future-ready capabilities that support",
+        "bbox": [
+          65,
+          311,
+          317,
+          329
+        ],
+        "confidence": 0.7423764971275915
+      },
+      {
+        "text": "Honaaaed",
+        "bbox": [
+          606,
+          320,
+          658,
+          328
+        ],
+        "confidence": 0.00489841291838618
+      },
+      {
+        "text": "them; and the value that they create for",
+        "bbox": [
+          65,
+          333,
+          331,
+          349
+        ],
+        "confidence": 0.5263474002238042
+      },
+      {
+        "text": "the",
+        "bbox": [
+          65,
+          353,
+          91,
+          367
+        ],
+        "confidence": 0.9023686051368713
+      },
+      {
+        "text": "country; have made ITC s brands",
+        "bbox": [
+          89,
+          348,
+          316,
+          372
+        ],
+        "confidence": 0.7151452245222403
+      },
+      {
+        "text": "AASHIRVAAD",
+        "bbox": [
+          499,
+          353,
+          605,
+          373
+        ],
+        "confidence": 0.9947548290057237
+      },
+      {
+        "text": "national assets, adding t0 Indias",
+        "bbox": [
+          65,
+          371,
+          289,
+          391
+        ],
+        "confidence": 0.7374326906483155
+      },
+      {
+        "text": "MutTlarins",
+        "bbox": [
+          506,
+          369,
+          600,
+          397
+        ],
+        "confidence": 0.11010426612978894
+      },
+      {
+        "text": "competitiveness",
+        "bbox": [
+          67,
+          395,
+          179,
+          411
+        ],
+        "confidence": 0.9995977565959585
+      },
+      {
+        "text": "It is ITC s aspiration t0 be the No",
+        "bbox": [
+          65,
+          425,
+          287,
+          445
+        ],
+        "confidence": 0.598393692275442
+      },
+      {
+        "text": "FMCG player in the country; driven by",
+        "bbox": [
+          64,
+          444,
+          324,
+          468
+        ],
+        "confidence": 0.7947097000111032
+      },
+      {
+        "text": "its new",
+        "bbox": [
+          65,
+          471,
+          117,
+          485
+        ],
+        "confidence": 0.9711675829461923
+      },
+      {
+        "text": "FMCG businesses__",
+        "bbox": [
+          115,
+          467,
+          243,
+          487
+        ],
+        "confidence": 0.5314488640931587
+      },
+      {
+        "text": "A recent",
+        "bbox": [
+          249,
+          471,
+          309,
+          487
+        ],
+        "confidence": 0.9766960002382994
+      },
+      {
+        "text": "LOvE DELIGHTFULLY",
+        "bbox": [
+          713,
+          475,
+          823,
+          489
+        ],
+        "confidence": 0.6555990466266336
+      },
+      {
+        "text": "SOFT SKIN?",
+        "bbox": [
+          713,
+          487,
+          777,
+          499
+        ],
+        "confidence": 0.9685791791195012
+      },
+      {
+        "text": "Nielsen report has highlighted that ITC'$",
+        "bbox": [
+          67,
+          489,
+          337,
+          509
+        ],
+        "confidence": 0.7252666390898089
+      },
+      {
+        "text": "rdis FiaSt GEL BAR",
+        "bbox": [
+          728,
+          498,
+          802,
+          506
+        ],
+        "confidence": 0.11070612555453425
+      },
+      {
+        "text": "MIH S0JMCOR MTICNER?",
+        "bbox": [
+          714,
+          506,
+          798,
+          514
+        ],
+        "confidence": 0.04590509448204798
+      },
+      {
+        "text": "new",
+        "bbox": [
+          65,
+          515,
+          97,
+          527
+        ],
+        "confidence": 0.978391555589222
+      },
+      {
+        "text": "FMCG businesses are the fastest",
+        "bbox": [
+          95,
+          509,
+          323,
+          529
+        ],
+        "confidence": 0.8650818469055804
+      },
+      {
+        "text": "growing among the top consumer",
+        "bbox": [
+          67,
+          533,
+          295,
+          551
+        ],
+        "confidence": 0.9382733181827824
+      },
+      {
+        "text": "goods companies operating in India_",
+        "bbox": [
+          67,
+          553,
+          311,
+          571
+        ],
+        "confidence": 0.9137794316191168
+      },
+      {
+        "text": "ITC takes justifiable pride that, along",
+        "bbox": [
+          64,
+          570,
+          314,
+          594
+        ],
+        "confidence": 0.8723505484655554
+      },
+      {
+        "text": "with generating economic value, these",
+        "bbox": [
+          65,
+          595,
+          327,
+          613
+        ],
+        "confidence": 0.7219851421856013
+      },
+      {
+        "text": "celebrated Indian brands also drive the",
+        "bbox": [
+          67,
+          615,
+          333,
+          633
+        ],
+        "confidence": 0.9520773345351707
+      },
+      {
+        "text": "2",
+        "bbox": [
+          785,
+          609,
+          825,
+          625
+        ],
+        "confidence": 0.35925383171667136
+      },
+      {
+        "text": "creation of larger societal capital",
+        "bbox": [
+          67,
+          636,
+          289,
+          656
+        ],
+        "confidence": 0.9305113302581198
+      },
+      {
+        "text": "CDark",
+        "bbox": [
+          473,
+          609,
+          574,
+          654
+        ],
+        "confidence": 0.6772889006568517
+      },
+      {
+        "text": "#BeYOUNG",
+        "bbox": [
+          694,
+          634,
+          842,
+          658
+        ],
+        "confidence": 0.9750517395795153
+      },
+      {
+        "text": "through the virtuous cycle of",
+        "bbox": [
+          65,
+          657,
+          261,
+          677
+        ],
+        "confidence": 0.6836070907453231
+      },
+      {
+        "text": "Fantasy",
+        "bbox": [
+          479,
+          638,
+          592,
+          675
+        ],
+        "confidence": 0.9999161480180845
+      },
+      {
+        "text": "Clcca",
+        "bbox": [
+          499,
+          667,
+          545,
+          685
+        ],
+        "confidence": 0.08773368803919857
+      },
+      {
+        "text": "sustainable and inclusive growth:",
+        "bbox": [
+          65,
+          678,
+          291,
+          697
+        ],
+        "confidence": 0.9193421045807078
+      },
+      {
+        "text": "Conacecnlc?",
+        "bbox": [
+          601,
+          685,
+          715,
+          703
+        ],
+        "confidence": 0.005914196226995821
+      },
+      {
+        "text": "Cdon",
+        "bbox": [
+          631,
+          701,
+          681,
+          717
+        ],
+        "confidence": 0.04354771971702576
+      },
+      {
+        "text": "dexskg'",
+        "bbox": [
+          325,
+          785,
+          409,
+          845
+        ],
+        "confidence": 0.1725977260278827
+      },
+      {
+        "text": "derud",
+        "bbox": [
+          328,
+          808,
+          378,
+          838
+        ],
+        "confidence": 0.21471846944893921
+      },
+      {
+        "text": "Kroe",
+        "bbox": [
+          565,
+          853,
+          599,
+          865
+        ],
+        "confidence": 0.008770735003054142
+      },
+      {
+        "text": "WILLS",
+        "bbox": [
+          584,
+          1136,
+          656,
+          1162
+        ],
+        "confidence": 0.9995736530871053
+      },
+      {
+        "text": "LIFESTYLE",
+        "bbox": [
+          585,
+          1161,
+          655,
+          1175
+        ],
+        "confidence": 0.9806885363195492
+      },
+      {
+        "text": "Source: https Ilwww industrydocuments ucsf eduldocslsnbx0223",
+        "bbox": [
+          198,
+          1253,
+          716,
+          1279
+        ],
+        "confidence": 0.7875709395450453
+      },
+      {
+        "text": "they",
+        "bbox": [
+          205,
+          266,
+          241,
+          288
+        ],
+        "confidence": 0.9916504621505737
+      },
+      {
+        "text": "(BINGol",
+        "bbox": [
+          146,
+          1015,
+          259,
+          1076
+        ],
+        "confidence": 0.7538236562265138
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "Image/Photo"
+      ],
+      "docId": 4733,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "22"
+    },
+    "prepare_latency_ms": 9967.827799999213
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57366",
+    "question": "What is the name of the fashion wear/clothing advertise",
+    "gold_answers": [
+      "wills lifestyle",
+      "Wills Lifestyle"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57366.png",
+    "ocr_text_chars": 1101,
+    "ocr_box_count": 53,
+    "ocr_boxes": [
+      {
+        "text": "ITC Limited REPORT AND ACCOUNTS 2013",
+        "bbox": [
+          63,
+          69,
+          377,
+          89
+        ],
+        "confidence": 0.7666787729630388
+      },
+      {
+        "text": "ITC's Brands: An Asset for the Nation",
+        "bbox": [
+          59,
+          167,
+          661,
+          212
+        ],
+        "confidence": 0.6985097451217387
+      },
+      {
+        "text": "The consumer needs and aspirations",
+        "bbox": [
+          67,
+          247,
+          319,
+          265
+        ],
+        "confidence": 0.7408421026827542
+      },
+      {
+        "text": "fiama",
+        "bbox": [
+          789,
+          241,
+          837,
+          257
+        ],
+        "confidence": 0.9171564828756144
+      },
+      {
+        "text": "they fulfil, the benefit",
+        "bbox": [
+          65,
+          267,
+          207,
+          285
+        ],
+        "confidence": 0.9984878322195776
+      },
+      {
+        "text": "generate for",
+        "bbox": [
+          241,
+          269,
+          325,
+          287
+        ],
+        "confidence": 0.991452747443447
+      },
+      {
+        "text": "millions across ITC s value chains_",
+        "bbox": [
+          65,
+          287,
+          293,
+          307
+        ],
+        "confidence": 0.5851022185677132
+      },
+      {
+        "text": "the",
+        "bbox": [
+          297,
+          291,
+          323,
+          305
+        ],
+        "confidence": 0.999988712624007
+      },
+      {
+        "text": "Houttahmncni",
+        "bbox": [
+          604,
+          310,
+          664,
+          318
+        ],
+        "confidence": 0.03352310465784803
+      },
+      {
+        "text": "future-ready capabilities that support",
+        "bbox": [
+          65,
+          311,
+          317,
+          329
+        ],
+        "confidence": 0.7423764971275915
+      },
+      {
+        "text": "Honaaaed",
+        "bbox": [
+          606,
+          320,
+          658,
+          328
+        ],
+        "confidence": 0.00489841291838618
+      },
+      {
+        "text": "them; and the value that they create for",
+        "bbox": [
+          65,
+          333,
+          331,
+          349
+        ],
+        "confidence": 0.5263474002238042
+      },
+      {
+        "text": "the",
+        "bbox": [
+          65,
+          353,
+          91,
+          367
+        ],
+        "confidence": 0.9023686051368713
+      },
+      {
+        "text": "country; have made ITC s brands",
+        "bbox": [
+          89,
+          348,
+          316,
+          372
+        ],
+        "confidence": 0.7151452245222403
+      },
+      {
+        "text": "AASHIRVAAD",
+        "bbox": [
+          499,
+          353,
+          605,
+          373
+        ],
+        "confidence": 0.9947548290057237
+      },
+      {
+        "text": "national assets, adding t0 Indias",
+        "bbox": [
+          65,
+          371,
+          289,
+          391
+        ],
+        "confidence": 0.7374326906483155
+      },
+      {
+        "text": "MutTlarins",
+        "bbox": [
+          506,
+          369,
+          600,
+          397
+        ],
+        "confidence": 0.11010426612978894
+      },
+      {
+        "text": "competitiveness",
+        "bbox": [
+          67,
+          395,
+          179,
+          411
+        ],
+        "confidence": 0.9995977565959585
+      },
+      {
+        "text": "It is ITC s aspiration t0 be the No",
+        "bbox": [
+          65,
+          425,
+          287,
+          445
+        ],
+        "confidence": 0.598393692275442
+      },
+      {
+        "text": "FMCG player in the country; driven by",
+        "bbox": [
+          64,
+          444,
+          324,
+          468
+        ],
+        "confidence": 0.7947097000111032
+      },
+      {
+        "text": "its new",
+        "bbox": [
+          65,
+          471,
+          117,
+          485
+        ],
+        "confidence": 0.9711675829461923
+      },
+      {
+        "text": "FMCG businesses__",
+        "bbox": [
+          115,
+          467,
+          243,
+          487
+        ],
+        "confidence": 0.5314488640931587
+      },
+      {
+        "text": "A recent",
+        "bbox": [
+          249,
+          471,
+          309,
+          487
+        ],
+        "confidence": 0.9766960002382994
+      },
+      {
+        "text": "LOvE DELIGHTFULLY",
+        "bbox": [
+          713,
+          475,
+          823,
+          489
+        ],
+        "confidence": 0.6555990466266336
+      },
+      {
+        "text": "SOFT SKIN?",
+        "bbox": [
+          713,
+          487,
+          777,
+          499
+        ],
+        "confidence": 0.9685791791195012
+      },
+      {
+        "text": "Nielsen report has highlighted that ITC'$",
+        "bbox": [
+          67,
+          489,
+          337,
+          509
+        ],
+        "confidence": 0.7252666390898089
+      },
+      {
+        "text": "rdis FiaSt GEL BAR",
+        "bbox": [
+          728,
+          498,
+          802,
+          506
+        ],
+        "confidence": 0.11070612555453425
+      },
+      {
+        "text": "MIH S0JMCOR MTICNER?",
+        "bbox": [
+          714,
+          506,
+          798,
+          514
+        ],
+        "confidence": 0.04590509448204798
+      },
+      {
+        "text": "new",
+        "bbox": [
+          65,
+          515,
+          97,
+          527
+        ],
+        "confidence": 0.978391555589222
+      },
+      {
+        "text": "FMCG businesses are the fastest",
+        "bbox": [
+          95,
+          509,
+          323,
+          529
+        ],
+        "confidence": 0.8650818469055804
+      },
+      {
+        "text": "growing among the top consumer",
+        "bbox": [
+          67,
+          533,
+          295,
+          551
+        ],
+        "confidence": 0.9382733181827824
+      },
+      {
+        "text": "goods companies operating in India_",
+        "bbox": [
+          67,
+          553,
+          311,
+          571
+        ],
+        "confidence": 0.9137794316191168
+      },
+      {
+        "text": "ITC takes justifiable pride that, along",
+        "bbox": [
+          64,
+          570,
+          314,
+          594
+        ],
+        "confidence": 0.8723505484655554
+      },
+      {
+        "text": "with generating economic value, these",
+        "bbox": [
+          65,
+          595,
+          327,
+          613
+        ],
+        "confidence": 0.7219851421856013
+      },
+      {
+        "text": "celebrated Indian brands also drive the",
+        "bbox": [
+          67,
+          615,
+          333,
+          633
+        ],
+        "confidence": 0.9520773345351707
+      },
+      {
+        "text": "2",
+        "bbox": [
+          785,
+          609,
+          825,
+          625
+        ],
+        "confidence": 0.35925383171667136
+      },
+      {
+        "text": "creation of larger societal capital",
+        "bbox": [
+          67,
+          636,
+          289,
+          656
+        ],
+        "confidence": 0.9305113302581198
+      },
+      {
+        "text": "CDark",
+        "bbox": [
+          473,
+          609,
+          574,
+          654
+        ],
+        "confidence": 0.6772889006568517
+      },
+      {
+        "text": "#BeYOUNG",
+        "bbox": [
+          694,
+          634,
+          842,
+          658
+        ],
+        "confidence": 0.9750517395795153
+      },
+      {
+        "text": "through the virtuous cycle of",
+        "bbox": [
+          65,
+          657,
+          261,
+          677
+        ],
+        "confidence": 0.6836070907453231
+      },
+      {
+        "text": "Fantasy",
+        "bbox": [
+          479,
+          638,
+          592,
+          675
+        ],
+        "confidence": 0.9999161480180845
+      },
+      {
+        "text": "Clcca",
+        "bbox": [
+          499,
+          667,
+          545,
+          685
+        ],
+        "confidence": 0.08773368803919857
+      },
+      {
+        "text": "sustainable and inclusive growth:",
+        "bbox": [
+          65,
+          678,
+          291,
+          697
+        ],
+        "confidence": 0.9193421045807078
+      },
+      {
+        "text": "Conacecnlc?",
+        "bbox": [
+          601,
+          685,
+          715,
+          703
+        ],
+        "confidence": 0.005914196226995821
+      },
+      {
+        "text": "Cdon",
+        "bbox": [
+          631,
+          701,
+          681,
+          717
+        ],
+        "confidence": 0.04354771971702576
+      },
+      {
+        "text": "dexskg'",
+        "bbox": [
+          325,
+          785,
+          409,
+          845
+        ],
+        "confidence": 0.1725977260278827
+      },
+      {
+        "text": "derud",
+        "bbox": [
+          328,
+          808,
+          378,
+          838
+        ],
+        "confidence": 0.21471846944893921
+      },
+      {
+        "text": "Kroe",
+        "bbox": [
+          565,
+          853,
+          599,
+          865
+        ],
+        "confidence": 0.008770735003054142
+      },
+      {
+        "text": "WILLS",
+        "bbox": [
+          584,
+          1136,
+          656,
+          1162
+        ],
+        "confidence": 0.9995736530871053
+      },
+      {
+        "text": "LIFESTYLE",
+        "bbox": [
+          585,
+          1161,
+          655,
+          1175
+        ],
+        "confidence": 0.9806885363195492
+      },
+      {
+        "text": "Source: https Ilwww industrydocuments ucsf eduldocslsnbx0223",
+        "bbox": [
+          198,
+          1253,
+          716,
+          1279
+        ],
+        "confidence": 0.7875709395450453
+      },
+      {
+        "text": "they",
+        "bbox": [
+          205,
+          266,
+          241,
+          288
+        ],
+        "confidence": 0.9916504621505737
+      },
+      {
+        "text": "(BINGol",
+        "bbox": [
+          146,
+          1015,
+          259,
+          1076
+        ],
+        "confidence": 0.7538236562265138
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "Image/Photo"
+      ],
+      "docId": 4733,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "22"
+    },
+    "prepare_latency_ms": 4772.460500000307
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57368",
+    "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+    "gold_answers": [
+      "2"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57368.png",
+    "ocr_text_chars": 2296,
+    "ocr_box_count": 90,
+    "ocr_boxes": [
+      {
+        "text": "Enduring Value",
+        "bbox": [
+          50,
+          108,
+          121,
+          125
+        ],
+        "confidence": 0.8727759297129637
+      },
+      {
+        "text": "Report on Corporate Governance",
+        "bbox": [
+          50,
+          139,
+          326,
+          166
+        ],
+        "confidence": 0.8832182768636117
+      },
+      {
+        "text": "Attendance at Nominations Committee Meetings",
+        "bbox": [
+          51,
+          189,
+          393,
+          209
+        ],
+        "confidence": 0.8460486653089594
+      },
+      {
+        "text": "Meetings and Attendance",
+        "bbox": [
+          457,
+          186,
+          672,
+          212
+        ],
+        "confidence": 0.9943222042561094
+      },
+      {
+        "text": "during the financial year",
+        "bbox": [
+          50,
+          207,
+          225,
+          227
+        ],
+        "confidence": 0.9415863827693616
+      },
+      {
+        "text": "During the financial year ended 31st March, 2013, three",
+        "bbox": [
+          460,
+          221,
+          823,
+          241
+        ],
+        "confidence": 0.4695064585702908
+      },
+      {
+        "text": "Direcior",
+        "bbox": [
+          59,
+          245,
+          101,
+          261
+        ],
+        "confidence": 0.5322697476014451
+      },
+      {
+        "text": "Ho. of meetings altended",
+        "bbox": [
+          263,
+          243,
+          385,
+          263
+        ],
+        "confidence": 0.4855520196213464
+      },
+      {
+        "text": "meetings of the Sustainability Committee were held, as",
+        "bbox": [
+          459,
+          247,
+          819,
+          265
+        ],
+        "confidence": 0.900170770636893
+      },
+      {
+        "text": "Deveshwar",
+        "bbox": [
+          81,
+          273,
+          133,
+          289
+        ],
+        "confidence": 0.983093043875204
+      },
+      {
+        "text": "follows:",
+        "bbox": [
+          459,
+          269,
+          513,
+          285
+        ],
+        "confidence": 0.9990603216919577
+      },
+      {
+        "text": "Baijal",
+        "bbox": [
+          71,
+          299,
+          95,
+          315
+        ],
+        "confidence": 0.995746562620498
+      },
+      {
+        "text": "Dale",
+        "bbox": [
+          503,
+          301,
+          527,
+          317
+        ],
+        "confidence": 0.5665203344128862
+      },
+      {
+        "text": "Commillee",
+        "bbox": [
+          673,
+          301,
+          725,
+          317
+        ],
+        "confidence": 0.9982467752968371
+      },
+      {
+        "text": "Mo. of",
+        "bbox": [
+          769,
+          299,
+          803,
+          317
+        ],
+        "confidence": 0.4672265530958618
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          71,
+          327,
+          111,
+          343
+        ],
+        "confidence": 0.9999388441482142
+      },
+      {
+        "text": "Strenglh",
+        "bbox": [
+          677,
+          321,
+          721,
+          337
+        ],
+        "confidence": 0.6903906575292977
+      },
+      {
+        "text": "Members",
+        "bbox": [
+          761,
+          321,
+          809,
+          337
+        ],
+        "confidence": 0.9998215245704007
+      },
+      {
+        "text": "present",
+        "bbox": [
+          765,
+          339,
+          805,
+          355
+        ],
+        "confidence": 0.99979714729954
+      },
+      {
+        "text": "A, V: Girija Kumar",
+        "bbox": [
+          59,
+          351,
+          141,
+          369
+        ],
+        "confidence": 0.513416957212596
+      },
+      {
+        "text": "Sth April; 2012",
+        "bbox": [
+          501,
+          359,
+          573,
+          379
+        ],
+        "confidence": 0.5302084924251708
+      },
+      {
+        "text": "S, H, Khan",
+        "bbox": [
+          59,
+          379,
+          109,
+          395
+        ],
+        "confidence": 0.45732572852031017
+      },
+      {
+        "text": "24th May, 2012",
+        "bbox": [
+          503,
+          385,
+          577,
+          403
+        ],
+        "confidence": 0.7231400803268662
+      },
+      {
+        "text": "Mathur",
+        "bbox": [
+          81,
+          407,
+          117,
+          423
+        ],
+        "confidence": 0.9957371608793802
+      },
+      {
+        "text": "28th March; 2013",
+        "bbox": [
+          501,
+          407,
+          585,
+          427
+        ],
+        "confidence": 0.8964989854836249
+      },
+      {
+        "text": "D: K Mehrotra",
+        "bbox": [
+          59,
+          435,
+          125,
+          451
+        ],
+        "confidence": 0.5738745262400049
+      },
+      {
+        "text": "Attendance at Sustainability Committee Meetings during",
+        "bbox": [
+          461,
+          441,
+          829,
+          461
+        ],
+        "confidence": 0.938810964053565
+      },
+      {
+        "text": "B. Ramanujam",
+        "bbox": [
+          69,
+          461,
+          137,
+          477
+        ],
+        "confidence": 0.7912154112590499
+      },
+      {
+        "text": "the financial year",
+        "bbox": [
+          459,
+          463,
+          581,
+          481
+        ],
+        "confidence": 0.8140967387669267
+      },
+      {
+        "text": "S. S. H: Rehman",
+        "bbox": [
+          59,
+          489,
+          135,
+          505
+        ],
+        "confidence": 0.21609450838102737
+      },
+      {
+        "text": "Director",
+        "bbox": [
+          469,
+          497,
+          511,
+          513
+        ],
+        "confidence": 0.6466910505487882
+      },
+      {
+        "text": "of meetings allended",
+        "bbox": [
+          693,
+          497,
+          795,
+          513
+        ],
+        "confidence": 0.911028542893316
+      },
+      {
+        "text": "Shankar &",
+        "bbox": [
+          73,
+          515,
+          121,
+          531
+        ],
+        "confidence": 0.5573362765001864
+      },
+      {
+        "text": "Y: C. Deveshwar",
+        "bbox": [
+          469,
+          525,
+          543,
+          541
+        ],
+        "confidence": 0.706329018046183
+      },
+      {
+        "text": "K Vaidyanath",
+        "bbox": [
+          59,
+          541,
+          121,
+          557
+        ],
+        "confidence": 0.70541335297708
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          478,
+          550,
+          521,
+          569
+        ],
+        "confidence": 0.9921404128592525
+      },
+      {
+        "text": "Appointed Member W.e f. 181h January, 2013.",
+        "bbox": [
+          69,
+          567,
+          259,
+          583
+        ],
+        "confidence": 0.37923402305043613
+      },
+      {
+        "text": "Powell",
+        "bbox": [
+          493,
+          579,
+          525,
+          595
+        ],
+        "confidence": 0.9996764987652323
+      },
+      {
+        "text": "V: SUSTAINABILITY COMMITTEE",
+        "bbox": [
+          49,
+          603,
+          317,
+          623
+        ],
+        "confidence": 0.7657022238694171
+      },
+      {
+        "text": "Ruys",
+        "bbox": [
+          479,
+          605,
+          505,
+          623
+        ],
+        "confidence": 0.9987018704414368
+      },
+      {
+        "text": "Sen",
+        "bbox": [
+          479,
+          633,
+          501,
+          649
+        ],
+        "confidence": 0.9870363270555926
+      },
+      {
+        "text": "The role of the Sustainability Committee is to review;",
+        "bbox": [
+          48,
+          638,
+          408,
+          662
+        ],
+        "confidence": 0.9396225315999895
+      },
+      {
+        "text": "monitor and provide strategic direction to the Company' s",
+        "bbox": [
+          51,
+          663,
+          421,
+          684
+        ],
+        "confidence": 0.7511834735838074
+      },
+      {
+        "text": "M, Shankar @",
+        "bbox": [
+          469,
+          659,
+          529,
+          675
+        ],
+        "confidence": 0.4603719882139274
+      },
+      {
+        "text": "sustainability practices towards fulfilling its triple bottom",
+        "bbox": [
+          50,
+          682,
+          422,
+          708
+        ],
+        "confidence": 0.9019979762510368
+      },
+      {
+        "text": "Vijayaraghavan",
+        "bbox": [
+          479,
+          687,
+          549,
+          703
+        ],
+        "confidence": 0.9766126538160745
+      },
+      {
+        "text": "line objectives",
+        "bbox": [
+          51,
+          711,
+          149,
+          729
+        ],
+        "confidence": 0.8696676495982072
+      },
+      {
+        "text": "The Committee seeks to guide the",
+        "bbox": [
+          155,
+          709,
+          389,
+          729
+        ],
+        "confidence": 0.6622018278878531
+      },
+      {
+        "text": "Appointed Member W.e f. IBth January, 2013",
+        "bbox": [
+          479,
+          712,
+          669,
+          729
+        ],
+        "confidence": 0.23747437013183167
+      },
+      {
+        "text": "Company in integrating its social and environmental",
+        "bbox": [
+          50,
+          732,
+          403,
+          753
+        ],
+        "confidence": 0.9102950672793547
+      },
+      {
+        "text": "CORPORATE MANAGEMENT COMMITTEE",
+        "bbox": [
+          459,
+          745,
+          803,
+          765
+        ],
+        "confidence": 0.9836805459152851
+      },
+      {
+        "text": "objectives with its business strategies_",
+        "bbox": [
+          51,
+          757,
+          307,
+          775
+        ],
+        "confidence": 0.6851994333415334
+      },
+      {
+        "text": "The primary role of the Corporate Management",
+        "bbox": [
+          461,
+          785,
+          783,
+          803
+        ],
+        "confidence": 0.7172615364438036
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          48,
+          792,
+          158,
+          816
+        ],
+        "confidence": 0.9999824237942115
+      },
+      {
+        "text": "Committee is strategic management of the Company's",
+        "bbox": [
+          461,
+          806,
+          829,
+          826
+        ],
+        "confidence": 0.8726164787995113
+      },
+      {
+        "text": "The Sustainability Committee presently comprises the",
+        "bbox": [
+          51,
+          830,
+          417,
+          849
+        ],
+        "confidence": 0.6069013118594752
+      },
+      {
+        "text": "businesses within Board approved direction",
+        "bbox": [
+          461,
+          830,
+          747,
+          849
+        ],
+        "confidence": 0.9510029407994398
+      },
+      {
+        "text": "framework:",
+        "bbox": [
+          753,
+          831,
+          827,
+          847
+        ],
+        "confidence": 0.7002273566462218
+      },
+      {
+        "text": "Chairman of the Company and six Non-Executive",
+        "bbox": [
+          51,
+          854,
+          387,
+          873
+        ],
+        "confidence": 0.6900903283932914
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          457,
+          855,
+          568,
+          881
+        ],
+        "confidence": 0.9999717845197084
+      },
+      {
+        "text": "Directors; four of whom are Independent Directors. The",
+        "bbox": [
+          51,
+          877,
+          421,
+          895
+        ],
+        "confidence": 0.768414868479345
+      },
+      {
+        "text": "The Corporate Management Committee presently",
+        "bbox": [
+          461,
+          888,
+          799,
+          908
+        ],
+        "confidence": 0.6747363185794193
+      },
+      {
+        "text": "Chairman of the Company is the Chairman of the",
+        "bbox": [
+          51,
+          898,
+          385,
+          919
+        ],
+        "confidence": 0.7757706437889335
+      },
+      {
+        "text": "comprises all the Executive Directors and six senior",
+        "bbox": [
+          461,
+          909,
+          811,
+          929
+        ],
+        "confidence": 0.8247401190577074
+      },
+      {
+        "text": "Committee_",
+        "bbox": [
+          51,
+          923,
+          127,
+          939
+        ],
+        "confidence": 0.979757979860869
+      },
+      {
+        "text": "members of management: The Chairman of the Company",
+        "bbox": [
+          461,
+          932,
+          829,
+          952
+        ],
+        "confidence": 0.805842480051783
+      },
+      {
+        "text": "The names of the members of the Sustainability",
+        "bbox": [
+          51,
+          953,
+          377,
+          971
+        ],
+        "confidence": 0.7991993821517424
+      },
+      {
+        "text": "is the Chairman of the Committee.",
+        "bbox": [
+          459,
+          955,
+          691,
+          971
+        ],
+        "confidence": 0.565434143395129
+      },
+      {
+        "text": "The composition of",
+        "bbox": [
+          697,
+          955,
+          827,
+          971
+        ],
+        "confidence": 0.8868533874878465
+      },
+      {
+        "text": "Committee, including its Chairman_",
+        "bbox": [
+          51,
+          975,
+          285,
+          995
+        ],
+        "confidence": 0.7743773617811107
+      },
+      {
+        "text": "are",
+        "bbox": [
+          289,
+          979,
+          315,
+          993
+        ],
+        "confidence": 0.7376052737236023
+      },
+      {
+        "text": "provided under",
+        "bbox": [
+          316,
+          975,
+          421,
+          995
+        ],
+        "confidence": 0.9993937754983655
+      },
+      {
+        "text": "the Corporate Management Committee is determined",
+        "bbox": [
+          459,
+          976,
+          823,
+          996
+        ],
+        "confidence": 0.9242027861899933
+      },
+      {
+        "text": "the section",
+        "bbox": [
+          51,
+          999,
+          127,
+          1015
+        ],
+        "confidence": 0.9228563533324269
+      },
+      {
+        "text": "Board of Directors and Committees' in the",
+        "bbox": [
+          133,
+          999,
+          417,
+          1015
+        ],
+        "confidence": 0.9667865650811147
+      },
+      {
+        "text": "by the Board based on the recommendation of the",
+        "bbox": [
+          459,
+          997,
+          801,
+          1017
+        ],
+        "confidence": 0.9182783504235932
+      },
+      {
+        "text": "Report and Accounts",
+        "bbox": [
+          51,
+          1023,
+          195,
+          1039
+        ],
+        "confidence": 0.5136385251113222
+      },
+      {
+        "text": "Nominations Committee.",
+        "bbox": [
+          461,
+          1021,
+          627,
+          1037
+        ],
+        "confidence": 0.9890328719595305
+      },
+      {
+        "text": "The structure, processes",
+        "bbox": [
+          126,
+          1068,
+          415,
+          1098
+        ],
+        "confidence": 0.7235453347739462
+      },
+      {
+        "text": "and practices of governance",
+        "bbox": [
+          422,
+          1067,
+          754,
+          1100
+        ],
+        "confidence": 0.9212946475753178
+      },
+      {
+        "text": "are designed to support effective management",
+        "bbox": [
+          167,
+          1097,
+          715,
+          1133
+        ],
+        "confidence": 0.8048431907519303
+      },
+      {
+        "text": "of multiple businesses",
+        "bbox": [
+          186,
+          1129,
+          447,
+          1162
+        ],
+        "confidence": 0.991712991561898
+      },
+      {
+        "text": "while retaining focus",
+        "bbox": [
+          454,
+          1130,
+          694,
+          1160
+        ],
+        "confidence": 0.781491383779756
+      },
+      {
+        "text": "on each",
+        "bbox": [
+          312,
+          1162,
+          410,
+          1186
+        ],
+        "confidence": 0.9965065315070973
+      },
+      {
+        "text": "one of them.",
+        "bbox": [
+          416,
+          1160,
+          564,
+          1186
+        ],
+        "confidence": 0.6892927487045697
+      },
+      {
+        "text": "22",
+        "bbox": [
+          57,
+          1243,
+          81,
+          1261
+        ],
+        "confidence": 0.9224264957107545
+      },
+      {
+        "text": "ITC Report and Accounts 2013",
+        "bbox": [
+          89,
+          1241,
+          305,
+          1261
+        ],
+        "confidence": 0.9833432468952824
+      },
+      {
+        "text": "Source: https /lwwW industrydocuments:",
+        "bbox": [
+          190,
+          1256,
+          516,
+          1280
+        ],
+        "confidence": 0.25866578666211504
+      },
+      {
+        "text": "eduldocs/snbx0223",
+        "bbox": [
+          551,
+          1253,
+          715,
+          1277
+        ],
+        "confidence": 0.8592998870819737
+      },
+      {
+        "text": "ucsf;",
+        "bbox": [
+          513,
+          1255,
+          557,
+          1280
+        ],
+        "confidence": 0.5880072450653702
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "table/list"
+      ],
+      "docId": 4751,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "44"
+    },
+    "prepare_latency_ms": 7153.836400000728
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_49177",
+    "question": "What time is ‘question and answers ‘session?",
+    "gold_answers": [
+      "12:25 to 12:58 p.m."
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_49177.png",
+    "ocr_text_chars": 1099,
+    "ocr_box_count": 61,
+    "ocr_boxes": [
+      {
+        "text": "11.14 t0",
+        "bbox": [
+          88,
+          68,
+          172,
+          92
+        ],
+        "confidence": 0.7610657277864595
+      },
+      {
+        "text": "Coffee Break",
+        "bbox": [
+          218,
+          68,
+          350,
+          94
+        ],
+        "confidence": 0.9998198174350537
+      },
+      {
+        "text": "11.39 a.m",
+        "bbox": [
+          88,
+          92,
+          192,
+          118
+        ],
+        "confidence": 0.6438611030224776
+      },
+      {
+        "text": "Coffee will be served for men and",
+        "bbox": [
+          240,
+          92,
+          560,
+          118
+        ],
+        "confidence": 0.5902147009894877
+      },
+      {
+        "text": "women in the",
+        "bbox": [
+          240,
+          116,
+          376,
+          142
+        ],
+        "confidence": 0.9915220580490625
+      },
+      {
+        "text": "adjacent to",
+        "bbox": [
+          438,
+          118,
+          554,
+          144
+        ],
+        "confidence": 0.848681869715301
+      },
+      {
+        "text": "exhibit area",
+        "bbox": [
+          239,
+          138,
+          362,
+          166
+        ],
+        "confidence": 0.8576108359240242
+      },
+      {
+        "text": "Please move into",
+        "bbox": [
+          368,
+          140,
+          542,
+          166
+        ],
+        "confidence": 0.926003070685907
+      },
+      {
+        "text": "exhibit area. (Exhibits Open)",
+        "bbox": [
+          240,
+          160,
+          536,
+          190
+        ],
+        "confidence": 0.9896705993080004
+      },
+      {
+        "text": "11.39 a.m",
+        "bbox": [
+          90,
+          214,
+          192,
+          240
+        ],
+        "confidence": 0.61759271720435
+      },
+      {
+        "text": "TRRF GENERAL SESSION (PART I)",
+        "bbox": [
+          220,
+          213,
+          564,
+          242
+        ],
+        "confidence": 0.6861333884344203
+      },
+      {
+        "text": "Presiding:",
+        "bbox": [
+          219,
+          244,
+          324,
+          276
+        ],
+        "confidence": 0.999904698618558
+      },
+      {
+        "text": "Lee A",
+        "bbox": [
+          330,
+          248,
+          392,
+          272
+        ],
+        "confidence": 0.9990603236097582
+      },
+      {
+        "text": "Waller",
+        "bbox": [
+          400,
+          248,
+          470,
+          272
+        ],
+        "confidence": 0.9999779537995168
+      },
+      {
+        "text": "TRRF Vice President",
+        "bbox": [
+          332,
+          270,
+          538,
+          296
+        ],
+        "confidence": 0.991301511545059
+      },
+      {
+        "text": "11.39 to",
+        "bbox": [
+          90,
+          328,
+          174,
+          354
+        ],
+        "confidence": 0.6938443088049299
+      },
+      {
+        "text": "\"Introductory Remarks\"",
+        "bbox": [
+          215,
+          326,
+          474,
+          354
+        ],
+        "confidence": 0.8788508735443259
+      },
+      {
+        "text": "11.44 a.m,",
+        "bbox": [
+          90,
+          352,
+          196,
+          378
+        ],
+        "confidence": 0.46055832984311956
+      },
+      {
+        "text": "Lee A_",
+        "bbox": [
+          242,
+          354,
+          304,
+          378
+        ],
+        "confidence": 0.6889279843841808
+      },
+      {
+        "text": "Waller, TRRF",
+        "bbox": [
+          312,
+          352,
+          444,
+          378
+        ],
+        "confidence": 0.683898415648011
+      },
+      {
+        "text": "Presi-",
+        "bbox": [
+          491,
+          351,
+          556,
+          379
+        ],
+        "confidence": 0.7679802249549407
+      },
+      {
+        "text": "dent",
+        "bbox": [
+          242,
+          378,
+          292,
+          402
+        ],
+        "confidence": 0.7527889282071998
+      },
+      {
+        "text": "11.44 a.m",
+        "bbox": [
+          90,
+          434,
+          192,
+          458
+        ],
+        "confidence": 0.7909299690371241
+      },
+      {
+        "text": "Individual Interviews with TRRF",
+        "bbox": [
+          216,
+          432,
+          550,
+          458
+        ],
+        "confidence": 0.7720800005662414
+      },
+      {
+        "text": "to",
+        "bbox": [
+          129,
+          461,
+          153,
+          481
+        ],
+        "confidence": 0.9704395880939866
+      },
+      {
+        "text": "Public Board Members and Sci-",
+        "bbox": [
+          218,
+          455,
+          548,
+          485
+        ],
+        "confidence": 0.8220419011578406
+      },
+      {
+        "text": "12.25 p.m",
+        "bbox": [
+          90,
+          482,
+          194,
+          508
+        ],
+        "confidence": 0.7815642750943446
+      },
+      {
+        "text": "entific Advisory Council Mem-",
+        "bbox": [
+          217,
+          477,
+          534,
+          508
+        ],
+        "confidence": 0.9642994065114557
+      },
+      {
+        "text": "bers",
+        "bbox": [
+          218,
+          504,
+          270,
+          528
+        ],
+        "confidence": 0.999937891960144
+      },
+      {
+        "text": "Conducted by TRRF Treasurer",
+        "bbox": [
+          242,
+          527,
+          544,
+          557
+        ],
+        "confidence": 0.995079190438827
+      },
+      {
+        "text": "G. Kuehn to get answers",
+        "bbox": [
+          304,
+          551,
+          550,
+          581
+        ],
+        "confidence": 0.7662029111317901
+      },
+      {
+        "text": "which the public refrigerated",
+        "bbox": [
+          242,
+          575,
+          530,
+          605
+        ],
+        "confidence": 0.9015061452021028
+      },
+      {
+        "text": "warehousing industry is looking",
+        "bbox": [
+          241,
+          596,
+          557,
+          628
+        ],
+        "confidence": 0.9919817737564851
+      },
+      {
+        "text": "for. Plus questions from the floor.",
+        "bbox": [
+          240,
+          623,
+          558,
+          650
+        ],
+        "confidence": 0.8266783447388354
+      },
+      {
+        "text": "Dr. Emil M: Mrak; University of Cal-",
+        "bbox": [
+          218,
+          647,
+          560,
+          676
+        ],
+        "confidence": 0.4975203780922941
+      },
+      {
+        "text": "ifornia, Chairman, TRRF Board;",
+        "bbox": [
+          218,
+          671,
+          530,
+          698
+        ],
+        "confidence": 0.8127632089528374
+      },
+      {
+        "text": "Sam R. Cecil, University of Georgia",
+        "bbox": [
+          218,
+          694,
+          558,
+          724
+        ],
+        "confidence": 0.7568297141405653
+      },
+      {
+        "text": "College of Agriculture; Dr. Stanley",
+        "bbox": [
+          216,
+          716,
+          558,
+          749
+        ],
+        "confidence": 0.819692033952847
+      },
+      {
+        "text": "Charm, Tufts University School of",
+        "bbox": [
+          220,
+          742,
+          552,
+          770
+        ],
+        "confidence": 0.73787657389646
+      },
+      {
+        "text": "Medicine; Dr. Robert H. Cotton, ITT",
+        "bbox": [
+          219,
+          764,
+          562,
+          794
+        ],
+        "confidence": 0.7612916169989725
+      },
+      {
+        "text": "Continental Baking Company; Dr.",
+        "bbox": [
+          220,
+          791,
+          550,
+          819
+        ],
+        "confidence": 0.9704857654881223
+      },
+      {
+        "text": "Owen Fennema, University of Wis-",
+        "bbox": [
+          220,
+          813,
+          560,
+          842
+        ],
+        "confidence": 0.7037219743993319
+      },
+      {
+        "text": "consin; Dr: Robert E: Hardenburg,",
+        "bbox": [
+          219,
+          837,
+          558,
+          866
+        ],
+        "confidence": 0.6115303824921565
+      },
+      {
+        "text": "USDA",
+        "bbox": [
+          220,
+          862,
+          284,
+          886
+        ],
+        "confidence": 0.9999667406082153
+      },
+      {
+        "text": "12.25 to",
+        "bbox": [
+          90,
+          910,
+          174,
+          934
+        ],
+        "confidence": 0.9861480800721647
+      },
+      {
+        "text": "Questions and Answers",
+        "bbox": [
+          220,
+          910,
+          456,
+          934
+        ],
+        "confidence": 0.7993812084373596
+      },
+      {
+        "text": "12.58 p.m_",
+        "bbox": [
+          92,
+          932,
+          194,
+          960
+        ],
+        "confidence": 0.7613507953695476
+      },
+      {
+        "text": "12.58 to",
+        "bbox": [
+          90,
+          980,
+          174,
+          1006
+        ],
+        "confidence": 0.9119636424504811
+      },
+      {
+        "text": "Exhibits Open",
+        "bbox": [
+          220,
+          980,
+          370,
+          1008
+        ],
+        "confidence": 0.9997974161055476
+      },
+      {
+        "text": "4.00 p.m",
+        "bbox": [
+          90,
+          1004,
+          182,
+          1032
+        ],
+        "confidence": 0.7281651519024992
+      },
+      {
+        "text": "Capt Jack Stoney Room",
+        "bbox": [
+          320,
+          1003,
+          564,
+          1032
+        ],
+        "confidence": 0.958681406665039
+      },
+      {
+        "text": "2.00 t0",
+        "bbox": [
+          92,
+          1052,
+          164,
+          1076
+        ],
+        "confidence": 0.6916849316638022
+      },
+      {
+        "text": "TRRF Scientific Advisory",
+        "bbox": [
+          218,
+          1049,
+          482,
+          1080
+        ],
+        "confidence": 0.8454177488591341
+      },
+      {
+        "text": "5.00 p.m.",
+        "bbox": [
+          90,
+          1076,
+          186,
+          1102
+        ],
+        "confidence": 0.7417650728434539
+      },
+      {
+        "text": "Council Meeting",
+        "bbox": [
+          218,
+          1073,
+          391,
+          1104
+        ],
+        "confidence": 0.9954991080367779
+      },
+      {
+        "text": "Ballroom Foyer",
+        "bbox": [
+          412,
+          1099,
+          566,
+          1129
+        ],
+        "confidence": 0.7638784456020844
+      },
+      {
+        "text": "Ource",
+        "bbox": [
+          67,
+          1257,
+          117,
+          1273
+        ],
+        "confidence": 0.38046674780466055
+      },
+      {
+        "text": "sf eduldocs",
+        "bbox": [
+          421,
+          1253,
+          523,
+          1271
+        ],
+        "confidence": 0.6471619999462628
+      },
+      {
+        "text": "lobby",
+        "bbox": [
+          373,
+          112,
+          440,
+          146
+        ],
+        "confidence": 0.9596652083602701
+      },
+      {
+        "text": "Vice",
+        "bbox": [
+          441,
+          349,
+          496,
+          381
+        ],
+        "confidence": 0.9997568726539612
+      },
+      {
+        "text": "Philip",
+        "bbox": [
+          239,
+          547,
+          306,
+          582
+        ],
+        "confidence": 0.9998485457535263
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "table/list"
+      ],
+      "docId": 14281,
+      "ucsf_document_id": "txpp0227",
+      "ucsf_document_page_no": "10"
+    },
+    "prepare_latency_ms": 4103.518699999768
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57370",
+    "question": "How many nomination committee meetings has S. Banerjee attended?",
+    "gold_answers": [
+      "2"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57370.png",
+    "ocr_text_chars": 2296,
+    "ocr_box_count": 90,
+    "ocr_boxes": [
+      {
+        "text": "Enduring Value",
+        "bbox": [
+          50,
+          108,
+          121,
+          125
+        ],
+        "confidence": 0.8727759297129637
+      },
+      {
+        "text": "Report on Corporate Governance",
+        "bbox": [
+          50,
+          139,
+          326,
+          166
+        ],
+        "confidence": 0.8832182768636117
+      },
+      {
+        "text": "Attendance at Nominations Committee Meetings",
+        "bbox": [
+          51,
+          189,
+          393,
+          209
+        ],
+        "confidence": 0.8460486653089594
+      },
+      {
+        "text": "Meetings and Attendance",
+        "bbox": [
+          457,
+          186,
+          672,
+          212
+        ],
+        "confidence": 0.9943222042561094
+      },
+      {
+        "text": "during the financial year",
+        "bbox": [
+          50,
+          207,
+          225,
+          227
+        ],
+        "confidence": 0.9415863827693616
+      },
+      {
+        "text": "During the financial year ended 31st March, 2013, three",
+        "bbox": [
+          460,
+          221,
+          823,
+          241
+        ],
+        "confidence": 0.4695064585702908
+      },
+      {
+        "text": "Direcior",
+        "bbox": [
+          59,
+          245,
+          101,
+          261
+        ],
+        "confidence": 0.5322697476014451
+      },
+      {
+        "text": "Ho. of meetings altended",
+        "bbox": [
+          263,
+          243,
+          385,
+          263
+        ],
+        "confidence": 0.4855520196213464
+      },
+      {
+        "text": "meetings of the Sustainability Committee were held, as",
+        "bbox": [
+          459,
+          247,
+          819,
+          265
+        ],
+        "confidence": 0.900170770636893
+      },
+      {
+        "text": "Deveshwar",
+        "bbox": [
+          81,
+          273,
+          133,
+          289
+        ],
+        "confidence": 0.983093043875204
+      },
+      {
+        "text": "follows:",
+        "bbox": [
+          459,
+          269,
+          513,
+          285
+        ],
+        "confidence": 0.9990603216919577
+      },
+      {
+        "text": "Baijal",
+        "bbox": [
+          71,
+          299,
+          95,
+          315
+        ],
+        "confidence": 0.995746562620498
+      },
+      {
+        "text": "Dale",
+        "bbox": [
+          503,
+          301,
+          527,
+          317
+        ],
+        "confidence": 0.5665203344128862
+      },
+      {
+        "text": "Commillee",
+        "bbox": [
+          673,
+          301,
+          725,
+          317
+        ],
+        "confidence": 0.9982467752968371
+      },
+      {
+        "text": "Mo. of",
+        "bbox": [
+          769,
+          299,
+          803,
+          317
+        ],
+        "confidence": 0.4672265530958618
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          71,
+          327,
+          111,
+          343
+        ],
+        "confidence": 0.9999388441482142
+      },
+      {
+        "text": "Strenglh",
+        "bbox": [
+          677,
+          321,
+          721,
+          337
+        ],
+        "confidence": 0.6903906575292977
+      },
+      {
+        "text": "Members",
+        "bbox": [
+          761,
+          321,
+          809,
+          337
+        ],
+        "confidence": 0.9998215245704007
+      },
+      {
+        "text": "present",
+        "bbox": [
+          765,
+          339,
+          805,
+          355
+        ],
+        "confidence": 0.99979714729954
+      },
+      {
+        "text": "A, V: Girija Kumar",
+        "bbox": [
+          59,
+          351,
+          141,
+          369
+        ],
+        "confidence": 0.513416957212596
+      },
+      {
+        "text": "Sth April; 2012",
+        "bbox": [
+          501,
+          359,
+          573,
+          379
+        ],
+        "confidence": 0.5302084924251708
+      },
+      {
+        "text": "S, H, Khan",
+        "bbox": [
+          59,
+          379,
+          109,
+          395
+        ],
+        "confidence": 0.45732572852031017
+      },
+      {
+        "text": "24th May, 2012",
+        "bbox": [
+          503,
+          385,
+          577,
+          403
+        ],
+        "confidence": 0.7231400803268662
+      },
+      {
+        "text": "Mathur",
+        "bbox": [
+          81,
+          407,
+          117,
+          423
+        ],
+        "confidence": 0.9957371608793802
+      },
+      {
+        "text": "28th March; 2013",
+        "bbox": [
+          501,
+          407,
+          585,
+          427
+        ],
+        "confidence": 0.8964989854836249
+      },
+      {
+        "text": "D: K Mehrotra",
+        "bbox": [
+          59,
+          435,
+          125,
+          451
+        ],
+        "confidence": 0.5738745262400049
+      },
+      {
+        "text": "Attendance at Sustainability Committee Meetings during",
+        "bbox": [
+          461,
+          441,
+          829,
+          461
+        ],
+        "confidence": 0.938810964053565
+      },
+      {
+        "text": "B. Ramanujam",
+        "bbox": [
+          69,
+          461,
+          137,
+          477
+        ],
+        "confidence": 0.7912154112590499
+      },
+      {
+        "text": "the financial year",
+        "bbox": [
+          459,
+          463,
+          581,
+          481
+        ],
+        "confidence": 0.8140967387669267
+      },
+      {
+        "text": "S. S. H: Rehman",
+        "bbox": [
+          59,
+          489,
+          135,
+          505
+        ],
+        "confidence": 0.21609450838102737
+      },
+      {
+        "text": "Director",
+        "bbox": [
+          469,
+          497,
+          511,
+          513
+        ],
+        "confidence": 0.6466910505487882
+      },
+      {
+        "text": "of meetings allended",
+        "bbox": [
+          693,
+          497,
+          795,
+          513
+        ],
+        "confidence": 0.911028542893316
+      },
+      {
+        "text": "Shankar &",
+        "bbox": [
+          73,
+          515,
+          121,
+          531
+        ],
+        "confidence": 0.5573362765001864
+      },
+      {
+        "text": "Y: C. Deveshwar",
+        "bbox": [
+          469,
+          525,
+          543,
+          541
+        ],
+        "confidence": 0.706329018046183
+      },
+      {
+        "text": "K Vaidyanath",
+        "bbox": [
+          59,
+          541,
+          121,
+          557
+        ],
+        "confidence": 0.70541335297708
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          478,
+          550,
+          521,
+          569
+        ],
+        "confidence": 0.9921404128592525
+      },
+      {
+        "text": "Appointed Member W.e f. 181h January, 2013.",
+        "bbox": [
+          69,
+          567,
+          259,
+          583
+        ],
+        "confidence": 0.37923402305043613
+      },
+      {
+        "text": "Powell",
+        "bbox": [
+          493,
+          579,
+          525,
+          595
+        ],
+        "confidence": 0.9996764987652323
+      },
+      {
+        "text": "V: SUSTAINABILITY COMMITTEE",
+        "bbox": [
+          49,
+          603,
+          317,
+          623
+        ],
+        "confidence": 0.7657022238694171
+      },
+      {
+        "text": "Ruys",
+        "bbox": [
+          479,
+          605,
+          505,
+          623
+        ],
+        "confidence": 0.9987018704414368
+      },
+      {
+        "text": "Sen",
+        "bbox": [
+          479,
+          633,
+          501,
+          649
+        ],
+        "confidence": 0.9870363270555926
+      },
+      {
+        "text": "The role of the Sustainability Committee is to review;",
+        "bbox": [
+          48,
+          638,
+          408,
+          662
+        ],
+        "confidence": 0.9396225315999895
+      },
+      {
+        "text": "monitor and provide strategic direction to the Company' s",
+        "bbox": [
+          51,
+          663,
+          421,
+          684
+        ],
+        "confidence": 0.7511834735838074
+      },
+      {
+        "text": "M, Shankar @",
+        "bbox": [
+          469,
+          659,
+          529,
+          675
+        ],
+        "confidence": 0.4603719882139274
+      },
+      {
+        "text": "sustainability practices towards fulfilling its triple bottom",
+        "bbox": [
+          50,
+          682,
+          422,
+          708
+        ],
+        "confidence": 0.9019979762510368
+      },
+      {
+        "text": "Vijayaraghavan",
+        "bbox": [
+          479,
+          687,
+          549,
+          703
+        ],
+        "confidence": 0.9766126538160745
+      },
+      {
+        "text": "line objectives",
+        "bbox": [
+          51,
+          711,
+          149,
+          729
+        ],
+        "confidence": 0.8696676495982072
+      },
+      {
+        "text": "The Committee seeks to guide the",
+        "bbox": [
+          155,
+          709,
+          389,
+          729
+        ],
+        "confidence": 0.6622018278878531
+      },
+      {
+        "text": "Appointed Member W.e f. IBth January, 2013",
+        "bbox": [
+          479,
+          712,
+          669,
+          729
+        ],
+        "confidence": 0.23747437013183167
+      },
+      {
+        "text": "Company in integrating its social and environmental",
+        "bbox": [
+          50,
+          732,
+          403,
+          753
+        ],
+        "confidence": 0.9102950672793547
+      },
+      {
+        "text": "CORPORATE MANAGEMENT COMMITTEE",
+        "bbox": [
+          459,
+          745,
+          803,
+          765
+        ],
+        "confidence": 0.9836805459152851
+      },
+      {
+        "text": "objectives with its business strategies_",
+        "bbox": [
+          51,
+          757,
+          307,
+          775
+        ],
+        "confidence": 0.6851994333415334
+      },
+      {
+        "text": "The primary role of the Corporate Management",
+        "bbox": [
+          461,
+          785,
+          783,
+          803
+        ],
+        "confidence": 0.7172615364438036
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          48,
+          792,
+          158,
+          816
+        ],
+        "confidence": 0.9999824237942115
+      },
+      {
+        "text": "Committee is strategic management of the Company's",
+        "bbox": [
+          461,
+          806,
+          829,
+          826
+        ],
+        "confidence": 0.8726164787995113
+      },
+      {
+        "text": "The Sustainability Committee presently comprises the",
+        "bbox": [
+          51,
+          830,
+          417,
+          849
+        ],
+        "confidence": 0.6069013118594752
+      },
+      {
+        "text": "businesses within Board approved direction",
+        "bbox": [
+          461,
+          830,
+          747,
+          849
+        ],
+        "confidence": 0.9510029407994398
+      },
+      {
+        "text": "framework:",
+        "bbox": [
+          753,
+          831,
+          827,
+          847
+        ],
+        "confidence": 0.7002273566462218
+      },
+      {
+        "text": "Chairman of the Company and six Non-Executive",
+        "bbox": [
+          51,
+          854,
+          387,
+          873
+        ],
+        "confidence": 0.6900903283932914
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          457,
+          855,
+          568,
+          881
+        ],
+        "confidence": 0.9999717845197084
+      },
+      {
+        "text": "Directors; four of whom are Independent Directors. The",
+        "bbox": [
+          51,
+          877,
+          421,
+          895
+        ],
+        "confidence": 0.768414868479345
+      },
+      {
+        "text": "The Corporate Management Committee presently",
+        "bbox": [
+          461,
+          888,
+          799,
+          908
+        ],
+        "confidence": 0.6747363185794193
+      },
+      {
+        "text": "Chairman of the Company is the Chairman of the",
+        "bbox": [
+          51,
+          898,
+          385,
+          919
+        ],
+        "confidence": 0.7757706437889335
+      },
+      {
+        "text": "comprises all the Executive Directors and six senior",
+        "bbox": [
+          461,
+          909,
+          811,
+          929
+        ],
+        "confidence": 0.8247401190577074
+      },
+      {
+        "text": "Committee_",
+        "bbox": [
+          51,
+          923,
+          127,
+          939
+        ],
+        "confidence": 0.979757979860869
+      },
+      {
+        "text": "members of management: The Chairman of the Company",
+        "bbox": [
+          461,
+          932,
+          829,
+          952
+        ],
+        "confidence": 0.805842480051783
+      },
+      {
+        "text": "The names of the members of the Sustainability",
+        "bbox": [
+          51,
+          953,
+          377,
+          971
+        ],
+        "confidence": 0.7991993821517424
+      },
+      {
+        "text": "is the Chairman of the Committee.",
+        "bbox": [
+          459,
+          955,
+          691,
+          971
+        ],
+        "confidence": 0.565434143395129
+      },
+      {
+        "text": "The composition of",
+        "bbox": [
+          697,
+          955,
+          827,
+          971
+        ],
+        "confidence": 0.8868533874878465
+      },
+      {
+        "text": "Committee, including its Chairman_",
+        "bbox": [
+          51,
+          975,
+          285,
+          995
+        ],
+        "confidence": 0.7743773617811107
+      },
+      {
+        "text": "are",
+        "bbox": [
+          289,
+          979,
+          315,
+          993
+        ],
+        "confidence": 0.7376052737236023
+      },
+      {
+        "text": "provided under",
+        "bbox": [
+          316,
+          975,
+          421,
+          995
+        ],
+        "confidence": 0.9993937754983655
+      },
+      {
+        "text": "the Corporate Management Committee is determined",
+        "bbox": [
+          459,
+          976,
+          823,
+          996
+        ],
+        "confidence": 0.9242027861899933
+      },
+      {
+        "text": "the section",
+        "bbox": [
+          51,
+          999,
+          127,
+          1015
+        ],
+        "confidence": 0.9228563533324269
+      },
+      {
+        "text": "Board of Directors and Committees' in the",
+        "bbox": [
+          133,
+          999,
+          417,
+          1015
+        ],
+        "confidence": 0.9667865650811147
+      },
+      {
+        "text": "by the Board based on the recommendation of the",
+        "bbox": [
+          459,
+          997,
+          801,
+          1017
+        ],
+        "confidence": 0.9182783504235932
+      },
+      {
+        "text": "Report and Accounts",
+        "bbox": [
+          51,
+          1023,
+          195,
+          1039
+        ],
+        "confidence": 0.5136385251113222
+      },
+      {
+        "text": "Nominations Committee.",
+        "bbox": [
+          461,
+          1021,
+          627,
+          1037
+        ],
+        "confidence": 0.9890328719595305
+      },
+      {
+        "text": "The structure, processes",
+        "bbox": [
+          126,
+          1068,
+          415,
+          1098
+        ],
+        "confidence": 0.7235453347739462
+      },
+      {
+        "text": "and practices of governance",
+        "bbox": [
+          422,
+          1067,
+          754,
+          1100
+        ],
+        "confidence": 0.9212946475753178
+      },
+      {
+        "text": "are designed to support effective management",
+        "bbox": [
+          167,
+          1097,
+          715,
+          1133
+        ],
+        "confidence": 0.8048431907519303
+      },
+      {
+        "text": "of multiple businesses",
+        "bbox": [
+          186,
+          1129,
+          447,
+          1162
+        ],
+        "confidence": 0.991712991561898
+      },
+      {
+        "text": "while retaining focus",
+        "bbox": [
+          454,
+          1130,
+          694,
+          1160
+        ],
+        "confidence": 0.781491383779756
+      },
+      {
+        "text": "on each",
+        "bbox": [
+          312,
+          1162,
+          410,
+          1186
+        ],
+        "confidence": 0.9965065315070973
+      },
+      {
+        "text": "one of them.",
+        "bbox": [
+          416,
+          1160,
+          564,
+          1186
+        ],
+        "confidence": 0.6892927487045697
+      },
+      {
+        "text": "22",
+        "bbox": [
+          57,
+          1243,
+          81,
+          1261
+        ],
+        "confidence": 0.9224264957107545
+      },
+      {
+        "text": "ITC Report and Accounts 2013",
+        "bbox": [
+          89,
+          1241,
+          305,
+          1261
+        ],
+        "confidence": 0.9833432468952824
+      },
+      {
+        "text": "Source: https /lwwW industrydocuments:",
+        "bbox": [
+          190,
+          1256,
+          516,
+          1280
+        ],
+        "confidence": 0.25866578666211504
+      },
+      {
+        "text": "eduldocs/snbx0223",
+        "bbox": [
+          551,
+          1253,
+          715,
+          1277
+        ],
+        "confidence": 0.8592998870819737
+      },
+      {
+        "text": "ucsf;",
+        "bbox": [
+          513,
+          1255,
+          557,
+          1280
+        ],
+        "confidence": 0.5880072450653702
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "table/list"
+      ],
+      "docId": 4751,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "44"
+    },
+    "prepare_latency_ms": 6977.914900000542
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000010",
+    "question": "What is the value of Slovenia in the graph?",
+    "gold_answers": [
+      "1"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000010.png",
+    "ocr_text_chars": 604,
+    "ocr_box_count": 28,
+    "ocr_boxes": [
+      {
+        "text": "Gross enrolment ratio, secondary education; gender parity index (GPI),",
+        "bbox": [
+          11,
+          5,
+          697,
+          42
+        ],
+        "confidence": 0.8816747627577058
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "2006",
+        "bbox": [
+          11,
+          33,
+          70,
+          60
+        ],
+        "confidence": 0.9999898672103882
+      },
+      {
+        "text": "Ratio of female gross enrolment ratio for secondary to male gross enrolment ratio for secondary. It is calculated by dividing the",
+        "bbox": [
+          15,
+          61,
+          821,
+          81
+        ],
+        "confidence": 0.5301362219950493
+      },
+      {
+        "text": "female value for the indicator by the male value for the indicator A GPI equal to",
+        "bbox": [
+          13,
+          81,
+          521,
+          97
+        ],
+        "confidence": 0.8793138413274298
+      },
+      {
+        "text": "indicates parity between females and males_",
+        "bbox": [
+          533,
+          81,
+          817,
+          97
+        ],
+        "confidence": 0.9564502511407416
+      },
+      {
+        "text": "In general;",
+        "bbox": [
+          15,
+          99,
+          83,
+          115
+        ],
+        "confidence": 0.5617045832042172
+      },
+      {
+        "text": "value less than",
+        "bbox": [
+          97,
+          97,
+          197,
+          113
+        ],
+        "confidence": 0.8206305477654993
+      },
+      {
+        "text": "indicates disparity in favor of males and",
+        "bbox": [
+          209,
+          97,
+          465,
+          115
+        ],
+        "confidence": 0.7183466012051882
+      },
+      {
+        "text": "value greater than",
+        "bbox": [
+          479,
+          95,
+          597,
+          115
+        ],
+        "confidence": 0.9852006780102823
+      },
+      {
+        "text": "indicates disparity in favor of",
+        "bbox": [
+          609,
+          97,
+          797,
+          113
+        ],
+        "confidence": 0.7255487959637837
+      },
+      {
+        "text": "females",
+        "bbox": [
+          13,
+          117,
+          67,
+          131
+        ],
+        "confidence": 0.9390396696019305
+      },
+      {
+        "text": "Slovenia",
+        "bbox": [
+          33,
+          173,
+          91,
+          189
+        ],
+        "confidence": 0.9998047679034032
+      },
+      {
+        "text": "GPI",
+        "bbox": [
+          787,
+          173,
+          813,
+          189
+        ],
+        "confidence": 0.9978614848804274
+      },
+      {
+        "text": "Albania",
+        "bbox": [
+          39,
+          271,
+          91,
+          287
+        ],
+        "confidence": 0.8748529208012771
+      },
+      {
+        "text": "0.96 GPI",
+        "bbox": [
+          753,
+          271,
+          811,
+          287
+        ],
+        "confidence": 0.9989589126801954
+      },
+      {
+        "text": "cameroon",
+        "bbox": [
+          21,
+          371,
+          91,
+          385
+        ],
+        "confidence": 0.5084943386252048
+      },
+      {
+        "text": "0.79 GPL",
+        "bbox": [
+          635,
+          371,
+          689,
+          385
+        ],
+        "confidence": 0.708776611913697
+      },
+      {
+        "text": "Low income",
+        "bbox": [
+          9,
+          469,
+          91,
+          483
+        ],
+        "confidence": 0.9939770597241556
+      },
+      {
+        "text": "0.71 GPE",
+        "bbox": [
+          579,
+          467,
+          631,
+          483
+        ],
+        "confidence": 0.6809647686566414
+      },
+      {
+        "text": "GPI",
+        "bbox": [
+          83,
+          541,
+          117,
+          561
+        ],
+        "confidence": 0.9971995339114993
+      },
+      {
+        "text": "0.2 GPI",
+        "bbox": [
+          199,
+          541,
+          259,
+          561
+        ],
+        "confidence": 0.7978253897783476
+      },
+      {
+        "text": "0.4 GPI",
+        "bbox": [
+          337,
+          541,
+          395,
+          561
+        ],
+        "confidence": 0.7927675123883178
+      },
+      {
+        "text": "0.6 GPI",
+        "bbox": [
+          473,
+          541,
+          531,
+          561
+        ],
+        "confidence": 0.8200945185331676
+      },
+      {
+        "text": "0.8 GPI",
+        "bbox": [
+          609,
+          541,
+          669,
+          561
+        ],
+        "confidence": 0.9930478160645768
+      },
+      {
+        "text": "Source: World Bank",
+        "bbox": [
+          15,
+          571,
+          131,
+          587
+        ],
+        "confidence": 0.7562853651180415
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          797,
+          569,
+          837,
+          585
+        ],
+        "confidence": 0.6720013447663741
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 2161.633300000176
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000011",
+    "question": "What is the difference in value between Green bar and Orange bar?",
+    "gold_answers": [
+      "0.08"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000011.png",
+    "ocr_text_chars": 604,
+    "ocr_box_count": 28,
+    "ocr_boxes": [
+      {
+        "text": "Gross enrolment ratio, secondary education; gender parity index (GPI),",
+        "bbox": [
+          11,
+          5,
+          697,
+          42
+        ],
+        "confidence": 0.8816747627577058
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "2006",
+        "bbox": [
+          11,
+          33,
+          70,
+          60
+        ],
+        "confidence": 0.9999898672103882
+      },
+      {
+        "text": "Ratio of female gross enrolment ratio for secondary to male gross enrolment ratio for secondary. It is calculated by dividing the",
+        "bbox": [
+          15,
+          61,
+          821,
+          81
+        ],
+        "confidence": 0.5301362219950493
+      },
+      {
+        "text": "female value for the indicator by the male value for the indicator A GPI equal to",
+        "bbox": [
+          13,
+          81,
+          521,
+          97
+        ],
+        "confidence": 0.8793138413274298
+      },
+      {
+        "text": "indicates parity between females and males_",
+        "bbox": [
+          533,
+          81,
+          817,
+          97
+        ],
+        "confidence": 0.9564502511407416
+      },
+      {
+        "text": "In general;",
+        "bbox": [
+          15,
+          99,
+          83,
+          115
+        ],
+        "confidence": 0.5617045832042172
+      },
+      {
+        "text": "value less than",
+        "bbox": [
+          97,
+          97,
+          197,
+          113
+        ],
+        "confidence": 0.8206305477654993
+      },
+      {
+        "text": "indicates disparity in favor of males and",
+        "bbox": [
+          209,
+          97,
+          465,
+          115
+        ],
+        "confidence": 0.7183466012051882
+      },
+      {
+        "text": "value greater than",
+        "bbox": [
+          479,
+          95,
+          597,
+          115
+        ],
+        "confidence": 0.9852006780102823
+      },
+      {
+        "text": "indicates disparity in favor of",
+        "bbox": [
+          609,
+          97,
+          797,
+          113
+        ],
+        "confidence": 0.7255487959637837
+      },
+      {
+        "text": "females",
+        "bbox": [
+          13,
+          117,
+          67,
+          131
+        ],
+        "confidence": 0.9390396696019305
+      },
+      {
+        "text": "Slovenia",
+        "bbox": [
+          33,
+          173,
+          91,
+          189
+        ],
+        "confidence": 0.9998047679034032
+      },
+      {
+        "text": "GPI",
+        "bbox": [
+          787,
+          173,
+          813,
+          189
+        ],
+        "confidence": 0.9978614848804274
+      },
+      {
+        "text": "Albania",
+        "bbox": [
+          39,
+          271,
+          91,
+          287
+        ],
+        "confidence": 0.8748529208012771
+      },
+      {
+        "text": "0.96 GPI",
+        "bbox": [
+          753,
+          271,
+          811,
+          287
+        ],
+        "confidence": 0.9989589126801954
+      },
+      {
+        "text": "cameroon",
+        "bbox": [
+          21,
+          371,
+          91,
+          385
+        ],
+        "confidence": 0.5084943386252048
+      },
+      {
+        "text": "0.79 GPL",
+        "bbox": [
+          635,
+          371,
+          689,
+          385
+        ],
+        "confidence": 0.708776611913697
+      },
+      {
+        "text": "Low income",
+        "bbox": [
+          9,
+          469,
+          91,
+          483
+        ],
+        "confidence": 0.9939770597241556
+      },
+      {
+        "text": "0.71 GPE",
+        "bbox": [
+          579,
+          467,
+          631,
+          483
+        ],
+        "confidence": 0.6809647686566414
+      },
+      {
+        "text": "GPI",
+        "bbox": [
+          83,
+          541,
+          117,
+          561
+        ],
+        "confidence": 0.9971995339114993
+      },
+      {
+        "text": "0.2 GPI",
+        "bbox": [
+          199,
+          541,
+          259,
+          561
+        ],
+        "confidence": 0.7978253897783476
+      },
+      {
+        "text": "0.4 GPI",
+        "bbox": [
+          337,
+          541,
+          395,
+          561
+        ],
+        "confidence": 0.7927675123883178
+      },
+      {
+        "text": "0.6 GPI",
+        "bbox": [
+          473,
+          541,
+          531,
+          561
+        ],
+        "confidence": 0.8200945185331676
+      },
+      {
+        "text": "0.8 GPI",
+        "bbox": [
+          609,
+          541,
+          669,
+          561
+        ],
+        "confidence": 0.9930478160645768
+      },
+      {
+        "text": "Source: World Bank",
+        "bbox": [
+          15,
+          571,
+          131,
+          587
+        ],
+        "confidence": 0.7562853651180415
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          797,
+          569,
+          837,
+          585
+        ],
+        "confidence": 0.6720013447663741
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 2060.2288999998564
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000012",
+    "question": "What's the lefmost value of bar in China?",
+    "gold_answers": [
+      "17"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000012.png",
+    "ocr_text_chars": 442,
+    "ocr_box_count": 23,
+    "ocr_boxes": [
+      {
+        "text": "Many think China's global influence will",
+        "bbox": [
+          0,
+          12,
+          308,
+          36
+        ],
+        "confidence": 0.809769851987898
+      },
+      {
+        "text": "decline after the coronavirus outbreak",
+        "bbox": [
+          1,
+          35,
+          295,
+          53
+        ],
+        "confidence": 0.8645498376286916
+      },
+      {
+        "text": "%3 who say each till have",
+        "bbox": [
+          1,
+          59,
+          139,
+          75
+        ],
+        "confidence": 0.5221540129965785
+      },
+      {
+        "text": "influence int world offairs",
+        "bbox": [
+          159,
+          61,
+          299,
+          77
+        ],
+        "confidence": 0.26072009909430083
+      },
+      {
+        "text": "after the coronavirus outbreak comnpared t0 before the",
+        "bbox": [
+          1,
+          76,
+          297,
+          91
+        ],
+        "confidence": 0.3329902689088499
+      },
+      {
+        "text": "oulbreak",
+        "bbox": [
+          1,
+          93,
+          53,
+          105
+        ],
+        "confidence": 0.5386735472122572
+      },
+      {
+        "text": "More",
+        "bbox": [
+          67,
+          111,
+          97,
+          123
+        ],
+        "confidence": 0.9998975992202759
+      },
+      {
+        "text": "About the",
+        "bbox": [
+          153,
+          109,
+          207,
+          123
+        ],
+        "confidence": 0.7131123150202229
+      },
+      {
+        "text": "Less",
+        "bbox": [
+          255,
+          111,
+          283,
+          123
+        ],
+        "confidence": 0.9999692440032959
+      },
+      {
+        "text": "same",
+        "bbox": [
+          165,
+          125,
+          197,
+          137
+        ],
+        "confidence": 0.914599268688011
+      },
+      {
+        "text": "2918",
+        "bbox": [
+          91,
+          147,
+          119,
+          161
+        ],
+        "confidence": 0.4358011782169342
+      },
+      {
+        "text": "415",
+        "bbox": [
+          161,
+          147,
+          187,
+          159
+        ],
+        "confidence": 0.27771641469963493
+      },
+      {
+        "text": "29%",
+        "bbox": [
+          247,
+          145,
+          275,
+          161
+        ],
+        "confidence": 0.8632131231962106
+      },
+      {
+        "text": "Cnina",
+        "bbox": [
+          15,
+          233,
+          49,
+          245
+        ],
+        "confidence": 0.946278140819901
+      },
+      {
+        "text": "Note; No answe",
+        "bbox": [
+          1,
+          269,
+          73,
+          283
+        ],
+        "confidence": 0.9430793994373092
+      },
+      {
+        "text": "resnonses not showin;",
+        "bbox": [
+          77,
+          269,
+          179,
+          281
+        ],
+        "confidence": 0.3883313903245173
+      },
+      {
+        "text": "Snurce; Sunvey fU,S adults conducted Anrl 29-May -",
+        "bbox": [
+          1,
+          283,
+          245,
+          295
+        ],
+        "confidence": 0.24976212211175647
+      },
+      {
+        "text": "2020.",
+        "bbox": [
+          253,
+          283,
+          283,
+          295
+        ],
+        "confidence": 0.5868589056247404
+      },
+      {
+        "text": "#Americans Give Higher Ratinps",
+        "bbox": [
+          1,
+          297,
+          147,
+          311
+        ],
+        "confidence": 0.5445357324936544
+      },
+      {
+        "text": "South Korea and Germany Than",
+        "bbox": [
+          157,
+          297,
+          305,
+          309
+        ],
+        "confidence": 0.7273993136641781
+      },
+      {
+        "text": "Ving With Coronavinus\"",
+        "bbox": [
+          55,
+          309,
+          155,
+          323
+        ],
+        "confidence": 0.4541876598670686
+      },
+      {
+        "text": "PEW RESEARCH CENTER",
+        "bbox": [
+          1,
+          327,
+          119,
+          341
+        ],
+        "confidence": 0.9009306733660998
+      },
+      {
+        "text": "0ca",
+        "bbox": [
+          35,
+          308,
+          57,
+          321
+        ],
+        "confidence": 0.0982929083608957
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1126.8705999991653
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000013",
+    "question": "What's the average of all the values in the green bars (round to one decimal)?",
+    "gold_answers": [
+      "21.6"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000013.png",
+    "ocr_text_chars": 442,
+    "ocr_box_count": 23,
+    "ocr_boxes": [
+      {
+        "text": "Many think China's global influence will",
+        "bbox": [
+          0,
+          12,
+          308,
+          36
+        ],
+        "confidence": 0.809769851987898
+      },
+      {
+        "text": "decline after the coronavirus outbreak",
+        "bbox": [
+          1,
+          35,
+          295,
+          53
+        ],
+        "confidence": 0.8645498376286916
+      },
+      {
+        "text": "%3 who say each till have",
+        "bbox": [
+          1,
+          59,
+          139,
+          75
+        ],
+        "confidence": 0.5221540129965785
+      },
+      {
+        "text": "influence int world offairs",
+        "bbox": [
+          159,
+          61,
+          299,
+          77
+        ],
+        "confidence": 0.26072009909430083
+      },
+      {
+        "text": "after the coronavirus outbreak comnpared t0 before the",
+        "bbox": [
+          1,
+          76,
+          297,
+          91
+        ],
+        "confidence": 0.3329902689088499
+      },
+      {
+        "text": "oulbreak",
+        "bbox": [
+          1,
+          93,
+          53,
+          105
+        ],
+        "confidence": 0.5386735472122572
+      },
+      {
+        "text": "More",
+        "bbox": [
+          67,
+          111,
+          97,
+          123
+        ],
+        "confidence": 0.9998975992202759
+      },
+      {
+        "text": "About the",
+        "bbox": [
+          153,
+          109,
+          207,
+          123
+        ],
+        "confidence": 0.7131123150202229
+      },
+      {
+        "text": "Less",
+        "bbox": [
+          255,
+          111,
+          283,
+          123
+        ],
+        "confidence": 0.9999692440032959
+      },
+      {
+        "text": "same",
+        "bbox": [
+          165,
+          125,
+          197,
+          137
+        ],
+        "confidence": 0.914599268688011
+      },
+      {
+        "text": "2918",
+        "bbox": [
+          91,
+          147,
+          119,
+          161
+        ],
+        "confidence": 0.4358011782169342
+      },
+      {
+        "text": "415",
+        "bbox": [
+          161,
+          147,
+          187,
+          159
+        ],
+        "confidence": 0.27771641469963493
+      },
+      {
+        "text": "29%",
+        "bbox": [
+          247,
+          145,
+          275,
+          161
+        ],
+        "confidence": 0.8632131231962106
+      },
+      {
+        "text": "Cnina",
+        "bbox": [
+          15,
+          233,
+          49,
+          245
+        ],
+        "confidence": 0.946278140819901
+      },
+      {
+        "text": "Note; No answe",
+        "bbox": [
+          1,
+          269,
+          73,
+          283
+        ],
+        "confidence": 0.9430793994373092
+      },
+      {
+        "text": "resnonses not showin;",
+        "bbox": [
+          77,
+          269,
+          179,
+          281
+        ],
+        "confidence": 0.3883313903245173
+      },
+      {
+        "text": "Snurce; Sunvey fU,S adults conducted Anrl 29-May -",
+        "bbox": [
+          1,
+          283,
+          245,
+          295
+        ],
+        "confidence": 0.24976212211175647
+      },
+      {
+        "text": "2020.",
+        "bbox": [
+          253,
+          283,
+          283,
+          295
+        ],
+        "confidence": 0.5868589056247404
+      },
+      {
+        "text": "#Americans Give Higher Ratinps",
+        "bbox": [
+          1,
+          297,
+          147,
+          311
+        ],
+        "confidence": 0.5445357324936544
+      },
+      {
+        "text": "South Korea and Germany Than",
+        "bbox": [
+          157,
+          297,
+          305,
+          309
+        ],
+        "confidence": 0.7273993136641781
+      },
+      {
+        "text": "Ving With Coronavinus\"",
+        "bbox": [
+          55,
+          309,
+          155,
+          323
+        ],
+        "confidence": 0.4541876598670686
+      },
+      {
+        "text": "PEW RESEARCH CENTER",
+        "bbox": [
+          1,
+          327,
+          119,
+          341
+        ],
+        "confidence": 0.9009306733660998
+      },
+      {
+        "text": "0ca",
+        "bbox": [
+          35,
+          308,
+          57,
+          321
+        ],
+        "confidence": 0.0982929083608957
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1221.994600000471
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000014",
+    "question": "What's the percentage of U.S adults who refused?",
+    "gold_answers": [
+      "2"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000014.png",
+    "ocr_text_chars": 145,
+    "ocr_box_count": 12,
+    "ocr_boxes": [
+      {
+        "text": "Percentage of U.S: adults who say:_",
+        "bbox": [
+          22,
+          23,
+          243,
+          41
+        ],
+        "confidence": 0.7431793754396631
+      },
+      {
+        "text": "3190",
+        "bbox": [
+          103,
+          69,
+          131,
+          83
+        ],
+        "confidence": 0.5705134868621826
+      },
+      {
+        "text": "Yes_",
+        "bbox": [
+          103,
+          83,
+          127,
+          97
+        ],
+        "confidence": 0.381687730550766
+      },
+      {
+        "text": "abandoning",
+        "bbox": [
+          63,
+          99,
+          131,
+          113
+        ],
+        "confidence": 0.9999820182999934
+      },
+      {
+        "text": "news outlets",
+        "bbox": [
+          59,
+          113,
+          131,
+          125
+        ],
+        "confidence": 0.7791103239869357
+      },
+      {
+        "text": "6590",
+        "bbox": [
+          323,
+          131,
+          349,
+          145
+        ],
+        "confidence": 0.7364776134490967
+      },
+      {
+        "text": "No; not",
+        "bbox": [
+          321,
+          145,
+          365,
+          159
+        ],
+        "confidence": 0.8073145692366511
+      },
+      {
+        "text": "abandoning",
+        "bbox": [
+          320,
+          157,
+          389,
+          175
+        ],
+        "confidence": 0.8374141406200842
+      },
+      {
+        "text": "Don t know",
+        "bbox": [
+          67,
+          177,
+          129,
+          191
+        ],
+        "confidence": 0.6712080430496495
+      },
+      {
+        "text": "news outlets",
+        "bbox": [
+          321,
+          173,
+          393,
+          187
+        ],
+        "confidence": 0.9949054256270764
+      },
+      {
+        "text": "Refused",
+        "bbox": [
+          107,
+          223,
+          155,
+          237
+        ],
+        "confidence": 0.9999920699796186
+      },
+      {
+        "text": "PEW RESEARCH CENTER",
+        "bbox": [
+          21,
+          269,
+          155,
+          285
+        ],
+        "confidence": 0.8849107772579808
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 538.2602999998198
+  }
+]

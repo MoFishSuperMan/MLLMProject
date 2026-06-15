@@ -1,0 +1,31 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000000",
+    "question": "How many food item is shown in the bar graph?",
+    "gold_answer": "14",
+    "gold_answers": "14",
+    "gold_page": 1,
+    "prediction": "图表中显示了18种食品商品，分别是：羊肉、玉米、大麦、黑麦、牛肉、小麦、咖啡、茶叶、花生、棕榈油、猪肉、大米、糖和可可。[E1]\n\nFinal answer: 18\n来源：[page=1, chunk=chartqa_000000_p1_chart_region]",
+    "raw_prediction": "图表中显示了18种食品商品，分别是：羊肉、玉米、大麦、黑麦、牛肉、小麦、咖啡、茶叶、花生、棕榈油、猪肉、大米、糖和可可。[E1]\n\nFinal answer: 18\n来源：[page=1, chunk=chartqa_000000_p1_chart_region]",
+    "extracted_answer": "18",
+    "mode": "mm_rag",
+    "em": 0.0,
+    "anls": 0.5,
+    "latency_ms": 3635.830199999873,
+    "answer_match": 1.0,
+    "failure_label": "ok",
+    "route": "hybrid_route",
+    "ocr_text_chars": 454,
+    "ocr_box_count": 42,
+    "region_chunk_count": 1,
+    "evidence_count": 1,
+    "top_evidence_types": "chart_region",
+    "top_evidence_ids": "chartqa_000000_p1_chart_region",
+    "top_evidence_image_paths": "data\\eval\\benchmarks\\real_improved_regions\\chartqa\\chartqa_000000\\chartqa_000000_p1_chart_region.png",
+    "top_region_page_bboxes": "[0, 3, 847, 597]",
+    "chart_question_type": "count",
+    "chart_numbers": "1850|2015|1934|0|1900|100|103|103.13|102.45|87.37|85.27|83.73|82.2|68.48|64.71|57.6|55.36|42.48|25.56|18.81|20|2016",
+    "chart_labels": "Long-term|index in food commodities, 1850-2015, World, 1934|Our World|Data|Commodity price index in food items dating 1850-2015,|measured relative t0 real prices in 1900 (ie. 1900|100).|Lamb|103.|Corn|Barley|Rye|Beef|Wheat|Coffee|Tea|Peanuts|Palm oil|Pork|Rice"
+  }
+]

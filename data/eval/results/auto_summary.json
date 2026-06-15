@@ -1,0 +1,74 @@
+{
+  "mode": "auto",
+  "metrics": {
+    "em": 0.0,
+    "anls": 0.0,
+    "recall_at_1": 0.25,
+    "recall_at_5": 0.75,
+    "mrr": 0.5,
+    "citation_accuracy": 0.25,
+    "latency_ms": 1.0972749996653874,
+    "count": 4.0,
+    "case_success_rate": 0.25,
+    "retrieval_success_rate": 0.75,
+    "citation_success_rate": 0.25,
+    "answer_match_rate": 0.0
+  },
+  "breakdowns": {
+    "by_route": {
+      "text_route": {
+        "em": 0.0,
+        "anls": 0.0,
+        "recall_at_1": 0.25,
+        "recall_at_5": 0.75,
+        "mrr": 0.5,
+        "citation_accuracy": 0.25,
+        "latency_ms": 1.0972749996653874,
+        "count": 4.0,
+        "case_success_rate": 0.25,
+        "retrieval_success_rate": 0.75,
+        "citation_success_rate": 0.25,
+        "answer_match_rate": 0.0
+      }
+    },
+    "by_question_type": {
+      "metric": {
+        "em": 0.0,
+        "anls": 0.0,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "citation_accuracy": 0.0,
+        "latency_ms": 1.0886999989452306,
+        "count": 1.0,
+        "case_success_rate": 0.0,
+        "retrieval_success_rate": 0.0,
+        "citation_success_rate": 0.0,
+        "answer_match_rate": 0.0
+      },
+      "text": {
+        "em": 0.0,
+        "anls": 0.0,
+        "recall_at_1": 0.3333333333333333,
+        "recall_at_5": 1.0,
+        "mrr": 0.6666666666666666,
+        "citation_accuracy": 0.3333333333333333,
+        "latency_ms": 1.100133333238773,
+        "count": 3.0,
+        "case_success_rate": 0.3333333333333333,
+        "retrieval_success_rate": 1.0,
+        "citation_success_rate": 0.3333333333333333,
+        "answer_match_rate": 0.0
+      }
+    },
+    "failure_counts": {
+      "answer_mismatch": 1,
+      "citation_miss": 2,
+      "retrieval_miss": 1
+    },
+    "case_status_counts": {
+      "failure": 3,
+      "success": 1
+    }
+  }
+}

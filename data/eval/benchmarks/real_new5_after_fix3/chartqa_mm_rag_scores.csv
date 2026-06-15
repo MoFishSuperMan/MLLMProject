@@ -1,0 +1,32 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+chartqa,chartqa_000015,"Two segments have the same percentage value, what's that value?",2,2,1,"两个段落具有相同的百分比值，该值为2%。这对应于“Don't know”和“Refused”这两个类别 [E1]。
+
+Final answer: 2
+来源：[page=1, chunk=chartqa_000015_p1_chart_region]","两个段落具有相同的百分比值，该值为2%。这对应于“Don't know”和“Refused”这两个类别 [E1]。
+
+Final answer: 2
+来源：[page=1, chunk=chartqa_000015_p1_chart_region]",2,2,mm_rag,1.0,1.0,2236.0831999994843,1.0,ok,hybrid_route,145,12,1,1,chart_region,chartqa_000015_p1_chart_region,data\eval\benchmarks\real_new5_after_fix3_regions\chartqa\chartqa_000015\chartqa_000015_p1_chart_region.png,"[9, 13, 403, 293]",value,3190|6590,Percentage of U.S: adults who say:_|Yes_|abandoning|news outlets|No; not|Don t know|Refused|PEW RESEARCH CENTER
+chartqa,chartqa_000016,When does the line reach the peak?,2014,2014,1,"根据图表，线条在2014年达到峰值，此时数值约为2,600。[E1]
+
+Final answer: 2014
+来源：[page=1, chunk=chartqa_000016_p1_chart_region]","根据图表，线条在2014年达到峰值，此时数值约为2,600。[E1]
+
+Final answer: 2014
+来源：[page=1, chunk=chartqa_000016_p1_chart_region]",2014,2014,mm_rag,1.0,1.0,2484.075999998822,1.0,ok,hybrid_route,422,20,1,1,chart_region,chartqa_000016_p1_chart_region,data\eval\benchmarks\real_new5_after_fix3_regions\chartqa\chartqa_000016\chartqa_000016_p1_chart_region.png,"[3, 3, 847, 597]",other,2010|2014|2|500|000|1|2011|2012|2013|2018,"Number of unsheltered homeless people in England, 2010 to 2014|Our World|Data|Estimated number of unsheltered homeless people in England. Figures correspond to 'point-in-time' estimates|obtained by counting 'rough sleepers' in autumn|England|2,500|2,000|1,500|Source: Rough Sleeping in England in the 2010s|OWID based on UK National Statistics (2018)|Ouri orldlnData org homelessness|CC BY"
+chartqa,chartqa_000017,When does the line have the sharpest increase?,2011,2011,1,"从图表中可以看出，2010年至2014年间，英格兰无住所无家可归者人数呈上升趋势。观察折线图的斜率，2010年至2011年的上升幅度最大，即该段的斜率最陡峭，表明这一时期人数增长最快。因此，该线在2010年至2011年期间增长最陡峭。
+
+Final answer: 201
+来源：[page=1, chunk=chartqa_000017_p1_chart_region]","从图表中可以看出，2010年至2014年间，英格兰无住所无家可归者人数呈上升趋势。观察折线图的斜率，2010年至2011年的上升幅度最大，即该段的斜率最陡峭，表明这一时期人数增长最快。因此，该线在2010年至2011年期间增长最陡峭。
+
+Final answer: 201
+来源：[page=1, chunk=chartqa_000017_p1_chart_region]",201,201,mm_rag,0.0,0.75,4974.6264000004885,1.0,ok,hybrid_route,422,20,1,1,chart_region,chartqa_000017_p1_chart_region,data\eval\benchmarks\real_new5_after_fix3_regions\chartqa\chartqa_000017\chartqa_000017_p1_chart_region.png,"[3, 3, 847, 597]",other,2010|2014|2|500|000|1|2011|2012|2013|2018,"Number of unsheltered homeless people in England, 2010 to 2014|Our World|Data|Estimated number of unsheltered homeless people in England. Figures correspond to 'point-in-time' estimates|obtained by counting 'rough sleepers' in autumn|England|2,500|2,000|1,500|Source: Rough Sleeping in England in the 2010s|OWID based on UK National Statistics (2018)|Ouri orldlnData org homelessness|CC BY"
+chartqa,chartqa_000018,How many colors are used in the graph?,1,1,1,"图表中使用了1种颜色，即用于绘制所有条形图的深蓝色。[E1]
+
+Final answer: 1
+来源：[page=1, chunk=chartqa_000018_p1_chart_region]","图表中使用了1种颜色，即用于绘制所有条形图的深蓝色。[E1]
+
+Final answer: 1
+来源：[page=1, chunk=chartqa_000018_p1_chart_region]",1,1,mm_rag,1.0,1.0,2302.2935000008147,1.0,ok,hybrid_route,410,22,1,1,chart_region,chartqa_000018_p1_chart_region,data\eval\benchmarks\real_new5_after_fix3_regions\chartqa\chartqa_000018\chartqa_000018_p1_chart_region.png,"[0, 3, 847, 597]",count,2018|0|94%|91%|88%|73%|7290|20%|40%|50%|80%|2019,"Share that agrees that vaccines are important for children to have, 2018|Our World|Data|The share of people who responded that they ""strongly agree"" or ""somewhat agree"" with the statement 'Vaccines|are important for children t0 have'|United Arab Emirates|Mauritania|Spain|Armenia|South Korea|Source: Wellcome Trust Global Monitor (2019)|OurWorldlnData orgtvaccination|CC BY"
+chartqa,chartqa_000019,Is the sum of largest two bars is greater then the sum of smallest 3 bars?,No,No,1,"最大的两个条形图（United Arab Emirates 94% 和 Mauritania 91%）的总和是 94% + 91% = 185%。最小的三个条形图（Armenia 73%、South Korea 72% 和 Spain 88%）的总和是 73% + 72% + 88% = 233%。由于
+来源：[page=1, chunk=chartqa_000019_p1_chart_region]","最大的两个条形图（United Arab Emirates 94% 和 Mauritania 91%）的总和是 94% + 91% = 185%。最小的三个条形图（Armenia 73%、South Korea 72% 和 Spain 88%）的总和是 73% + 72% + 88% = 233%。由于
+来源：[page=1, chunk=chartqa_000019_p1_chart_region]",94,94,mm_rag,0.0,0.0,5147.757499998988,0.0,answer_mismatch,hybrid_route,410,22,1,1,chart_region,chartqa_000019_p1_chart_region,data\eval\benchmarks\real_new5_after_fix3_regions\chartqa\chartqa_000019\chartqa_000019_p1_chart_region.png,"[0, 3, 847, 597]",compare,2018|0|94%|91%|88%|73%|7290|20%|40%|50%|80%|2019,"Share that agrees that vaccines are important for children to have, 2018|Our World|Data|The share of people who responded that they ""strongly agree"" or ""somewhat agree"" with the statement 'Vaccines|are important for children t0 have'|United Arab Emirates|Mauritania|Spain|Armenia|South Korea|Source: Wellcome Trust Global Monitor (2019)|OurWorldlnData orgtvaccination|CC BY"

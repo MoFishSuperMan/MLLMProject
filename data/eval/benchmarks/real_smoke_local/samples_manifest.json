@@ -1,0 +1,17 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000000",
+    "question": "How many food item is shown in the bar graph?",
+    "gold_answers": [
+      "14"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\mock_cache\\chartqa\\chartqa_000000.png",
+    "ocr_text_chars": 454,
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 6254.085099999429
+  }
+]

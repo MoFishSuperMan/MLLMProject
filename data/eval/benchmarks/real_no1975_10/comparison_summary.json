@@ -1,0 +1,38 @@
+[
+  {
+    "dataset": "chartqa",
+    "mode": "mm_rag",
+    "count": 10.0,
+    "em": 0.9,
+    "anls": 0.9,
+    "answer_match_rate": 0.9,
+    "latency_ms": 3594.0497599998707
+  },
+  {
+    "dataset": "chartqa",
+    "mode": "text_rag",
+    "count": 10.0,
+    "em": 0.3,
+    "anls": 0.3,
+    "answer_match_rate": 0.3,
+    "latency_ms": 2805.3462600000785
+  },
+  {
+    "dataset": "docvqa",
+    "mode": "mm_rag",
+    "count": 10.0,
+    "em": 0.9,
+    "anls": 0.9,
+    "answer_match_rate": 0.9,
+    "latency_ms": 2595.6179600001633
+  },
+  {
+    "dataset": "docvqa",
+    "mode": "text_rag",
+    "count": 10.0,
+    "em": 0.6,
+    "anls": 0.746,
+    "answer_match_rate": 0.8,
+    "latency_ms": 3568.022209999981
+  }
+]

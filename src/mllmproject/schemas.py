@@ -177,6 +177,7 @@ class EvalPrediction:
     retrieved_evidence_ids: list[str]
     route: str
     latency_ms: float
+    gold_pages: list[int] = field(default_factory=list)
 
     def to_dict(self) -> JsonDict:
         return asdict(self)

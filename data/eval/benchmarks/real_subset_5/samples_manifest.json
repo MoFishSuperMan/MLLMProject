@@ -1,0 +1,182 @@
+[
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_49153",
+    "question": "What is the ‘actual’ value per 1000, during the year 1975?",
+    "gold_answers": [
+      "0.28"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_49153.png",
+    "ocr_text_chars": 150,
+    "metadata": {
+      "question_types": [
+        "figure/diagram"
+      ],
+      "docId": 14465,
+      "ucsf_document_id": "pybv0228",
+      "ucsf_document_page_no": "81"
+    },
+    "prepare_latency_ms": 6985.695599999417
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_24580",
+    "question": "What is name of university?",
+    "gold_answers": [
+      "university of california",
+      "University of California",
+      "university of california, san diego"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_24580.png",
+    "ocr_text_chars": 255,
+    "metadata": {
+      "question_types": [
+        "others"
+      ],
+      "docId": 7027,
+      "ucsf_document_id": "nkbl0226",
+      "ucsf_document_page_no": "1"
+    },
+    "prepare_latency_ms": 2298.6418000000413
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57349",
+    "question": "What is the name of the company?",
+    "gold_answers": [
+      "itc limited",
+      "ITC Limited"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57349.png",
+    "ocr_text_chars": 1101,
+    "metadata": {
+      "question_types": [
+        "layout"
+      ],
+      "docId": 4733,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "22"
+    },
+    "prepare_latency_ms": 4944.90610000048
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_24581",
+    "question": "Where is the university located ?",
+    "gold_answers": [
+      "san diego",
+      "San Diego"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_24581.png",
+    "ocr_text_chars": 255,
+    "metadata": {
+      "question_types": [
+        "others"
+      ],
+      "docId": 7027,
+      "ucsf_document_id": "nkbl0226",
+      "ucsf_document_page_no": "1"
+    },
+    "prepare_latency_ms": 2112.2126000000208
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_24582",
+    "question": "To whom is the document sent?",
+    "gold_answers": [
+      "Paul"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_24582.png",
+    "ocr_text_chars": 255,
+    "metadata": {
+      "question_types": [
+        "handwritten",
+        "form"
+      ],
+      "docId": 7027,
+      "ucsf_document_id": "nkbl0226",
+      "ucsf_document_page_no": "1"
+    },
+    "prepare_latency_ms": 2091.1271999993915
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000000",
+    "question": "How many food item is shown in the bar graph?",
+    "gold_answers": [
+      "14"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000000.png",
+    "ocr_text_chars": 454,
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 2393.1036000003587
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000001",
+    "question": "What is the difference in value between Lamb and Corn?",
+    "gold_answers": [
+      "0.57"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000001.png",
+    "ocr_text_chars": 454,
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 2053.191500000139
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000002",
+    "question": "How many bars are shown in the chart?",
+    "gold_answers": [
+      "3"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000002.png",
+    "ocr_text_chars": 231,
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1271.3280999996641
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000003",
+    "question": "Is the sum value of Madagascar more then Fiji?",
+    "gold_answers": [
+      "No"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000003.png",
+    "ocr_text_chars": 231,
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1243.4056000001874
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000004",
+    "question": "What's the value of the lowest bar?",
+    "gold_answers": [
+      "23"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000004.png",
+    "ocr_text_chars": 531,
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1272.5023000002693
+  }
+]

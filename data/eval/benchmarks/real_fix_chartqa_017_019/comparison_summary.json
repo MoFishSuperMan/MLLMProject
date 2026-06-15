@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "chartqa",
+    "mode": "mm_rag",
+    "count": 2.0,
+    "em": 1.0,
+    "anls": 1.0,
+    "answer_match_rate": 1.0,
+    "latency_ms": 4826.572050000323
+  },
+  {
+    "dataset": "chartqa",
+    "mode": "text_rag",
+    "count": 2.0,
+    "em": 0.0,
+    "anls": 0.0,
+    "answer_match_rate": 0.0,
+    "latency_ms": 10567.531400000007
+  }
+]

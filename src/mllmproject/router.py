@@ -7,7 +7,7 @@ from .schemas import RouteDecision
 VISION_KEYWORDS = ("图", "图片", "趋势", "颜色", "坐标", "柱状", "折线", "曲线", "figure", "chart", "plot")
 TABLE_KEYWORDS = ("表", "表格", "数值", "最大", "最小", "占比", "平均", "增长率", "table", "value")
 TEXT_KEYWORDS = ("第几节", "主要结论", "定义", "背景", "方法", "贡献", "摘要", "section", "summary")
-ALL_MODES = ["text", "table", "figure", "formula", "image", "page"]
+ALL_MODES = ["text", "table", "figure", "formula", "image", "page", "visual", "region", "chart_region"]
 
 
 def route_question(question: str, mode: str = "Auto Router") -> RouteDecision:
@@ -34,13 +34,13 @@ def route_question(question: str, mode: str = "Auto Router") -> RouteDecision:
         return RouteDecision(
             route="vision_route",
             reason=f"命中视觉关键词：{', '.join(vision_hits[:3])}",
-            retrieval_modes=["figure", "image", "page", "text"],
+            retrieval_modes=["chart_region", "region", "figure", "image", "page", "text"],
         )
     if table_hits:
         return RouteDecision(
             route="table_route",
             reason=f"命中表格/数值关键词：{', '.join(table_hits[:3])}",
-            retrieval_modes=["table", "page", "text"],
+            retrieval_modes=["chart_region", "region", "table", "page", "text"],
         )
     if text_hits:
         return RouteDecision(

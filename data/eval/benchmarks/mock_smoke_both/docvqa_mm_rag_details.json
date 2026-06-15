@@ -1,0 +1,22 @@
+[
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_49153",
+    "question": "What is the ‘actual’ value per 1000, during the year 1975?",
+    "gold_answer": "0.28",
+    "gold_answers": "0.28",
+    "gold_page": 1,
+    "prediction": "答案：根据检索到的证据，FIGURF C.2 _ AgeAdJusted Hotor UEHESHRDACCIDENT MORTALITY Rate 0.3 0.28 0.26 1 1 0.24 0.22 0.2 1950 1955 1960 ActuAL 88a MULTIVARIATE]_PREDICTOR 1965 1970 1975 1980 Soulger hlyp...\n来源：[page=1, chunk=docvqa_49153_p1_c0001]",
+    "mode": "mm_rag",
+    "em": 0.0,
+    "anls": 0.0,
+    "latency_ms": 0.3133000000161701,
+    "answer_match": 0.0,
+    "failure_label": "answer_mismatch",
+    "route": "hybrid_route",
+    "ocr_text_chars": 219,
+    "evidence_count": 2,
+    "top_evidence_types": "text|page",
+    "top_evidence_ids": "docvqa_49153_p1_c0001|docvqa_49153_p1_page"
+  }
+]

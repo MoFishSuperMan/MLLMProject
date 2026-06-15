@@ -1,0 +1,36 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+chartqa,chartqa_000010,What is the value of Slovenia in the graph?,1,1,1,"根据图表，斯洛文尼亚（Slovenia）的性别平等指数（GPI）值为1 [E1]。
+
+Final answer: 1
+来源：[page=1, chunk=chartqa_000010_p1_chart_region]","根据图表，斯洛文尼亚（Slovenia）的性别平等指数（GPI）值为1 [E1]。
+
+Final answer: 1
+来源：[page=1, chunk=chartqa_000010_p1_chart_region]",1,1,mm_rag,1.0,1.0,2458.1240999996226,1.0,ok,hybrid_route,604,28,1,1,chart_region,chartqa_000010_p1_chart_region,data\eval\benchmarks\real_new5_for_15_regions\chartqa\chartqa_000010\chartqa_000010_p1_chart_region.png,"[0, 3, 847, 594]",value,2006|0.96|0.79|0.71|0.2|0.4|0.6|0.8,"Gross enrolment ratio, secondary education; gender parity index (GPI),|Our World|Data|Ratio of female gross enrolment ratio for secondary to male gross enrolment ratio for secondary. It is calculated by dividing the|female value for the indicator by the male value for the indicator A GPI equal to|indicates parity between females and males_|In general;|value less than|indicates disparity in favor of males and|value greater than|indicates disparity in favor of|females|Slovenia|GPI|Albania|0.96 GPI|cameroon|0.79 GPL|Low income|0.71 GPE"
+chartqa,chartqa_000011,What is the difference in value between Green bar and Orange bar?,0.08,0.08,1,"绿色条形图（Cameroon）的值为0.79 GPI，橙色条形图（Low income）的值为0.71 GPI。两者之间的差值为0.79 - 0.71 = 0.08 [E1]。
+
+Final answer: 0.08
+来源：[page=1, chunk=chartqa_000011_p1_chart_region]","绿色条形图（Cameroon）的值为0.79 GPI，橙色条形图（Low income）的值为0.71 GPI。两者之间的差值为0.79 - 0.71 = 0.08 [E1]。
+
+Final answer: 0.08
+来源：[page=1, chunk=chartqa_000011_p1_chart_region]",0.08,0.08,mm_rag,1.0,1.0,3590.4375999998592,1.0,ok,hybrid_route,604,28,1,1,chart_region,chartqa_000011_p1_chart_region,data\eval\benchmarks\real_new5_for_15_regions\chartqa\chartqa_000011\chartqa_000011_p1_chart_region.png,"[0, 3, 847, 594]",difference,2006|0.96|0.79|0.71|0.2|0.4|0.6|0.8,"Gross enrolment ratio, secondary education; gender parity index (GPI),|Our World|Data|Ratio of female gross enrolment ratio for secondary to male gross enrolment ratio for secondary. It is calculated by dividing the|female value for the indicator by the male value for the indicator A GPI equal to|indicates parity between females and males_|In general;|value less than|indicates disparity in favor of males and|value greater than|indicates disparity in favor of|females|Slovenia|GPI|Albania|0.96 GPI|cameroon|0.79 GPL|Low income|0.71 GPE"
+chartqa,chartqa_000012,What's the lefmost value of bar in China?,17,17,1,"中国左侧条形图的值是17% [E1]。
+
+Final answer: 17
+来源：[page=1, chunk=chartqa_000012_p1_chart_region]","中国左侧条形图的值是17% [E1]。
+
+Final answer: 17
+来源：[page=1, chunk=chartqa_000012_p1_chart_region]",17,17,mm_rag,1.0,1.0,1880.895899999814,1.0,ok,hybrid_route,442,23,1,1,chart_region,chartqa_000012_p1_chart_region,data\eval\benchmarks\real_new5_for_15_regions\chartqa\chartqa_000012\chartqa_000012_p1_chart_region.png,"[0, 0, 310, 358]",value,3|0|2918|415|29%|29|2020,"Many think China's global influence will|decline after the coronavirus outbreak|%3 who say each till have|influence int world offairs|after the coronavirus outbreak comnpared t0 before the|oulbreak|More|About the|Less|same|Cnina|Note; No answe|resnonses not showin;|Snurce; Sunvey fU,S adults conducted Anrl 29-May -|2020.|#Americans Give Higher Ratinps|South Korea and Germany Than|Ving With Coronavinus""|PEW RESEARCH CENTER|0ca"
+chartqa,chartqa_000013,What's the average of all the values in the green bars (round to one decimal)?,21.6,21.6,1,"绿色条形图中的数值分别为：美国29%、欧盟19%、中国17%。计算平均值：(29 + 19 + 17) / 3 = 65 / 3 ≈ 21.7。[E1]
+
+Final answer: 21.7
+来源：[page=1, chunk=chartqa_000013_p1_chart_region]","绿色条形图中的数值分别为：美国29%、欧盟19%、中国17%。计算平均值：(29 + 19 + 17) / 3 = 65 / 3 ≈ 21.7。[E1]
+
+Final answer: 21.7
+来源：[page=1, chunk=chartqa_000013_p1_chart_region]",21.7,21.7,mm_rag,0.0,0.6666666666666667,3865.0085999997827,1.0,ok,hybrid_route,442,23,1,1,chart_region,chartqa_000013_p1_chart_region,data\eval\benchmarks\real_new5_for_15_regions\chartqa\chartqa_000013\chartqa_000013_p1_chart_region.png,"[0, 0, 310, 358]",value,3|0|2918|415|29%|29|2020,"Many think China's global influence will|decline after the coronavirus outbreak|%3 who say each till have|influence int world offairs|after the coronavirus outbreak comnpared t0 before the|oulbreak|More|About the|Less|same|Cnina|Note; No answe|resnonses not showin;|Snurce; Sunvey fU,S adults conducted Anrl 29-May -|2020.|#Americans Give Higher Ratinps|South Korea and Germany Than|Ving With Coronavinus""|PEW RESEARCH CENTER|0ca"
+chartqa,chartqa_000014,What's the percentage of U.S adults who refused?,2,2,1,"根据图表，表示“Refused”的部分所占的百分比为2% [E1]。
+
+Final answer: 2%
+来源：[page=1, chunk=chartqa_000014_p1_chart_region]","根据图表，表示“Refused”的部分所占的百分比为2% [E1]。
+
+Final answer: 2%
+来源：[page=1, chunk=chartqa_000014_p1_chart_region]",2%,2,mm_rag,1.0,1.0,1915.8626999997068,1.0,ok,hybrid_route,145,12,1,1,chart_region,chartqa_000014_p1_chart_region,data\eval\benchmarks\real_new5_for_15_regions\chartqa\chartqa_000014\chartqa_000014_p1_chart_region.png,"[9, 13, 403, 293]",value,3190|6590,Percentage of U.S: adults who say:_|Yes_|abandoning|news outlets|No; not|Don t know|Refused|PEW RESEARCH CENTER

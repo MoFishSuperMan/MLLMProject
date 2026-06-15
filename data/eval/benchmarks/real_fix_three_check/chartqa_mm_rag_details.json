@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000013",
+    "question": "What's the average of all the values in the green bars (round to one decimal)?",
+    "gold_answer": "21.6",
+    "gold_answers": "21.6",
+    "gold_page": 1,
+    "prediction": "绿色条形图中的数值分别为：美国29%、欧盟19%、中国17%。计算平均值：(29 + 19 + 17) / 3 = 65 / 3 ≈ 21.7。[E1]\n\nFinal answer: 21.7\n来源：[page=1, chunk=chartqa_000013_p1_chart_region]",
+    "raw_prediction": "绿色条形图中的数值分别为：美国29%、欧盟19%、中国17%。计算平均值：(29 + 19 + 17) / 3 = 65 / 3 ≈ 21.7。[E1]\n\nFinal answer: 21.7\n来源：[page=1, chunk=chartqa_000013_p1_chart_region]",
+    "extracted_answer": "21.7",
+    "normalized_answer": "21.6",
+    "mode": "mm_rag",
+    "em": 1.0,
+    "anls": 1.0,
+    "latency_ms": 3946.816300000137,
+    "answer_match": 1.0,
+    "failure_label": "ok",
+    "route": "hybrid_route",
+    "ocr_text_chars": 442,
+    "ocr_box_count": 23,
+    "region_chunk_count": 1,
+    "evidence_count": 1,
+    "top_evidence_types": "chart_region",
+    "top_evidence_ids": "chartqa_000013_p1_chart_region",
+    "top_evidence_image_paths": "data\\eval\\benchmarks\\real_fix_three_check_regions\\chartqa\\chartqa_000013\\chartqa_000013_p1_chart_region.png",
+    "top_region_page_bboxes": "[0, 0, 310, 358]",
+    "chart_question_type": "value",
+    "chart_numbers": "3|0|2918|415|29%|29|2020",
+    "chart_labels": "Many think China's global influence will|decline after the coronavirus outbreak|%3 who say each till have|influence int world offairs|after the coronavirus outbreak comnpared t0 before the|oulbreak|More|About the|Less|same|Cnina|Note; No answe|resnonses not showin;|Snurce; Sunvey fU,S adults conducted Anrl 29-May -|2020.|#Americans Give Higher Ratinps|South Korea and Germany Than|Ving With Coronavinus\"|PEW RESEARCH CENTER|0ca"
+  }
+]

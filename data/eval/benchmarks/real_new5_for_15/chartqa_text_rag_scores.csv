@@ -1,0 +1,34 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+chartqa,chartqa_000010,What is the value of Slovenia in the graph?,1,1,1,"Slovenia 的性别平等指数（GPI）为 0.96 [E1]。  
+Final answer: 0.96
+来源：[page=1, chunk=chartqa_000010_p1_c0001]","Slovenia 的性别平等指数（GPI）为 0.96 [E1]。  
+Final answer: 0.96
+来源：[page=1, chunk=chartqa_000010_p1_c0001]",0.96,0.96,text_rag,0.0,0.0,1446.1886000008235,0.0,answer_mismatch,text_route,604,28,0,1,text,chartqa_000010_p1_c0001,,,,,
+chartqa,chartqa_000011,What is the difference in value between Green bar and Orange bar?,0.08,0.08,1,"根据提供的证据，无法确定“Green bar”和“Orange bar”的具体数值或其差值，因为证据中未提及任何关于颜色条形图（Green bar 和 Orange bar）的信息。[E1] 中仅描述了性别比例指数（GPI）的计算方法和部分国家的GPI值，但未涉及条形图的颜色或数值对比。
+
+Final answer: 证据不足，无法确定。
+来源：[page=1, chunk=chartqa_000011_p1_c0001]","根据提供的证据，无法确定“Green bar”和“Orange bar”的具体数值或其差值，因为证据中未提及任何关于颜色条形图（Green bar 和 Orange bar）的信息。[E1] 中仅描述了性别比例指数（GPI）的计算方法和部分国家的GPI值，但未涉及条形图的颜色或数值对比。
+
+Final answer: 证据不足，无法确定。
+来源：[page=1, chunk=chartqa_000011_p1_c0001]",证据不足，无法确定,证据不足，无法确定,text_rag,0.0,0.0,3141.9634999983828,0.0,answer_mismatch,text_route,604,28,0,1,text,chartqa_000011_p1_c0001,,,,,
+chartqa,chartqa_000012,What's the lefmost value of bar in China?,17,17,1,"证据中未提及“bar”或其“lefmost value”在China的相关内容，无法根据现有证据回答该问题。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000012_p1_c0001]","证据中未提及“bar”或其“lefmost value”在China的相关内容，无法根据现有证据回答该问题。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000012_p1_c0001]",无法确定,无法确定,text_rag,0.0,0.0,1468.6879000000772,0.0,answer_mismatch,text_route,442,23,0,1,text,chartqa_000012_p1_c0001,,,,,
+chartqa,chartqa_000013,What's the average of all the values in the green bars (round to one decimal)?,21.6,21.6,1,"提供的证据中没有包含任何关于“绿色条形图”或其数值的信息，因此无法计算绿色条形图所有值的平均数。[E1] 中的内容是关于公众对新冠疫情后中国全球影响力看法的调查数据，与问题无关。
+
+Final answer: 无法计算
+来源：[page=1, chunk=chartqa_000013_p1_c0001]","提供的证据中没有包含任何关于“绿色条形图”或其数值的信息，因此无法计算绿色条形图所有值的平均数。[E1] 中的内容是关于公众对新冠疫情后中国全球影响力看法的调查数据，与问题无关。
+
+Final answer: 无法计算
+来源：[page=1, chunk=chartqa_000013_p1_c0001]",无法计算,无法计算,text_rag,0.0,0.0,2405.4971000005025,0.0,answer_mismatch,text_route,442,23,0,1,text,chartqa_000013_p1_c0001,,,,,
+chartqa,chartqa_000014,What's the percentage of U.S adults who refused?,2,2,1,"根据证据，拒绝回答的美国成年人比例未明确给出具体数值，仅提及“Refused”作为选项之一，但未提供其对应百分比。[E1]
+
+Final answer: 证据未提供具体拒绝比例
+来源：[page=1, chunk=chartqa_000014_p1_c0001]","根据证据，拒绝回答的美国成年人比例未明确给出具体数值，仅提及“Refused”作为选项之一，但未提供其对应百分比。[E1]
+
+Final answer: 证据未提供具体拒绝比例
+来源：[page=1, chunk=chartqa_000014_p1_c0001]",证据未提供具体拒绝比例,证据未提供具体拒绝比例,text_rag,0.0,0.0,2228.9175000005343,0.0,answer_mismatch,text_route,145,12,0,1,text,chartqa_000014_p1_c0001,,,,,

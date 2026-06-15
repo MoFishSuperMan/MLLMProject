@@ -6,33 +6,46 @@
     "answer": "最终报告、上台展示、系统实现细节、代码仓库、定量实验结果、可视化或错误分析",
     "gold_page": 1,
     "gold_type": "text",
-    "question_type": "text"
+    "question_type": "text",
+    "gold_pages": [
+      1,
+      11
+    ]
   },
   {
     "sample_id": "course_req_002",
     "doc_id": "course_assignment",
     "question": "文档理解多模态检索问答系统的最低验收标准是什么？",
     "answer": "支持上传多页 PDF 或图像，支持自然语言查询并标出引用，在文档数据集上评测，并对比纯文本 RAG 与多模态 RAG",
-    "gold_page": 3,
+    "gold_page": 4,
     "gold_type": "text",
-    "question_type": "text"
+    "question_type": "text",
+    "gold_pages": [
+      4
+    ]
   },
   {
     "sample_id": "course_req_003",
     "doc_id": "course_assignment",
     "question": "实验评测推荐使用哪些指标？",
     "answer": "准确率、F1、Recall@K、MRR、ANLS、EM、时间戳精度或人工打分等",
-    "gold_page": 8,
+    "gold_page": 10,
     "gold_type": "text",
-    "question_type": "metric"
+    "question_type": "metric",
+    "gold_pages": [
+      10
+    ]
   },
   {
     "sample_id": "course_req_004",
     "doc_id": "course_assignment",
     "question": "题目3推荐的技术栈包括哪些？",
     "answer": "LLaMA 3.2 Vision、Qwen2.5-VL、DeepSeek-VL、PaddleOCR、Tesseract、LangChain 和向量检索",
-    "gold_page": 3,
+    "gold_page": 4,
     "gold_type": "text",
-    "question_type": "text"
+    "question_type": "text",
+    "gold_pages": [
+      4
+    ]
   }
 ]

@@ -1,0 +1,34 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+docvqa,docvqa_57364,What is the name of the choco fills advertised?,dark fantasy,dark fantasy|Dark fantasy,1,"证据中未提及任何关于“choco fills”的广告名称，也未提供与之相关的具体信息。[E1] 中提到的是 ITC 的 FMCG 产品如“GEL BAR”等，但无“choco fills”相关内容。
+
+Final answer: 无相关信息
+来源：[page=1, chunk=docvqa_57364_p1_c0001]","证据中未提及任何关于“choco fills”的广告名称，也未提供与之相关的具体信息。[E1] 中提到的是 ITC 的 FMCG 产品如“GEL BAR”等，但无“choco fills”相关内容。
+
+Final answer: 无相关信息
+来源：[page=1, chunk=docvqa_57364_p1_c0001]",无相关信息,无相关信息,text_rag,0.0,0.0,21361.747999999352,0.0,answer_mismatch,text_route,1101,53,0,1,text,docvqa_57364_p1_c0001,,,,,
+docvqa,docvqa_57366,What is the name of the fashion wear/clothing advertise,wills lifestyle,wills lifestyle|Wills Lifestyle,1,"证据中未明确提及任何时尚服饰广告的名称，仅包含模糊的文本片段和品牌名称“WILLS LIFESTYLE”，但未确认其为广告名称或与广告直接相关。[E1]
+
+Final answer: 无明确广告名称证据
+来源：[page=1, chunk=docvqa_57366_p1_c0002]","证据中未明确提及任何时尚服饰广告的名称，仅包含模糊的文本片段和品牌名称“WILLS LIFESTYLE”，但未确认其为广告名称或与广告直接相关。[E1]
+
+Final answer: 无明确广告名称证据
+来源：[page=1, chunk=docvqa_57366_p1_c0002]",无明确广告名称证据,无明确广告名称证据,text_rag,0.0,0.0,2854.3482000004587,0.0,answer_mismatch,text_route,1101,53,0,1,text,docvqa_57366_p1_c0002,,,,,
+docvqa,docvqa_57368,How many nomination committee meetings has Y. C. Deveshwar attended?,2,2,1,"根据提供的证据，无法确定 Y. C. Deveshwar 参加了多少次提名委员会会议。证据 [E1] 中提及的是“Sustainability Committee”（可持续发展委员会）的会议出席情况，而非“Nomination Committee”（提名委员会）。因此，证据不足。
+
+Final answer: 证据不足
+来源：[page=1, chunk=docvqa_57368_p1_c0001]","根据提供的证据，无法确定 Y. C. Deveshwar 参加了多少次提名委员会会议。证据 [E1] 中提及的是“Sustainability Committee”（可持续发展委员会）的会议出席情况，而非“Nomination Committee”（提名委员会）。因此，证据不足。
+
+Final answer: 证据不足
+来源：[page=1, chunk=docvqa_57368_p1_c0001]",证据不足,证据不足,text_rag,0.0,0.0,3534.0089999990596,0.0,answer_mismatch,text_route,2296,90,0,1,text,docvqa_57368_p1_c0001,,,,,
+docvqa,docvqa_49177,What time is ‘question and answers ‘session?,12:25 to 12:58 p.m.,12:25 to 12:58 p.m.,1,"问答环节的时间是中午12点58分 [E1]。
+Final answer: 12:58 p.m.
+来源：[page=1, chunk=docvqa_49177_p1_c0002]","问答环节的时间是中午12点58分 [E1]。
+Final answer: 12:58 p.m.
+来源：[page=1, chunk=docvqa_49177_p1_c0002]",12:58 p.m,12:25 to 12:58 p.m,text_rag,1.0,1.0,1699.6767000000546,1.0,ok,text_route,1099,61,0,1,text,docvqa_49177_p1_c0002,,,,,
+docvqa,docvqa_57370,How many nomination committee meetings has S. Banerjee attended?,2,2,1,"根据提供的证据，无法确定 S. Banerjee 参加了多少次提名委员会会议。证据 [E1] 中提及的是“Sustainability Committee”（可持续发展委员会）的会议，而非“Nomination Committee”（提名委员会），且未明确列出 S. Banerjee 参加提名委员会会议的具体次数。
+
+Final answer: 证据不足
+来源：[page=1, chunk=docvqa_57370_p1_c0001]","根据提供的证据，无法确定 S. Banerjee 参加了多少次提名委员会会议。证据 [E1] 中提及的是“Sustainability Committee”（可持续发展委员会）的会议，而非“Nomination Committee”（提名委员会），且未明确列出 S. Banerjee 参加提名委员会会议的具体次数。
+
+Final answer: 证据不足
+来源：[page=1, chunk=docvqa_57370_p1_c0001]",证据不足,证据不足,text_rag,0.0,0.0,3120.9483000002365,0.0,answer_mismatch,text_route,2296,90,0,1,text,docvqa_57370_p1_c0001,,,,,

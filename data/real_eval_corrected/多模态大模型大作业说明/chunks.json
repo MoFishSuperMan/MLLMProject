@@ -1,0 +1,156 @@
+[
+  {
+    "chunk_id": "多模态大模型大作业说明_p1_c0001",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 1,
+    "source_type": "text",
+    "content": "多模态大模型原理与应用 \n2026春季学期期末大作业说明 \n课程名称： 多模态大模型原理与应用 \n学期： 2025-2026 春季学期 \n发布日期： 2026年4月9日\n\n一、作业基本要求 \n1.1 组队与时间安排 \n \n组队规模： 每组1-3人 \n \n期中开题： 第9-10周，提交开题报告（约5页）+上台展示，包含： \no \n任务定义与应用背景 \no \n相关工作调研（至少5篇代表性论文/项目） \no \n系统方案设计（架构图、模型选择、评测指标） \no \n初步数据集与实验设想（算力预算、时间计划） \n \n期末验收： 第16-17周，提交最终报告（10-15页）+ 上台展示，包含： \no \n系统实现细节与代码仓库 \no \n定量实验结果（至少1-2项指标）+ 可视化/错误分析 \no \n反思与展望（模型局限、AGI视角下的潜力与瓶颈） \n1.2 评分标准 \n评分项 \n权重\n说明 \n开题报告\n20% \n调研深度、方案可行性、工作量规划 \n系统实现\n30% \n代码质量、功能完整性、创新性 \n实验评测\n20% \n实验设计合理性、指标选择、结果分析\n最终汇报\n30% \nDemo演示效果、报告清晰度、团队协作",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p2_c0002",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 2,
+    "source_type": "text",
+    "content": "1.3 算力与资源说明 \n \n推荐算力： 大部分题目可在1张24GB消费级GPU（如RTX 3090/4090）或云平台免费额\n度内完成 \n \n云平台选项： 中大超算、Google Colab Pro、阿里云、AutoDL等 \n \n开源模型优先： 鼓励使用Qwen2.5-VL、LLaMA 3.2 Vision、BLIP-2等开源模型",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p2_c0003",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 2,
+    "source_type": "text",
+    "content": "二、题目列表（仅供参考，可以自由选题） \n题目1：基于VLM的智能图文问答助手 \n任务描述 \n构建一个\"看图/看文档能聊天\"的多模态助手，支持商品图+问题、讲义截图+问题等场景。要\n求支持至少两类图像（自然场景、文档/幻灯片），实现中文问答和基础推理功能。 \n推荐技术栈 \n \n模型选择： Qwen2.5-VL（7B）、LLaMA 3.2 Vision、Gemma 3-Vision、GLM-4.6V-Fla\nsh \n \n训练方式： 推理为主 + 可选LoRA微调 \n \n评测数据集： VQA-v2子集、TextVQA、自建中文图文问答集 \n算力要求 \n \nGPU： 1×24GB（如RTX 3090）或云端推理API \n最低验收标准 \n• \n支持上传图片+文本问题，返回多轮对话式回答 \n• \n实现Web UI或命令行交互界面 \n• \n在至少一个公开数据集子集上评测，报告准确率或人工打分结果 \n• \n提供5-10个典型成功/失败案例分析 \n参考工作与代码仓库 \n• \nCLIP/BLIP/BLIP-2：图文预训练与问答基础架构 \n• \nLLaVA、MiniGPT-4：开源图文对话框架 \n• \nQwen-VL官方仓库：https://github.com/QwenLM/Qwen-VL \n• \n开源VLM综合对比：Best Open Source Multimodal Vision Models (2025)",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p3_c0004",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 3,
+    "source_type": "text",
+    "content": "题目2：面向课堂视频的多模态问答机器人 \n任务描述 \n针对教学视频（课程录播、公开课），构建\"看视频+听音频+看字幕\"的问答/检索机器人。 \n例如：\"老师在12分钟左右板书了哪几个要点？\" \n推荐技术栈 \n \n语音转文本： Whisper、FunASR \n \n视频理解： VideoChat、VideoChatGPT、Qwen-VL（视频模式） \n \n检索增强： 向量数据库（FAISS、Milvus）+ 时间戳索引 \n算力要求 \n \nGPU： 1×16-24GB（视频可抽帧降采样） \n最低验收标准 \n• \n支持用户输入视频链接或本地视频文件 \n• \n自动抽帧（如1 FPS）+ 音频转写，构建多模态索引 \n• \n用户可就视频内容提问，系统返回带时间戳引用的回答 \n• \n至少在3-5个教学视频上完成测试，展示问答准确性 \n参考工作与代码仓库 \n• \nVideoChat/VideoChatGPT \n• \nWhisper官方仓库：https://github.com/openai/whisper \n• \nLangChain视频问答教程：Building multimodal AI applications \n• \nVideoChat论文：https://arxiv.org/abs/2305.06355",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p4_c0005",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 4,
+    "source_type": "text",
+    "content": "题目3：文档理解+多模态检索问答系统 \n任务描述 \n针对PDF、扫描文档、PPT截图等，构建\"文档智能助手\"。用户上传文档或页面截图，系统可定\n位表格/图像/公式区域，回答结构化问题（如\"图3表示什么趋势？\"、\"第2节主要结论是什\n么？\"）。 \n推荐技术栈 \n \n模型选择： LLaMA 3.2 Vision、Qwen2.5-VL、DeepSeek-VL（强文档能力） \n \nOCR增强： PaddleOCR、Tesseract（可选） \n \nRAG架构： LangChain + 向量检索对长文档分块 \n算力要求 \n \nGPU： 1×24GB或云端API \n最低验收标准 \n• \n支持上传多页PDF或图像，自动分块（文本/表格/图形） \n• \n支持自然语言问题查询，在回答中标出引用的页面/图号 \n• \n在至少一个文档数据集（DocVQA、ChartQA子集或自建）上评测 \n• \n对比纯文本RAG与多模态RAG的效果差异 \n参考工作与代码仓库 \n• \nTextVQA、DocVQA、ChartQA数据集 \n• \nQwen2.5-VL文档理解能力评测 \n• \nLangChain多模态RAG示例：https://python.langchain.com/docs/use_cases/visual_\nqa \n• \nDeepSeek-VL：https://github.com/deepseek-ai/DeepSeek-VL",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p5_c0006",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 5,
+    "source_type": "text",
+    "content": "题目4：图文驱动的个性化封面/海报生成 \n任务描述 \n基于扩散模型或开源文本到图像模型，构建\"智能设计助手\"。输入文案、风格参考图（或草\n图），自动生成个性化海报/书籍封面/课程封面，并支持少量交互式修改。 \n推荐技术栈 \n \n生成模型： Stable Diffusion、SDXL、HCP-Diffusion \n \n控制方法： LoRA微调、ControlNet（边缘/深度图）、DreamBooth \n \n前端界面： Gradio、Streamlit或HCP-Diffusion Web UI \n算力要求 \n \nGPU： 1×24GB（可使用低显存优化方案） \n最低验收标准 \n• \n至少支持两种控制方式：文本提示词 + 参考图（布局草图/风格图） \n• \n提供简单Web UI供用户交互式生成与调整 \n• \n设计一套小型评测：人工主观打分（美观度、符合度）或CLIP Score、FID等自动指标 \n• \n对比不同提示策略或LoRA微调前后的生成效果 \n参考工作与代码仓库 \n• \nHCP-Diffusion：高效扩散模型训练与部署 \n• \nStable Diffusion官方：https://github.com/Stability-AI/stablediffusion \n• \nControlNet论文与代码：https://github.com/lllyasviel/ControlNet \n• \nLoRA微调教程：https://huggingface.co/docs/diffusers/training/lora",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p6_c0007",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 6,
+    "source_type": "text",
+    "content": "题目5：游戏或仿真环境中的多模态智能Agent \n任务描述 \n选择一个简单2D/3D环境（如GridWorld、自制小迷宫，或轻量级AI2-THOR/Habitat子任务），\n构建\"视觉+语言\"导航/交互Agent。给定自然语言指令与视觉观测，Agent规划并执行动作（例\n如：\"走到红色椅子旁边\"）。 \n推荐技术栈 \n \n仿真环境： AI2-THOR、Habitat-Sim、iGibson（可选轻量子任务） \n \n模型架构： 小型LLM（7B）+ 简单强化学习（PPO、DQN）或规则控制 \n \n视觉编码： CLIP特征 + 目标检测（YOLO、SAM） \n算力要求 \n \nGPU： 1×16-24GB（主要吃CPU/GPU混合，环境模拟较重） \n最低验收标准 \n• \n完成1-2种任务（如目标导航ObjectNav、简单交互） \n• \n报告成功率、SPL（Success weighted by Path Length）等指标[8] \n• \n提供至少10个episode的可视化轨迹与失败案例分析 \n• \n对比纯视觉导航与\"视觉+语言\"导航的性能差异 \n参考工作与代码仓库 \n• \nAI2-THOR官方：https://ai2thor.allenai.org/ \n• \nHabitat-Sim：https://github.com/facebookresearch/habitat-sim \n• \nRoboAgent、RT-1/RT-2具身智能模型 \n• \nAwesome Embodied Robotics & Agent：https://github.com/zchoi/Aweso",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p6_c0008",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 6,
+    "source_type": "text",
+    "content": "/RT-2具身智能模型 \n• \nAwesome Embodied Robotics & Agent：https://github.com/zchoi/Awesome-Embodied\n-Robotics-and-Agent",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p7_c0009",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 7,
+    "source_type": "text",
+    "content": "题目6：多模态教学/学习助手（图表+文字+语音） \n任务描述 \n基于开源机械臂抓取/桌面操作场景（如Open-X-Embodied / Open X-CLAW风格数据或类似仿真\n环境），构建\"视觉+语言指令→抓取/放置方案\"的多模态系统。重点在多模态理解与动作规\n划，而不要求真正控制真实机器人。 \n推荐技术栈 \n \n感知模块： Segment Anything (SAM)、YOLO、CLIP（物体检测与分割） \n \n语言理解： LLM解析任务指令（如GPT-3.5、Qwen） \n \n规划模块： 启发式规则或轻量Transformer学习\"场景+指令→动作\"映射 \n \n仿真环境： PyBullet、Isaac Gym桌面场景（可选） \n算力要求 \n \nGPU： 1×16-24GB \n最低验收标准 \n• \n在仿真或离线数据中，选择至少50个不同桌面场景（物体组合不同） \n• \n设计≥60条任务指令（不同目标物体/数量/关系约束） \n• \n评估规划成功率（动作方案是否满足指令目标） \n• \n提供若干典型场景的可视化（物体分割、动作标注）及至少5个失败案例分析 \n参考工作与代码仓库 \n• \nOpen X-Embodiment项目：https://robotics-transformer-x.github.io/ \n• \nSegment Anything (SAM)：https://github.com/facebookresearch/segment-anything \n• \nRT-1/RT-2机械臂操作模型 \n• \nPyBullet仿真环境：https://pybullet",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p7_c0010",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 7,
+    "source_type": "text",
+    "content": "research/segment-anything \n• \nRT-1/RT-2机械臂操作模型 \n• \nPyBullet仿真环境：https://pybullet.org/",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p8_c0011",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 8,
+    "source_type": "text",
+    "content": "题目7：网页多模态Agent（界面理解+自动操作） \n任务描述 \n设计一个网页多模态Agent：基于网页截图/结构信息和自然语言指令，生成一系列浏览器操作\n（点击、输入、滚动）来完成具体任务。可在浏览器自动化环境中演示。 \n推荐技术栈 \n \n架构设计： VLM（解析界面截图） + LLM（规划动作序列） + 工具调用 \n \n执行工具： Selenium、Playwright（浏览器自动化） \n \n状态管理： 简单状态机或ReAct框架 \n算力要求 \n \nGPU： 1×24GB（LLM推理 + 轻量VLM） \n最低验收标准 \n• \n选择1-2个真实网站，针对每个网站至少设计3个任务场景 \n• \n每个场景至少10次独立测试（共≥60次），统计任务成功率 \n• \n分类记录失败类型（识别失败/规划失败/执行失败） \n• \n提供可视化操作轨迹（截图序列+动作序列）及错误分析 \n参考工作与代码仓库 \n• \nOpenClaw、Nanobot等Agent \n• \nPlaywright官方：https://playwright.dev/ \n• \nSMART-LLM多Agent任务规划：https://github.com/SMARTlab-Purdue/SMART-LLM \n• \nWebAgent研究综述与代码",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p9_c0012",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 9,
+    "source_type": "text",
+    "content": "题目8：具身智能/仿真导航多模态Agent \n任务描述 \n在自制或开源仿真环境中（2D或简化3D），实现一个基于视觉和语言指令的导航/交互Agent，\n执行例如\"到达目标物体旁边\"等任务。强调强化学习/规划与多模态结合。 \n推荐技术栈 \n \n仿真环境： 自制Gym-like迷宫、简化AI2-THOR/Habitat子任务 \n \n策略方法： PPO、DD-PPO（强化学习）或LLM+规划混合方案 \n \n视觉编码： CLIP特征 + 目标检测 \n算力要求 \n \nGPU： 1×16-24GB（环境模拟+策略训练） \n最低验收标准 \n• \n至少50个测试关卡（随机生成或手工设计），指令多样化 \n• \n报告成功率与SPL（Success weighted by Path Length）指标 \n• \n对比\"有语言指令 vs 只有坐标目标\"的性能差异 \n• \n提供至少10个episode的可视化轨迹与失败案例分析 \n参考工作与代码仓库 \n• \nAI2-THOR官方：https://ai2thor.allenai.org/ \n• \nHabitat-Sim：https://github.com/facebookresearch/habitat-sim \n• \nRoboAgent、RT-1/RT-2具身智能模型[9][10] \n• \nAwesome Embodied Robotics & Agent：https://github.com/zchoi/Awesome-Embodied\n-Robotics-and-Agent",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p10_c0013",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 10,
+    "source_type": "text",
+    "content": "三、通用评测指标与工具 \n3.1 常用评测指标 \n任务类型 \n推荐指标 \nVQA \n准确率（Accuracy）、F1 Score \nImage Caption\nBLEU、ROUGE、CIDEr、METEOR \n视频问答 \n准确率、时间戳精度 \nAgent导航 \n成功率、SPL、路径长度 \nAIGC生成 \nCLIP Score、FID、人工主观打分\n\nTable 1: 常用评测指标汇总 \n3.2 推荐开发工具 \n• \n深度学习框架： PyTorch、TensorFlow \n• \n多模态库： Hugging Face Transformers、LangChain、LlamaIndex \n• \n前端界面： Gradio、Streamlit \n• \n向量检索： FAISS、Milvus、Pinecone \n• \n数据标注： Label Studio、CVAT",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "多模态大模型大作业说明_p11_c0014",
+    "doc_id": "多模态大模型大作业说明",
+    "page": 11,
+    "source_type": "text",
+    "content": "四、提交要求与注意事项 \n4.1 代码与文档要求 \n• \n代码仓库： 需提交GitHub仓库链接，包含README.md（环境配置、运行说明） \n• \n开题报告： PDF格式，5页左右，模板见课程网站 \n• \n最终报告： PDF格式，15-20页，需包含：摘要、引言、相关工作、方法、实验、结\n论、参考文献 \n• \nDemo视频： 3-5分钟录屏演示（上传至B站/YouTube并提供链接） \n4.2 学术诚信 \n• \n允许使用开源代码与预训练模型，但需在报告中明确标注 \n• \n禁止抄袭他人代码或报告 \n• \n鼓励创新与改进，对开源工作的深度理解与扩展同样有价值",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  }
+]

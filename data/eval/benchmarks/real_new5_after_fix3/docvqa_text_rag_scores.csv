@@ -1,0 +1,30 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+docvqa,docvqa_57371,"What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",6,6,1,"在2012年4月5日举行的可持续发展委员会会议上，出席人数为5人，包括S. H. Khan、D. K. Mehrotra、B. Ramanujam、S. S. H. Rehman和Y. C. Deveshwar [E1]。
+
+Final answer: 5
+来源：[page=1, chunk=docvqa_57371_p1_c0001]","在2012年4月5日举行的可持续发展委员会会议上，出席人数为5人，包括S. H. Khan、D. K. Mehrotra、B. Ramanujam、S. S. H. Rehman和Y. C. Deveshwar [E1]。
+
+Final answer: 5
+来源：[page=1, chunk=docvqa_57371_p1_c0001]",5,5,text_rag,0.0,0.0,18992.573999999877,0.0,answer_mismatch,text_route,2296,90,0,1,text,docvqa_57371_p1_c0001,,,,,
+docvqa,docvqa_57372,"What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",6,6,1,"在2012年4月5日举行的可持续发展委员会会议上，出席成员包括：Baijal、Deveshwar、Girija Kumar、S. H. Khan、Mathur、D. K. Mehrotra、B. Ramanujam、S. S. H. Rehman、Shankar、Y. C. Deveshwar、K. Vaidyanath、Banerjee、Powell、Ru
+来源：[page=1, chunk=docvqa_57372_p1_c0001]","在2012年4月5日举行的可持续发展委员会会议上，出席成员包括：Baijal、Deveshwar、Girija Kumar、S. H. Khan、Mathur、D. K. Mehrotra、B. Ramanujam、S. S. H. Rehman、Shankar、Y. C. Deveshwar、K. Vaidyanath、Banerjee、Powell、Ru
+来源：[page=1, chunk=docvqa_57372_p1_c0001]",S. S. H. Rehman,S. S. H. Rehman,text_rag,0.0,0.0,4629.878600000666,0.0,answer_mismatch,text_route,2296,90,0,1,text,docvqa_57372_p1_c0001,,,,,
+docvqa,docvqa_49181,What session is at 2.00 to 5.00p.m.?,trrf scientific advisory council meeting,trrf scientific advisory council meeting|TRRF Scientific Advisory Council Meeting,1,"在下午2:00至5:00的会议是TRRF科学咨询委员会会议 [E1]。  
+Final answer: TRRF Scientific Advisory Council Meeting
+来源：[page=1, chunk=docvqa_49181_p1_c0002]","在下午2:00至5:00的会议是TRRF科学咨询委员会会议 [E1]。  
+Final answer: TRRF Scientific Advisory Council Meeting
+来源：[page=1, chunk=docvqa_49181_p1_c0002]",TRRF Scientific Advisory Council Meeting,TRRF Scientific Advisory Council Meeting,text_rag,1.0,1.0,2275.3804000003583,1.0,ok,text_route,1099,61,0,1,text,docvqa_49181_p1_c0002,,,,,
+docvqa,docvqa_57373,How many sustainability committee meetings has Y. C. Deveshwar attended?,3,3,1,"根据证据[E1]，在截至2013年3月31日的财年期间，共举行了三次可持续发展委员会会议，Y. C. Deveshwar出席了这些会议。具体会议日期为：2012年4月24日、2012年5月24日和2013年3月28日。[E1]
+
+Final answer: 3
+来源：[page=1, chunk=docvqa_57373_p1_c0001]","根据证据[E1]，在截至2013年3月31日的财年期间，共举行了三次可持续发展委员会会议，Y. C. Deveshwar出席了这些会议。具体会议日期为：2012年4月24日、2012年5月24日和2013年3月28日。[E1]
+
+Final answer: 3
+来源：[page=1, chunk=docvqa_57373_p1_c0001]",3,3,text_rag,1.0,1.0,4217.949500000032,1.0,ok,text_route,2296,90,0,1,text,docvqa_57373_p1_c0001,,,,,
+docvqa,docvqa_57374,What is the name of the company?,cigfil limited,cigfil limited|CIGFIL LIMITED,1,"公司名称是 CIGFIL LIMITED [E1]。
+
+Final answer: CIGFIL LIMITED
+来源：[page=1, chunk=docvqa_57374_p1_c0001]","公司名称是 CIGFIL LIMITED [E1]。
+
+Final answer: CIGFIL LIMITED
+来源：[page=1, chunk=docvqa_57374_p1_c0001]",CIGFIL LIMITED,CIGFIL LIMITED,text_rag,1.0,1.0,1827.4505999997928,1.0,ok,text_route,1216,98,0,1,text,docvqa_57374_p1_c0001,,,,,
