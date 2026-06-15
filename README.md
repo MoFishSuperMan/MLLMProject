@@ -1,8 +1,9 @@
 # MLLM 文档问答 Demo
 
-当前实现分为一个展示入口和一套命令行/评测入口：
+当前实现分为 React + FastAPI 联调入口、一个 Gradio 兼容入口和一套命令行/评测入口：
 
-- **前端展示入口**：`app.py`，统一使用 Gradio，支持 PDF/图片上传、页面预览、模式选择、规则路由、Top-K evidence 和引用页面高亮。
+- **React + FastAPI 联调入口**：`frontend/` + `src/mllmproject/api.py`，支持 PDF/图片上传、解析轮询、真实 chunk 列表、页面预览和带引用问答。
+- **Gradio 兼容入口**：`app.py`，支持 PDF/图片上传、页面预览、模式选择、规则路由、Top-K evidence 和引用页面高亮。
 - **后端服务层**：`src/mllmproject/service.py`，提供无 UI 的文档解析、问答和引用预览接口，前端与评测共用这一层。
 - **命令行/评测入口**：`main.py` 与 `scripts/`，用于 Text-RAG baseline、单次问答、批量评测和生成报告表格。
 
@@ -51,7 +52,30 @@ data/processed/{doc_id}/metadata.json
 PDF/TXT/MD -> 文本抽取 -> 按页/段落切 chunk -> 本地哈希 embedding -> 本地余弦检索 -> 词重叠 rerank -> mock 引用式回答
 ```
 
-## 前端 Demo
+## React + FastAPI 前端联调
+
+后端使用 `first` conda 环境和本地真实模型，默认监听 `127.0.0.1:8000`：
+
+```powershell
+$env:MLLMPROJECT_USE_REAL_MODELS="1"
+$env:MLLMPROJECT_QWEN3_MODEL_PATH="C:\Users\杨毅涵\Desktop\多模态大作业\MLLMProject\model"
+& "C:\anaconda\envs\first\python.exe" -m uvicorn mllmproject.api:app --host 127.0.0.1 --port 8000
+```
+
+前端使用 Vite，`/api` 会自动代理到后端：
+
+```powershell
+cd frontend
+npm run dev
+```
+
+打开：
+
+```text
+http://127.0.0.1:5173
+```
+
+## Gradio Demo
 
 运行：
 
@@ -75,7 +99,7 @@ http://127.0.0.1:7860
 - 展示 Top-K evidence。
 - 展示路由、citation、页面截图和 bbox 高亮。
 
-注意：`app.py` 是唯一前端展示入口；Text-RAG baseline 的无界面运行走 `main.py` 或 `scripts/demo_query.py`。
+注意：React + FastAPI 是当前前后端联调入口；`app.py` 保留为 Gradio 兼容展示入口。Text-RAG baseline 的无界面运行走 `main.py` 或 `scripts/demo_query.py`。
 
 ## 接口设计
 

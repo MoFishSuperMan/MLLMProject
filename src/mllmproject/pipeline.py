@@ -27,6 +27,9 @@ class RagPipeline:
         output_dir: str | Path = "data/processed",
         include_visual: bool = True,
         render_pages: bool = True,
+        doc_id: str | None = None,
+        chunk_chars: int = 700,
+        overlap: int = 80,
         model_stack: ModelStack | None = None,
         embedder: Any | None = None,
         index: Any | None = None,
@@ -35,7 +38,14 @@ class RagPipeline:
         visual_summarizer: Any | None = None,
     ) -> "RagPipeline":
         model_stack = model_stack or ModelStack.from_env()
-        document = load_document(source_path, output_dir=output_dir, render_pages=render_pages)
+        document = load_document(
+            source_path,
+            output_dir=output_dir,
+            render_pages=render_pages,
+            chunk_chars=chunk_chars,
+            overlap=overlap,
+            doc_id=doc_id,
+        )
         if include_visual:
             add_page_visual_evidence(
                 document,

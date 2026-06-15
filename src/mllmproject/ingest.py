@@ -21,13 +21,14 @@ def load_document(
     render_pages: bool = True,
     chunk_chars: int = 700,
     overlap: int = 80,
+    doc_id: str | None = None,
 ) -> Document:
     return DocumentIngestor(
         processed_root=output_dir,
         chunk_chars=chunk_chars,
         overlap=overlap,
         render_pages=render_pages,
-    ).ingest(source_path)
+    ).ingest(source_path, doc_id=doc_id)
 
 
 def extract_pages(source: Path, doc_id: str, doc_dir: Path, render_pages: bool = True) -> list[Page]:
@@ -191,12 +192,12 @@ class DocumentIngestor:
         self.overlap = overlap
         self.render_pages = render_pages
 
-    def ingest(self, file_path: str | Path) -> Document:
+    def ingest(self, file_path: str | Path, doc_id: str | None = None) -> Document:
         source = Path(file_path)
         if not source.exists():
             raise FileNotFoundError(source)
 
-        doc_id = make_doc_id(source)
+        doc_id = doc_id or make_doc_id(source)
         doc_dir = ensure_dir(self.processed_root / doc_id)
         pages = extract_pages(source, doc_id, doc_dir, render_pages=self.render_pages)
         page_texts = [PageText(page=page.page, text=page.text) for page in pages]
