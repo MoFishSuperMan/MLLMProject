@@ -87,7 +87,9 @@ type AnswerResult = {
   latency_ms: number;
 };
 
-const API_BASE = "/api/v1";
+const API_ORIGIN = "http://127.0.0.1:8000";
+const API_BASE = `${API_ORIGIN}/api/v1`;
+const FALLBACK_PAGE_ASPECT = "0.72";
 
 async function apiJson<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, init);
@@ -121,10 +123,17 @@ function normalizeChunk(raw: unknown): EvidenceChunk {
     content: String(item.content ?? ""),
     enabled: Boolean(item.enabled ?? true),
     bbox: item.bbox ?? null,
-    image_url: item.image_url ?? null,
-    preview_url: item.preview_url ?? null,
+    image_url: absolutizeApiUrl(item.image_url),
+    preview_url: absolutizeApiUrl(item.preview_url),
     metadata: item.metadata ?? {},
   };
+}
+
+function absolutizeApiUrl(value: unknown) {
+  if (!value) return null;
+  const url = String(value);
+  if (/^https?:\/\//.test(url)) return url;
+  return `${API_ORIGIN}${url.startsWith("/") ? url : `/${url}`}`;
 }
 
 function asEvidenceType(value: unknown): EvidenceType {
@@ -147,6 +156,34 @@ function errorMessageFrom(error: unknown) {
   return error instanceof Error ? error.message : "Unexpected API error.";
 }
 
+function pageImageUrl(fileId: string | undefined, page: number | undefined) {
+  if (!fileId || !page) return null;
+  return `${API_BASE}/files/${fileId}/pages/${page}/image`;
+}
+
+function numericTuple4(value: unknown): [number, number, number, number] | null {
+  if (!Array.isArray(value) || value.length !== 4) return null;
+  const values = value.map((item) => Number(item));
+  if (values.some((item) => !Number.isFinite(item))) return null;
+  const [x1, y1, x2, y2] = values;
+  if (x2 <= x1 || y2 <= y1) return null;
+  return [x1, y1, x2, y2];
+}
+
+function metadataNumber(metadata: Record<string, unknown> | undefined, key: string) {
+  const value = Number(metadata?.[key]);
+  return Number.isFinite(value) && value > 0 ? value : 0;
+}
+
+function pageHighlightBox(chunk: EvidenceChunk | null): [number, number, number, number] | null {
+  if (!chunk) return null;
+  return (
+    numericTuple4(chunk.metadata?.page_bbox) ??
+    numericTuple4(chunk.metadata?.original_bbox) ??
+    numericTuple4(chunk.bbox)
+  );
+}
+
 function App() {
   const [view, setView] = useState<View>("knowledge");
   const [query, setQuery] = useState("");
@@ -156,7 +193,7 @@ function App() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [focusedId, setFocusedId] = useState("");
   const [models, setModels] = useState<ModelOption[]>([]);
-  const [modelId, setModelId] = useState("qwen3_vl_local");
+  const [modelId, setModelId] = useState("local_mock");
   const [answerResult, setAnswerResult] = useState<AnswerResult | null>(null);
   const [isThinking, setIsThinking] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
@@ -763,7 +800,34 @@ function PreviewPanel({
   onActiveFile: (fileId: string) => void;
   onUpload: (files: FileList | null) => void | Promise<void>;
 }) {
-  const previewSrc = selected?.preview_url || selected?.image_url || null;
+  const selectedFileId = selected?.file_id || activeFile?.file_id;
+  const selectedPage = selected?.page || 1;
+  const primaryPreviewSrc = pageImageUrl(selectedFileId, selectedPage);
+  const fallbackPreviewSrc = selected?.preview_url || selected?.image_url || null;
+  const [previewSrc, setPreviewSrc] = useState(primaryPreviewSrc);
+  const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
+  const highlight = pageHighlightBox(selected);
+  const pageWidth = metadataNumber(selected?.metadata, "page_width") || imageSize.width;
+  const pageHeight = metadataNumber(selected?.metadata, "page_height") || imageSize.height;
+  const aspectRatio = pageWidth > 0 && pageHeight > 0 ? `${pageWidth} / ${pageHeight}` : FALLBACK_PAGE_ASPECT;
+  const highlightStyle = highlight && pageWidth > 0 && pageHeight > 0
+    ? {
+        left: `${(highlight[0] / pageWidth) * 100}%`,
+        top: `${(highlight[1] / pageHeight) * 100}%`,
+        width: `${((highlight[2] - highlight[0]) / pageWidth) * 100}%`,
+        height: `${((highlight[3] - highlight[1]) / pageHeight) * 100}%`,
+      }
+    : null;
+  const locatorText = selected
+    ? `Page ${selected.page} · ${selected.type} · ${selected.chunk_id}`
+    : activeFile?.status === "ready"
+      ? "Page 1"
+      : activeFile?.status ?? "Waiting";
+
+  useEffect(() => {
+    setPreviewSrc(primaryPreviewSrc);
+    setImageSize({ width: 0, height: 0 });
+  }, [primaryPreviewSrc]);
 
   return (
     <motion.aside
@@ -815,11 +879,35 @@ function PreviewPanel({
                     <span>{selected ? `Page ${selected.page}` : activeFile?.status}</span>
                   </div>
                   {previewSrc ? (
-                    <img
-                      src={previewSrc}
-                      alt={selected?.title ?? activeFile?.file_name ?? "Preview"}
-                      className="max-h-[520px] w-full rounded-lg border border-zinc-100 object-contain"
-                    />
+                    <div
+                      className="relative overflow-hidden rounded-lg border border-zinc-100 bg-zinc-50"
+                      style={{ aspectRatio }}
+                    >
+                      <img
+                        src={previewSrc}
+                        alt={activeFile?.file_name ?? "PDF page preview"}
+                        className="absolute inset-0 h-full w-full object-contain"
+                        onLoad={(event) => {
+                          setImageSize({
+                            width: event.currentTarget.naturalWidth,
+                            height: event.currentTarget.naturalHeight,
+                          });
+                        }}
+                        onError={() => {
+                          if (fallbackPreviewSrc && previewSrc !== fallbackPreviewSrc) {
+                            setPreviewSrc(fallbackPreviewSrc);
+                          } else {
+                            setPreviewSrc(null);
+                          }
+                        }}
+                      />
+                      {highlightStyle ? (
+                        <div
+                          className="pointer-events-none absolute border-2 border-[#3178f6] bg-[#3178f6]/14 shadow-[0_0_0_9999px_rgba(255,255,255,0.14)]"
+                          style={highlightStyle}
+                        />
+                      ) : null}
+                    </div>
                   ) : (
                     <>
                       <div className="space-y-3">
@@ -847,19 +935,12 @@ function PreviewPanel({
                       </div>
                     </>
                   )}
-                  {selected ? (
-                    <motion.div
-                      layout
-                      className="mt-5 rounded-lg border border-[#3178f6]/30 bg-blue-50/55 p-4 text-sm leading-6 text-zinc-700"
-                    >
-                      <div className="mb-1 font-medium text-[#246be8]">{selected.title}</div>
-                      {selected.content}
-                    </motion.div>
-                  ) : (
-                    <div className="mt-5 rounded-lg border border-zinc-100 bg-zinc-50 p-4 text-sm leading-6 text-zinc-500">
-                      {activeFile?.status === "ready" ? "No evidence selected." : "Parsing evidence..."}
-                    </div>
-                  )}
+                  <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-zinc-100 bg-zinc-50 px-4 py-3 text-sm text-zinc-600">
+                    <span className="min-w-0 truncate">{locatorText}</span>
+                    <span className="shrink-0 font-medium text-[#246be8]">
+                      {highlightStyle ? "Highlighted in PDF" : "PDF preview"}
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>

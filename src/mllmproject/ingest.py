@@ -1,4 +1,4 @@
-"""Document ingestion for text chunks and page images."""
+﻿"""Document ingestion for text chunks and page images."""
 
 from __future__ import annotations
 
@@ -169,12 +169,24 @@ def sliding_chunks(text: str, chunk_chars: int = 700, overlap: int = 80) -> list
 
 def add_page_visual_evidence(document: Document, summarizer: MockVisualSummarizer | None = None) -> list[Chunk]:
     summarizer = summarizer or MockVisualSummarizer()
-    visual_chunks = make_page_visual_chunks(document, summary_fn=summarizer.generate_visual_summary)
+    def safe_summary(image_path: str) -> str:
+        try:
+            return summarizer.generate_visual_summary(image_path)
+        except Exception:
+            page = next((item for item in document.pages if item.image_path == image_path), None)
+            return default_visual_summary(page.page if page else None)
+
+    visual_chunks = make_page_visual_chunks(document, summary_fn=safe_summary)
     document.chunks.extend(visual_chunks)
     processed_dir = document.metadata.get("processed_dir")
     if processed_dir:
         write_json(Path(processed_dir) / "chunks_with_visual.json", [chunk.to_dict() for chunk in document.chunks])
     return visual_chunks
+
+
+def default_visual_summary(page: int | None) -> str:
+    page_text = f"Page {page}" if page else "This page"
+    return f"{page_text} PDF preview. Vision summary API is unavailable; using page-level evidence."
 
 
 class DocumentIngestor:
@@ -207,6 +219,27 @@ class DocumentIngestor:
             max_chars=self.chunk_chars,
             overlap=self.overlap,
         )
+        pages_by_number = {page.page: page for page in pages}
+        for chunk in chunks:
+            page = pages_by_number.get(chunk.page)
+            if page is None:
+                continue
+            chunk.image_path = page.image_path
+            if page.width and page.height:
+                margin_x = max(float(page.width) * 0.06, 24.0)
+                margin_y = max(float(page.height) * 0.06, 24.0)
+                chunk.bbox = [
+                    margin_x,
+                    margin_y,
+                    float(page.width) - margin_x,
+                    float(page.height) - margin_y,
+                ]
+            chunk.metadata = {
+                **chunk.metadata,
+                "highlight_kind": "page_text_region",
+                "page_width": page.width,
+                "page_height": page.height,
+            }
 
         document = Document(
             doc_id=doc_id,
@@ -232,3 +265,4 @@ class DocumentIngestor:
             "processed_dir": document.metadata.get("processed_dir", ""),
             "render_pages": self.render_pages,
         }
+

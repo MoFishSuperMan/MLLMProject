@@ -1,0 +1,44 @@
+[
+  {
+    "chunk_id": "file_7bb3428fbc78_p1_c0001",
+    "doc_id": "file_7bb3428fbc78",
+    "page": 1,
+    "source_type": "text",
+    "content": "This is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nThis is a table demo\nTitle\nC1\nC2\nC3\nC4\nC5\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "file_7bb3428fbc78_p1_c0002",
+    "doc_id": "file_7bb3428fbc78",
+    "page": 1,
+    "source_type": "text",
+    "content": "15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15\nRow1\n1\n2\n3\n4\n2\nR2\n6\n7\n8\n9\n10\nR3\n11\n12\n13\n14\n15",
+    "bbox": null,
+    "image_path": null,
+    "region_id": null,
+    "metadata": {}
+  },
+  {
+    "chunk_id": "file_7bb3428fbc78_p1_page",
+    "doc_id": "file_7bb3428fbc78",
+    "page": 1,
+    "source_type": "page",
+    "content": "这页文档截图的主要内容如下：\n\n1. **页面标题**：文档顶部有重复的文本“This is a table demo”，但没有明确的页面标题。\n\n2. **表格**：文档中包含一个详细的表格，表格标题为“Title”，列标题分别为C1、C2、C3、C4和C5。表格内容重复显示了三行数据（Row1、R2、R3），每行数据依次为：",
+    "bbox": [
+      0.0,
+      0.0,
+      953.0,
+      1348.0
+    ],
+    "image_path": "E:\\GitHub\\MLLMProject\\data\\processed\\file_7bb3428fbc78\\pages\\page_001.png",
+    "region_id": "file_7bb3428fbc78_p1_page",
+    "metadata": {
+      "summary_type": "mock_page_visual",
+      "region_kind": "page",
+      "component": "multimodal.make_page_visual_chunks"
+    }
+  }
+]

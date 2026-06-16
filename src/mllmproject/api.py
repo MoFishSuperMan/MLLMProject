@@ -85,7 +85,7 @@ class QueryRequest(BaseModel):
     question: str
     file_ids: list[str] = Field(default_factory=list)
     selected_chunk_ids: list[str] = Field(default_factory=list)
-    model: str = "qwen3_vl_local"
+    model: str = "local_mock"
     mode: str = "auto"
     top_k: int = 5
     include_disabled: bool = False
@@ -236,17 +236,19 @@ class ApiStore:
                 result=result,
             )
         except Exception as exc:  # pragma: no cover - exercised through API error paths in integration
-            error = {"code": "parse_failed", "message": str(exc), "details": {"file_id": record.file_id}}
+            error_message = friendly_model_error(exc) if is_model_api_error(exc) else str(exc)
+            error_code = "model_api_failed" if is_model_api_error(exc) else "parse_failed"
+            error = {"code": error_code, "message": error_message, "details": {"file_id": record.file_id}}
             with self.lock:
                 record.status = "failed"
-                record.error_message = str(exc)
+                record.error_message = error_message
                 record.updated_at = iso_now()
             self._update_job(
                 job,
                 status="failed",
                 progress=1.0,
                 stage="failed",
-                message=str(exc),
+                message=error_message,
                 error=error,
             )
 
@@ -406,7 +408,15 @@ class ApiStore:
         evidences = merge_evidences(selected, prioritize_region_evidence(searched))
         evidence_limit = max(request.top_k, len(selected), 1)
         evidences = evidences[:evidence_limit]
-        answer, citations = pipeline.generator.generate_answer(question, evidences, route=route, route_reason=reason)
+        try:
+            answer, citations = pipeline.generator.generate_answer(question, evidences, route=route, route_reason=reason)
+        except Exception as exc:
+            raise ApiError(
+                "model_api_failed",
+                friendly_model_error(exc),
+                status_code=502,
+                details={"raw_error": str(exc)},
+            ) from exc
         latency_ms = (time.perf_counter() - start) * 1000
         result = AnswerResult(answer=answer, citations=citations, route=route, route_reason=reason, evidences=evidences)
         return answer_to_api(
@@ -503,7 +513,7 @@ def create_app(store: ApiStore | None = None) -> FastAPI:
 
     @app.get("/api/v1/models")
     def list_models() -> dict[str, Any]:
-        return {"models": model_options(api_store.model_config.use_real_models)}
+        return {"models": model_options(api_store.model_config)}
 
     @app.post("/api/v1/files")
     async def upload_files(files: list[UploadFile] = File(...)) -> dict[str, Any]:
@@ -581,9 +591,10 @@ def create_app(store: ApiStore | None = None) -> FastAPI:
 
 
 def build_model_config(project_root: Path, use_real_models: bool | None) -> ModelConfig:
-    default_real = parse_bool(os.getenv("MLLMPROJECT_USE_REAL_MODELS"), default=True)
     config = ModelConfig.from_env()
-    config.use_real_models = default_real if use_real_models is None else use_real_models
+    config.use_real_models = False if use_real_models is None else use_real_models
+    if not os.getenv("MLLMPROJECT_MODEL_BACKEND") and not os.getenv("MLLMPROJECT_BACKEND"):
+        config.backend = "mock"
     local_model_dir = project_root / "model"
     if config.use_real_models and not os.getenv("MLLMPROJECT_QWEN3_MODEL_PATH") and local_model_dir.exists():
         config.vlm_model_id = str(local_model_dir)
@@ -594,28 +605,31 @@ def build_model_config(project_root: Path, use_real_models: bool | None) -> Mode
     return config
 
 
-def model_options(use_real_models: bool) -> list[dict[str, Any]]:
+def model_options(config: ModelConfig) -> list[dict[str, Any]]:
+    if config.backend == "dashscope":
+        return [
+            {
+                "id": "qwen_dashscope",
+                "label": "Qwen 百炼 API",
+                "provider": "dashscope",
+                "description": "Qwen via DashScope Bailian OpenAI-compatible API.",
+                "enabled": True,
+                "is_default": True,
+                "supports_vision": True,
+                "supports_text": True,
+            }
+        ]
     return [
-        {
-            "id": "qwen3_vl_local",
-            "label": "Qwen3-VL-8B",
-            "provider": "local",
-            "description": "Qwen3-VL-8B with BGE retrieval and reranking.",
-            "enabled": use_real_models,
-            "is_default": use_real_models,
-            "supports_vision": True,
-            "supports_text": True,
-        },
         {
             "id": "local_mock",
             "label": "Local Mock",
-            "provider": "mock",
-            "description": "Lightweight local pipeline for tests and fallback development.",
-            "enabled": not use_real_models,
-            "is_default": not use_real_models,
-            "supports_vision": False,
+            "provider": "local",
+            "description": "Local deterministic model for upload, preview, retrieval, and UI testing.",
+            "enabled": True,
+            "is_default": True,
+            "supports_vision": True,
             "supports_text": True,
-        },
+        }
     ]
 
 
@@ -798,7 +812,31 @@ def save_pipeline_index(pipeline: RagPipeline, path: Path) -> None:
 
 
 def model_label_for(model_id: str) -> str:
-    return {"qwen3_vl_local": "Qwen3-VL-8B", "local_mock": "Local Mock"}.get(model_id, model_id)
+    return {"qwen_dashscope": "Qwen 百炼 API", "local_mock": "Local Mock"}.get(model_id, model_id)
+
+
+def is_model_api_error(exc: Exception) -> bool:
+    raw = str(exc)
+    markers = (
+        "Arrearage",
+        "overdue-payment",
+        "Access denied",
+        "dashscope",
+        "OpenAI",
+        "Error code:",
+        "chat.completions",
+    )
+    return any(marker in raw for marker in markers)
+
+
+def friendly_model_error(exc: Exception) -> str:
+    raw = str(exc)
+    if "Arrearage" in raw or "overdue-payment" in raw or "Access denied" in raw:
+        return (
+            "Qwen 百炼 API 调用失败：当前阿里云百炼账号可能欠费、停服或没有可用额度。"
+            "这不是上传文件内容的问题，请到百炼或阿里云控制台确认账号状态、额度和模型调用权限。"
+        )
+    return f"模型 API 调用失败：{raw}"
 
 
 def guess_mime_type(path: str | Path) -> str:

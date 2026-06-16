@@ -6,6 +6,7 @@ import os
 from dataclasses import dataclass
 from typing import Any
 
+from .api_models import DashScopeQwenConfig, DashScopeQwenModel
 from .index import FaissVectorIndex, VectorIndex
 from .models import MockEmbedder, MockGenerator, MockReranker, MockVisualSummarizer
 from .real_models import (
@@ -23,7 +24,12 @@ from .real_models import (
 class ModelConfig:
     """Configuration for choosing mock or real model components."""
 
+    backend: str = "mock"
     use_real_models: bool = False
+    dashscope_api_key: str = ""
+    dashscope_base_url: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    dashscope_chat_model: str = "qwen-plus"
+    dashscope_vision_model: str = "qwen-vl-plus"
     vlm_model_id: str = QWEN3_VL_MODEL_ID
     embedding_model_id: str = BGE_M3_MODEL_ID
     reranker_model_id: str = BGE_RERANKER_MODEL_ID
@@ -38,8 +44,18 @@ class ModelConfig:
 
     @classmethod
     def from_env(cls) -> "ModelConfig":
+        backend = os.getenv("MLLMPROJECT_MODEL_BACKEND") or os.getenv("MLLMPROJECT_BACKEND") or "mock"
         return cls(
+            backend=backend.strip().lower(),
             use_real_models=parse_bool(os.getenv("MLLMPROJECT_USE_REAL_MODELS"), default=False),
+            dashscope_api_key=os.getenv("MLLMPROJECT_DASHSCOPE_API_KEY")
+            or os.getenv("DASHSCOPE_API_KEY", ""),
+            dashscope_base_url=os.getenv(
+                "MLLMPROJECT_DASHSCOPE_BASE_URL",
+                "https://dashscope.aliyuncs.com/compatible-mode/v1",
+            ),
+            dashscope_chat_model=os.getenv("MLLMPROJECT_DASHSCOPE_CHAT_MODEL", "qwen-plus"),
+            dashscope_vision_model=os.getenv("MLLMPROJECT_DASHSCOPE_VISION_MODEL", "qwen-vl-plus"),
             vlm_model_id=os.getenv("MLLMPROJECT_QWEN3_MODEL_PATH")
             or os.getenv("MLLMPROJECT_VLM_MODEL_ID", QWEN3_VL_MODEL_ID),
             embedding_model_id=os.getenv("MLLMPROJECT_EMBEDDING_MODEL_ID", BGE_M3_MODEL_ID),
@@ -61,6 +77,7 @@ class ModelStack:
     def __init__(self, config: ModelConfig | None = None) -> None:
         self.config = config or ModelConfig()
         self._qwen3_vl: Qwen3VLModel | None = None
+        self._dashscope_qwen: DashScopeQwenModel | None = None
 
     @classmethod
     def from_env(cls) -> "ModelStack":
@@ -89,14 +106,32 @@ class ModelStack:
         return MockReranker()
 
     def create_generator(self):
+        if self.config.backend == "dashscope":
+            return self._get_dashscope_qwen()
         if self.config.use_real_models:
             return self._get_qwen3_vl()
         return MockGenerator()
 
     def create_visual_summarizer(self):
+        if self.config.backend == "dashscope":
+            return self._get_dashscope_qwen()
         if self.config.use_real_models and self.config.enable_vlm_summary:
             return self._get_qwen3_vl()
         return MockVisualSummarizer()
+
+    def _get_dashscope_qwen(self) -> DashScopeQwenModel:
+        if self._dashscope_qwen is None:
+            self._dashscope_qwen = DashScopeQwenModel(
+                DashScopeQwenConfig(
+                    api_key=self.config.dashscope_api_key,
+                    base_url=self.config.dashscope_base_url,
+                    chat_model=self.config.dashscope_chat_model,
+                    vision_model=self.config.dashscope_vision_model,
+                    max_tokens=self.config.vlm_max_new_tokens,
+                    max_images=self.config.vlm_max_images,
+                )
+            )
+        return self._dashscope_qwen
 
     def _get_qwen3_vl(self) -> Qwen3VLModel:
         if self._qwen3_vl is None:
