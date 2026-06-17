@@ -200,7 +200,7 @@ def default_visual_summary(page: int | None) -> str:
 
 
 class DocumentIngestor:
-    """Ingest documents for the Gradio demo engine."""
+    """Ingest documents for local document QA pipelines."""
 
     def __init__(
         self,

@@ -11,7 +11,7 @@ from .schemas import AnswerResult, Document, Evidence
 
 
 class RagService:
-    """Stateful service shared by the Gradio app, scripts, and evaluation."""
+    """Stateful service shared by API, scripts, and evaluation."""
 
     def __init__(
         self,
