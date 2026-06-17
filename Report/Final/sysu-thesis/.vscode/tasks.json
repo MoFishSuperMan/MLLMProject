@@ -1,0 +1,71 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "xelatex pass 1",
+            "type": "shell",
+            "command": "xelatex",
+            "args": [
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "main.tex"
+            ],
+            "problemMatcher": "$latex-history",
+            "group": "build"
+        },
+        {
+            "label": "bibtex",
+            "type": "shell",
+            "command": "bibtex",
+            "args": ["main"],
+            "problemMatcher": "$latex-history",
+            "dependsOn": ["xelatex pass 1"]
+        },
+        {
+            "label": "xelatex pass 2",
+            "type": "shell",
+            "command": "xelatex",
+            "args": [
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "main.tex"
+            ],
+            "problemMatcher": "$latex-history",
+            "dependsOn": ["bibtex"]
+        },
+        {
+            "label": "xelatex pass 3",
+            "type": "shell",
+            "command": "xelatex",
+            "args": [
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "main.tex"
+            ],
+            "problemMatcher": "$latex-history",
+            "dependsOn": ["xelatex pass 2"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build LaTeX (Full Compile)",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "xelatex -interaction=nonstopmode -synctex=1 main.tex; bibtex main; xelatex -interaction=nonstopmode -synctex=1 main.tex; xelatex -interaction=nonstopmode -synctex=1 main.tex"
+            ],
+            "problemMatcher": "$latex-history",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
