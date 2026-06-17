@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
+from .grpo_router import route_question_with_grpo
 from .schemas import RouteDecision
 
 VISION_KEYWORDS = ("图", "图片", "趋势", "颜色", "坐标", "柱状", "折线", "曲线", "figure", "chart", "plot")
 TABLE_KEYWORDS = ("表", "表格", "数值", "最大", "最小", "占比", "平均", "增长率", "table", "value")
 TEXT_KEYWORDS = ("第几节", "主要结论", "定义", "背景", "方法", "贡献", "摘要", "section", "summary")
-ALL_MODES = ["text", "table", "figure", "formula", "image", "page", "visual", "region", "chart_region"]
+CODE_KEYWORDS = ("code", "代码", "函数", "class", "def", "api", "script", "algorithm", "伪代码")
+ALL_MODES = ["text", "code", "table", "figure", "formula", "image", "page", "visual", "region", "chart_region"]
 
 
 def route_question(question: str, mode: str = "Auto Router") -> RouteDecision:
@@ -25,9 +27,13 @@ def route_question(question: str, mode: str = "Auto Router") -> RouteDecision:
             retrieval_modes=ALL_MODES,
         )
 
+    if normalized_mode in {"auto", "auto router", "grpo", "grpo-auto", "grpo_router"}:
+        return route_question_with_grpo(question, mode="auto")
+
     normalized = question.lower()
     vision_hits = [keyword for keyword in VISION_KEYWORDS if keyword in normalized]
     table_hits = [keyword for keyword in TABLE_KEYWORDS if keyword in normalized]
+    code_hits = [keyword for keyword in CODE_KEYWORDS if keyword in normalized]
     text_hits = [keyword for keyword in TEXT_KEYWORDS if keyword in normalized]
 
     if vision_hits:
@@ -41,6 +47,12 @@ def route_question(question: str, mode: str = "Auto Router") -> RouteDecision:
             route="table_route",
             reason=f"命中表格/数值关键词：{', '.join(table_hits[:3])}",
             retrieval_modes=["chart_region", "region", "table", "page", "text"],
+        )
+    if code_hits:
+        return RouteDecision(
+            route="text_route",
+            reason=f"Query matched code keywords: {', '.join(code_hits[:3])}",
+            retrieval_modes=["code", "text"],
         )
     if text_hits:
         return RouteDecision(

@@ -6,9 +6,16 @@ import os
 from dataclasses import dataclass
 from typing import Any
 
-from .api_models import DashScopeQwenConfig, DashScopeQwenModel
+from .api_models import (
+    DASHSCOPE_BASE_URL,
+    DASHSCOPE_CHAT_MODEL,
+    DASHSCOPE_VISION_MODEL,
+    DashScopeQwenConfig,
+    DashScopeQwenModel,
+)
 from .index import FaissVectorIndex, VectorIndex
 from .models import MockEmbedder, MockGenerator, MockReranker, MockVisualSummarizer
+from .multimodal_embeddings import ImageFeatureEmbedder, NativeVitImageEmbedder, UnifiedMultimodalEmbedder
 from .real_models import (
     BGE_M3_MODEL_ID,
     BGE_RERANKER_MODEL_ID,
@@ -27,11 +34,12 @@ class ModelConfig:
     backend: str = "mock"
     use_real_models: bool = False
     dashscope_api_key: str = ""
-    dashscope_base_url: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-    dashscope_chat_model: str = "qwen-plus"
-    dashscope_vision_model: str = "qwen-vl-plus"
+    dashscope_base_url: str = DASHSCOPE_BASE_URL
+    dashscope_chat_model: str = DASHSCOPE_CHAT_MODEL
+    dashscope_vision_model: str = DASHSCOPE_VISION_MODEL
     vlm_model_id: str = QWEN3_VL_MODEL_ID
     embedding_model_id: str = BGE_M3_MODEL_ID
+    image_embedding_model_id: str = ""
     reranker_model_id: str = BGE_RERANKER_MODEL_ID
     dtype: str = "bf16"
     device_map: str | None = "auto"
@@ -39,6 +47,7 @@ class ModelConfig:
     vlm_max_new_tokens: int = 512
     vlm_max_images: int = 3
     embedding_device: str | None = None
+    image_embedding_device: str | None = None
     reranker_device: str | None = None
     attn_implementation: str | None = None
 
@@ -52,13 +61,14 @@ class ModelConfig:
             or os.getenv("DASHSCOPE_API_KEY", ""),
             dashscope_base_url=os.getenv(
                 "MLLMPROJECT_DASHSCOPE_BASE_URL",
-                "https://dashscope.aliyuncs.com/compatible-mode/v1",
+                DASHSCOPE_BASE_URL,
             ),
-            dashscope_chat_model=os.getenv("MLLMPROJECT_DASHSCOPE_CHAT_MODEL", "qwen-plus"),
-            dashscope_vision_model=os.getenv("MLLMPROJECT_DASHSCOPE_VISION_MODEL", "qwen-vl-plus"),
+            dashscope_chat_model=os.getenv("MLLMPROJECT_DASHSCOPE_CHAT_MODEL", DASHSCOPE_CHAT_MODEL),
+            dashscope_vision_model=os.getenv("MLLMPROJECT_DASHSCOPE_VISION_MODEL", DASHSCOPE_VISION_MODEL),
             vlm_model_id=os.getenv("MLLMPROJECT_QWEN3_MODEL_PATH")
             or os.getenv("MLLMPROJECT_VLM_MODEL_ID", QWEN3_VL_MODEL_ID),
             embedding_model_id=os.getenv("MLLMPROJECT_EMBEDDING_MODEL_ID", BGE_M3_MODEL_ID),
+            image_embedding_model_id=os.getenv("MLLMPROJECT_IMAGE_EMBEDDING_MODEL_ID", ""),
             reranker_model_id=os.getenv("MLLMPROJECT_RERANKER_MODEL_ID", BGE_RERANKER_MODEL_ID),
             dtype=os.getenv("MLLMPROJECT_TORCH_DTYPE", "bf16"),
             device_map=none_if_empty(os.getenv("MLLMPROJECT_DEVICE_MAP", "auto")),
@@ -66,6 +76,7 @@ class ModelConfig:
             vlm_max_new_tokens=int(os.getenv("MLLMPROJECT_VLM_MAX_NEW_TOKENS", "512")),
             vlm_max_images=int(os.getenv("MLLMPROJECT_VLM_MAX_IMAGES", "3")),
             embedding_device=none_if_empty(os.getenv("MLLMPROJECT_EMBEDDING_DEVICE")),
+            image_embedding_device=none_if_empty(os.getenv("MLLMPROJECT_IMAGE_EMBEDDING_DEVICE")),
             reranker_device=none_if_empty(os.getenv("MLLMPROJECT_RERANKER_DEVICE")),
             attn_implementation=none_if_empty(os.getenv("MLLMPROJECT_ATTENTION_IMPL")),
         )
@@ -85,11 +96,24 @@ class ModelStack:
 
     def create_embedder(self):
         if self.config.use_real_models:
-            return BgeM3Embedder(
+            text_embedder = BgeM3Embedder(
                 model_id=self.config.embedding_model_id,
                 device=self.config.embedding_device,
             )
-        return MockEmbedder()
+        else:
+            text_embedder = MockEmbedder()
+        return UnifiedMultimodalEmbedder(
+            text_embedder=text_embedder,
+            image_embedder=self.create_image_embedder(),
+        )
+
+    def create_image_embedder(self):
+        if self.config.image_embedding_model_id:
+            return NativeVitImageEmbedder(
+                model_id=self.config.image_embedding_model_id,
+                device=self.config.image_embedding_device,
+            )
+        return ImageFeatureEmbedder()
 
     def create_index(self, embedder: Any | None = None):
         embedder = embedder or self.create_embedder()

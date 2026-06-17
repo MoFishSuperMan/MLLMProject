@@ -58,20 +58,27 @@ class MockGenerator(AnswerGenerator):
         if not evidences:
             return "答案：未检索到足够证据，无法回答。\n来源：[]", []
 
-        top = evidences[0]
-        snippet = compact_text(top.content, max_len=180)
-        answer = (
-            f"答案：根据检索到的证据，{snippet}\n"
-            f"来源：[page={top.page}, chunk={top.chunk_id or top.evidence_id}]"
+        top = evidences[: min(4, len(evidences))]
+        snippets = [
+            f"{index}. {compact_text(evidence.content, max_len=420)}"
+            for index, evidence in enumerate(top, start=1)
+        ]
+        answer = "答案：根据检索到的证据，可以整理如下：\n" + "\n".join(snippets)
+        answer += "\n来源：" + "; ".join(
+            f"[page={evidence.page}, chunk={evidence.chunk_id or evidence.evidence_id}]"
+            for evidence in top
         )
-        citation = Citation(
-            page=top.page,
-            source_type=top.source_type,
-            chunk_id=top.chunk_id,
-            bbox=top.bbox,
-            evidence_id=top.evidence_id,
-        )
-        return answer, [citation]
+        citations = [
+            Citation(
+                page=evidence.page,
+                source_type=evidence.source_type,
+                chunk_id=evidence.chunk_id,
+                bbox=evidence.bbox,
+                evidence_id=evidence.evidence_id,
+            )
+            for evidence in top
+        ]
+        return answer, citations
 
 
 class MockVisualSummarizer(VisionSummaryModel):

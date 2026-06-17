@@ -18,11 +18,11 @@ from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field
 
 from .index import vectors_to_jsonable
-from .io_utils import ensure_dir, write_json
+from .io_utils import ensure_dir, read_json, write_json
 from .model_stack import ModelConfig, ModelStack, parse_bool
 from .multimodal import draw_evidence_preview
 from .pipeline import RagPipeline, prioritize_region_evidence
-from .schemas import AnswerResult, Chunk, Citation, Document, Evidence
+from .schemas import AnswerResult, Chunk, Citation, Document, Evidence, Page
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -65,6 +65,7 @@ class FileRecord:
     document: Document | None = None
     pipeline: RagPipeline | None = None
     disabled_chunk_ids: set[str] = field(default_factory=set)
+    disk_signature: str = ""
 
 
 @dataclass(slots=True)
@@ -74,7 +75,7 @@ class JobRecord:
     status: str = "queued"
     progress: float = 0.0
     stage: str = "queued"
-    message: str = "Waiting to parse."
+    message: str = "等待解析。"
     result: dict[str, Any] | None = None
     error: dict[str, Any] | None = None
     created_at: str = field(default_factory=iso_now)
@@ -85,7 +86,7 @@ class QueryRequest(BaseModel):
     question: str
     file_ids: list[str] = Field(default_factory=list)
     selected_chunk_ids: list[str] = Field(default_factory=list)
-    model: str = "local_mock"
+    model: str = "auto"
     mode: str = "auto"
     top_k: int = 5
     include_disabled: bool = False
@@ -116,6 +117,7 @@ class ApiStore:
         self.jobs: dict[str, JobRecord] = {}
         self.model_config = build_model_config(self.project_root, use_real_models=use_real_models)
         self.model_stack = model_stack or ModelStack(self.model_config)
+        self._load_existing_files()
 
     def add_upload(self, upload: UploadFile) -> FileRecord:
         original_name = Path(upload.filename or "upload").name
@@ -187,7 +189,7 @@ class ApiStore:
     def parse_file(self, job_id: str, include_visual: bool = True, chunking: dict[str, int] | None = None) -> None:
         job = self.require_job(job_id)
         record = self.require_file(job.file_id)
-        self._update_job(job, status="parsing", progress=0.08, stage="parsing", message="Parsing document.")
+        self._update_job(job, status="parsing", progress=0.08, stage="parsing", message="正在解析文档。")
         with self.lock:
             record.status = "parsing"
             record.error_message = None
@@ -232,7 +234,7 @@ class ApiStore:
                 status="ready",
                 progress=1.0,
                 stage="ready",
-                message=f"Parsed {result['page_count']} pages and {result['chunk_count']} chunks.",
+                message=f"已解析 {result['page_count']} 页，生成 {result['chunk_count']} 个 chunk。",
                 result=result,
             )
         except Exception as exc:  # pragma: no cover - exercised through API error paths in integration
@@ -254,13 +256,28 @@ class ApiStore:
 
     def list_files(self) -> list[FileRecord]:
         with self.lock:
-            return list(self.files.values())
+            records = list(self.files.values())
+        return [self._reload_if_disk_changed(record) for record in records]
+
+    def delete_file(self, file_id: str) -> dict[str, Any]:
+        record = self.require_file(file_id)
+        upload_dir = self.upload_root / file_id
+        processed_dir = self.processed_root / file_id
+        preview_dir = self.preview_root / file_id
+        with self.lock:
+            self.files.pop(file_id, None)
+            self.jobs = {job_id: job for job_id, job in self.jobs.items() if job.file_id != file_id}
+        for path in (upload_dir, processed_dir, preview_dir):
+            if path.exists() and path.is_dir():
+                shutil.rmtree(path, ignore_errors=True)
+        return {"file_id": record.file_id, "deleted": True}
 
     def require_file(self, file_id: str) -> FileRecord:
         with self.lock:
             record = self.files.get(file_id)
         if record is None:
-            raise ApiError("file_not_found", "File not found.", status_code=404, details={"file_id": file_id})
+            raise ApiError("file_not_found", "文件不存在。", status_code=404, details={"file_id": file_id})
+        record = self._reload_if_disk_changed(record)
         return record
 
     def require_job(self, job_id: str) -> JobRecord:
@@ -278,7 +295,7 @@ class ApiStore:
             if record.status != "ready" or record.pipeline is None or record.document is None:
                 raise ApiError(
                     "file_not_ready",
-                    "File is still parsing.",
+                    "文件仍在解析中。",
                     status_code=409,
                     details={"file_id": record.file_id, "status": record.status},
                 )
@@ -297,7 +314,7 @@ class ApiStore:
         if record.status != "ready" or record.document is None:
             raise ApiError(
                 "file_not_ready",
-                "File is still parsing.",
+                "文件仍在解析中。",
                 status_code=409,
                 details={"file_id": file_id, "status": record.status},
             )
@@ -356,7 +373,7 @@ class ApiStore:
         if record.status != "ready" or record.document is None:
             raise ApiError(
                 "file_not_ready",
-                "File is still parsing.",
+                "文件仍在解析中。",
                 status_code=409,
                 details={"file_id": file_id, "status": record.status},
             )
@@ -383,16 +400,24 @@ class ApiStore:
         if not path.exists():
             raise ApiError(
                 "preview_not_found",
-                "Evidence preview not found.",
+                "未找到证据预览图。",
                 status_code=404,
                 details={"evidence_id": evidence_id},
             )
         return path
 
+    def evidence_image_path(self, evidence_id: str) -> Path:
+        record, chunk = self.find_chunk(evidence_id)
+        if chunk.image_path:
+            path = Path(chunk.image_path)
+            if path.exists():
+                return path
+        return self.page_image_path(record.file_id, chunk.page)
+
     def answer(self, request: QueryRequest) -> dict[str, Any]:
         question = request.question.strip()
         if not question:
-            raise ApiError("empty_question", "Question cannot be empty.", status_code=400)
+            raise ApiError("empty_question", "问题不能为空。", status_code=400)
         records = self.ready_records(request.file_ids)
         pipeline = self.pipeline_for_records(records)
 
@@ -404,6 +429,7 @@ class ApiStore:
             disabled = set().union(*(record.disabled_chunk_ids for record in records))
             searched = [evidence for evidence in searched if (evidence.chunk_id or evidence.evidence_id) not in disabled]
         searched = pipeline.reranker.rerank(question, searched)
+        searched = ensure_structured_evidence(searched, pipeline.document.chunks)
         selected = self.selected_evidences(request.selected_chunk_ids, records)
         evidences = merge_evidences(selected, prioritize_region_evidence(searched))
         evidence_limit = max(request.top_k, len(selected), 1)
@@ -450,7 +476,7 @@ class ApiStore:
         if len(records) == 1:
             pipeline = records[0].pipeline
             if pipeline is None:
-                raise ApiError("file_not_ready", "File is still parsing.", status_code=409)
+                raise ApiError("file_not_ready", "文件仍在解析中。", status_code=409)
             return pipeline
 
         documents = [record.document for record in records if record.document is not None]
@@ -465,6 +491,97 @@ class ApiStore:
 
     def _write_file_manifest(self, record: FileRecord) -> None:
         write_json(self.processed_root / record.file_id / "api_file.json", file_to_api(record))
+        record.disk_signature = self._disk_signature(record.file_id)
+
+    def reload_file_from_disk(self, file_id: str) -> FileRecord:
+        manifest_path = self.processed_root / file_id / "api_file.json"
+        if not manifest_path.exists():
+            raise ApiError("file_not_found", "文件不存在。", status_code=404, details={"file_id": file_id})
+        record = self._load_existing_file(manifest_path)
+        with self.lock:
+            previous = self.files.get(file_id)
+            if previous is not None:
+                record.disabled_chunk_ids = set(previous.disabled_chunk_ids)
+            self.files[file_id] = record
+        return record
+
+    def _load_existing_files(self) -> None:
+        for manifest_path in sorted(self.processed_root.glob("*/api_file.json")):
+            try:
+                record = self._load_existing_file(manifest_path)
+            except Exception:
+                continue
+            with self.lock:
+                self.files[record.file_id] = record
+
+    def _load_existing_file(self, manifest_path: Path) -> FileRecord:
+        processed_dir = manifest_path.parent
+        manifest = read_json(manifest_path)
+        file_id = str(manifest.get("file_id") or processed_dir.name)
+        document_path = processed_dir / "document.json"
+        if not document_path.exists():
+            raise FileNotFoundError(document_path)
+
+        document = document_from_json(read_json(document_path))
+        visual_chunks_path = processed_dir / "chunks_with_visual.json"
+        chunks_path = visual_chunks_path if visual_chunks_path.exists() else processed_dir / "chunks.json"
+        if chunks_path.exists():
+            document.chunks = [Chunk.from_dict(item) for item in read_json(chunks_path)]
+
+        source_path = first_existing_upload_source(self.upload_root / file_id) or Path(document.source_path)
+        pipeline = RagPipeline.from_document(document, include_visual=False, model_stack=self.model_stack)
+        visual_count = count_visual_regions(document.chunks)
+        return FileRecord(
+            file_id=file_id,
+            file_name=str(manifest.get("file_name") or document.file_name or source_path.name),
+            original_name=str(manifest.get("original_name") or manifest.get("file_name") or document.file_name),
+            mime_type=str(manifest.get("mime_type") or guess_mime_type(source_path)),
+            size_bytes=int(manifest.get("size_bytes") or (source_path.stat().st_size if source_path.exists() else 0)),
+            source_path=source_path,
+            status=str(manifest.get("status") or "ready"),
+            page_count=len(document.pages),
+            chunk_count=len(document.chunks),
+            visual_region_count=visual_count,
+            created_at=str(manifest.get("created_at") or iso_now()),
+            updated_at=str(manifest.get("updated_at") or iso_now()),
+            error_message=manifest.get("error_message"),
+            document=document,
+            pipeline=pipeline,
+            disk_signature=self._disk_signature(file_id),
+        )
+
+    def _reload_if_disk_changed(self, record: FileRecord) -> FileRecord:
+        if record.status != "ready":
+            return record
+        current_signature = self._disk_signature(record.file_id)
+        if not current_signature or current_signature == record.disk_signature:
+            return record
+        try:
+            refreshed = self._load_existing_file(self.processed_root / record.file_id / "api_file.json")
+        except Exception:
+            return record
+        with self.lock:
+            refreshed.disabled_chunk_ids = set(record.disabled_chunk_ids)
+            self.files[record.file_id] = refreshed
+        return refreshed
+
+    def _disk_signature(self, file_id: str) -> str:
+        processed_dir = self.processed_root / file_id
+        paths = [
+            processed_dir / "api_file.json",
+            processed_dir / "document.json",
+            processed_dir / "chunks_with_visual.json",
+            processed_dir / "chunks.json",
+            processed_dir / "index.json",
+        ]
+        parts: list[str] = []
+        for path in paths:
+            try:
+                stat = path.stat()
+            except OSError:
+                continue
+            parts.append(f"{path.name}:{stat.st_mtime_ns}:{stat.st_size}")
+        return "|".join(parts)
 
     def _update_job(
         self,
@@ -540,6 +657,14 @@ def create_app(store: ApiStore | None = None) -> FastAPI:
     def get_file(file_id: str) -> dict[str, Any]:
         return {"file": file_to_api(api_store.require_file(file_id))}
 
+    @app.post("/api/v1/files/{file_id}/reload")
+    def reload_file(file_id: str) -> dict[str, Any]:
+        return {"file": file_to_api(api_store.reload_file_from_disk(file_id))}
+
+    @app.delete("/api/v1/files/{file_id}")
+    def delete_file(file_id: str) -> dict[str, Any]:
+        return api_store.delete_file(file_id)
+
     @app.get("/api/v1/files/{file_id}/chunks")
     def list_chunks(
         file_id: str,
@@ -572,6 +697,11 @@ def create_app(store: ApiStore | None = None) -> FastAPI:
         path = api_store.evidence_preview_path(evidence_id)
         return FileResponse(path, media_type=guess_mime_type(path))
 
+    @app.get("/api/v1/evidence/{evidence_id}/image")
+    def evidence_image(evidence_id: str):
+        path = api_store.evidence_image_path(evidence_id)
+        return FileResponse(path, media_type=guess_mime_type(path))
+
     @app.post("/api/v1/query")
     def query(request: QueryRequest) -> dict[str, Any]:
         return api_store.answer(request)
@@ -601,32 +731,44 @@ def build_model_config(project_root: Path, use_real_models: bool | None) -> Mode
     if not os.getenv("MLLMPROJECT_VLM_MAX_IMAGES"):
         config.vlm_max_images = 1
     if not os.getenv("MLLMPROJECT_VLM_MAX_NEW_TOKENS"):
-        config.vlm_max_new_tokens = 96
+        config.vlm_max_new_tokens = 768
     return config
 
 
 def model_options(config: ModelConfig) -> list[dict[str, Any]]:
+    auto_option = {
+        "id": "auto",
+        "label": "auto",
+        "provider": "router",
+        "description": "GRPO 风格轻量路由，会按问题和证据类型自动选择检索策略。",
+        "enabled": True,
+        "is_default": True,
+        "supports_vision": True,
+        "supports_text": True,
+    }
     if config.backend == "dashscope":
         return [
+            auto_option,
             {
                 "id": "qwen_dashscope",
-                "label": "Qwen 百炼 API",
                 "provider": "dashscope",
-                "description": "Qwen via DashScope Bailian OpenAI-compatible API.",
+                "label": "Qwen3.5 Omni Flash",
+                "description": f"百炼兼容接口：{config.dashscope_vision_model}。",
                 "enabled": True,
-                "is_default": True,
+                "is_default": False,
                 "supports_vision": True,
                 "supports_text": True,
             }
         ]
     return [
+        auto_option,
         {
             "id": "local_mock",
-            "label": "Local Mock",
+            "label": "本地模拟",
             "provider": "local",
-            "description": "Local deterministic model for upload, preview, retrieval, and UI testing.",
+            "description": "用于上传、预览、检索和界面调试的本地确定性模型。",
             "enabled": True,
-            "is_default": True,
+            "is_default": False,
             "supports_vision": True,
             "supports_text": True,
         }
@@ -648,6 +790,27 @@ def file_to_api(record: FileRecord) -> dict[str, Any]:
         "updated_at": record.updated_at,
         "error_message": record.error_message,
     }
+
+
+def document_from_json(data: dict[str, Any]) -> Document:
+    return Document(
+        doc_id=str(data.get("doc_id") or ""),
+        source_path=str(data.get("source_path") or data.get("file_path") or ""),
+        pages=[Page(**item) for item in data.get("pages", [])],
+        chunks=[Chunk.from_dict(item) for item in data.get("chunks", [])],
+        metadata=data.get("metadata") or {},
+        file_name=str(data.get("file_name") or ""),
+        file_path=str(data.get("file_path") or data.get("source_path") or ""),
+    )
+
+
+def first_existing_upload_source(upload_dir: Path) -> Path | None:
+    if not upload_dir.exists():
+        return None
+    for path in sorted(upload_dir.glob("original.*")):
+        if path.is_file():
+            return path
+    return None
 
 
 def job_to_api(job: JobRecord) -> dict[str, Any]:
@@ -681,6 +844,7 @@ def chunk_to_api(chunk: Chunk, record: FileRecord, score: float | None = None) -
         "bbox": chunk.bbox,
         "region_id": chunk.region_id,
         "image_url": f"/api/v1/files/{record.file_id}/pages/{chunk.page}/image" if chunk.page else None,
+        "crop_url": f"/api/v1/evidence/{evidence_id}/image" if chunk.image_path else None,
         "preview_url": f"/api/v1/evidence/{evidence_id}/preview" if chunk.image_path else None,
         "enabled": chunk.chunk_id not in record.disabled_chunk_ids,
         "metadata": chunk.metadata or {},
@@ -764,7 +928,7 @@ def answer_to_api(
 
 def normalize_source_type(source_type: str) -> str:
     normalized = source_type.strip().lower()
-    if normalized in {"text", "figure", "table", "visual"}:
+    if normalized in {"text", "code", "figure", "table", "formula", "visual"}:
         return normalized
     if normalized in {"chart", "chart_region", "plot", "image", "region"}:
         return "figure"
@@ -776,12 +940,16 @@ def chunk_title(chunk: Chunk, source_type: str) -> str:
     if title:
         return str(title)
     if source_type == "text":
-        return f"Page {chunk.page} text chunk"
+        return f"第 {chunk.page} 页文本 chunk"
+    if source_type == "code":
+        return f"第 {chunk.page} 页代码 chunk"
     if source_type == "figure":
-        return f"Page {chunk.page} visual region"
+        return f"第 {chunk.page} 页图片 chunk"
     if source_type == "table":
-        return f"Page {chunk.page} table chunk"
-    return f"Page {chunk.page} visual summary"
+        return f"第 {chunk.page} 页表格 chunk"
+    if source_type == "formula":
+        return f"第 {chunk.page} 页公式 chunk"
+    return f"第 {chunk.page} 页视觉摘要"
 
 
 def merge_evidences(selected: list[Evidence], searched: list[Evidence]) -> list[Evidence]:
@@ -796,8 +964,24 @@ def merge_evidences(selected: list[Evidence], searched: list[Evidence]) -> list[
     return merged
 
 
+def ensure_structured_evidence(evidences: list[Evidence], chunks: list[Chunk]) -> list[Evidence]:
+    result = list(evidences)
+    existing = {evidence.chunk_id or evidence.evidence_id for evidence in result}
+    for source_type in ("figure", "table", "formula", "code"):
+        if any(normalize_source_type(evidence.source_type) == source_type for evidence in result):
+            continue
+        candidate = next((chunk for chunk in chunks if normalize_source_type(chunk.source_type) == source_type), None)
+        if candidate is None or candidate.chunk_id in existing:
+            continue
+        evidence = Evidence.from_chunk(candidate, score=max(float((candidate.metadata or {}).get("score", 0.85)), 0.85))
+        evidence.metadata = {**evidence.metadata, "included_for_structured_context": True}
+        result.append(evidence)
+        existing.add(candidate.chunk_id)
+    return result
+
+
 def count_visual_regions(chunks: list[Chunk]) -> int:
-    return sum(1 for chunk in chunks if normalize_source_type(chunk.source_type) in {"figure", "table", "visual"})
+    return sum(1 for chunk in chunks if normalize_source_type(chunk.source_type) in {"figure", "table", "formula", "visual"})
 
 
 def save_pipeline_index(pipeline: RagPipeline, path: Path) -> None:
@@ -812,7 +996,11 @@ def save_pipeline_index(pipeline: RagPipeline, path: Path) -> None:
 
 
 def model_label_for(model_id: str) -> str:
-    return {"qwen_dashscope": "Qwen 百炼 API", "local_mock": "Local Mock"}.get(model_id, model_id)
+    if model_id == "auto":
+        return "auto"
+    if model_id == "qwen_dashscope":
+        return "Qwen3.5 Omni Flash"
+    return {"local_mock": "本地模拟"}.get(model_id, model_id)
 
 
 def is_model_api_error(exc: Exception) -> bool:

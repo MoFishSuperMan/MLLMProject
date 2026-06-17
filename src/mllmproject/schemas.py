@@ -148,6 +148,9 @@ class RouteDecision:
     route: RouteName
     reason: str
     retrieval_modes: list[str]
+    selected_model: str = ""
+    router_name: str = ""
+    policy_trace: JsonDict = field(default_factory=dict)
 
     def to_dict(self) -> JsonDict:
         return asdict(self)

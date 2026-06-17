@@ -21,12 +21,12 @@ class VectorIndex:
 
     def build(self, chunks: list[Chunk]) -> None:
         self.chunks = list(chunks)
-        self.vectors = self.embedder.embed_text([chunk.content for chunk in self.chunks])
+        self.vectors = embed_chunks(self.embedder, self.chunks)
 
     def search(self, query: str, top_k: int = 5, source_types: set[str] | None = None) -> list[Evidence]:
         if not self.chunks:
             return []
-        query_vector = self.embedder.embed_text([query])[0]
+        query_vector = embed_query(self.embedder, query)
         scored: list[tuple[float, Chunk]] = []
         for chunk, vector in zip(self.chunks, self.vectors):
             if source_types and chunk.source_type not in source_types:
@@ -85,7 +85,7 @@ class FaissVectorIndex(VectorIndex):
             self.dim = None
             self.faiss_index = None
             return
-        vectors = self.embedder.embed_text([chunk.content for chunk in self.chunks])
+        vectors = embed_chunks(self.embedder, self.chunks)
         array = np.asarray(vectors, dtype="float32")
         if array.ndim != 2:
             raise ValueError("Embedding model must return a 2D array-like value.")
@@ -102,7 +102,7 @@ class FaissVectorIndex(VectorIndex):
 
         import numpy as np
 
-        query_vector = np.asarray(self.embedder.embed_text([query]), dtype="float32")
+        query_vector = np.asarray([embed_query(self.embedder, query)], dtype="float32")
         if query_vector.ndim != 2 or query_vector.shape[0] != 1:
             raise ValueError("Embedding model must return exactly one query vector.")
 
@@ -157,6 +157,18 @@ def require_faiss():
             "Install the real backend extras before using FAISS retrieval."
         ) from exc
     return faiss
+
+
+def embed_chunks(embedder: Any, chunks: list[Chunk]) -> Any:
+    if hasattr(embedder, "embed_chunks"):
+        return embedder.embed_chunks(chunks)
+    return embedder.embed_text([chunk.content for chunk in chunks])
+
+
+def embed_query(embedder: Any, query: str) -> Any:
+    if hasattr(embedder, "embed_query"):
+        return embedder.embed_query(query)
+    return embedder.embed_text([query])[0]
 
 
 def similarity(left: Any, right: Any) -> float:

@@ -22,8 +22,8 @@ from .schemas import Citation, Evidence
 
 
 DASHSCOPE_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-DASHSCOPE_CHAT_MODEL = "qwen-plus"
-DASHSCOPE_VISION_MODEL = "qwen-vl-plus"
+DASHSCOPE_CHAT_MODEL = "qwen3.5-omni-flash"
+DASHSCOPE_VISION_MODEL = "qwen3.5-omni-flash"
 
 
 @dataclass(slots=True)

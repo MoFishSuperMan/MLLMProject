@@ -127,10 +127,15 @@ def evidence_to_markdown(evidences: list[Evidence]) -> str:
 def prioritize_region_evidence(evidences: list[Evidence]) -> list[Evidence]:
     def priority(evidence: Evidence) -> tuple[int, int, float, float]:
         region_score = float((evidence.metadata or {}).get("score", 0.0))
-        if evidence.source_type == "chart_region":
+        source_type = evidence.source_type.strip().lower()
+        if source_type in {"chart_region", "figure", "image"}:
+            return (5, 1 if evidence.image_path else 0, region_score, evidence.score)
+        if source_type in {"table", "formula"}:
+            return (4, 1 if evidence.image_path else 0, region_score, evidence.score)
+        if source_type == "code":
+            return (3, 1 if evidence.image_path else 0, region_score, evidence.score)
+        if source_type in {"region", "visual", "page"}:
             return (2, 1 if evidence.image_path else 0, region_score, evidence.score)
-        if evidence.source_type == "region":
-            return (1, 1 if evidence.image_path else 0, region_score, evidence.score)
         return (0, 1 if evidence.image_path else 0, region_score, evidence.score)
 
     return sorted(evidences, key=priority, reverse=True)
