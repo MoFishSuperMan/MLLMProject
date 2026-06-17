@@ -1,35 +1,92 @@
-# Python-generated files
+# Python bytecode and build output
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
+.eggs/
 
-# Virtual environments
-.venv
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
 
-# Demo runtime artifacts
-data/processed/
-data/processed_text_baseline_check/
-data/uploads/
+# Virtual environments and local package managers
+.venv/
+venv/
+env/
+.uv-cache/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Local model weights and downloaded datasets
+model/
+models/
+checkpoints/
+
+# Runtime uploads, parsed documents, previews, indexes, and logs
+data/uploads*/
+data/processed*/
+data/api_previews*/
+data/backend_logs/
 data/indexes/
-data/eval/results/
 data/eval/results*/
+data/eval/benchmarks*/
+data/eval_page_check/
+data/real_*/
+data/tmp*/
+
+# Generic generated output
+output/
 outputs/
 *.log
+*.tmp
+*.bak
+*.zip
 
-# Frontend runtime artifacts
-node_modules/
+# Frontend dependencies and build output
 frontend/node_modules/
 frontend/dist/
 frontend/*.tsbuildinfo
+frontend/vite-dev*.log
 frontend/vite.config.js
 frontend/vite.config.d.ts
+
+# LaTeX / report build artifacts
+Report/**/tmp/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+
+.uv-cache/
 
 data/
 
 docs/
 
 output/
-

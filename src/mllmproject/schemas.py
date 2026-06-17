@@ -148,6 +148,9 @@ class RouteDecision:
     route: RouteName
     reason: str
     retrieval_modes: list[str]
+    selected_model: str = ""
+    router_name: str = ""
+    policy_trace: JsonDict = field(default_factory=dict)
 
     def to_dict(self) -> JsonDict:
         return asdict(self)
@@ -177,6 +180,7 @@ class EvalPrediction:
     retrieved_evidence_ids: list[str]
     route: str
     latency_ms: float
+    gold_pages: list[int] = field(default_factory=list)
 
     def to_dict(self) -> JsonDict:
         return asdict(self)

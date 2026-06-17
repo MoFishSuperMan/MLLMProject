@@ -1,0 +1,22 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000000",
+    "question": "How many food item is shown in the bar graph?",
+    "gold_answer": "14",
+    "gold_answers": "14",
+    "gold_page": 1,
+    "prediction": "答案：根据检索到的证据，Long-term price index in food commodities, 1850-2015, World, 1934 Commodity price index in food items dating 1850-2015, measured relative t0 real prices in 1900 (ie. 1900 100). ...\n来源：[page=1, chunk=chartqa_000000_p1_c0001]",
+    "mode": "text_rag",
+    "em": 0.0,
+    "anls": 0.0,
+    "latency_ms": 0.320099999953527,
+    "answer_match": 0.0,
+    "failure_label": "answer_mismatch",
+    "route": "text_route",
+    "ocr_text_chars": 454,
+    "evidence_count": 1,
+    "top_evidence_types": "text",
+    "top_evidence_ids": "chartqa_000000_p1_c0001"
+  }
+]

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from .model_stack import ModelConfig, ModelStack
 from .multimodal import draw_evidence_preview
 from .pipeline import RagPipeline
 from .schemas import AnswerResult, Document, Evidence
@@ -12,14 +13,30 @@ from .schemas import AnswerResult, Document, Evidence
 class RagService:
     """Stateful service shared by the Gradio app, scripts, and evaluation."""
 
-    def __init__(self, processed_root: str | Path = "data/processed") -> None:
+    def __init__(
+        self,
+        processed_root: str | Path = "data/processed",
+        model_stack: ModelStack | None = None,
+        model_config: ModelConfig | None = None,
+    ) -> None:
         self.processed_root = Path(processed_root)
+        if model_stack is not None:
+            self.model_stack = model_stack
+        elif model_config is not None:
+            self.model_stack = ModelStack(model_config)
+        else:
+            self.model_stack = None
         self.pipeline: RagPipeline | None = None
         self.document: Document | None = None
         self.index_chunks = []
 
     def ingest_document(self, file_path: str | Path) -> Document:
-        self.pipeline = RagPipeline.from_file(file_path, output_dir=self.processed_root, include_visual=True)
+        self.pipeline = RagPipeline.from_file(
+            file_path,
+            output_dir=self.processed_root,
+            include_visual=True,
+            model_stack=self.model_stack,
+        )
         self.document = self.pipeline.document
         self.index_chunks = self.pipeline.index.chunks
         return self.document

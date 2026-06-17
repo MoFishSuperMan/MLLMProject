@@ -1,0 +1,1034 @@
+[
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_49168",
+    "question": "What time is the ‘coffee break’?",
+    "gold_answers": [
+      "11:14 to 11:39 a.m.",
+      "11.14 to 11.39 a.m."
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_49168.png",
+    "ocr_text_chars": 1099,
+    "ocr_box_count": 61,
+    "ocr_boxes": [
+      {
+        "text": "11.14 t0",
+        "bbox": [
+          88,
+          68,
+          172,
+          92
+        ],
+        "confidence": 0.7610657277864595
+      },
+      {
+        "text": "Coffee Break",
+        "bbox": [
+          218,
+          68,
+          350,
+          94
+        ],
+        "confidence": 0.9998198174350537
+      },
+      {
+        "text": "11.39 a.m",
+        "bbox": [
+          88,
+          92,
+          192,
+          118
+        ],
+        "confidence": 0.6438611030224776
+      },
+      {
+        "text": "Coffee will be served for men and",
+        "bbox": [
+          240,
+          92,
+          560,
+          118
+        ],
+        "confidence": 0.5902147009894877
+      },
+      {
+        "text": "women in the",
+        "bbox": [
+          240,
+          116,
+          376,
+          142
+        ],
+        "confidence": 0.9915220580490625
+      },
+      {
+        "text": "adjacent to",
+        "bbox": [
+          438,
+          118,
+          554,
+          144
+        ],
+        "confidence": 0.848681869715301
+      },
+      {
+        "text": "exhibit area",
+        "bbox": [
+          239,
+          138,
+          362,
+          166
+        ],
+        "confidence": 0.8576108359240242
+      },
+      {
+        "text": "Please move into",
+        "bbox": [
+          368,
+          140,
+          542,
+          166
+        ],
+        "confidence": 0.926003070685907
+      },
+      {
+        "text": "exhibit area. (Exhibits Open)",
+        "bbox": [
+          240,
+          160,
+          536,
+          190
+        ],
+        "confidence": 0.9896705993080004
+      },
+      {
+        "text": "11.39 a.m",
+        "bbox": [
+          90,
+          214,
+          192,
+          240
+        ],
+        "confidence": 0.61759271720435
+      },
+      {
+        "text": "TRRF GENERAL SESSION (PART I)",
+        "bbox": [
+          220,
+          213,
+          564,
+          242
+        ],
+        "confidence": 0.6861333884344203
+      },
+      {
+        "text": "Presiding:",
+        "bbox": [
+          219,
+          244,
+          324,
+          276
+        ],
+        "confidence": 0.999904698618558
+      },
+      {
+        "text": "Lee A",
+        "bbox": [
+          330,
+          248,
+          392,
+          272
+        ],
+        "confidence": 0.9990603236097582
+      },
+      {
+        "text": "Waller",
+        "bbox": [
+          400,
+          248,
+          470,
+          272
+        ],
+        "confidence": 0.9999779537995168
+      },
+      {
+        "text": "TRRF Vice President",
+        "bbox": [
+          332,
+          270,
+          538,
+          296
+        ],
+        "confidence": 0.991301511545059
+      },
+      {
+        "text": "11.39 to",
+        "bbox": [
+          90,
+          328,
+          174,
+          354
+        ],
+        "confidence": 0.6938443088049299
+      },
+      {
+        "text": "\"Introductory Remarks\"",
+        "bbox": [
+          215,
+          326,
+          474,
+          354
+        ],
+        "confidence": 0.8788508735443259
+      },
+      {
+        "text": "11.44 a.m,",
+        "bbox": [
+          90,
+          352,
+          196,
+          378
+        ],
+        "confidence": 0.46055832984311956
+      },
+      {
+        "text": "Lee A_",
+        "bbox": [
+          242,
+          354,
+          304,
+          378
+        ],
+        "confidence": 0.6889279843841808
+      },
+      {
+        "text": "Waller, TRRF",
+        "bbox": [
+          312,
+          352,
+          444,
+          378
+        ],
+        "confidence": 0.683898415648011
+      },
+      {
+        "text": "Presi-",
+        "bbox": [
+          491,
+          351,
+          556,
+          379
+        ],
+        "confidence": 0.7679802249549407
+      },
+      {
+        "text": "dent",
+        "bbox": [
+          242,
+          378,
+          292,
+          402
+        ],
+        "confidence": 0.7527889282071998
+      },
+      {
+        "text": "11.44 a.m",
+        "bbox": [
+          90,
+          434,
+          192,
+          458
+        ],
+        "confidence": 0.7909299690371241
+      },
+      {
+        "text": "Individual Interviews with TRRF",
+        "bbox": [
+          216,
+          432,
+          550,
+          458
+        ],
+        "confidence": 0.7720800005662414
+      },
+      {
+        "text": "to",
+        "bbox": [
+          129,
+          461,
+          153,
+          481
+        ],
+        "confidence": 0.9704395880939866
+      },
+      {
+        "text": "Public Board Members and Sci-",
+        "bbox": [
+          218,
+          455,
+          548,
+          485
+        ],
+        "confidence": 0.8220419011578406
+      },
+      {
+        "text": "12.25 p.m",
+        "bbox": [
+          90,
+          482,
+          194,
+          508
+        ],
+        "confidence": 0.7815642750943446
+      },
+      {
+        "text": "entific Advisory Council Mem-",
+        "bbox": [
+          217,
+          477,
+          534,
+          508
+        ],
+        "confidence": 0.9642994065114557
+      },
+      {
+        "text": "bers",
+        "bbox": [
+          218,
+          504,
+          270,
+          528
+        ],
+        "confidence": 0.999937891960144
+      },
+      {
+        "text": "Conducted by TRRF Treasurer",
+        "bbox": [
+          242,
+          527,
+          544,
+          557
+        ],
+        "confidence": 0.995079190438827
+      },
+      {
+        "text": "G. Kuehn to get answers",
+        "bbox": [
+          304,
+          551,
+          550,
+          581
+        ],
+        "confidence": 0.7662029111317901
+      },
+      {
+        "text": "which the public refrigerated",
+        "bbox": [
+          242,
+          575,
+          530,
+          605
+        ],
+        "confidence": 0.9015061452021028
+      },
+      {
+        "text": "warehousing industry is looking",
+        "bbox": [
+          241,
+          596,
+          557,
+          628
+        ],
+        "confidence": 0.9919817737564851
+      },
+      {
+        "text": "for. Plus questions from the floor.",
+        "bbox": [
+          240,
+          623,
+          558,
+          650
+        ],
+        "confidence": 0.8266783447388354
+      },
+      {
+        "text": "Dr. Emil M: Mrak; University of Cal-",
+        "bbox": [
+          218,
+          647,
+          560,
+          676
+        ],
+        "confidence": 0.4975203780922941
+      },
+      {
+        "text": "ifornia, Chairman, TRRF Board;",
+        "bbox": [
+          218,
+          671,
+          530,
+          698
+        ],
+        "confidence": 0.8127632089528374
+      },
+      {
+        "text": "Sam R. Cecil, University of Georgia",
+        "bbox": [
+          218,
+          694,
+          558,
+          724
+        ],
+        "confidence": 0.7568297141405653
+      },
+      {
+        "text": "College of Agriculture; Dr. Stanley",
+        "bbox": [
+          216,
+          716,
+          558,
+          749
+        ],
+        "confidence": 0.819692033952847
+      },
+      {
+        "text": "Charm, Tufts University School of",
+        "bbox": [
+          220,
+          742,
+          552,
+          770
+        ],
+        "confidence": 0.73787657389646
+      },
+      {
+        "text": "Medicine; Dr. Robert H. Cotton, ITT",
+        "bbox": [
+          219,
+          764,
+          562,
+          794
+        ],
+        "confidence": 0.7612916169989725
+      },
+      {
+        "text": "Continental Baking Company; Dr.",
+        "bbox": [
+          220,
+          791,
+          550,
+          819
+        ],
+        "confidence": 0.9704857654881223
+      },
+      {
+        "text": "Owen Fennema, University of Wis-",
+        "bbox": [
+          220,
+          813,
+          560,
+          842
+        ],
+        "confidence": 0.7037219743993319
+      },
+      {
+        "text": "consin; Dr: Robert E: Hardenburg,",
+        "bbox": [
+          219,
+          837,
+          558,
+          866
+        ],
+        "confidence": 0.6115303824921565
+      },
+      {
+        "text": "USDA",
+        "bbox": [
+          220,
+          862,
+          284,
+          886
+        ],
+        "confidence": 0.9999667406082153
+      },
+      {
+        "text": "12.25 to",
+        "bbox": [
+          90,
+          910,
+          174,
+          934
+        ],
+        "confidence": 0.9861480800721647
+      },
+      {
+        "text": "Questions and Answers",
+        "bbox": [
+          220,
+          910,
+          456,
+          934
+        ],
+        "confidence": 0.7993812084373596
+      },
+      {
+        "text": "12.58 p.m_",
+        "bbox": [
+          92,
+          932,
+          194,
+          960
+        ],
+        "confidence": 0.7613507953695476
+      },
+      {
+        "text": "12.58 to",
+        "bbox": [
+          90,
+          980,
+          174,
+          1006
+        ],
+        "confidence": 0.9119636424504811
+      },
+      {
+        "text": "Exhibits Open",
+        "bbox": [
+          220,
+          980,
+          370,
+          1008
+        ],
+        "confidence": 0.9997974161055476
+      },
+      {
+        "text": "4.00 p.m",
+        "bbox": [
+          90,
+          1004,
+          182,
+          1032
+        ],
+        "confidence": 0.7281651519024992
+      },
+      {
+        "text": "Capt Jack Stoney Room",
+        "bbox": [
+          320,
+          1003,
+          564,
+          1032
+        ],
+        "confidence": 0.958681406665039
+      },
+      {
+        "text": "2.00 t0",
+        "bbox": [
+          92,
+          1052,
+          164,
+          1076
+        ],
+        "confidence": 0.6916849316638022
+      },
+      {
+        "text": "TRRF Scientific Advisory",
+        "bbox": [
+          218,
+          1049,
+          482,
+          1080
+        ],
+        "confidence": 0.8454177488591341
+      },
+      {
+        "text": "5.00 p.m.",
+        "bbox": [
+          90,
+          1076,
+          186,
+          1102
+        ],
+        "confidence": 0.7417650728434539
+      },
+      {
+        "text": "Council Meeting",
+        "bbox": [
+          218,
+          1073,
+          391,
+          1104
+        ],
+        "confidence": 0.9954991080367779
+      },
+      {
+        "text": "Ballroom Foyer",
+        "bbox": [
+          412,
+          1099,
+          566,
+          1129
+        ],
+        "confidence": 0.7638784456020844
+      },
+      {
+        "text": "Ource",
+        "bbox": [
+          67,
+          1257,
+          117,
+          1273
+        ],
+        "confidence": 0.38046674780466055
+      },
+      {
+        "text": "sf eduldocs",
+        "bbox": [
+          421,
+          1253,
+          523,
+          1271
+        ],
+        "confidence": 0.6471619999462628
+      },
+      {
+        "text": "lobby",
+        "bbox": [
+          373,
+          112,
+          440,
+          146
+        ],
+        "confidence": 0.9596652083602701
+      },
+      {
+        "text": "Vice",
+        "bbox": [
+          441,
+          349,
+          496,
+          381
+        ],
+        "confidence": 0.9997568726539612
+      },
+      {
+        "text": "Philip",
+        "bbox": [
+          239,
+          547,
+          306,
+          582
+        ],
+        "confidence": 0.9998485457535263
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "table/list"
+      ],
+      "docId": 14281,
+      "ucsf_document_id": "txpp0227",
+      "ucsf_document_page_no": "10"
+    },
+    "prepare_latency_ms": 8484.022399999958
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000009",
+    "question": "How many more people felt inspired frequently than depressed frequently?",
+    "gold_answers": [
+      "0.03"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000009.png",
+    "ocr_text_chars": 515,
+    "ocr_box_count": 38,
+    "ocr_boxes": [
+      {
+        "text": "Social media users experience a mix of positive,",
+        "bbox": [
+          0,
+          40,
+          735,
+          85
+        ],
+        "confidence": 0.7418067392761988
+      },
+      {
+        "text": "negative emotions while using these platforms",
+        "bbox": [
+          0,
+          80,
+          715,
+          125
+        ],
+        "confidence": 0.7363560545388649
+      },
+      {
+        "text": "% of social media users who say",
+        "bbox": [
+          0,
+          132,
+          350,
+          164
+        ],
+        "confidence": 0.9496801479983337
+      },
+      {
+        "text": "see content on social media that",
+        "bbox": [
+          452,
+          134,
+          802,
+          160
+        ],
+        "confidence": 0.9821516382842733
+      },
+      {
+        "text": "makes them feel",
+        "bbox": [
+          0,
+          166,
+          180,
+          198
+        ],
+        "confidence": 0.9917625358198918
+      },
+      {
+        "text": "Frequently",
+        "bbox": [
+          258,
+          238,
+          376,
+          266
+        ],
+        "confidence": 0.9870114666580467
+      },
+      {
+        "text": "Sometimes",
+        "bbox": [
+          494,
+          236,
+          620,
+          262
+        ],
+        "confidence": 0.9999782640547586
+      },
+      {
+        "text": "NET",
+        "bbox": [
+          720,
+          238,
+          764,
+          262
+        ],
+        "confidence": 0.51344233751297
+      },
+      {
+        "text": "Amused",
+        "bbox": [
+          78,
+          292,
+          166,
+          318
+        ],
+        "confidence": 0.9202208705947205
+      },
+      {
+        "text": "44",
+        "bbox": [
+          370,
+          294,
+          404,
+          318
+        ],
+        "confidence": 0.4157602787017822
+      },
+      {
+        "text": "44",
+        "bbox": [
+          602,
+          294,
+          636,
+          318
+        ],
+        "confidence": 1.0
+      },
+      {
+        "text": "88",
+        "bbox": [
+          722,
+          294,
+          756,
+          318
+        ],
+        "confidence": 1.0
+      },
+      {
+        "text": "Angry",
+        "bbox": [
+          104,
+          349,
+          167,
+          380
+        ],
+        "confidence": 0.877798304324618
+      },
+      {
+        "text": "25",
+        "bbox": [
+          270,
+          352,
+          302,
+          378
+        ],
+        "confidence": 0.8992927433526339
+      },
+      {
+        "text": "47",
+        "bbox": [
+          518,
+          352,
+          550,
+          376
+        ],
+        "confidence": 0.5299524523118537
+      },
+      {
+        "text": "71",
+        "bbox": [
+          724,
+          352,
+          756,
+          378
+        ],
+        "confidence": 0.9999933408044295
+      },
+      {
+        "text": "Connected",
+        "bbox": [
+          50,
+          408,
+          164,
+          434
+        ],
+        "confidence": 0.9559423410517521
+      },
+      {
+        "text": "21",
+        "bbox": [
+          248,
+          410,
+          280,
+          434
+        ],
+        "confidence": 1.0
+      },
+      {
+        "text": "49",
+        "bbox": [
+          508,
+          410,
+          540,
+          436
+        ],
+        "confidence": 0.99999452091409
+      },
+      {
+        "text": "71",
+        "bbox": [
+          724,
+          412,
+          758,
+          440
+        ],
+        "confidence": 0.999996375372952
+      },
+      {
+        "text": "Inspired",
+        "bbox": [
+          76,
+          468,
+          164,
+          494
+        ],
+        "confidence": 0.9997597088577673
+      },
+      {
+        "text": "16",
+        "bbox": [
+          222,
+          468,
+          256,
+          494
+        ],
+        "confidence": 0.9999985670074514
+      },
+      {
+        "text": "53",
+        "bbox": [
+          502,
+          468,
+          538,
+          496
+        ],
+        "confidence": 0.9999870187953367
+      },
+      {
+        "text": "69",
+        "bbox": [
+          724,
+          468,
+          758,
+          498
+        ],
+        "confidence": 0.9999045808683948
+      },
+      {
+        "text": "Depressed",
+        "bbox": [
+          51,
+          523,
+          164,
+          553
+        ],
+        "confidence": 0.9999980926504577
+      },
+      {
+        "text": "13",
+        "bbox": [
+          206,
+          526,
+          240,
+          552
+        ],
+        "confidence": 0.9999816240235012
+      },
+      {
+        "text": "36",
+        "bbox": [
+          396,
+          526,
+          432,
+          554
+        ],
+        "confidence": 0.9999981455391691
+      },
+      {
+        "text": "49",
+        "bbox": [
+          722,
+          528,
+          756,
+          552
+        ],
+        "confidence": 0.7904605269432068
+      },
+      {
+        "text": "Lonely",
+        "bbox": [
+          92,
+          580,
+          167,
+          612
+        ],
+        "confidence": 0.9999735737466786
+      },
+      {
+        "text": "24",
+        "bbox": [
+          300,
+          584,
+          334,
+          610
+        ],
+        "confidence": 0.986960476792002
+      },
+      {
+        "text": "31",
+        "bbox": [
+          722,
+          588,
+          756,
+          612
+        ],
+        "confidence": 0.9999971340155042
+      },
+      {
+        "text": "Note: Respondents who did not give an answer or gave other answers are not shown:",
+        "bbox": [
+          0,
+          624,
+          770,
+          652
+        ],
+        "confidence": 0.6599654884010047
+      },
+      {
+        "text": "Source: Survey of U.S. adults conducted",
+        "bbox": [
+          0,
+          649,
+          363,
+          677
+        ],
+        "confidence": 0.8050561659485692
+      },
+      {
+        "text": "29-June 11,2018.",
+        "bbox": [
+          406,
+          650,
+          578,
+          674
+        ],
+        "confidence": 0.5508983558509434
+      },
+      {
+        "text": "Public Attitudes Toward Computer Algorithms\"",
+        "bbox": [
+          8,
+          677,
+          426,
+          706
+        ],
+        "confidence": 0.8158821841563554
+      },
+      {
+        "text": "PEW RESEARCH CENTER",
+        "bbox": [
+          0,
+          716,
+          234,
+          740
+        ],
+        "confidence": 0.8865663259820863
+      },
+      {
+        "text": "they",
+        "bbox": [
+          344,
+          130,
+          405,
+          166
+        ],
+        "confidence": 0.9999879598617554
+      },
+      {
+        "text": "May :",
+        "bbox": [
+          361,
+          647,
+          410,
+          679
+        ],
+        "confidence": 0.24844385994462959
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 2992.682900001455
+  }
+]

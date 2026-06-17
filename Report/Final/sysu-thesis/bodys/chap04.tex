@@ -1,0 +1,60 @@
+\chapter{实验设计}
+
+\section{与开题评测设计的对应}
+
+开题报告中计划使用 DocVQA、ChartQA 子集或自建数据集进行评测，并关注 Recall@K、MRR、ANLS、EM、溯源准确性和响应延迟等指标。期末阶段，项目优先完成 DocVQA 与 ChartQA 两类公开任务的对比实验：DocVQA 用于检验文档页面、表格、广告和票据类信息抽取能力；ChartQA 用于检验图表数值和视觉趋势理解能力。两类数据分别对应开题报告中“文档解析”和“图表/视觉理解”两个重点场景。
+
+由于课程周期有限，最终报告没有扩展到视频片段和大规模自建中文数据集，而是将主要精力放在“纯文本 RAG 与多模态 RAG 的效果差异”这一核心问题上。这样可以直接验证开题方案中多模态 evidence、路由和局部视觉区域是否真正带来收益。
+
+\section{数据集}
+
+为了验证系统在真实文档理解任务中的效果，本文选择 DocVQA 与 ChartQA 两类数据作为评测来源。DocVQA 主要考察模型对文档页面、表格、广告、表单和票据等场景的文字定位与抽取能力；ChartQA 主要考察模型对柱状图、折线图、数值比较和视觉趋势的理解能力。两者分别覆盖文档问答中的文本密集型场景和图表视觉推理场景，符合课程要求中“至少在一个文档数据集上评测，并对比纯文本 RAG 与多模态 RAG”的标准。
+
+最终统计使用 20 个 DocVQA 样本和 20 个 ChartQA 样本，共 40 个样本。由于此前发现 docvqa\_49153 存在标注歧义，最终 20+20 统计排除了该样本，并使用新样本替代。评测结果由以下实验目录合并得到：基础 15+15 实验、新增 5+5 实验、三个历史错误修复重测和两个 ChartQA 截断错误修复重测。
+
+\section{对比方法}
+
+本文比较两种主要方法：
+
+\begin{itemize}
+  \item \textbf{Text-RAG}：只使用文档文本抽取结果构建 chunk 和向量索引。该方法适合章节总结、定义、普通文本问答等场景，是多模态系统的基础 baseline。
+  \item \textbf{MM-RAG}：在 Text-RAG 基础上加入页面视觉 evidence、局部高清 crop、图表专用 route 和 VLM 推理。该方法能处理图表、视觉区域、广告品牌、商品标签、表格和图像型问题。
+\end{itemize}
+
+两种方法共享同一套短答案抽取、归一化和评分脚本，以保证比较公平。对于生成式回答，系统优先抽取 Final answer: 后的短答案，再进行大小写、标点、数字容差和实体子串归一。
+
+\section{评测指标}
+
+本文使用以下指标：
+
+\begin{itemize}
+  \item \textbf{Exact Match (EM)}：预测短答案与标准答案严格匹配的比例。该指标适合衡量抽取式或短答案问答。
+  \item \textbf{ANLS}：平均归一化 Levenshtein 相似度，是 DocVQA 常用指标，能够容忍轻微拼写或格式差异。
+  \item \textbf{Answer Match}：经过项目内归一化逻辑后的答案匹配率，用于处理实体子串、数值容差和截断修复等情况。
+  \item \textbf{Latency}：单个问题平均推理耗时，用于评估系统可用性。
+\end{itemize}
+
+此外，开发过程中也记录 Recall@K、MRR 和 Citation Accuracy，用于检查检索和 citation 对齐是否稳定。这些指标对应开题报告中的“检索与路由指标”和“溯源准确性”。在最终 20+20 表格中，重点展示 EM、ANLS、Answer Match 和平均延迟；检索指标主要用于开发调试和错误定位，没有作为最终主表展开。
+
+\section{运行环境}
+
+真实模型评测使用如下环境：
+
+\begin{itemize}
+  \item Python：C:/anaconda/envs/first/python.exe
+  \item OCR：EasyOCR CPU 模式，使用 --no-ocr-gpu
+  \item Embedding：BGE-M3，CPU 推理
+  \item Reranker：BGE-reranker-v2-m3，CPU 推理
+  \item VLM：Qwen3-VL-8B-Instruct，GPU 推理
+  \item 显存策略：--max-images 1，优先传局部 crop
+  \item 图像限制：整页最长边 1280，region crop 默认最长边 2048
+  \item 生成长度：--max-new-tokens 96
+\end{itemize}
+
+系统开发机主要使用 NVIDIA GeForce RTX 5090D 32GB。考虑到课程项目的演示需求，前端和后端同时保留 mock 模式，使无 GPU 环境下仍可展示上传、解析、预览和 API 流程。
+
+\section{实验流程}
+
+实验流程分为四步。第一步，使用统一脚本读取 DocVQA 和 ChartQA 样本，并构建文档对象。第二步，分别运行 Text-RAG 和 MM-RAG，保存每个样本的预测答案、top evidence、引用页、route、延迟和失败标签。第三步，对模型输出进行短答案抽取与归一化，计算 EM、ANLS 和 Answer Match。第四步，对错误样本进行人工检查，分析错误来源是否来自检索、视觉区域选择、OCR、VLM 推理或答案截断。
+
+为减少偶然性，项目在最终统计前对若干错误进行了定点修复与重测。例如，针对 ChartQA 截断年份和 Yes/No 比较题，系统加入了短答案修复逻辑；针对广告品牌和商品标签题，系统加入 logo 区域 crop；针对图表问题，系统固定生成 chart region 并增强图表任务提示。

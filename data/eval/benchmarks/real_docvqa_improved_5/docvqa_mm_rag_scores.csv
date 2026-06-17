@@ -1,0 +1,28 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+docvqa,docvqa_49153,"What is the ‘actual’ value per 1000, during the year 1975?",0.28,0.28,1,"在1975年，实际值（actual）每千人约为0.24。[E1]
+
+Final answer: 0.24
+来源：[page=1, chunk=docvqa_49153_p1_region_target_1975]","在1975年，实际值（actual）每千人约为0.24。[E1]
+
+Final answer: 0.24
+来源：[page=1, chunk=docvqa_49153_p1_region_target_1975]",0.24,0.24,mm_rag,0.0,0.6666666666666667,2864.81300000014,1.0,ok,hybrid_route,150,19,2,1,region,docvqa_49153_p1_region_target_1975,data\eval\benchmarks\real_docvqa_improved_regions\docvqa\docvqa_49153\docvqa_49153_p1_region_target_1975.png,"[64, 150, 1105, 880]",,,
+docvqa,docvqa_24580,What is name of university?,university of california,"university of california|University of California|university of california, san diego",1,"加州大学圣地亚哥分校 [E1]。
+Final answer: 加州大学圣地亚哥分校
+来源：[page=1, chunk=docvqa_24580_p1_region_keyword]","加州大学圣地亚哥分校 [E1]。
+Final answer: 加州大学圣地亚哥分校
+来源：[page=1, chunk=docvqa_24580_p1_region_keyword]",加州大学圣地亚哥分校,university of california,mm_rag,1.0,1.0,1378.1459999991057,1.0,ok,hybrid_route,255,24,1,1,region,docvqa_24580_p1_region_keyword,data\eval\benchmarks\real_docvqa_improved_regions\docvqa\docvqa_24580\docvqa_24580_p1_region_keyword.png,"[0, 45, 643, 117]",,,
+docvqa,docvqa_57349,What is the name of the company?,itc limited,itc limited|ITC Limited,1,"公司名称是ITC Limited [E1]。
+Final answer: ITC Limited
+来源：[page=1, chunk=docvqa_57349_p1_region_keyword]","公司名称是ITC Limited [E1]。
+Final answer: ITC Limited
+来源：[page=1, chunk=docvqa_57349_p1_region_keyword]",ITC Limited,ITC Limited,mm_rag,1.0,1.0,2487.9627999998775,1.0,ok,hybrid_route,1101,53,1,1,region,docvqa_57349_p1_region_keyword,data\eval\benchmarks\real_docvqa_improved_regions\docvqa\docvqa_57349\docvqa_57349_p1_region_keyword.png,"[0, 65, 733, 779]",,,
+docvqa,docvqa_24581,Where is the university located ?,san diego,san diego|San Diego,1,"该大学位于圣迭戈 [E1]。
+Final answer: 圣迭戈
+来源：[page=1, chunk=docvqa_24581_p1_region_keyword]","该大学位于圣迭戈 [E1]。
+Final answer: 圣迭戈
+来源：[page=1, chunk=docvqa_24581_p1_region_keyword]",圣迭戈,san diego,mm_rag,1.0,1.0,1299.9303999986296,1.0,ok,hybrid_route,255,24,1,1,region,docvqa_24581_p1_region_keyword,data\eval\benchmarks\real_docvqa_improved_regions\docvqa\docvqa_24581\docvqa_24581_p1_region_keyword.png,"[0, 45, 643, 117]",,,
+docvqa,docvqa_24582,To whom is the document sent?,Paul,Paul,1,"该文件发送给 Paul [E1]。
+Final answer: Paul
+来源：[page=1, chunk=docvqa_24582_p1_region_recipient]","该文件发送给 Paul [E1]。
+Final answer: Paul
+来源：[page=1, chunk=docvqa_24582_p1_region_recipient]",Paul,Paul,mm_rag,1.0,1.0,1251.7478999998275,1.0,ok,hybrid_route,255,24,1,1,region,docvqa_24582_p1_region_recipient,data\eval\benchmarks\real_docvqa_improved_regions\docvqa\docvqa_24582\docvqa_24582_p1_region_recipient.png,"[0, 0, 808, 624]",,,

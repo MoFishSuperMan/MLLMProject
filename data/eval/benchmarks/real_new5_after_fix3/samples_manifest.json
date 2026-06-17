@@ -1,0 +1,5459 @@
+[
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57371",
+    "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+    "gold_answers": [
+      "6"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57371.png",
+    "ocr_text_chars": 2296,
+    "ocr_box_count": 90,
+    "ocr_boxes": [
+      {
+        "text": "Enduring Value",
+        "bbox": [
+          50,
+          108,
+          121,
+          125
+        ],
+        "confidence": 0.8727759297129637
+      },
+      {
+        "text": "Report on Corporate Governance",
+        "bbox": [
+          50,
+          139,
+          326,
+          166
+        ],
+        "confidence": 0.8832182768636117
+      },
+      {
+        "text": "Attendance at Nominations Committee Meetings",
+        "bbox": [
+          51,
+          189,
+          393,
+          209
+        ],
+        "confidence": 0.8460486653089594
+      },
+      {
+        "text": "Meetings and Attendance",
+        "bbox": [
+          457,
+          186,
+          672,
+          212
+        ],
+        "confidence": 0.9943222042561094
+      },
+      {
+        "text": "during the financial year",
+        "bbox": [
+          50,
+          207,
+          225,
+          227
+        ],
+        "confidence": 0.9415863827693616
+      },
+      {
+        "text": "During the financial year ended 31st March, 2013, three",
+        "bbox": [
+          460,
+          221,
+          823,
+          241
+        ],
+        "confidence": 0.4695064585702908
+      },
+      {
+        "text": "Direcior",
+        "bbox": [
+          59,
+          245,
+          101,
+          261
+        ],
+        "confidence": 0.5322697476014451
+      },
+      {
+        "text": "Ho. of meetings altended",
+        "bbox": [
+          263,
+          243,
+          385,
+          263
+        ],
+        "confidence": 0.4855520196213464
+      },
+      {
+        "text": "meetings of the Sustainability Committee were held, as",
+        "bbox": [
+          459,
+          247,
+          819,
+          265
+        ],
+        "confidence": 0.900170770636893
+      },
+      {
+        "text": "Deveshwar",
+        "bbox": [
+          81,
+          273,
+          133,
+          289
+        ],
+        "confidence": 0.983093043875204
+      },
+      {
+        "text": "follows:",
+        "bbox": [
+          459,
+          269,
+          513,
+          285
+        ],
+        "confidence": 0.9990603216919577
+      },
+      {
+        "text": "Baijal",
+        "bbox": [
+          71,
+          299,
+          95,
+          315
+        ],
+        "confidence": 0.995746562620498
+      },
+      {
+        "text": "Dale",
+        "bbox": [
+          503,
+          301,
+          527,
+          317
+        ],
+        "confidence": 0.5665203344128862
+      },
+      {
+        "text": "Commillee",
+        "bbox": [
+          673,
+          301,
+          725,
+          317
+        ],
+        "confidence": 0.9982467752968371
+      },
+      {
+        "text": "Mo. of",
+        "bbox": [
+          769,
+          299,
+          803,
+          317
+        ],
+        "confidence": 0.4672265530958618
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          71,
+          327,
+          111,
+          343
+        ],
+        "confidence": 0.9999388441482142
+      },
+      {
+        "text": "Strenglh",
+        "bbox": [
+          677,
+          321,
+          721,
+          337
+        ],
+        "confidence": 0.6903906575292977
+      },
+      {
+        "text": "Members",
+        "bbox": [
+          761,
+          321,
+          809,
+          337
+        ],
+        "confidence": 0.9998215245704007
+      },
+      {
+        "text": "present",
+        "bbox": [
+          765,
+          339,
+          805,
+          355
+        ],
+        "confidence": 0.99979714729954
+      },
+      {
+        "text": "A, V: Girija Kumar",
+        "bbox": [
+          59,
+          351,
+          141,
+          369
+        ],
+        "confidence": 0.513416957212596
+      },
+      {
+        "text": "Sth April; 2012",
+        "bbox": [
+          501,
+          359,
+          573,
+          379
+        ],
+        "confidence": 0.5302084924251708
+      },
+      {
+        "text": "S, H, Khan",
+        "bbox": [
+          59,
+          379,
+          109,
+          395
+        ],
+        "confidence": 0.45732572852031017
+      },
+      {
+        "text": "24th May, 2012",
+        "bbox": [
+          503,
+          385,
+          577,
+          403
+        ],
+        "confidence": 0.7231400803268662
+      },
+      {
+        "text": "Mathur",
+        "bbox": [
+          81,
+          407,
+          117,
+          423
+        ],
+        "confidence": 0.9957371608793802
+      },
+      {
+        "text": "28th March; 2013",
+        "bbox": [
+          501,
+          407,
+          585,
+          427
+        ],
+        "confidence": 0.8964989854836249
+      },
+      {
+        "text": "D: K Mehrotra",
+        "bbox": [
+          59,
+          435,
+          125,
+          451
+        ],
+        "confidence": 0.5738745262400049
+      },
+      {
+        "text": "Attendance at Sustainability Committee Meetings during",
+        "bbox": [
+          461,
+          441,
+          829,
+          461
+        ],
+        "confidence": 0.938810964053565
+      },
+      {
+        "text": "B. Ramanujam",
+        "bbox": [
+          69,
+          461,
+          137,
+          477
+        ],
+        "confidence": 0.7912154112590499
+      },
+      {
+        "text": "the financial year",
+        "bbox": [
+          459,
+          463,
+          581,
+          481
+        ],
+        "confidence": 0.8140967387669267
+      },
+      {
+        "text": "S. S. H: Rehman",
+        "bbox": [
+          59,
+          489,
+          135,
+          505
+        ],
+        "confidence": 0.21609450838102737
+      },
+      {
+        "text": "Director",
+        "bbox": [
+          469,
+          497,
+          511,
+          513
+        ],
+        "confidence": 0.6466910505487882
+      },
+      {
+        "text": "of meetings allended",
+        "bbox": [
+          693,
+          497,
+          795,
+          513
+        ],
+        "confidence": 0.911028542893316
+      },
+      {
+        "text": "Shankar &",
+        "bbox": [
+          73,
+          515,
+          121,
+          531
+        ],
+        "confidence": 0.5573362765001864
+      },
+      {
+        "text": "Y: C. Deveshwar",
+        "bbox": [
+          469,
+          525,
+          543,
+          541
+        ],
+        "confidence": 0.706329018046183
+      },
+      {
+        "text": "K Vaidyanath",
+        "bbox": [
+          59,
+          541,
+          121,
+          557
+        ],
+        "confidence": 0.70541335297708
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          478,
+          550,
+          521,
+          569
+        ],
+        "confidence": 0.9921404128592525
+      },
+      {
+        "text": "Appointed Member W.e f. 181h January, 2013.",
+        "bbox": [
+          69,
+          567,
+          259,
+          583
+        ],
+        "confidence": 0.37923402305043613
+      },
+      {
+        "text": "Powell",
+        "bbox": [
+          493,
+          579,
+          525,
+          595
+        ],
+        "confidence": 0.9996764987652323
+      },
+      {
+        "text": "V: SUSTAINABILITY COMMITTEE",
+        "bbox": [
+          49,
+          603,
+          317,
+          623
+        ],
+        "confidence": 0.7657022238694171
+      },
+      {
+        "text": "Ruys",
+        "bbox": [
+          479,
+          605,
+          505,
+          623
+        ],
+        "confidence": 0.9987018704414368
+      },
+      {
+        "text": "Sen",
+        "bbox": [
+          479,
+          633,
+          501,
+          649
+        ],
+        "confidence": 0.9870363270555926
+      },
+      {
+        "text": "The role of the Sustainability Committee is to review;",
+        "bbox": [
+          48,
+          638,
+          408,
+          662
+        ],
+        "confidence": 0.9396225315999895
+      },
+      {
+        "text": "monitor and provide strategic direction to the Company' s",
+        "bbox": [
+          51,
+          663,
+          421,
+          684
+        ],
+        "confidence": 0.7511834735838074
+      },
+      {
+        "text": "M, Shankar @",
+        "bbox": [
+          469,
+          659,
+          529,
+          675
+        ],
+        "confidence": 0.4603719882139274
+      },
+      {
+        "text": "sustainability practices towards fulfilling its triple bottom",
+        "bbox": [
+          50,
+          682,
+          422,
+          708
+        ],
+        "confidence": 0.9019979762510368
+      },
+      {
+        "text": "Vijayaraghavan",
+        "bbox": [
+          479,
+          687,
+          549,
+          703
+        ],
+        "confidence": 0.9766126538160745
+      },
+      {
+        "text": "line objectives",
+        "bbox": [
+          51,
+          711,
+          149,
+          729
+        ],
+        "confidence": 0.8696676495982072
+      },
+      {
+        "text": "The Committee seeks to guide the",
+        "bbox": [
+          155,
+          709,
+          389,
+          729
+        ],
+        "confidence": 0.6622018278878531
+      },
+      {
+        "text": "Appointed Member W.e f. IBth January, 2013",
+        "bbox": [
+          479,
+          712,
+          669,
+          729
+        ],
+        "confidence": 0.23747437013183167
+      },
+      {
+        "text": "Company in integrating its social and environmental",
+        "bbox": [
+          50,
+          732,
+          403,
+          753
+        ],
+        "confidence": 0.9102950672793547
+      },
+      {
+        "text": "CORPORATE MANAGEMENT COMMITTEE",
+        "bbox": [
+          459,
+          745,
+          803,
+          765
+        ],
+        "confidence": 0.9836805459152851
+      },
+      {
+        "text": "objectives with its business strategies_",
+        "bbox": [
+          51,
+          757,
+          307,
+          775
+        ],
+        "confidence": 0.6851994333415334
+      },
+      {
+        "text": "The primary role of the Corporate Management",
+        "bbox": [
+          461,
+          785,
+          783,
+          803
+        ],
+        "confidence": 0.7172615364438036
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          48,
+          792,
+          158,
+          816
+        ],
+        "confidence": 0.9999824237942115
+      },
+      {
+        "text": "Committee is strategic management of the Company's",
+        "bbox": [
+          461,
+          806,
+          829,
+          826
+        ],
+        "confidence": 0.8726164787995113
+      },
+      {
+        "text": "The Sustainability Committee presently comprises the",
+        "bbox": [
+          51,
+          830,
+          417,
+          849
+        ],
+        "confidence": 0.6069013118594752
+      },
+      {
+        "text": "businesses within Board approved direction",
+        "bbox": [
+          461,
+          830,
+          747,
+          849
+        ],
+        "confidence": 0.9510029407994398
+      },
+      {
+        "text": "framework:",
+        "bbox": [
+          753,
+          831,
+          827,
+          847
+        ],
+        "confidence": 0.7002273566462218
+      },
+      {
+        "text": "Chairman of the Company and six Non-Executive",
+        "bbox": [
+          51,
+          854,
+          387,
+          873
+        ],
+        "confidence": 0.6900903283932914
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          457,
+          855,
+          568,
+          881
+        ],
+        "confidence": 0.9999717845197084
+      },
+      {
+        "text": "Directors; four of whom are Independent Directors. The",
+        "bbox": [
+          51,
+          877,
+          421,
+          895
+        ],
+        "confidence": 0.768414868479345
+      },
+      {
+        "text": "The Corporate Management Committee presently",
+        "bbox": [
+          461,
+          888,
+          799,
+          908
+        ],
+        "confidence": 0.6747363185794193
+      },
+      {
+        "text": "Chairman of the Company is the Chairman of the",
+        "bbox": [
+          51,
+          898,
+          385,
+          919
+        ],
+        "confidence": 0.7757706437889335
+      },
+      {
+        "text": "comprises all the Executive Directors and six senior",
+        "bbox": [
+          461,
+          909,
+          811,
+          929
+        ],
+        "confidence": 0.8247401190577074
+      },
+      {
+        "text": "Committee_",
+        "bbox": [
+          51,
+          923,
+          127,
+          939
+        ],
+        "confidence": 0.979757979860869
+      },
+      {
+        "text": "members of management: The Chairman of the Company",
+        "bbox": [
+          461,
+          932,
+          829,
+          952
+        ],
+        "confidence": 0.805842480051783
+      },
+      {
+        "text": "The names of the members of the Sustainability",
+        "bbox": [
+          51,
+          953,
+          377,
+          971
+        ],
+        "confidence": 0.7991993821517424
+      },
+      {
+        "text": "is the Chairman of the Committee.",
+        "bbox": [
+          459,
+          955,
+          691,
+          971
+        ],
+        "confidence": 0.565434143395129
+      },
+      {
+        "text": "The composition of",
+        "bbox": [
+          697,
+          955,
+          827,
+          971
+        ],
+        "confidence": 0.8868533874878465
+      },
+      {
+        "text": "Committee, including its Chairman_",
+        "bbox": [
+          51,
+          975,
+          285,
+          995
+        ],
+        "confidence": 0.7743773617811107
+      },
+      {
+        "text": "are",
+        "bbox": [
+          289,
+          979,
+          315,
+          993
+        ],
+        "confidence": 0.7376052737236023
+      },
+      {
+        "text": "provided under",
+        "bbox": [
+          316,
+          975,
+          421,
+          995
+        ],
+        "confidence": 0.9993937754983655
+      },
+      {
+        "text": "the Corporate Management Committee is determined",
+        "bbox": [
+          459,
+          976,
+          823,
+          996
+        ],
+        "confidence": 0.9242027861899933
+      },
+      {
+        "text": "the section",
+        "bbox": [
+          51,
+          999,
+          127,
+          1015
+        ],
+        "confidence": 0.9228563533324269
+      },
+      {
+        "text": "Board of Directors and Committees' in the",
+        "bbox": [
+          133,
+          999,
+          417,
+          1015
+        ],
+        "confidence": 0.9667865650811147
+      },
+      {
+        "text": "by the Board based on the recommendation of the",
+        "bbox": [
+          459,
+          997,
+          801,
+          1017
+        ],
+        "confidence": 0.9182783504235932
+      },
+      {
+        "text": "Report and Accounts",
+        "bbox": [
+          51,
+          1023,
+          195,
+          1039
+        ],
+        "confidence": 0.5136385251113222
+      },
+      {
+        "text": "Nominations Committee.",
+        "bbox": [
+          461,
+          1021,
+          627,
+          1037
+        ],
+        "confidence": 0.9890328719595305
+      },
+      {
+        "text": "The structure, processes",
+        "bbox": [
+          126,
+          1068,
+          415,
+          1098
+        ],
+        "confidence": 0.7235453347739462
+      },
+      {
+        "text": "and practices of governance",
+        "bbox": [
+          422,
+          1067,
+          754,
+          1100
+        ],
+        "confidence": 0.9212946475753178
+      },
+      {
+        "text": "are designed to support effective management",
+        "bbox": [
+          167,
+          1097,
+          715,
+          1133
+        ],
+        "confidence": 0.8048431907519303
+      },
+      {
+        "text": "of multiple businesses",
+        "bbox": [
+          186,
+          1129,
+          447,
+          1162
+        ],
+        "confidence": 0.991712991561898
+      },
+      {
+        "text": "while retaining focus",
+        "bbox": [
+          454,
+          1130,
+          694,
+          1160
+        ],
+        "confidence": 0.781491383779756
+      },
+      {
+        "text": "on each",
+        "bbox": [
+          312,
+          1162,
+          410,
+          1186
+        ],
+        "confidence": 0.9965065315070973
+      },
+      {
+        "text": "one of them.",
+        "bbox": [
+          416,
+          1160,
+          564,
+          1186
+        ],
+        "confidence": 0.6892927487045697
+      },
+      {
+        "text": "22",
+        "bbox": [
+          57,
+          1243,
+          81,
+          1261
+        ],
+        "confidence": 0.9224264957107545
+      },
+      {
+        "text": "ITC Report and Accounts 2013",
+        "bbox": [
+          89,
+          1241,
+          305,
+          1261
+        ],
+        "confidence": 0.9833432468952824
+      },
+      {
+        "text": "Source: https /lwwW industrydocuments:",
+        "bbox": [
+          190,
+          1256,
+          516,
+          1280
+        ],
+        "confidence": 0.25866578666211504
+      },
+      {
+        "text": "eduldocs/snbx0223",
+        "bbox": [
+          551,
+          1253,
+          715,
+          1277
+        ],
+        "confidence": 0.8592998870819737
+      },
+      {
+        "text": "ucsf;",
+        "bbox": [
+          513,
+          1255,
+          557,
+          1280
+        ],
+        "confidence": 0.5880072450653702
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "table/list"
+      ],
+      "docId": 4751,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "44"
+    },
+    "prepare_latency_ms": 11013.01980000062
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57372",
+    "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+    "gold_answers": [
+      "6"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57372.png",
+    "ocr_text_chars": 2296,
+    "ocr_box_count": 90,
+    "ocr_boxes": [
+      {
+        "text": "Enduring Value",
+        "bbox": [
+          50,
+          108,
+          121,
+          125
+        ],
+        "confidence": 0.8727759297129637
+      },
+      {
+        "text": "Report on Corporate Governance",
+        "bbox": [
+          50,
+          139,
+          326,
+          166
+        ],
+        "confidence": 0.8832182768636117
+      },
+      {
+        "text": "Attendance at Nominations Committee Meetings",
+        "bbox": [
+          51,
+          189,
+          393,
+          209
+        ],
+        "confidence": 0.8460486653089594
+      },
+      {
+        "text": "Meetings and Attendance",
+        "bbox": [
+          457,
+          186,
+          672,
+          212
+        ],
+        "confidence": 0.9943222042561094
+      },
+      {
+        "text": "during the financial year",
+        "bbox": [
+          50,
+          207,
+          225,
+          227
+        ],
+        "confidence": 0.9415863827693616
+      },
+      {
+        "text": "During the financial year ended 31st March, 2013, three",
+        "bbox": [
+          460,
+          221,
+          823,
+          241
+        ],
+        "confidence": 0.4695064585702908
+      },
+      {
+        "text": "Direcior",
+        "bbox": [
+          59,
+          245,
+          101,
+          261
+        ],
+        "confidence": 0.5322697476014451
+      },
+      {
+        "text": "Ho. of meetings altended",
+        "bbox": [
+          263,
+          243,
+          385,
+          263
+        ],
+        "confidence": 0.4855520196213464
+      },
+      {
+        "text": "meetings of the Sustainability Committee were held, as",
+        "bbox": [
+          459,
+          247,
+          819,
+          265
+        ],
+        "confidence": 0.900170770636893
+      },
+      {
+        "text": "Deveshwar",
+        "bbox": [
+          81,
+          273,
+          133,
+          289
+        ],
+        "confidence": 0.983093043875204
+      },
+      {
+        "text": "follows:",
+        "bbox": [
+          459,
+          269,
+          513,
+          285
+        ],
+        "confidence": 0.9990603216919577
+      },
+      {
+        "text": "Baijal",
+        "bbox": [
+          71,
+          299,
+          95,
+          315
+        ],
+        "confidence": 0.995746562620498
+      },
+      {
+        "text": "Dale",
+        "bbox": [
+          503,
+          301,
+          527,
+          317
+        ],
+        "confidence": 0.5665203344128862
+      },
+      {
+        "text": "Commillee",
+        "bbox": [
+          673,
+          301,
+          725,
+          317
+        ],
+        "confidence": 0.9982467752968371
+      },
+      {
+        "text": "Mo. of",
+        "bbox": [
+          769,
+          299,
+          803,
+          317
+        ],
+        "confidence": 0.4672265530958618
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          71,
+          327,
+          111,
+          343
+        ],
+        "confidence": 0.9999388441482142
+      },
+      {
+        "text": "Strenglh",
+        "bbox": [
+          677,
+          321,
+          721,
+          337
+        ],
+        "confidence": 0.6903906575292977
+      },
+      {
+        "text": "Members",
+        "bbox": [
+          761,
+          321,
+          809,
+          337
+        ],
+        "confidence": 0.9998215245704007
+      },
+      {
+        "text": "present",
+        "bbox": [
+          765,
+          339,
+          805,
+          355
+        ],
+        "confidence": 0.99979714729954
+      },
+      {
+        "text": "A, V: Girija Kumar",
+        "bbox": [
+          59,
+          351,
+          141,
+          369
+        ],
+        "confidence": 0.513416957212596
+      },
+      {
+        "text": "Sth April; 2012",
+        "bbox": [
+          501,
+          359,
+          573,
+          379
+        ],
+        "confidence": 0.5302084924251708
+      },
+      {
+        "text": "S, H, Khan",
+        "bbox": [
+          59,
+          379,
+          109,
+          395
+        ],
+        "confidence": 0.45732572852031017
+      },
+      {
+        "text": "24th May, 2012",
+        "bbox": [
+          503,
+          385,
+          577,
+          403
+        ],
+        "confidence": 0.7231400803268662
+      },
+      {
+        "text": "Mathur",
+        "bbox": [
+          81,
+          407,
+          117,
+          423
+        ],
+        "confidence": 0.9957371608793802
+      },
+      {
+        "text": "28th March; 2013",
+        "bbox": [
+          501,
+          407,
+          585,
+          427
+        ],
+        "confidence": 0.8964989854836249
+      },
+      {
+        "text": "D: K Mehrotra",
+        "bbox": [
+          59,
+          435,
+          125,
+          451
+        ],
+        "confidence": 0.5738745262400049
+      },
+      {
+        "text": "Attendance at Sustainability Committee Meetings during",
+        "bbox": [
+          461,
+          441,
+          829,
+          461
+        ],
+        "confidence": 0.938810964053565
+      },
+      {
+        "text": "B. Ramanujam",
+        "bbox": [
+          69,
+          461,
+          137,
+          477
+        ],
+        "confidence": 0.7912154112590499
+      },
+      {
+        "text": "the financial year",
+        "bbox": [
+          459,
+          463,
+          581,
+          481
+        ],
+        "confidence": 0.8140967387669267
+      },
+      {
+        "text": "S. S. H: Rehman",
+        "bbox": [
+          59,
+          489,
+          135,
+          505
+        ],
+        "confidence": 0.21609450838102737
+      },
+      {
+        "text": "Director",
+        "bbox": [
+          469,
+          497,
+          511,
+          513
+        ],
+        "confidence": 0.6466910505487882
+      },
+      {
+        "text": "of meetings allended",
+        "bbox": [
+          693,
+          497,
+          795,
+          513
+        ],
+        "confidence": 0.911028542893316
+      },
+      {
+        "text": "Shankar &",
+        "bbox": [
+          73,
+          515,
+          121,
+          531
+        ],
+        "confidence": 0.5573362765001864
+      },
+      {
+        "text": "Y: C. Deveshwar",
+        "bbox": [
+          469,
+          525,
+          543,
+          541
+        ],
+        "confidence": 0.706329018046183
+      },
+      {
+        "text": "K Vaidyanath",
+        "bbox": [
+          59,
+          541,
+          121,
+          557
+        ],
+        "confidence": 0.70541335297708
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          478,
+          550,
+          521,
+          569
+        ],
+        "confidence": 0.9921404128592525
+      },
+      {
+        "text": "Appointed Member W.e f. 181h January, 2013.",
+        "bbox": [
+          69,
+          567,
+          259,
+          583
+        ],
+        "confidence": 0.37923402305043613
+      },
+      {
+        "text": "Powell",
+        "bbox": [
+          493,
+          579,
+          525,
+          595
+        ],
+        "confidence": 0.9996764987652323
+      },
+      {
+        "text": "V: SUSTAINABILITY COMMITTEE",
+        "bbox": [
+          49,
+          603,
+          317,
+          623
+        ],
+        "confidence": 0.7657022238694171
+      },
+      {
+        "text": "Ruys",
+        "bbox": [
+          479,
+          605,
+          505,
+          623
+        ],
+        "confidence": 0.9987018704414368
+      },
+      {
+        "text": "Sen",
+        "bbox": [
+          479,
+          633,
+          501,
+          649
+        ],
+        "confidence": 0.9870363270555926
+      },
+      {
+        "text": "The role of the Sustainability Committee is to review;",
+        "bbox": [
+          48,
+          638,
+          408,
+          662
+        ],
+        "confidence": 0.9396225315999895
+      },
+      {
+        "text": "monitor and provide strategic direction to the Company' s",
+        "bbox": [
+          51,
+          663,
+          421,
+          684
+        ],
+        "confidence": 0.7511834735838074
+      },
+      {
+        "text": "M, Shankar @",
+        "bbox": [
+          469,
+          659,
+          529,
+          675
+        ],
+        "confidence": 0.4603719882139274
+      },
+      {
+        "text": "sustainability practices towards fulfilling its triple bottom",
+        "bbox": [
+          50,
+          682,
+          422,
+          708
+        ],
+        "confidence": 0.9019979762510368
+      },
+      {
+        "text": "Vijayaraghavan",
+        "bbox": [
+          479,
+          687,
+          549,
+          703
+        ],
+        "confidence": 0.9766126538160745
+      },
+      {
+        "text": "line objectives",
+        "bbox": [
+          51,
+          711,
+          149,
+          729
+        ],
+        "confidence": 0.8696676495982072
+      },
+      {
+        "text": "The Committee seeks to guide the",
+        "bbox": [
+          155,
+          709,
+          389,
+          729
+        ],
+        "confidence": 0.6622018278878531
+      },
+      {
+        "text": "Appointed Member W.e f. IBth January, 2013",
+        "bbox": [
+          479,
+          712,
+          669,
+          729
+        ],
+        "confidence": 0.23747437013183167
+      },
+      {
+        "text": "Company in integrating its social and environmental",
+        "bbox": [
+          50,
+          732,
+          403,
+          753
+        ],
+        "confidence": 0.9102950672793547
+      },
+      {
+        "text": "CORPORATE MANAGEMENT COMMITTEE",
+        "bbox": [
+          459,
+          745,
+          803,
+          765
+        ],
+        "confidence": 0.9836805459152851
+      },
+      {
+        "text": "objectives with its business strategies_",
+        "bbox": [
+          51,
+          757,
+          307,
+          775
+        ],
+        "confidence": 0.6851994333415334
+      },
+      {
+        "text": "The primary role of the Corporate Management",
+        "bbox": [
+          461,
+          785,
+          783,
+          803
+        ],
+        "confidence": 0.7172615364438036
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          48,
+          792,
+          158,
+          816
+        ],
+        "confidence": 0.9999824237942115
+      },
+      {
+        "text": "Committee is strategic management of the Company's",
+        "bbox": [
+          461,
+          806,
+          829,
+          826
+        ],
+        "confidence": 0.8726164787995113
+      },
+      {
+        "text": "The Sustainability Committee presently comprises the",
+        "bbox": [
+          51,
+          830,
+          417,
+          849
+        ],
+        "confidence": 0.6069013118594752
+      },
+      {
+        "text": "businesses within Board approved direction",
+        "bbox": [
+          461,
+          830,
+          747,
+          849
+        ],
+        "confidence": 0.9510029407994398
+      },
+      {
+        "text": "framework:",
+        "bbox": [
+          753,
+          831,
+          827,
+          847
+        ],
+        "confidence": 0.7002273566462218
+      },
+      {
+        "text": "Chairman of the Company and six Non-Executive",
+        "bbox": [
+          51,
+          854,
+          387,
+          873
+        ],
+        "confidence": 0.6900903283932914
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          457,
+          855,
+          568,
+          881
+        ],
+        "confidence": 0.9999717845197084
+      },
+      {
+        "text": "Directors; four of whom are Independent Directors. The",
+        "bbox": [
+          51,
+          877,
+          421,
+          895
+        ],
+        "confidence": 0.768414868479345
+      },
+      {
+        "text": "The Corporate Management Committee presently",
+        "bbox": [
+          461,
+          888,
+          799,
+          908
+        ],
+        "confidence": 0.6747363185794193
+      },
+      {
+        "text": "Chairman of the Company is the Chairman of the",
+        "bbox": [
+          51,
+          898,
+          385,
+          919
+        ],
+        "confidence": 0.7757706437889335
+      },
+      {
+        "text": "comprises all the Executive Directors and six senior",
+        "bbox": [
+          461,
+          909,
+          811,
+          929
+        ],
+        "confidence": 0.8247401190577074
+      },
+      {
+        "text": "Committee_",
+        "bbox": [
+          51,
+          923,
+          127,
+          939
+        ],
+        "confidence": 0.979757979860869
+      },
+      {
+        "text": "members of management: The Chairman of the Company",
+        "bbox": [
+          461,
+          932,
+          829,
+          952
+        ],
+        "confidence": 0.805842480051783
+      },
+      {
+        "text": "The names of the members of the Sustainability",
+        "bbox": [
+          51,
+          953,
+          377,
+          971
+        ],
+        "confidence": 0.7991993821517424
+      },
+      {
+        "text": "is the Chairman of the Committee.",
+        "bbox": [
+          459,
+          955,
+          691,
+          971
+        ],
+        "confidence": 0.565434143395129
+      },
+      {
+        "text": "The composition of",
+        "bbox": [
+          697,
+          955,
+          827,
+          971
+        ],
+        "confidence": 0.8868533874878465
+      },
+      {
+        "text": "Committee, including its Chairman_",
+        "bbox": [
+          51,
+          975,
+          285,
+          995
+        ],
+        "confidence": 0.7743773617811107
+      },
+      {
+        "text": "are",
+        "bbox": [
+          289,
+          979,
+          315,
+          993
+        ],
+        "confidence": 0.7376052737236023
+      },
+      {
+        "text": "provided under",
+        "bbox": [
+          316,
+          975,
+          421,
+          995
+        ],
+        "confidence": 0.9993937754983655
+      },
+      {
+        "text": "the Corporate Management Committee is determined",
+        "bbox": [
+          459,
+          976,
+          823,
+          996
+        ],
+        "confidence": 0.9242027861899933
+      },
+      {
+        "text": "the section",
+        "bbox": [
+          51,
+          999,
+          127,
+          1015
+        ],
+        "confidence": 0.9228563533324269
+      },
+      {
+        "text": "Board of Directors and Committees' in the",
+        "bbox": [
+          133,
+          999,
+          417,
+          1015
+        ],
+        "confidence": 0.9667865650811147
+      },
+      {
+        "text": "by the Board based on the recommendation of the",
+        "bbox": [
+          459,
+          997,
+          801,
+          1017
+        ],
+        "confidence": 0.9182783504235932
+      },
+      {
+        "text": "Report and Accounts",
+        "bbox": [
+          51,
+          1023,
+          195,
+          1039
+        ],
+        "confidence": 0.5136385251113222
+      },
+      {
+        "text": "Nominations Committee.",
+        "bbox": [
+          461,
+          1021,
+          627,
+          1037
+        ],
+        "confidence": 0.9890328719595305
+      },
+      {
+        "text": "The structure, processes",
+        "bbox": [
+          126,
+          1068,
+          415,
+          1098
+        ],
+        "confidence": 0.7235453347739462
+      },
+      {
+        "text": "and practices of governance",
+        "bbox": [
+          422,
+          1067,
+          754,
+          1100
+        ],
+        "confidence": 0.9212946475753178
+      },
+      {
+        "text": "are designed to support effective management",
+        "bbox": [
+          167,
+          1097,
+          715,
+          1133
+        ],
+        "confidence": 0.8048431907519303
+      },
+      {
+        "text": "of multiple businesses",
+        "bbox": [
+          186,
+          1129,
+          447,
+          1162
+        ],
+        "confidence": 0.991712991561898
+      },
+      {
+        "text": "while retaining focus",
+        "bbox": [
+          454,
+          1130,
+          694,
+          1160
+        ],
+        "confidence": 0.781491383779756
+      },
+      {
+        "text": "on each",
+        "bbox": [
+          312,
+          1162,
+          410,
+          1186
+        ],
+        "confidence": 0.9965065315070973
+      },
+      {
+        "text": "one of them.",
+        "bbox": [
+          416,
+          1160,
+          564,
+          1186
+        ],
+        "confidence": 0.6892927487045697
+      },
+      {
+        "text": "22",
+        "bbox": [
+          57,
+          1243,
+          81,
+          1261
+        ],
+        "confidence": 0.9224264957107545
+      },
+      {
+        "text": "ITC Report and Accounts 2013",
+        "bbox": [
+          89,
+          1241,
+          305,
+          1261
+        ],
+        "confidence": 0.9833432468952824
+      },
+      {
+        "text": "Source: https /lwwW industrydocuments:",
+        "bbox": [
+          190,
+          1256,
+          516,
+          1280
+        ],
+        "confidence": 0.25866578666211504
+      },
+      {
+        "text": "eduldocs/snbx0223",
+        "bbox": [
+          551,
+          1253,
+          715,
+          1277
+        ],
+        "confidence": 0.8592998870819737
+      },
+      {
+        "text": "ucsf;",
+        "bbox": [
+          513,
+          1255,
+          557,
+          1280
+        ],
+        "confidence": 0.5880072450653702
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "table/list"
+      ],
+      "docId": 4751,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "44"
+    },
+    "prepare_latency_ms": 8324.207400000887
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_49181",
+    "question": "What session is at 2.00 to 5.00p.m.?",
+    "gold_answers": [
+      "trrf scientific advisory council meeting",
+      "TRRF Scientific Advisory Council Meeting"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_49181.png",
+    "ocr_text_chars": 1099,
+    "ocr_box_count": 61,
+    "ocr_boxes": [
+      {
+        "text": "11.14 t0",
+        "bbox": [
+          88,
+          68,
+          172,
+          92
+        ],
+        "confidence": 0.7610657277864595
+      },
+      {
+        "text": "Coffee Break",
+        "bbox": [
+          218,
+          68,
+          350,
+          94
+        ],
+        "confidence": 0.9998198174350537
+      },
+      {
+        "text": "11.39 a.m",
+        "bbox": [
+          88,
+          92,
+          192,
+          118
+        ],
+        "confidence": 0.6438611030224776
+      },
+      {
+        "text": "Coffee will be served for men and",
+        "bbox": [
+          240,
+          92,
+          560,
+          118
+        ],
+        "confidence": 0.5902147009894877
+      },
+      {
+        "text": "women in the",
+        "bbox": [
+          240,
+          116,
+          376,
+          142
+        ],
+        "confidence": 0.9915220580490625
+      },
+      {
+        "text": "adjacent to",
+        "bbox": [
+          438,
+          118,
+          554,
+          144
+        ],
+        "confidence": 0.848681869715301
+      },
+      {
+        "text": "exhibit area",
+        "bbox": [
+          239,
+          138,
+          362,
+          166
+        ],
+        "confidence": 0.8576108359240242
+      },
+      {
+        "text": "Please move into",
+        "bbox": [
+          368,
+          140,
+          542,
+          166
+        ],
+        "confidence": 0.926003070685907
+      },
+      {
+        "text": "exhibit area. (Exhibits Open)",
+        "bbox": [
+          240,
+          160,
+          536,
+          190
+        ],
+        "confidence": 0.9896705993080004
+      },
+      {
+        "text": "11.39 a.m",
+        "bbox": [
+          90,
+          214,
+          192,
+          240
+        ],
+        "confidence": 0.61759271720435
+      },
+      {
+        "text": "TRRF GENERAL SESSION (PART I)",
+        "bbox": [
+          220,
+          213,
+          564,
+          242
+        ],
+        "confidence": 0.6861333884344203
+      },
+      {
+        "text": "Presiding:",
+        "bbox": [
+          219,
+          244,
+          324,
+          276
+        ],
+        "confidence": 0.999904698618558
+      },
+      {
+        "text": "Lee A",
+        "bbox": [
+          330,
+          248,
+          392,
+          272
+        ],
+        "confidence": 0.9990603236097582
+      },
+      {
+        "text": "Waller",
+        "bbox": [
+          400,
+          248,
+          470,
+          272
+        ],
+        "confidence": 0.9999779537995168
+      },
+      {
+        "text": "TRRF Vice President",
+        "bbox": [
+          332,
+          270,
+          538,
+          296
+        ],
+        "confidence": 0.991301511545059
+      },
+      {
+        "text": "11.39 to",
+        "bbox": [
+          90,
+          328,
+          174,
+          354
+        ],
+        "confidence": 0.6938443088049299
+      },
+      {
+        "text": "\"Introductory Remarks\"",
+        "bbox": [
+          215,
+          326,
+          474,
+          354
+        ],
+        "confidence": 0.8788508735443259
+      },
+      {
+        "text": "11.44 a.m,",
+        "bbox": [
+          90,
+          352,
+          196,
+          378
+        ],
+        "confidence": 0.46055832984311956
+      },
+      {
+        "text": "Lee A_",
+        "bbox": [
+          242,
+          354,
+          304,
+          378
+        ],
+        "confidence": 0.6889279843841808
+      },
+      {
+        "text": "Waller, TRRF",
+        "bbox": [
+          312,
+          352,
+          444,
+          378
+        ],
+        "confidence": 0.683898415648011
+      },
+      {
+        "text": "Presi-",
+        "bbox": [
+          491,
+          351,
+          556,
+          379
+        ],
+        "confidence": 0.7679802249549407
+      },
+      {
+        "text": "dent",
+        "bbox": [
+          242,
+          378,
+          292,
+          402
+        ],
+        "confidence": 0.7527889282071998
+      },
+      {
+        "text": "11.44 a.m",
+        "bbox": [
+          90,
+          434,
+          192,
+          458
+        ],
+        "confidence": 0.7909299690371241
+      },
+      {
+        "text": "Individual Interviews with TRRF",
+        "bbox": [
+          216,
+          432,
+          550,
+          458
+        ],
+        "confidence": 0.7720800005662414
+      },
+      {
+        "text": "to",
+        "bbox": [
+          129,
+          461,
+          153,
+          481
+        ],
+        "confidence": 0.9704395880939866
+      },
+      {
+        "text": "Public Board Members and Sci-",
+        "bbox": [
+          218,
+          455,
+          548,
+          485
+        ],
+        "confidence": 0.8220419011578406
+      },
+      {
+        "text": "12.25 p.m",
+        "bbox": [
+          90,
+          482,
+          194,
+          508
+        ],
+        "confidence": 0.7815642750943446
+      },
+      {
+        "text": "entific Advisory Council Mem-",
+        "bbox": [
+          217,
+          477,
+          534,
+          508
+        ],
+        "confidence": 0.9642994065114557
+      },
+      {
+        "text": "bers",
+        "bbox": [
+          218,
+          504,
+          270,
+          528
+        ],
+        "confidence": 0.999937891960144
+      },
+      {
+        "text": "Conducted by TRRF Treasurer",
+        "bbox": [
+          242,
+          527,
+          544,
+          557
+        ],
+        "confidence": 0.995079190438827
+      },
+      {
+        "text": "G. Kuehn to get answers",
+        "bbox": [
+          304,
+          551,
+          550,
+          581
+        ],
+        "confidence": 0.7662029111317901
+      },
+      {
+        "text": "which the public refrigerated",
+        "bbox": [
+          242,
+          575,
+          530,
+          605
+        ],
+        "confidence": 0.9015061452021028
+      },
+      {
+        "text": "warehousing industry is looking",
+        "bbox": [
+          241,
+          596,
+          557,
+          628
+        ],
+        "confidence": 0.9919817737564851
+      },
+      {
+        "text": "for. Plus questions from the floor.",
+        "bbox": [
+          240,
+          623,
+          558,
+          650
+        ],
+        "confidence": 0.8266783447388354
+      },
+      {
+        "text": "Dr. Emil M: Mrak; University of Cal-",
+        "bbox": [
+          218,
+          647,
+          560,
+          676
+        ],
+        "confidence": 0.4975203780922941
+      },
+      {
+        "text": "ifornia, Chairman, TRRF Board;",
+        "bbox": [
+          218,
+          671,
+          530,
+          698
+        ],
+        "confidence": 0.8127632089528374
+      },
+      {
+        "text": "Sam R. Cecil, University of Georgia",
+        "bbox": [
+          218,
+          694,
+          558,
+          724
+        ],
+        "confidence": 0.7568297141405653
+      },
+      {
+        "text": "College of Agriculture; Dr. Stanley",
+        "bbox": [
+          216,
+          716,
+          558,
+          749
+        ],
+        "confidence": 0.819692033952847
+      },
+      {
+        "text": "Charm, Tufts University School of",
+        "bbox": [
+          220,
+          742,
+          552,
+          770
+        ],
+        "confidence": 0.73787657389646
+      },
+      {
+        "text": "Medicine; Dr. Robert H. Cotton, ITT",
+        "bbox": [
+          219,
+          764,
+          562,
+          794
+        ],
+        "confidence": 0.7612916169989725
+      },
+      {
+        "text": "Continental Baking Company; Dr.",
+        "bbox": [
+          220,
+          791,
+          550,
+          819
+        ],
+        "confidence": 0.9704857654881223
+      },
+      {
+        "text": "Owen Fennema, University of Wis-",
+        "bbox": [
+          220,
+          813,
+          560,
+          842
+        ],
+        "confidence": 0.7037219743993319
+      },
+      {
+        "text": "consin; Dr: Robert E: Hardenburg,",
+        "bbox": [
+          219,
+          837,
+          558,
+          866
+        ],
+        "confidence": 0.6115303824921565
+      },
+      {
+        "text": "USDA",
+        "bbox": [
+          220,
+          862,
+          284,
+          886
+        ],
+        "confidence": 0.9999667406082153
+      },
+      {
+        "text": "12.25 to",
+        "bbox": [
+          90,
+          910,
+          174,
+          934
+        ],
+        "confidence": 0.9861480800721647
+      },
+      {
+        "text": "Questions and Answers",
+        "bbox": [
+          220,
+          910,
+          456,
+          934
+        ],
+        "confidence": 0.7993812084373596
+      },
+      {
+        "text": "12.58 p.m_",
+        "bbox": [
+          92,
+          932,
+          194,
+          960
+        ],
+        "confidence": 0.7613507953695476
+      },
+      {
+        "text": "12.58 to",
+        "bbox": [
+          90,
+          980,
+          174,
+          1006
+        ],
+        "confidence": 0.9119636424504811
+      },
+      {
+        "text": "Exhibits Open",
+        "bbox": [
+          220,
+          980,
+          370,
+          1008
+        ],
+        "confidence": 0.9997974161055476
+      },
+      {
+        "text": "4.00 p.m",
+        "bbox": [
+          90,
+          1004,
+          182,
+          1032
+        ],
+        "confidence": 0.7281651519024992
+      },
+      {
+        "text": "Capt Jack Stoney Room",
+        "bbox": [
+          320,
+          1003,
+          564,
+          1032
+        ],
+        "confidence": 0.958681406665039
+      },
+      {
+        "text": "2.00 t0",
+        "bbox": [
+          92,
+          1052,
+          164,
+          1076
+        ],
+        "confidence": 0.6916849316638022
+      },
+      {
+        "text": "TRRF Scientific Advisory",
+        "bbox": [
+          218,
+          1049,
+          482,
+          1080
+        ],
+        "confidence": 0.8454177488591341
+      },
+      {
+        "text": "5.00 p.m.",
+        "bbox": [
+          90,
+          1076,
+          186,
+          1102
+        ],
+        "confidence": 0.7417650728434539
+      },
+      {
+        "text": "Council Meeting",
+        "bbox": [
+          218,
+          1073,
+          391,
+          1104
+        ],
+        "confidence": 0.9954991080367779
+      },
+      {
+        "text": "Ballroom Foyer",
+        "bbox": [
+          412,
+          1099,
+          566,
+          1129
+        ],
+        "confidence": 0.7638784456020844
+      },
+      {
+        "text": "Ource",
+        "bbox": [
+          67,
+          1257,
+          117,
+          1273
+        ],
+        "confidence": 0.38046674780466055
+      },
+      {
+        "text": "sf eduldocs",
+        "bbox": [
+          421,
+          1253,
+          523,
+          1271
+        ],
+        "confidence": 0.6471619999462628
+      },
+      {
+        "text": "lobby",
+        "bbox": [
+          373,
+          112,
+          440,
+          146
+        ],
+        "confidence": 0.9596652083602701
+      },
+      {
+        "text": "Vice",
+        "bbox": [
+          441,
+          349,
+          496,
+          381
+        ],
+        "confidence": 0.9997568726539612
+      },
+      {
+        "text": "Philip",
+        "bbox": [
+          239,
+          547,
+          306,
+          582
+        ],
+        "confidence": 0.9998485457535263
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "table/list"
+      ],
+      "docId": 14281,
+      "ucsf_document_id": "txpp0227",
+      "ucsf_document_page_no": "10"
+    },
+    "prepare_latency_ms": 3577.1480000003066
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57373",
+    "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+    "gold_answers": [
+      "3"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57373.png",
+    "ocr_text_chars": 2296,
+    "ocr_box_count": 90,
+    "ocr_boxes": [
+      {
+        "text": "Enduring Value",
+        "bbox": [
+          50,
+          108,
+          121,
+          125
+        ],
+        "confidence": 0.8727759297129637
+      },
+      {
+        "text": "Report on Corporate Governance",
+        "bbox": [
+          50,
+          139,
+          326,
+          166
+        ],
+        "confidence": 0.8832182768636117
+      },
+      {
+        "text": "Attendance at Nominations Committee Meetings",
+        "bbox": [
+          51,
+          189,
+          393,
+          209
+        ],
+        "confidence": 0.8460486653089594
+      },
+      {
+        "text": "Meetings and Attendance",
+        "bbox": [
+          457,
+          186,
+          672,
+          212
+        ],
+        "confidence": 0.9943222042561094
+      },
+      {
+        "text": "during the financial year",
+        "bbox": [
+          50,
+          207,
+          225,
+          227
+        ],
+        "confidence": 0.9415863827693616
+      },
+      {
+        "text": "During the financial year ended 31st March, 2013, three",
+        "bbox": [
+          460,
+          221,
+          823,
+          241
+        ],
+        "confidence": 0.4695064585702908
+      },
+      {
+        "text": "Direcior",
+        "bbox": [
+          59,
+          245,
+          101,
+          261
+        ],
+        "confidence": 0.5322697476014451
+      },
+      {
+        "text": "Ho. of meetings altended",
+        "bbox": [
+          263,
+          243,
+          385,
+          263
+        ],
+        "confidence": 0.4855520196213464
+      },
+      {
+        "text": "meetings of the Sustainability Committee were held, as",
+        "bbox": [
+          459,
+          247,
+          819,
+          265
+        ],
+        "confidence": 0.900170770636893
+      },
+      {
+        "text": "Deveshwar",
+        "bbox": [
+          81,
+          273,
+          133,
+          289
+        ],
+        "confidence": 0.983093043875204
+      },
+      {
+        "text": "follows:",
+        "bbox": [
+          459,
+          269,
+          513,
+          285
+        ],
+        "confidence": 0.9990603216919577
+      },
+      {
+        "text": "Baijal",
+        "bbox": [
+          71,
+          299,
+          95,
+          315
+        ],
+        "confidence": 0.995746562620498
+      },
+      {
+        "text": "Dale",
+        "bbox": [
+          503,
+          301,
+          527,
+          317
+        ],
+        "confidence": 0.5665203344128862
+      },
+      {
+        "text": "Commillee",
+        "bbox": [
+          673,
+          301,
+          725,
+          317
+        ],
+        "confidence": 0.9982467752968371
+      },
+      {
+        "text": "Mo. of",
+        "bbox": [
+          769,
+          299,
+          803,
+          317
+        ],
+        "confidence": 0.4672265530958618
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          71,
+          327,
+          111,
+          343
+        ],
+        "confidence": 0.9999388441482142
+      },
+      {
+        "text": "Strenglh",
+        "bbox": [
+          677,
+          321,
+          721,
+          337
+        ],
+        "confidence": 0.6903906575292977
+      },
+      {
+        "text": "Members",
+        "bbox": [
+          761,
+          321,
+          809,
+          337
+        ],
+        "confidence": 0.9998215245704007
+      },
+      {
+        "text": "present",
+        "bbox": [
+          765,
+          339,
+          805,
+          355
+        ],
+        "confidence": 0.99979714729954
+      },
+      {
+        "text": "A, V: Girija Kumar",
+        "bbox": [
+          59,
+          351,
+          141,
+          369
+        ],
+        "confidence": 0.513416957212596
+      },
+      {
+        "text": "Sth April; 2012",
+        "bbox": [
+          501,
+          359,
+          573,
+          379
+        ],
+        "confidence": 0.5302084924251708
+      },
+      {
+        "text": "S, H, Khan",
+        "bbox": [
+          59,
+          379,
+          109,
+          395
+        ],
+        "confidence": 0.45732572852031017
+      },
+      {
+        "text": "24th May, 2012",
+        "bbox": [
+          503,
+          385,
+          577,
+          403
+        ],
+        "confidence": 0.7231400803268662
+      },
+      {
+        "text": "Mathur",
+        "bbox": [
+          81,
+          407,
+          117,
+          423
+        ],
+        "confidence": 0.9957371608793802
+      },
+      {
+        "text": "28th March; 2013",
+        "bbox": [
+          501,
+          407,
+          585,
+          427
+        ],
+        "confidence": 0.8964989854836249
+      },
+      {
+        "text": "D: K Mehrotra",
+        "bbox": [
+          59,
+          435,
+          125,
+          451
+        ],
+        "confidence": 0.5738745262400049
+      },
+      {
+        "text": "Attendance at Sustainability Committee Meetings during",
+        "bbox": [
+          461,
+          441,
+          829,
+          461
+        ],
+        "confidence": 0.938810964053565
+      },
+      {
+        "text": "B. Ramanujam",
+        "bbox": [
+          69,
+          461,
+          137,
+          477
+        ],
+        "confidence": 0.7912154112590499
+      },
+      {
+        "text": "the financial year",
+        "bbox": [
+          459,
+          463,
+          581,
+          481
+        ],
+        "confidence": 0.8140967387669267
+      },
+      {
+        "text": "S. S. H: Rehman",
+        "bbox": [
+          59,
+          489,
+          135,
+          505
+        ],
+        "confidence": 0.21609450838102737
+      },
+      {
+        "text": "Director",
+        "bbox": [
+          469,
+          497,
+          511,
+          513
+        ],
+        "confidence": 0.6466910505487882
+      },
+      {
+        "text": "of meetings allended",
+        "bbox": [
+          693,
+          497,
+          795,
+          513
+        ],
+        "confidence": 0.911028542893316
+      },
+      {
+        "text": "Shankar &",
+        "bbox": [
+          73,
+          515,
+          121,
+          531
+        ],
+        "confidence": 0.5573362765001864
+      },
+      {
+        "text": "Y: C. Deveshwar",
+        "bbox": [
+          469,
+          525,
+          543,
+          541
+        ],
+        "confidence": 0.706329018046183
+      },
+      {
+        "text": "K Vaidyanath",
+        "bbox": [
+          59,
+          541,
+          121,
+          557
+        ],
+        "confidence": 0.70541335297708
+      },
+      {
+        "text": "Banerjee",
+        "bbox": [
+          478,
+          550,
+          521,
+          569
+        ],
+        "confidence": 0.9921404128592525
+      },
+      {
+        "text": "Appointed Member W.e f. 181h January, 2013.",
+        "bbox": [
+          69,
+          567,
+          259,
+          583
+        ],
+        "confidence": 0.37923402305043613
+      },
+      {
+        "text": "Powell",
+        "bbox": [
+          493,
+          579,
+          525,
+          595
+        ],
+        "confidence": 0.9996764987652323
+      },
+      {
+        "text": "V: SUSTAINABILITY COMMITTEE",
+        "bbox": [
+          49,
+          603,
+          317,
+          623
+        ],
+        "confidence": 0.7657022238694171
+      },
+      {
+        "text": "Ruys",
+        "bbox": [
+          479,
+          605,
+          505,
+          623
+        ],
+        "confidence": 0.9987018704414368
+      },
+      {
+        "text": "Sen",
+        "bbox": [
+          479,
+          633,
+          501,
+          649
+        ],
+        "confidence": 0.9870363270555926
+      },
+      {
+        "text": "The role of the Sustainability Committee is to review;",
+        "bbox": [
+          48,
+          638,
+          408,
+          662
+        ],
+        "confidence": 0.9396225315999895
+      },
+      {
+        "text": "monitor and provide strategic direction to the Company' s",
+        "bbox": [
+          51,
+          663,
+          421,
+          684
+        ],
+        "confidence": 0.7511834735838074
+      },
+      {
+        "text": "M, Shankar @",
+        "bbox": [
+          469,
+          659,
+          529,
+          675
+        ],
+        "confidence": 0.4603719882139274
+      },
+      {
+        "text": "sustainability practices towards fulfilling its triple bottom",
+        "bbox": [
+          50,
+          682,
+          422,
+          708
+        ],
+        "confidence": 0.9019979762510368
+      },
+      {
+        "text": "Vijayaraghavan",
+        "bbox": [
+          479,
+          687,
+          549,
+          703
+        ],
+        "confidence": 0.9766126538160745
+      },
+      {
+        "text": "line objectives",
+        "bbox": [
+          51,
+          711,
+          149,
+          729
+        ],
+        "confidence": 0.8696676495982072
+      },
+      {
+        "text": "The Committee seeks to guide the",
+        "bbox": [
+          155,
+          709,
+          389,
+          729
+        ],
+        "confidence": 0.6622018278878531
+      },
+      {
+        "text": "Appointed Member W.e f. IBth January, 2013",
+        "bbox": [
+          479,
+          712,
+          669,
+          729
+        ],
+        "confidence": 0.23747437013183167
+      },
+      {
+        "text": "Company in integrating its social and environmental",
+        "bbox": [
+          50,
+          732,
+          403,
+          753
+        ],
+        "confidence": 0.9102950672793547
+      },
+      {
+        "text": "CORPORATE MANAGEMENT COMMITTEE",
+        "bbox": [
+          459,
+          745,
+          803,
+          765
+        ],
+        "confidence": 0.9836805459152851
+      },
+      {
+        "text": "objectives with its business strategies_",
+        "bbox": [
+          51,
+          757,
+          307,
+          775
+        ],
+        "confidence": 0.6851994333415334
+      },
+      {
+        "text": "The primary role of the Corporate Management",
+        "bbox": [
+          461,
+          785,
+          783,
+          803
+        ],
+        "confidence": 0.7172615364438036
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          48,
+          792,
+          158,
+          816
+        ],
+        "confidence": 0.9999824237942115
+      },
+      {
+        "text": "Committee is strategic management of the Company's",
+        "bbox": [
+          461,
+          806,
+          829,
+          826
+        ],
+        "confidence": 0.8726164787995113
+      },
+      {
+        "text": "The Sustainability Committee presently comprises the",
+        "bbox": [
+          51,
+          830,
+          417,
+          849
+        ],
+        "confidence": 0.6069013118594752
+      },
+      {
+        "text": "businesses within Board approved direction",
+        "bbox": [
+          461,
+          830,
+          747,
+          849
+        ],
+        "confidence": 0.9510029407994398
+      },
+      {
+        "text": "framework:",
+        "bbox": [
+          753,
+          831,
+          827,
+          847
+        ],
+        "confidence": 0.7002273566462218
+      },
+      {
+        "text": "Chairman of the Company and six Non-Executive",
+        "bbox": [
+          51,
+          854,
+          387,
+          873
+        ],
+        "confidence": 0.6900903283932914
+      },
+      {
+        "text": "Composition",
+        "bbox": [
+          457,
+          855,
+          568,
+          881
+        ],
+        "confidence": 0.9999717845197084
+      },
+      {
+        "text": "Directors; four of whom are Independent Directors. The",
+        "bbox": [
+          51,
+          877,
+          421,
+          895
+        ],
+        "confidence": 0.768414868479345
+      },
+      {
+        "text": "The Corporate Management Committee presently",
+        "bbox": [
+          461,
+          888,
+          799,
+          908
+        ],
+        "confidence": 0.6747363185794193
+      },
+      {
+        "text": "Chairman of the Company is the Chairman of the",
+        "bbox": [
+          51,
+          898,
+          385,
+          919
+        ],
+        "confidence": 0.7757706437889335
+      },
+      {
+        "text": "comprises all the Executive Directors and six senior",
+        "bbox": [
+          461,
+          909,
+          811,
+          929
+        ],
+        "confidence": 0.8247401190577074
+      },
+      {
+        "text": "Committee_",
+        "bbox": [
+          51,
+          923,
+          127,
+          939
+        ],
+        "confidence": 0.979757979860869
+      },
+      {
+        "text": "members of management: The Chairman of the Company",
+        "bbox": [
+          461,
+          932,
+          829,
+          952
+        ],
+        "confidence": 0.805842480051783
+      },
+      {
+        "text": "The names of the members of the Sustainability",
+        "bbox": [
+          51,
+          953,
+          377,
+          971
+        ],
+        "confidence": 0.7991993821517424
+      },
+      {
+        "text": "is the Chairman of the Committee.",
+        "bbox": [
+          459,
+          955,
+          691,
+          971
+        ],
+        "confidence": 0.565434143395129
+      },
+      {
+        "text": "The composition of",
+        "bbox": [
+          697,
+          955,
+          827,
+          971
+        ],
+        "confidence": 0.8868533874878465
+      },
+      {
+        "text": "Committee, including its Chairman_",
+        "bbox": [
+          51,
+          975,
+          285,
+          995
+        ],
+        "confidence": 0.7743773617811107
+      },
+      {
+        "text": "are",
+        "bbox": [
+          289,
+          979,
+          315,
+          993
+        ],
+        "confidence": 0.7376052737236023
+      },
+      {
+        "text": "provided under",
+        "bbox": [
+          316,
+          975,
+          421,
+          995
+        ],
+        "confidence": 0.9993937754983655
+      },
+      {
+        "text": "the Corporate Management Committee is determined",
+        "bbox": [
+          459,
+          976,
+          823,
+          996
+        ],
+        "confidence": 0.9242027861899933
+      },
+      {
+        "text": "the section",
+        "bbox": [
+          51,
+          999,
+          127,
+          1015
+        ],
+        "confidence": 0.9228563533324269
+      },
+      {
+        "text": "Board of Directors and Committees' in the",
+        "bbox": [
+          133,
+          999,
+          417,
+          1015
+        ],
+        "confidence": 0.9667865650811147
+      },
+      {
+        "text": "by the Board based on the recommendation of the",
+        "bbox": [
+          459,
+          997,
+          801,
+          1017
+        ],
+        "confidence": 0.9182783504235932
+      },
+      {
+        "text": "Report and Accounts",
+        "bbox": [
+          51,
+          1023,
+          195,
+          1039
+        ],
+        "confidence": 0.5136385251113222
+      },
+      {
+        "text": "Nominations Committee.",
+        "bbox": [
+          461,
+          1021,
+          627,
+          1037
+        ],
+        "confidence": 0.9890328719595305
+      },
+      {
+        "text": "The structure, processes",
+        "bbox": [
+          126,
+          1068,
+          415,
+          1098
+        ],
+        "confidence": 0.7235453347739462
+      },
+      {
+        "text": "and practices of governance",
+        "bbox": [
+          422,
+          1067,
+          754,
+          1100
+        ],
+        "confidence": 0.9212946475753178
+      },
+      {
+        "text": "are designed to support effective management",
+        "bbox": [
+          167,
+          1097,
+          715,
+          1133
+        ],
+        "confidence": 0.8048431907519303
+      },
+      {
+        "text": "of multiple businesses",
+        "bbox": [
+          186,
+          1129,
+          447,
+          1162
+        ],
+        "confidence": 0.991712991561898
+      },
+      {
+        "text": "while retaining focus",
+        "bbox": [
+          454,
+          1130,
+          694,
+          1160
+        ],
+        "confidence": 0.781491383779756
+      },
+      {
+        "text": "on each",
+        "bbox": [
+          312,
+          1162,
+          410,
+          1186
+        ],
+        "confidence": 0.9965065315070973
+      },
+      {
+        "text": "one of them.",
+        "bbox": [
+          416,
+          1160,
+          564,
+          1186
+        ],
+        "confidence": 0.6892927487045697
+      },
+      {
+        "text": "22",
+        "bbox": [
+          57,
+          1243,
+          81,
+          1261
+        ],
+        "confidence": 0.9224264957107545
+      },
+      {
+        "text": "ITC Report and Accounts 2013",
+        "bbox": [
+          89,
+          1241,
+          305,
+          1261
+        ],
+        "confidence": 0.9833432468952824
+      },
+      {
+        "text": "Source: https /lwwW industrydocuments:",
+        "bbox": [
+          190,
+          1256,
+          516,
+          1280
+        ],
+        "confidence": 0.25866578666211504
+      },
+      {
+        "text": "eduldocs/snbx0223",
+        "bbox": [
+          551,
+          1253,
+          715,
+          1277
+        ],
+        "confidence": 0.8592998870819737
+      },
+      {
+        "text": "ucsf;",
+        "bbox": [
+          513,
+          1255,
+          557,
+          1280
+        ],
+        "confidence": 0.5880072450653702
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "table/list"
+      ],
+      "docId": 4751,
+      "ucsf_document_id": "snbx0223",
+      "ucsf_document_page_no": "44"
+    },
+    "prepare_latency_ms": 5667.308299998695
+  },
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_57374",
+    "question": "What is the name of the company?",
+    "gold_answers": [
+      "cigfil limited",
+      "CIGFIL LIMITED"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\docvqa\\docvqa_57374.png",
+    "ocr_text_chars": 1216,
+    "ocr_box_count": 98,
+    "ocr_boxes": [
+      {
+        "text": "~CIGFIL LIMITED, CHENNAI",
+        "bbox": [
+          72,
+          92,
+          318,
+          120
+        ],
+        "confidence": 0.8668214712317552
+      },
+      {
+        "text": "Schedules annexed to and",
+        "bbox": [
+          83,
+          121,
+          303,
+          141
+        ],
+        "confidence": 0.912217020187798
+      },
+      {
+        "text": "forming part of Balance Sheet as at 31.03.2004",
+        "bbox": [
+          300,
+          116,
+          702,
+          146
+        ],
+        "confidence": 0.6478351137334678
+      },
+      {
+        "text": "Acetate Filament Yarn /Fibre",
+        "bbox": [
+          187,
+          167,
+          427,
+          187
+        ],
+        "confidence": 0.7725148551986051
+      },
+      {
+        "text": "Kgs_",
+        "bbox": [
+          618,
+          166,
+          656,
+          192
+        ],
+        "confidence": 0.865911066532135
+      },
+      {
+        "text": "Rs_",
+        "bbox": [
+          727,
+          167,
+          753,
+          187
+        ],
+        "confidence": 0.9841287433988398
+      },
+      {
+        "text": "In lakhs",
+        "bbox": [
+          759,
+          167,
+          833,
+          187
+        ],
+        "confidence": 0.794006029089648
+      },
+      {
+        "text": "Current Year",
+        "bbox": [
+          239,
+          191,
+          351,
+          211
+        ],
+        "confidence": 0.9234846946282498
+      },
+      {
+        "text": "25,471",
+        "bbox": [
+          607,
+          191,
+          669,
+          211
+        ],
+        "confidence": 0.849386577652056
+      },
+      {
+        "text": "37.55",
+        "bbox": [
+          751,
+          187,
+          806,
+          213
+        ],
+        "confidence": 0.5506054933698548
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          236,
+          212,
+          356,
+          236
+        ],
+        "confidence": 0.9887394653136358
+      },
+      {
+        "text": "(12,431)",
+        "bbox": [
+          600,
+          210,
+          677,
+          236
+        ],
+        "confidence": 0.7523324074160193
+      },
+      {
+        "text": "(27.67)",
+        "bbox": [
+          748,
+          212,
+          812,
+          236
+        ],
+        "confidence": 0.6638234718176976
+      },
+      {
+        "text": "4) Acetate Tow",
+        "bbox": [
+          163,
+          259,
+          291,
+          279
+        ],
+        "confidence": 0.9142918421282369
+      },
+      {
+        "text": "Kgs",
+        "bbox": [
+          620,
+          258,
+          658,
+          282
+        ],
+        "confidence": 0.9997655151524899
+      },
+      {
+        "text": "Rs. In lakhs",
+        "bbox": [
+          727,
+          259,
+          833,
+          279
+        ],
+        "confidence": 0.6170296366558032
+      },
+      {
+        "text": "Curtent Year",
+        "bbox": [
+          241,
+          281,
+          351,
+          301
+        ],
+        "confidence": 0.6866686234526627
+      },
+      {
+        "text": "661,328",
+        "bbox": [
+          600,
+          280,
+          676,
+          304
+        ],
+        "confidence": 0.5585081933889549
+      },
+      {
+        "text": "1,262.58",
+        "bbox": [
+          740,
+          280,
+          820,
+          304
+        ],
+        "confidence": 0.9858119293274432
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          236,
+          304,
+          356,
+          328
+        ],
+        "confidence": 0.9994137263408099
+      },
+      {
+        "text": "(725,722)",
+        "bbox": [
+          596,
+          304,
+          680,
+          328
+        ],
+        "confidence": 0.6198883185107528
+      },
+      {
+        "text": "(1519.97)",
+        "bbox": [
+          736,
+          304,
+          822,
+          328
+        ],
+        "confidence": 0.8447815451033166
+      },
+      {
+        "text": "5) Poly Propelene",
+        "bbox": [
+          160,
+          349,
+          312,
+          375
+        ],
+        "confidence": 0.7322758354870275
+      },
+      {
+        "text": "MTs",
+        "bbox": [
+          619,
+          351,
+          659,
+          371
+        ],
+        "confidence": 0.9999507210936407
+      },
+      {
+        "text": "Rs. In lakhs",
+        "bbox": [
+          729,
+          351,
+          833,
+          371
+        ],
+        "confidence": 0.8364618748024691
+      },
+      {
+        "text": "Current Year",
+        "bbox": [
+          239,
+          373,
+          351,
+          393
+        ],
+        "confidence": 0.930751034857489
+      },
+      {
+        "text": "102.550",
+        "bbox": [
+          603,
+          373,
+          675,
+          393
+        ],
+        "confidence": 0.9999463367954188
+      },
+      {
+        "text": "46.88",
+        "bbox": [
+          753,
+          373,
+          807,
+          393
+        ],
+        "confidence": 0.999993602555785
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          239,
+          399,
+          355,
+          419
+        ],
+        "confidence": 0.9499760806140547
+      },
+      {
+        "text": "(235.949)",
+        "bbox": [
+          596,
+          396,
+          682,
+          420
+        ],
+        "confidence": 0.6925689731558791
+      },
+      {
+        "text": "(106.84)",
+        "bbox": [
+          742,
+          396,
+          818,
+          420
+        ],
+        "confidence": 0.9988039554207343
+      },
+      {
+        "text": "D) Opening and Closing Stock of goods produced",
+        "bbox": [
+          82,
+          439,
+          492,
+          466
+        ],
+        "confidence": 0.7356732830031489
+      },
+      {
+        "text": "1) Opening Stock",
+        "bbox": [
+          84,
+          483,
+          236,
+          512
+        ],
+        "confidence": 0.9641106427942696
+      },
+      {
+        "text": "a) Cigarette Filter Rods",
+        "bbox": [
+          162,
+          510,
+          362,
+          534
+        ],
+        "confidence": 0.7986509500464899
+      },
+      {
+        "text": "in MNR",
+        "bbox": [
+          605,
+          511,
+          673,
+          531
+        ],
+        "confidence": 0.9978303368142903
+      },
+      {
+        "text": "Rs. In lakhs",
+        "bbox": [
+          727,
+          511,
+          833,
+          531
+        ],
+        "confidence": 0.7426705099801334
+      },
+      {
+        "text": "Current Year",
+        "bbox": [
+          241,
+          535,
+          351,
+          553
+        ],
+        "confidence": 0.9295507334913466
+      },
+      {
+        "text": "64.232",
+        "bbox": [
+          609,
+          533,
+          669,
+          553
+        ],
+        "confidence": 0.6484974521644354
+      },
+      {
+        "text": "51.46",
+        "bbox": [
+          753,
+          533,
+          805,
+          553
+        ],
+        "confidence": 0.9999610821396641
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          241,
+          559,
+          355,
+          579
+        ],
+        "confidence": 0.747511160711356
+      },
+      {
+        "text": "(18.7652)",
+        "bbox": [
+          596,
+          554,
+          680,
+          578
+        ],
+        "confidence": 0.998106365475446
+      },
+      {
+        "text": "(13.56)",
+        "bbox": [
+          747,
+          557,
+          811,
+          577
+        ],
+        "confidence": 0.989915366171813
+      },
+      {
+        "text": "b) Poly Propelene Woven Fabrics _",
+        "bbox": [
+          160,
+          600,
+          438,
+          624
+        ],
+        "confidence": 0.9556413558581102
+      },
+      {
+        "text": "Sacks",
+        "bbox": [
+          445,
+          605,
+          497,
+          621
+        ],
+        "confidence": 0.9997026736746296
+      },
+      {
+        "text": "in Kgs",
+        "bbox": [
+          610,
+          600,
+          668,
+          624
+        ],
+        "confidence": 0.9926394064155978
+      },
+      {
+        "text": "Rs. In lakhs",
+        "bbox": [
+          729,
+          603,
+          833,
+          621
+        ],
+        "confidence": 0.9444161895389661
+      },
+      {
+        "text": "Current Year",
+        "bbox": [
+          241,
+          625,
+          351,
+          645
+        ],
+        "confidence": 0.9976588113630209
+      },
+      {
+        "text": "NIL",
+        "bbox": [
+          625,
+          627,
+          655,
+          643
+        ],
+        "confidence": 0.9998514760155216
+      },
+      {
+        "text": "NIL",
+        "bbox": [
+          763,
+          625,
+          797,
+          645
+        ],
+        "confidence": 0.9999021307587381
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          237,
+          646,
+          356,
+          670
+        ],
+        "confidence": 0.9979730614357044
+      },
+      {
+        "text": "NIL",
+        "bbox": [
+          623,
+          651,
+          655,
+          667
+        ],
+        "confidence": 0.999956364750777
+      },
+      {
+        "text": "NIL",
+        "bbox": [
+          763,
+          647,
+          797,
+          667
+        ],
+        "confidence": 0.9996739118318493
+      },
+      {
+        "text": "2) Closing Stock",
+        "bbox": [
+          82,
+          688,
+          228,
+          718
+        ],
+        "confidence": 0.9865607193146726
+      },
+      {
+        "text": "Cigarette Filter Rods",
+        "bbox": [
+          185,
+          713,
+          362,
+          742
+        ],
+        "confidence": 0.8368199012260227
+      },
+      {
+        "text": "in MNR",
+        "bbox": [
+          607,
+          717,
+          673,
+          735
+        ],
+        "confidence": 0.8524165227101469
+      },
+      {
+        "text": "Rs. In lakhs",
+        "bbox": [
+          729,
+          717,
+          833,
+          735
+        ],
+        "confidence": 0.8239713886509464
+      },
+      {
+        "text": "Current Year",
+        "bbox": [
+          241,
+          741,
+          351,
+          759
+        ],
+        "confidence": 0.977582274139547
+      },
+      {
+        "text": "31.5594",
+        "bbox": [
+          603,
+          739,
+          675,
+          759
+        ],
+        "confidence": 0.9981221808013853
+      },
+      {
+        "text": "23.97",
+        "bbox": [
+          753,
+          739,
+          805,
+          759
+        ],
+        "confidence": 0.7172272544883758
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          240,
+          762,
+          356,
+          786
+        ],
+        "confidence": 0.9654303845391935
+      },
+      {
+        "text": "(64.232)",
+        "bbox": [
+          600,
+          760,
+          676,
+          784
+        ],
+        "confidence": 0.9991779543304286
+      },
+      {
+        "text": "(51.46)",
+        "bbox": [
+          747,
+          758,
+          812,
+          784
+        ],
+        "confidence": 0.9998241380187336
+      },
+      {
+        "text": "b) Poly Propelene Woven Fabrics/ Sacks",
+        "bbox": [
+          160,
+          805,
+          498,
+          831
+        ],
+        "confidence": 0.8368774178249583
+      },
+      {
+        "text": "in Kgs",
+        "bbox": [
+          608,
+          806,
+          668,
+          830
+        ],
+        "confidence": 0.9975527145389561
+      },
+      {
+        "text": "Rs. In lakhs",
+        "bbox": [
+          729,
+          807,
+          833,
+          827
+        ],
+        "confidence": 0.60310369028113
+      },
+      {
+        "text": "Current Year",
+        "bbox": [
+          241,
+          831,
+          353,
+          849
+        ],
+        "confidence": 0.8724146990364047
+      },
+      {
+        "text": "3220",
+        "bbox": [
+          615,
+          829,
+          663,
+          849
+        ],
+        "confidence": 0.9999933242797852
+      },
+      {
+        "text": "3.23",
+        "bbox": [
+          761,
+          829,
+          801,
+          849
+        ],
+        "confidence": 0.8401267132380398
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          241,
+          855,
+          355,
+          875
+        ],
+        "confidence": 0.9997613966459756
+      },
+      {
+        "text": "2863.5",
+        "bbox": [
+          607,
+          853,
+          669,
+          873
+        ],
+        "confidence": 0.9328824756146024
+      },
+      {
+        "text": "2.87",
+        "bbox": [
+          759,
+          853,
+          799,
+          873
+        ],
+        "confidence": 0.8790404810669665
+      },
+      {
+        "text": "E) Value of imported /indigenous",
+        "bbox": [
+          82,
+          896,
+          374,
+          922
+        ],
+        "confidence": 0.5356428170346472
+      },
+      {
+        "text": "raw",
+        "bbox": [
+          379,
+          903,
+          415,
+          917
+        ],
+        "confidence": 0.8508208844870102
+      },
+      {
+        "text": "materials,",
+        "bbox": [
+          421,
+          896,
+          508,
+          920
+        ],
+        "confidence": 0.9978051454253172
+      },
+      {
+        "text": "stores",
+        "bbox": [
+          515,
+          901,
+          569,
+          917
+        ],
+        "confidence": 0.9993419249736468
+      },
+      {
+        "text": "spare",
+        "bbox": [
+          601,
+          903,
+          649,
+          919
+        ],
+        "confidence": 0.7823260215881076
+      },
+      {
+        "text": "parts",
+        "bbox": [
+          656,
+          900,
+          703,
+          919
+        ],
+        "confidence": 0.9999753165010985
+      },
+      {
+        "text": "and",
+        "bbox": [
+          711,
+          901,
+          745,
+          917
+        ],
+        "confidence": 0.9999927733243802
+      },
+      {
+        "text": "components",
+        "bbox": [
+          753,
+          901,
+          857,
+          919
+        ],
+        "confidence": 0.9999845063451579
+      },
+      {
+        "text": "consumed",
+        "bbox": [
+          84,
+          921,
+          172,
+          939
+        ],
+        "confidence": 0.9993503627991182
+      },
+      {
+        "text": "Raw Materials",
+        "bbox": [
+          111,
+          963,
+          231,
+          983
+        ],
+        "confidence": 0.9681224922622634
+      },
+      {
+        "text": "Percentage",
+        "bbox": [
+          573,
+          961,
+          670,
+          986
+        ],
+        "confidence": 0.8189957810192308
+      },
+      {
+        "text": "Rs. In lakhs",
+        "bbox": [
+          705,
+          963,
+          809,
+          983
+        ],
+        "confidence": 0.7231908170262572
+      },
+      {
+        "text": "Imported",
+        "bbox": [
+          161,
+          987,
+          241,
+          1007
+        ],
+        "confidence": 0.9998196890483695
+      },
+      {
+        "text": "Current Year",
+        "bbox": [
+          163,
+          1010,
+          273,
+          1030
+        ],
+        "confidence": 0.7801942049510164
+      },
+      {
+        "text": "79.23%",
+        "bbox": [
+          605,
+          1009,
+          673,
+          1029
+        ],
+        "confidence": 0.6444314141430102
+      },
+      {
+        "text": "1,304.95",
+        "bbox": [
+          741,
+          1009,
+          821,
+          1029
+        ],
+        "confidence": 0.6285894138975239
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          160,
+          1030,
+          278,
+          1054
+        ],
+        "confidence": 0.999166276234794
+      },
+      {
+        "text": "(82.85%)",
+        "bbox": [
+          599,
+          1031,
+          679,
+          1051
+        ],
+        "confidence": 0.6253396150829623
+      },
+      {
+        "text": "(1596.85)",
+        "bbox": [
+          736,
+          1030,
+          824,
+          1054
+        ],
+        "confidence": 0.9101920223615266
+      },
+      {
+        "text": "Indigenous",
+        "bbox": [
+          163,
+          1079,
+          257,
+          1099
+        ],
+        "confidence": 0.9999806234852215
+      },
+      {
+        "text": "Current Year",
+        "bbox": [
+          161,
+          1099,
+          273,
+          1119
+        ],
+        "confidence": 0.7028560085961644
+      },
+      {
+        "text": "20.77%",
+        "bbox": [
+          603,
+          1099,
+          673,
+          1119
+        ],
+        "confidence": 0.714783377434817
+      },
+      {
+        "text": "342.04",
+        "bbox": [
+          749,
+          1099,
+          811,
+          1119
+        ],
+        "confidence": 0.7360461349678156
+      },
+      {
+        "text": "Previous year",
+        "bbox": [
+          163,
+          1125,
+          277,
+          1145
+        ],
+        "confidence": 0.7187291619144185
+      },
+      {
+        "text": "(17.15%)",
+        "bbox": [
+          598,
+          1120,
+          680,
+          1144
+        ],
+        "confidence": 0.9973506060814031
+      },
+      {
+        "text": "(330.44)",
+        "bbox": [
+          744,
+          1120,
+          818,
+          1144
+        ],
+        "confidence": 0.9944577841670095
+      },
+      {
+        "text": "Source: https:IIWW.industrydocuments ucsf eduldocslylvj0223",
+        "bbox": [
+          202,
+          1253,
+          716,
+          1280
+        ],
+        "confidence": 0.58596570020671
+      }
+    ],
+    "metadata": {
+      "question_types": [
+        "layout"
+      ],
+      "docId": 4752,
+      "ucsf_document_id": "ylvj0223",
+      "ucsf_document_page_no": "21"
+    },
+    "prepare_latency_ms": 5123.951499999748
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000015",
+    "question": "Two segments have the same percentage value, what's that value?",
+    "gold_answers": [
+      "2"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000015.png",
+    "ocr_text_chars": 145,
+    "ocr_box_count": 12,
+    "ocr_boxes": [
+      {
+        "text": "Percentage of U.S: adults who say:_",
+        "bbox": [
+          22,
+          23,
+          243,
+          41
+        ],
+        "confidence": 0.7431793754396631
+      },
+      {
+        "text": "3190",
+        "bbox": [
+          103,
+          69,
+          131,
+          83
+        ],
+        "confidence": 0.5705134868621826
+      },
+      {
+        "text": "Yes_",
+        "bbox": [
+          103,
+          83,
+          127,
+          97
+        ],
+        "confidence": 0.381687730550766
+      },
+      {
+        "text": "abandoning",
+        "bbox": [
+          63,
+          99,
+          131,
+          113
+        ],
+        "confidence": 0.9999820182999934
+      },
+      {
+        "text": "news outlets",
+        "bbox": [
+          59,
+          113,
+          131,
+          125
+        ],
+        "confidence": 0.7791103239869357
+      },
+      {
+        "text": "6590",
+        "bbox": [
+          323,
+          131,
+          349,
+          145
+        ],
+        "confidence": 0.7364776134490967
+      },
+      {
+        "text": "No; not",
+        "bbox": [
+          321,
+          145,
+          365,
+          159
+        ],
+        "confidence": 0.8073145692366511
+      },
+      {
+        "text": "abandoning",
+        "bbox": [
+          320,
+          157,
+          389,
+          175
+        ],
+        "confidence": 0.8374141406200842
+      },
+      {
+        "text": "Don t know",
+        "bbox": [
+          67,
+          177,
+          129,
+          191
+        ],
+        "confidence": 0.6712080430496495
+      },
+      {
+        "text": "news outlets",
+        "bbox": [
+          321,
+          173,
+          393,
+          187
+        ],
+        "confidence": 0.9949054256270764
+      },
+      {
+        "text": "Refused",
+        "bbox": [
+          107,
+          223,
+          155,
+          237
+        ],
+        "confidence": 0.9999920699796186
+      },
+      {
+        "text": "PEW RESEARCH CENTER",
+        "bbox": [
+          21,
+          269,
+          155,
+          285
+        ],
+        "confidence": 0.8849107772579808
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 569.8699999993551
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000016",
+    "question": "When does the line reach the peak?",
+    "gold_answers": [
+      "2014"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000016.png",
+    "ocr_text_chars": 422,
+    "ocr_box_count": 20,
+    "ocr_boxes": [
+      {
+        "text": "Number of unsheltered homeless people in England, 2010 to 2014",
+        "bbox": [
+          12,
+          12,
+          726,
+          44
+        ],
+        "confidence": 0.6772423689845704
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "Estimated number of unsheltered homeless people in England. Figures correspond to 'point-in-time' estimates",
+        "bbox": [
+          15,
+          42,
+          717,
+          62
+        ],
+        "confidence": 0.8303972743055933
+      },
+      {
+        "text": "obtained by counting 'rough sleepers' in autumn",
+        "bbox": [
+          15,
+          61,
+          325,
+          77
+        ],
+        "confidence": 0.7384225443814202
+      },
+      {
+        "text": "England",
+        "bbox": [
+          752,
+          88,
+          807,
+          108
+        ],
+        "confidence": 0.9998978093186214
+      },
+      {
+        "text": "2,500",
+        "bbox": [
+          13,
+          119,
+          59,
+          139
+        ],
+        "confidence": 0.9999816073348611
+      },
+      {
+        "text": "2,000",
+        "bbox": [
+          15,
+          201,
+          59,
+          221
+        ],
+        "confidence": 0.999830999226776
+      },
+      {
+        "text": "1,500",
+        "bbox": [
+          13,
+          281,
+          59,
+          301
+        ],
+        "confidence": 0.9999815007105989
+      },
+      {
+        "text": "000",
+        "bbox": [
+          27,
+          363,
+          59,
+          381
+        ],
+        "confidence": 0.19883837502102256
+      },
+      {
+        "text": "500",
+        "bbox": [
+          27,
+          443,
+          57,
+          463
+        ],
+        "confidence": 0.9987852597189295
+      },
+      {
+        "text": "2010",
+        "bbox": [
+          41,
+          541,
+          81,
+          561
+        ],
+        "confidence": 0.9999985098838806
+      },
+      {
+        "text": "2011",
+        "bbox": [
+          213,
+          541,
+          251,
+          561
+        ],
+        "confidence": 0.9999973773956299
+      },
+      {
+        "text": "2012",
+        "bbox": [
+          385,
+          541,
+          425,
+          561
+        ],
+        "confidence": 0.5725102821874717
+      },
+      {
+        "text": "2013",
+        "bbox": [
+          557,
+          541,
+          599,
+          561
+        ],
+        "confidence": 0.8538093392498939
+      },
+      {
+        "text": "2014",
+        "bbox": [
+          729,
+          541,
+          771,
+          561
+        ],
+        "confidence": 0.5637695345446794
+      },
+      {
+        "text": "Source: Rough Sleeping in England in the 2010s",
+        "bbox": [
+          15,
+          569,
+          291,
+          587
+        ],
+        "confidence": 0.7804676484871063
+      },
+      {
+        "text": "OWID based on UK National Statistics (2018)",
+        "bbox": [
+          297,
+          569,
+          555,
+          587
+        ],
+        "confidence": 0.8814297157279721
+      },
+      {
+        "text": "Ouri orldlnData org homelessness",
+        "bbox": [
+          585,
+          571,
+          785,
+          587
+        ],
+        "confidence": 0.4304562363565746
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          793,
+          569,
+          835,
+          585
+        ],
+        "confidence": 0.995986227212439
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1708.3824000001187
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000017",
+    "question": "When does the line have the sharpest increase?",
+    "gold_answers": [
+      "2011"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000017.png",
+    "ocr_text_chars": 422,
+    "ocr_box_count": 20,
+    "ocr_boxes": [
+      {
+        "text": "Number of unsheltered homeless people in England, 2010 to 2014",
+        "bbox": [
+          12,
+          12,
+          726,
+          44
+        ],
+        "confidence": 0.6772423689845704
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "Estimated number of unsheltered homeless people in England. Figures correspond to 'point-in-time' estimates",
+        "bbox": [
+          15,
+          42,
+          717,
+          62
+        ],
+        "confidence": 0.8303972743055933
+      },
+      {
+        "text": "obtained by counting 'rough sleepers' in autumn",
+        "bbox": [
+          15,
+          61,
+          325,
+          77
+        ],
+        "confidence": 0.7384225443814202
+      },
+      {
+        "text": "England",
+        "bbox": [
+          752,
+          88,
+          807,
+          108
+        ],
+        "confidence": 0.9998978093186214
+      },
+      {
+        "text": "2,500",
+        "bbox": [
+          13,
+          119,
+          59,
+          139
+        ],
+        "confidence": 0.9999816073348611
+      },
+      {
+        "text": "2,000",
+        "bbox": [
+          15,
+          201,
+          59,
+          221
+        ],
+        "confidence": 0.999830999226776
+      },
+      {
+        "text": "1,500",
+        "bbox": [
+          13,
+          281,
+          59,
+          301
+        ],
+        "confidence": 0.9999815007105989
+      },
+      {
+        "text": "000",
+        "bbox": [
+          27,
+          363,
+          59,
+          381
+        ],
+        "confidence": 0.19883837502102256
+      },
+      {
+        "text": "500",
+        "bbox": [
+          27,
+          443,
+          57,
+          463
+        ],
+        "confidence": 0.9987852597189295
+      },
+      {
+        "text": "2010",
+        "bbox": [
+          41,
+          541,
+          81,
+          561
+        ],
+        "confidence": 0.9999985098838806
+      },
+      {
+        "text": "2011",
+        "bbox": [
+          213,
+          541,
+          251,
+          561
+        ],
+        "confidence": 0.9999973773956299
+      },
+      {
+        "text": "2012",
+        "bbox": [
+          385,
+          541,
+          425,
+          561
+        ],
+        "confidence": 0.5725102821874717
+      },
+      {
+        "text": "2013",
+        "bbox": [
+          557,
+          541,
+          599,
+          561
+        ],
+        "confidence": 0.8538093392498939
+      },
+      {
+        "text": "2014",
+        "bbox": [
+          729,
+          541,
+          771,
+          561
+        ],
+        "confidence": 0.5637695345446794
+      },
+      {
+        "text": "Source: Rough Sleeping in England in the 2010s",
+        "bbox": [
+          15,
+          569,
+          291,
+          587
+        ],
+        "confidence": 0.7804676484871063
+      },
+      {
+        "text": "OWID based on UK National Statistics (2018)",
+        "bbox": [
+          297,
+          569,
+          555,
+          587
+        ],
+        "confidence": 0.8814297157279721
+      },
+      {
+        "text": "Ouri orldlnData org homelessness",
+        "bbox": [
+          585,
+          571,
+          785,
+          587
+        ],
+        "confidence": 0.4304562363565746
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          793,
+          569,
+          835,
+          585
+        ],
+        "confidence": 0.995986227212439
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1631.9650000004913
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000018",
+    "question": "How many colors are used in the graph?",
+    "gold_answers": [
+      "1"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000018.png",
+    "ocr_text_chars": 410,
+    "ocr_box_count": 22,
+    "ocr_boxes": [
+      {
+        "text": "Share that agrees that vaccines are important for children to have, 2018",
+        "bbox": [
+          12,
+          11,
+          728,
+          43
+        ],
+        "confidence": 0.804483428263097
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "The share of people who responded that they \"strongly agree\" or \"somewhat agree\" with the statement 'Vaccines",
+        "bbox": [
+          15,
+          40,
+          735,
+          60
+        ],
+        "confidence": 0.7897362318105511
+      },
+      {
+        "text": "are important for children t0 have'",
+        "bbox": [
+          13,
+          59,
+          229,
+          75
+        ],
+        "confidence": 0.6579682913701346
+      },
+      {
+        "text": "United Arab Emirates",
+        "bbox": [
+          11,
+          117,
+          151,
+          133
+        ],
+        "confidence": 0.9752854148702594
+      },
+      {
+        "text": "94%",
+        "bbox": [
+          801,
+          117,
+          833,
+          133
+        ],
+        "confidence": 0.9844409609159025
+      },
+      {
+        "text": "Mauritania",
+        "bbox": [
+          79,
+          207,
+          149,
+          221
+        ],
+        "confidence": 0.9998744257538889
+      },
+      {
+        "text": "91%",
+        "bbox": [
+          777,
+          205,
+          809,
+          221
+        ],
+        "confidence": 0.49332162737846375
+      },
+      {
+        "text": "Spain",
+        "bbox": [
+          111,
+          295,
+          151,
+          313
+        ],
+        "confidence": 0.9988683235619473
+      },
+      {
+        "text": "88%",
+        "bbox": [
+          759,
+          295,
+          789,
+          311
+        ],
+        "confidence": 0.9811284649416291
+      },
+      {
+        "text": "Armenia",
+        "bbox": [
+          93,
+          385,
+          149,
+          399
+        ],
+        "confidence": 0.9858775577500697
+      },
+      {
+        "text": "73%",
+        "bbox": [
+          659,
+          385,
+          689,
+          399
+        ],
+        "confidence": 0.9452613782765992
+      },
+      {
+        "text": "South Korea",
+        "bbox": [
+          67,
+          473,
+          149,
+          489
+        ],
+        "confidence": 0.9911407636178864
+      },
+      {
+        "text": "7290",
+        "bbox": [
+          653,
+          473,
+          683,
+          489
+        ],
+        "confidence": 0.3282482922077179
+      },
+      {
+        "text": "20%",
+        "bbox": [
+          271,
+          541,
+          307,
+          561
+        ],
+        "confidence": 0.8299716401517732
+      },
+      {
+        "text": "40%",
+        "bbox": [
+          411,
+          543,
+          445,
+          561
+        ],
+        "confidence": 0.9499733587138101
+      },
+      {
+        "text": "50%",
+        "bbox": [
+          549,
+          543,
+          583,
+          561
+        ],
+        "confidence": 0.6055408010663715
+      },
+      {
+        "text": "80%",
+        "bbox": [
+          683,
+          541,
+          719,
+          561
+        ],
+        "confidence": 0.8774026001025791
+      },
+      {
+        "text": "Source: Wellcome Trust Global Monitor (2019)",
+        "bbox": [
+          15,
+          569,
+          277,
+          587
+        ],
+        "confidence": 0.6062893083477643
+      },
+      {
+        "text": "OurWorldlnData orgtvaccination",
+        "bbox": [
+          603,
+          569,
+          785,
+          587
+        ],
+        "confidence": 0.6006255010144548
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          793,
+          571,
+          835,
+          585
+        ],
+        "confidence": 0.9345143490402779
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1698.309600000357
+  },
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000019",
+    "question": "Is the sum of largest two bars is greater then the sum of smallest 3 bars?",
+    "gold_answers": [
+      "No"
+    ],
+    "gold_page": 1,
+    "image_path": "data\\eval\\benchmarks\\real_cache_1280\\chartqa\\chartqa_000019.png",
+    "ocr_text_chars": 410,
+    "ocr_box_count": 22,
+    "ocr_boxes": [
+      {
+        "text": "Share that agrees that vaccines are important for children to have, 2018",
+        "bbox": [
+          12,
+          11,
+          728,
+          43
+        ],
+        "confidence": 0.804483428263097
+      },
+      {
+        "text": "Our World",
+        "bbox": [
+          775,
+          19,
+          835,
+          33
+        ],
+        "confidence": 0.9026142462329908
+      },
+      {
+        "text": "Data",
+        "bbox": [
+          797,
+          31,
+          827,
+          45
+        ],
+        "confidence": 0.9951902622222729
+      },
+      {
+        "text": "The share of people who responded that they \"strongly agree\" or \"somewhat agree\" with the statement 'Vaccines",
+        "bbox": [
+          15,
+          40,
+          735,
+          60
+        ],
+        "confidence": 0.7897362318105511
+      },
+      {
+        "text": "are important for children t0 have'",
+        "bbox": [
+          13,
+          59,
+          229,
+          75
+        ],
+        "confidence": 0.6579682913701346
+      },
+      {
+        "text": "United Arab Emirates",
+        "bbox": [
+          11,
+          117,
+          151,
+          133
+        ],
+        "confidence": 0.9752854148702594
+      },
+      {
+        "text": "94%",
+        "bbox": [
+          801,
+          117,
+          833,
+          133
+        ],
+        "confidence": 0.9844409609159025
+      },
+      {
+        "text": "Mauritania",
+        "bbox": [
+          79,
+          207,
+          149,
+          221
+        ],
+        "confidence": 0.9998744257538889
+      },
+      {
+        "text": "91%",
+        "bbox": [
+          777,
+          205,
+          809,
+          221
+        ],
+        "confidence": 0.49332162737846375
+      },
+      {
+        "text": "Spain",
+        "bbox": [
+          111,
+          295,
+          151,
+          313
+        ],
+        "confidence": 0.9988683235619473
+      },
+      {
+        "text": "88%",
+        "bbox": [
+          759,
+          295,
+          789,
+          311
+        ],
+        "confidence": 0.9811284649416291
+      },
+      {
+        "text": "Armenia",
+        "bbox": [
+          93,
+          385,
+          149,
+          399
+        ],
+        "confidence": 0.9858775577500697
+      },
+      {
+        "text": "73%",
+        "bbox": [
+          659,
+          385,
+          689,
+          399
+        ],
+        "confidence": 0.9452613782765992
+      },
+      {
+        "text": "South Korea",
+        "bbox": [
+          67,
+          473,
+          149,
+          489
+        ],
+        "confidence": 0.9911407636178864
+      },
+      {
+        "text": "7290",
+        "bbox": [
+          653,
+          473,
+          683,
+          489
+        ],
+        "confidence": 0.3282482922077179
+      },
+      {
+        "text": "20%",
+        "bbox": [
+          271,
+          541,
+          307,
+          561
+        ],
+        "confidence": 0.8299716401517732
+      },
+      {
+        "text": "40%",
+        "bbox": [
+          411,
+          543,
+          445,
+          561
+        ],
+        "confidence": 0.9499733587138101
+      },
+      {
+        "text": "50%",
+        "bbox": [
+          549,
+          543,
+          583,
+          561
+        ],
+        "confidence": 0.6055408010663715
+      },
+      {
+        "text": "80%",
+        "bbox": [
+          683,
+          541,
+          719,
+          561
+        ],
+        "confidence": 0.8774026001025791
+      },
+      {
+        "text": "Source: Wellcome Trust Global Monitor (2019)",
+        "bbox": [
+          15,
+          569,
+          277,
+          587
+        ],
+        "confidence": 0.6062893083477643
+      },
+      {
+        "text": "OurWorldlnData orgtvaccination",
+        "bbox": [
+          603,
+          569,
+          785,
+          587
+        ],
+        "confidence": 0.6006255010144548
+      },
+      {
+        "text": "CC BY",
+        "bbox": [
+          793,
+          571,
+          835,
+          585
+        ],
+        "confidence": 0.9345143490402779
+      }
+    ],
+    "metadata": {
+      "type": "human_test"
+    },
+    "prepare_latency_ms": 1739.1723000000638
+  }
+]

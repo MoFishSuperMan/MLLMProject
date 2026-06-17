@@ -1,0 +1,4 @@
+﻿mode,em,anls,recall_at_1,recall_at_5,mrr,citation_accuracy,latency_ms,count,case_success_rate,retrieval_success_rate,citation_success_rate,answer_match_rate
+text_rag,0.0,0.0,0.5,0.75,0.625,0.75,3.2878250003705034,4.0,0.75,0.75,0.75,0.0
+mm_rag,0.0,0.0,0.25,0.75,0.5,0.25,1.6548499988857657,4.0,0.25,0.75,0.25,0.0
+auto,0.0,0.0,0.25,0.75,0.5,0.25,1.0972749996653874,4.0,0.25,0.75,0.25,0.0

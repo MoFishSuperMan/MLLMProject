@@ -1,0 +1,71 @@
+% !TeX root = ./main.tex
+
+\sysusetup{
+  title                = {基于多模态检索增强生成的文档理解问答系统},
+  author               = {刘天翔\quad 杨毅涵\quad 郭翊涵},
+  author*              = {MLLM Project Team},
+  speciality           = {计算机科学与技术},
+  speciality*          = {Computer Science and Technology},
+  supervisor           = {课程组},
+  supervisor*          = {Course Staff},
+  department           = {计算机学院},
+  student-id           = {23320104\quad 23330154\quad 22308043},
+  math-font            = xits,
+  cite-style           = super,
+}
+
+\makeatletter
+\renewcommand\sysu@thesis@name{多模态大模型项目期末报告}
+\renewcommand\sysu@title@page@bachelor{}
+\ifsysu@degree@bachelor
+  \fancypagestyle{plain}{%
+    \fancyhf{}%
+    \def\sysu@hf@font{\fontsize{10.5bp}{17.5bp}\selectfont}%
+    \fancyhead[C]{\sysu@hf@font 多模态大模型项目期末报告}%
+    \fancyfoot[C]{\sysu@hf@font\thepage}%
+    \let\@mkboth\@gobbletwo
+    \let\chaptermark\@gobble
+    \let\sectionmark\@gobble
+  }%
+  \fancypagestyle{headings}{%
+    \fancyhf{}%
+    \def\sysu@hf@font{\fontsize{10.5bp}{17.5bp}\selectfont}%
+    \fancyhead[C]{\sysu@hf@font 多模态大模型项目期末报告}%
+    \fancyfoot[C]{\sysu@hf@font\thepage}%
+  }%
+\fi
+\makeatother
+
+\IfFileExists{/.sysu-thesis.devcontainer}{
+  \sysusetup{cjk-font = noto}
+}{}
+
+\usepackage{amsthm}
+\usepackage{bicaption}
+\usepackage{threeparttable}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{algorithm2e}
+\usepackage{listings}
+\usepackage{siunitx}
+\usepackage[sort]{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\setlength{\headheight}{18pt}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible
+}

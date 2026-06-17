@@ -1,0 +1,7 @@
+chartqa samples:   0%|          | 0/1 [00:00<?, ?it/s]Using CPU. Note: This module is much faster with a GPU.
+
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 391/391 [00:00<00:00, 46300.76it/s]
+
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 393/393 [00:00<00:00, 13072.90it/s]
+
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s][A

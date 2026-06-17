@@ -1,0 +1,53 @@
+docvqa samples:   0%|          | 0/5 [00:00<?, ?it/s]Using CPU. Note: This module is much faster with a GPU.
+
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 391/391 [00:00<00:00, 48260.05it/s]
+
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 393/393 [00:00<00:00, 11640.81it/s]
+
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 1/750 [00:00<03:59,  3.12it/s][A
+Loading weights:   0%|          | 2/750 [00:00<04:30,  2.76it/s][A
+Loading weights:   1%|          | 9/750 [00:00<00:48, 15.21it/s][A
+Loading weights:   2%|▏         | 17/750 [00:00<00:25, 28.28it/s][A
+Loading weights:   4%|▎         | 28/750 [00:01<00:16, 43.76it/s][A
+Loading weights:   5%|▌         | 39/750 [00:01<00:12, 56.02it/s][A
+Loading weights:   7%|▋         | 50/750 [00:01<00:10, 65.23it/s][A
+Loading weights:   8%|▊         | 61/750 [00:01<00:09, 72.41it/s][A
+Loading weights:  10%|▉         | 72/750 [00:01<00:08, 76.86it/s][A
+Loading weights:  11%|█         | 83/750 [00:01<00:08, 80.66it/s][A
+Loading weights:  13%|█▎        | 94/750 [00:01<00:07, 82.06it/s][A
+Loading weights:  14%|█▍        | 105/750 [00:01<00:07, 83.23it/s][A
+Loading weights:  15%|█▌        | 116/750 [00:02<00:07, 83.88it/s][A
+Loading weights:  17%|█▋        | 127/750 [00:02<00:07, 84.67it/s][A
+Loading weights:  18%|█▊        | 138/750 [00:02<00:07, 86.07it/s][A
+Loading weights:  20%|█▉        | 148/750 [00:02<00:07, 85.74it/s][A
+Loading weights:  21%|██▏       | 160/750 [00:02<00:06, 90.10it/s][A
+Loading weights:  23%|██▎       | 171/750 [00:02<00:06, 90.19it/s][A
+Loading weights:  24%|██▍       | 182/750 [00:02<00:06, 89.21it/s][A
+Loading weights:  26%|██▌       | 192/750 [00:02<00:06, 90.91it/s][A
+Loading weights:  27%|██▋       | 202/750 [00:03<00:05, 92.78it/s][A
+Loading weights:  28%|██▊       | 212/750 [00:03<00:05, 94.68it/s][A
+Loading weights:  30%|██▉       | 222/750 [00:03<00:06, 87.83it/s][A
+Loading weights:  31%|███       | 231/750 [00:03<00:06, 85.61it/s][A
+Loading weights:  32%|███▏      | 240/750 [00:03<00:06, 83.20it/s][A
+Loading weights:  33%|███▎      | 249/750 [00:03<00:06, 81.10it/s][A
+Loading weights:  35%|███▍      | 259/750 [00:03<00:05, 82.45it/s][A
+Loading weights:  36%|███▌      | 269/750 [00:03<00:05, 86.73it/s][A
+Loading weights:  37%|███▋      | 280/750 [00:03<00:05, 87.14it/s][A
+Loading weights:  39%|███▉      | 291/750 [00:04<00:05, 85.22it/s][A
+Loading weights:  40%|████      | 302/750 [00:04<00:05, 84.61it/s][A
+Loading weights:  42%|████▏     | 313/750 [00:04<00:05, 85.53it/s][A
+Loading weights:  43%|████▎     | 324/750 [00:04<00:05, 84.75it/s][A
+Loading weights:  45%|████▍     | 334/750 [00:04<00:04, 88.36it/s][A
+Loading weights:  46%|████▌     | 345/750 [00:04<00:04, 88.27it/s][A
+Loading weights:  47%|████▋     | 356/750 [00:04<00:04, 86.73it/s][A
+Loading weights:  49%|████▉     | 367/750 [00:04<00:04, 86.90it/s][A
+Loading weights:  50%|█████     | 378/750 [00:05<00:04, 86.76it/s][A
+Loading weights:  52%|█████▏    | 389/750 [00:05<00:04, 80.63it/s][A
+Loading weights:  59%|█████▊    | 439/750 [00:05<00:01, 180.43it/s][A
+Loading weights:  73%|███████▎  | 547/750 [00:05<00:00, 407.41it/s][A
+Loading weights:  87%|████████▋ | 653/750 [00:05<00:00, 579.57it/s][A
+Loading weights:  97%|█████████▋| 731/750 [00:05<00:00, 624.49it/s][ALoading weights: 100%|██████████| 750/750 [00:05<00:00, 131.44it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+docvqa samples:  20%|██        | 1/5 [00:42<02:48, 42.20s/it]docvqa samples:  40%|████      | 2/5 [00:50<01:06, 22.29s/it]docvqa samples:  60%|██████    | 3/5 [01:02<00:34, 17.48s/it]docvqa samples:  80%|████████  | 4/5 [01:10<00:13, 13.69s/it]docvqa samples: 100%|██████████| 5/5 [01:18<00:00, 11.74s/it]docvqa samples: 100%|██████████| 5/5 [01:18<00:00, 15.70s/it]
+chartqa samples:   0%|          | 0/5 [00:00<?, ?it/s]chartqa samples:  20%|██        | 1/5 [00:11<00:44, 11.23s/it]chartqa samples:  40%|████      | 2/5 [00:21<00:31, 10.63s/it]chartqa samples:  60%|██████    | 3/5 [00:29<00:19,  9.66s/it]chartqa samples:  80%|████████  | 4/5 [00:39<00:09,  9.56s/it]chartqa samples: 100%|██████████| 5/5 [00:47<00:00,  8.95s/it]chartqa samples: 100%|██████████| 5/5 [00:47<00:00,  9.44s/it]

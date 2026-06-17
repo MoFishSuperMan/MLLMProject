@@ -1,0 +1,8 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+docvqa,docvqa_49168,What time is the ‘coffee break’?,11:14 to 11:39 a.m.,11:14 to 11:39 a.m.|11.14 to 11.39 a.m.,1,"咖啡休息时间是从上午11:14到11:39。[E1]
+
+Final answer: 上午11:14到11:39
+来源：[page=1, chunk=docvqa_49168_p1_region_time_row]","咖啡休息时间是从上午11:14到11:39。[E1]
+
+Final answer: 上午11:14到11:39
+来源：[page=1, chunk=docvqa_49168_p1_region_time_row]",上午11:14到11:39,11:14 to 11:39 a.m,mm_rag,1.0,1.0,4316.125100000136,1.0,ok,hybrid_route,1099,61,2,1,region,docvqa_49168_p1_region_time_row,data\eval\benchmarks\real_fix_two_regions\docvqa\docvqa_49168\docvqa_49168_p1_region_time_row.png,"[0, 0, 599, 1280]",,,

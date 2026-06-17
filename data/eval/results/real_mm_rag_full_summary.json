@@ -1,0 +1,630 @@
+{
+  "build_seconds": 146.587,
+  "pages": 11,
+  "chunk_counts": {
+    "text": 14,
+    "page": 11
+  },
+  "modes": {
+    "mm-rag": {
+      "summary": {
+        "em": 0.0,
+        "anls": 0.0,
+        "recall_at_1": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "citation_accuracy": 1.0,
+        "latency_ms": 25967.14997500001,
+        "count": 4.0,
+        "case_success_rate": 1.0,
+        "retrieval_success_rate": 1.0,
+        "citation_success_rate": 1.0,
+        "answer_match_rate": 0.0
+      },
+      "failures": {
+        "answer_mismatch": 4
+      },
+      "details": [
+        {
+          "sample_id": "course_req_001",
+          "question": "期末验收需要提交什么？",
+          "gold_pages": [
+            1,
+            11
+          ],
+          "top_evidence": [
+            [
+              1,
+              "page",
+              0.6303,
+              "多模态大模型大作业说明_p1_page"
+            ],
+            [
+              1,
+              "text",
+              0.5514,
+              "多模态大模型大作业说明_p1_c0001"
+            ],
+            [
+              11,
+              "text",
+              0.0731,
+              "多模态大模型大作业说明_p11_c0014"
+            ],
+            [
+              11,
+              "page",
+              0.0481,
+              "多模态大模型大作业说明_p11_page"
+            ],
+            [
+              9,
+              "page",
+              0.0045,
+              "多模态大模型大作业说明_p9_page"
+            ]
+          ],
+          "cited_pages": [
+            1,
+            11
+          ],
+          "elapsed_seconds": 45.627,
+          "latency_ms": 45627.45,
+          "route": "hybrid_route",
+          "route_reason": "手动选择 MM-RAG，检索文本与视觉 evidence",
+          "answer": "根据作业说明，期末验收需要在第16-17周提交以下内容：  *   **最终报告**：一份10-15页的PDF文档，内容需包含系统实现细节与代码仓库、定量实验结果（至少1-2项指标）+ 可视化/错误分析、以及反思与展望（模型局限、AGI视角下的潜力与瓶颈）[E2]。 *   **上台展示**：需要进行现场演示[ E2]。 *   **代码仓库**：需提交GitHub仓库链接，包含README.md文件，用于说明环境配置和运行方法[ E3]。 *   **Demo视频**：需提供一个3-5分钟的录屏演示视频，并上传至B站或YouTube并提供链接[ E3]。  此外，最终报告的格式要求为PDF，页数为15-20页，需包含摘要、引言、相关工作、方法、实验、结论和参考文献[ E3]。 来源：[page=1, chunk=多模态大模型大作业说明_p1_c0001]; [page=11, chunk=多模态大模型大作业说明_p11_c0014]",
+          "scores": {
+            "sample_id": "course_req_001",
+            "route": "hybrid_route",
+            "em": 0.0,
+            "anls": 0.0,
+            "recall_at_1": 1.0,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_accuracy": 1.0,
+            "latency_ms": 45627.45170000005,
+            "question_type": "text",
+            "gold_type": "text",
+            "gold_page": 1,
+            "gold_pages": "1|11",
+            "top1_page": 1,
+            "retrieved_pages": "1|1|11|11|9",
+            "cited_pages": "1|11",
+            "retrieval_success": 1.0,
+            "citation_success": 1.0,
+            "answer_match": 0.0,
+            "case_success": 1.0,
+            "case_status": "success",
+            "failure_label": "answer_mismatch"
+          }
+        },
+        {
+          "sample_id": "course_req_002",
+          "question": "文档理解多模态检索问答系统的最低验收标准是什么？",
+          "gold_pages": [
+            4
+          ],
+          "top_evidence": [
+            [
+              4,
+              "page",
+              0.9966,
+              "多模态大模型大作业说明_p4_page"
+            ],
+            [
+              4,
+              "text",
+              0.9872,
+              "多模态大模型大作业说明_p4_c0005"
+            ],
+            [
+              3,
+              "page",
+              0.9135,
+              "多模态大模型大作业说明_p3_page"
+            ],
+            [
+              3,
+              "text",
+              0.7783,
+              "多模态大模型大作业说明_p3_c0004"
+            ],
+            [
+              2,
+              "text",
+              0.72,
+              "多模态大模型大作业说明_p2_c0003"
+            ]
+          ],
+          "cited_pages": [
+            4
+          ],
+          "elapsed_seconds": 29.757,
+          "latency_ms": 29756.84,
+          "route": "hybrid_route",
+          "route_reason": "手动选择 MM-RAG，检索文本与视觉 evidence",
+          "answer": "根据文档“题目3：文档理解+多模态检索问答系统”的最低验收标准，系统需满足以下要求： - 支持上传多页PDF或图像，自动分块（文本/表格/图形）[E2]。 - 支持自然语言问题查询，在回答中标出引用的页面/图号 [E2]。 - 在至少一个文档数据集（DocVQA、ChartQA子集或自建）上评测 [E2]。 - 对比纯文本RAG与多模态RAG的效果差异 [E2]。 来源：[page=4, chunk=多模态大模型大作业说明_p4_c0005]",
+          "scores": {
+            "sample_id": "course_req_002",
+            "route": "hybrid_route",
+            "em": 0.0,
+            "anls": 0.0,
+            "recall_at_1": 1.0,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_accuracy": 1.0,
+            "latency_ms": 29756.84230000002,
+            "question_type": "text",
+            "gold_type": "text",
+            "gold_page": 4,
+            "gold_pages": "4",
+            "top1_page": 4,
+            "retrieved_pages": "4|4|3|3|2",
+            "cited_pages": "4",
+            "retrieval_success": 1.0,
+            "citation_success": 1.0,
+            "answer_match": 0.0,
+            "case_success": 1.0,
+            "case_status": "success",
+            "failure_label": "answer_mismatch"
+          }
+        },
+        {
+          "sample_id": "course_req_003",
+          "question": "实验评测推荐使用哪些指标？",
+          "gold_pages": [
+            10
+          ],
+          "top_evidence": [
+            [
+              10,
+              "text",
+              0.9185,
+              "多模态大模型大作业说明_p10_c0013"
+            ],
+            [
+              10,
+              "page",
+              0.8033,
+              "多模态大模型大作业说明_p10_page"
+            ],
+            [
+              1,
+              "text",
+              0.0444,
+              "多模态大模型大作业说明_p1_c0001"
+            ],
+            [
+              6,
+              "text",
+              0.0341,
+              "多模态大模型大作业说明_p6_c0007"
+            ],
+            [
+              9,
+              "text",
+              0.0271,
+              "多模态大模型大作业说明_p9_c0012"
+            ]
+          ],
+          "cited_pages": [
+            10,
+            6,
+            9
+          ],
+          "elapsed_seconds": 18.869,
+          "latency_ms": 18868.62,
+          "route": "hybrid_route",
+          "route_reason": "手动选择 MM-RAG，检索文本与视觉 evidence",
+          "answer": "实验评测推荐使用的指标依据任务类型而定，具体如下：  - 对于VQA任务，推荐使用准确率（Accuracy）和F1 Score [E1]。 - 对于图像生成任务，推荐使用BLEU、ROUGE、CIDEr、METEOR [E1]。 - 对于视频问答任务，推荐使用准确率和时间戳精度 [E1]。 - 对于Agent导航任务，推荐使用成功率、SPL（Success weighted by Path Length）和路径长度 [E1]。 - 对于AIGC生成任务，推荐使用CLIP Score、FID（Fréchet Inception Distance）和人工主观打分 [E1]。  此外，对于游戏或仿真环境中的多模态智能Agent，最低验收标准中也明确要求报告成功率和SPL指标 [E4]。对于具身智能/仿真导航多模态Agent，同样要求报告成功率与SPL指标 [E5]。 来源：[page=10, chunk=多模态大模型大作业说明_p10_c0013]; [page=6, chunk=多模态大模型大作业说明_p6_c0007]; [page=9, chunk=多模态大模型大作业说明_p9_c0012]",
+          "scores": {
+            "sample_id": "course_req_003",
+            "route": "hybrid_route",
+            "em": 0.0,
+            "anls": 0.0,
+            "recall_at_1": 1.0,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_accuracy": 1.0,
+            "latency_ms": 18868.61970000007,
+            "question_type": "metric",
+            "gold_type": "text",
+            "gold_page": 10,
+            "gold_pages": "10",
+            "top1_page": 10,
+            "retrieved_pages": "10|10|1|6|9",
+            "cited_pages": "10|6|9",
+            "retrieval_success": 1.0,
+            "citation_success": 1.0,
+            "answer_match": 0.0,
+            "case_success": 1.0,
+            "case_status": "success",
+            "failure_label": "answer_mismatch"
+          }
+        },
+        {
+          "sample_id": "course_req_004",
+          "question": "题目3推荐的技术栈包括哪些？",
+          "gold_pages": [
+            4
+          ],
+          "top_evidence": [
+            [
+              4,
+              "text",
+              0.9963,
+              "多模态大模型大作业说明_p4_c0005"
+            ],
+            [
+              4,
+              "page",
+              0.9897,
+              "多模态大模型大作业说明_p4_page"
+            ],
+            [
+              2,
+              "text",
+              0.7493,
+              "多模态大模型大作业说明_p2_c0003"
+            ],
+            [
+              7,
+              "text",
+              0.6509,
+              "多模态大模型大作业说明_p7_c0009"
+            ],
+            [
+              9,
+              "text",
+              0.5738,
+              "多模态大模型大作业说明_p9_c0012"
+            ]
+          ],
+          "cited_pages": [
+            4
+          ],
+          "elapsed_seconds": 9.616,
+          "latency_ms": 9615.69,
+          "route": "hybrid_route",
+          "route_reason": "手动选择 MM-RAG，检索文本与视觉 evidence",
+          "answer": "题目3推荐的技术栈包括： - 模型选择：LLaMA 3.2 Vision、Qwen2.5-VL、DeepSeek-VL（强文档能力）[E1]。 - OCR增强：PaddleOCR、Tesseract（可选）[E1]。 - RAG架构：LangChain + 向量检索对长文档分块[E1]。 来源：[page=4, chunk=多模态大模型大作业说明_p4_c0005]",
+          "scores": {
+            "sample_id": "course_req_004",
+            "route": "hybrid_route",
+            "em": 0.0,
+            "anls": 0.0,
+            "recall_at_1": 1.0,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_accuracy": 1.0,
+            "latency_ms": 9615.686199999913,
+            "question_type": "text",
+            "gold_type": "text",
+            "gold_page": 4,
+            "gold_pages": "4",
+            "top1_page": 4,
+            "retrieved_pages": "4|4|2|7|9",
+            "cited_pages": "4",
+            "retrieval_success": 1.0,
+            "citation_success": 1.0,
+            "answer_match": 0.0,
+            "case_success": 1.0,
+            "case_status": "success",
+            "failure_label": "answer_mismatch"
+          }
+        }
+      ]
+    },
+    "auto": {
+      "summary": {
+        "em": 0.0,
+        "anls": 0.0,
+        "recall_at_1": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "citation_accuracy": 1.0,
+        "latency_ms": 12672.856975000032,
+        "count": 4.0,
+        "case_success_rate": 1.0,
+        "retrieval_success_rate": 1.0,
+        "citation_success_rate": 1.0,
+        "answer_match_rate": 0.0
+      },
+      "failures": {
+        "answer_mismatch": 4
+      },
+      "details": [
+        {
+          "sample_id": "course_req_001",
+          "question": "期末验收需要提交什么？",
+          "gold_pages": [
+            1,
+            11
+          ],
+          "top_evidence": [
+            [
+              1,
+              "text",
+              0.5514,
+              "多模态大模型大作业说明_p1_c0001"
+            ],
+            [
+              11,
+              "text",
+              0.0731,
+              "多模态大模型大作业说明_p11_c0014"
+            ],
+            [
+              9,
+              "text",
+              0.0137,
+              "多模态大模型大作业说明_p9_c0012"
+            ],
+            [
+              6,
+              "text",
+              0.0111,
+              "多模态大模型大作业说明_p6_c0007"
+            ],
+            [
+              7,
+              "text",
+              0.0075,
+              "多模态大模型大作业说明_p7_c0009"
+            ]
+          ],
+          "cited_pages": [
+            1,
+            11
+          ],
+          "elapsed_seconds": 10.423,
+          "latency_ms": 10422.77,
+          "route": "text_route",
+          "route_reason": "未命中特定关键词，默认使用文本检索以减少 mock 视觉摘要噪声",
+          "answer": "期末验收需要提交最终报告（10-15页）+ 上台展示，包含：系统实现细节与代码仓库、定量实验结果（至少1-2项指标）+ 可视化/错误分析、反思与展望（模型局限、AGI视角下的潜力与瓶颈）[E1]。同时，需提交GitHub仓库链接，包含README.md（环境配置、运行说明）；最终报告需为PDF格式，15-20页，需包含摘要、引言、相关工作、方法、实验、结论、参考文献；并提供3-5分钟录屏演示（上传至B站/YouTube并提供链接）[E2]。 来源：[page=1, chunk=多模态大模型大作业说明_p1_c0001]; [page=11, chunk=多模态大模型大作业说明_p11_c0014]",
+          "scores": {
+            "sample_id": "course_req_001",
+            "route": "text_route",
+            "em": 0.0,
+            "anls": 0.0,
+            "recall_at_1": 1.0,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_accuracy": 1.0,
+            "latency_ms": 10422.768499999962,
+            "question_type": "text",
+            "gold_type": "text",
+            "gold_page": 1,
+            "gold_pages": "1|11",
+            "top1_page": 1,
+            "retrieved_pages": "1|11|9|6|7",
+            "cited_pages": "1|11",
+            "retrieval_success": 1.0,
+            "citation_success": 1.0,
+            "answer_match": 0.0,
+            "case_success": 1.0,
+            "case_status": "success",
+            "failure_label": "answer_mismatch"
+          }
+        },
+        {
+          "sample_id": "course_req_002",
+          "question": "文档理解多模态检索问答系统的最低验收标准是什么？",
+          "gold_pages": [
+            4
+          ],
+          "top_evidence": [
+            [
+              4,
+              "text",
+              0.9872,
+              "多模态大模型大作业说明_p4_c0005"
+            ],
+            [
+              3,
+              "text",
+              0.7783,
+              "多模态大模型大作业说明_p3_c0004"
+            ],
+            [
+              2,
+              "text",
+              0.72,
+              "多模态大模型大作业说明_p2_c0003"
+            ],
+            [
+              7,
+              "text",
+              0.4164,
+              "多模态大模型大作业说明_p7_c0009"
+            ],
+            [
+              8,
+              "text",
+              0.1236,
+              "多模态大模型大作业说明_p8_c0011"
+            ]
+          ],
+          "cited_pages": [
+            4
+          ],
+          "elapsed_seconds": 6.429,
+          "latency_ms": 6428.85,
+          "route": "text_route",
+          "route_reason": "未命中特定关键词，默认使用文本检索以减少 mock 视觉摘要噪声",
+          "answer": "文档理解多模态检索问答系统的最低验收标准包括：支持上传多页PDF或图像，自动分块（文本/表格/图形）；支持自然语言问题查询，在回答中标出引用的页面/图号；在至少一个文档数据集（DocVQA、ChartQA子集或自建）上评测；对比纯文本RAG与多模态RAG的效果差异 [E1]。 来源：[page=4, chunk=多模态大模型大作业说明_p4_c0005]",
+          "scores": {
+            "sample_id": "course_req_002",
+            "route": "text_route",
+            "em": 0.0,
+            "anls": 0.0,
+            "recall_at_1": 1.0,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_accuracy": 1.0,
+            "latency_ms": 6428.852900000038,
+            "question_type": "text",
+            "gold_type": "text",
+            "gold_page": 4,
+            "gold_pages": "4",
+            "top1_page": 4,
+            "retrieved_pages": "4|3|2|7|8",
+            "cited_pages": "4",
+            "retrieval_success": 1.0,
+            "citation_success": 1.0,
+            "answer_match": 0.0,
+            "case_success": 1.0,
+            "case_status": "success",
+            "failure_label": "answer_mismatch"
+          }
+        },
+        {
+          "sample_id": "course_req_003",
+          "question": "实验评测推荐使用哪些指标？",
+          "gold_pages": [
+            10
+          ],
+          "top_evidence": [
+            [
+              10,
+              "text",
+              0.9185,
+              "多模态大模型大作业说明_p10_c0013"
+            ],
+            [
+              1,
+              "text",
+              0.0444,
+              "多模态大模型大作业说明_p1_c0001"
+            ],
+            [
+              6,
+              "text",
+              0.0341,
+              "多模态大模型大作业说明_p6_c0007"
+            ],
+            [
+              9,
+              "text",
+              0.0271,
+              "多模态大模型大作业说明_p9_c0012"
+            ],
+            [
+              5,
+              "text",
+              0.0106,
+              "多模态大模型大作业说明_p5_c0006"
+            ]
+          ],
+          "cited_pages": [
+            10,
+            6,
+            9,
+            5,
+            1
+          ],
+          "elapsed_seconds": 17.338,
+          "latency_ms": 17337.87,
+          "route": "text_route",
+          "route_reason": "未命中特定关键词，默认使用文本检索以减少 mock 视觉摘要噪声",
+          "answer": "实验评测推荐使用的指标依据任务类型而定：  - 对于VQA任务，推荐使用准确率（Accuracy）和F1 Score [E1]。 - 对于图像Caption任务，推荐使用BLEU、ROUGE、CIDEr、METEOR [E1]。 - 对于视频问答任务，推荐使用准确率和时间戳精度 [E1]。 - 对于Agent导航任务，推荐使用成功率、SPL（Success weighted by Path Length）和路径长度 [E1]。 - 对于AIGC生成任务，推荐使用CLIP Score、FID和人工主观打分 [E1]。  此外，在具体题目中也明确指出了某些任务的推荐指标：  - 题目5（游戏或仿真环境中的多模态智能Agent）要求报告成功率、SPL等指标 [E3]。 - 题目8（具身智能/仿真导航多模态Agent）要求报告成功率与SPL指标 [E4]。 - 题目4（图文驱动的个性化封面/海报生成）建议使用人工主观打分或CLIP Score、FID等自动指标 [E5]。  这些指标的选择需结合具体任务类型和实验设计 [E2]。 来源：[page=10, chunk=多模态大模型大作业说明_p10_c0013]; [page=6, chunk=多模态大模型大作业说明_p6_c0007]; [page=9, chunk=多模态大模型大作业说明_p9_c0012]; [page=5, chunk=多模态大模型大作业说明_p5_c0006]; [page=1, chunk=多模态大模型大作业说明_p1_c0001]",
+          "scores": {
+            "sample_id": "course_req_003",
+            "route": "text_route",
+            "em": 0.0,
+            "anls": 0.0,
+            "recall_at_1": 1.0,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_accuracy": 1.0,
+            "latency_ms": 17337.86770000006,
+            "question_type": "metric",
+            "gold_type": "text",
+            "gold_page": 10,
+            "gold_pages": "10",
+            "top1_page": 10,
+            "retrieved_pages": "10|1|6|9|5",
+            "cited_pages": "10|6|9|5|1",
+            "retrieval_success": 1.0,
+            "citation_success": 1.0,
+            "answer_match": 0.0,
+            "case_success": 1.0,
+            "case_status": "success",
+            "failure_label": "answer_mismatch"
+          }
+        },
+        {
+          "sample_id": "course_req_004",
+          "question": "题目3推荐的技术栈包括哪些？",
+          "gold_pages": [
+            4
+          ],
+          "top_evidence": [
+            [
+              4,
+              "text",
+              0.9963,
+              "多模态大模型大作业说明_p4_c0005"
+            ],
+            [
+              2,
+              "text",
+              0.7493,
+              "多模态大模型大作业说明_p2_c0003"
+            ],
+            [
+              5,
+              "text",
+              0.7096,
+              "多模态大模型大作业说明_p5_c0006"
+            ],
+            [
+              7,
+              "text",
+              0.6509,
+              "多模态大模型大作业说明_p7_c0009"
+            ],
+            [
+              9,
+              "text",
+              0.5738,
+              "多模态大模型大作业说明_p9_c0012"
+            ]
+          ],
+          "cited_pages": [
+            4
+          ],
+          "elapsed_seconds": 16.502,
+          "latency_ms": 16501.94,
+          "route": "text_route",
+          "route_reason": "未命中特定关键词，默认使用文本检索以减少 mock 视觉摘要噪声",
+          "answer": "题目3推荐的技术栈包括：模型选择为LLaMA 3.2 Vision、Qwen2.5-VL、DeepSeek-VL（强文档能力）；OCR增强可选PaddleOCR、Tesseract；RAG架构使用LangChain + 向量检索对长文档分块 [E1]。 来源：[page=4, chunk=多模态大模型大作业说明_p4_c0005]",
+          "scores": {
+            "sample_id": "course_req_004",
+            "route": "text_route",
+            "em": 0.0,
+            "anls": 0.0,
+            "recall_at_1": 1.0,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_accuracy": 1.0,
+            "latency_ms": 16501.93880000006,
+            "question_type": "text",
+            "gold_type": "text",
+            "gold_page": 4,
+            "gold_pages": "4",
+            "top1_page": 4,
+            "retrieved_pages": "4|2|5|7|9",
+            "cited_pages": "4",
+            "retrieval_success": 1.0,
+            "citation_success": 1.0,
+            "answer_match": 0.0,
+            "case_success": 1.0,
+            "case_status": "success",
+            "failure_label": "answer_mismatch"
+          }
+        }
+      ]
+    }
+  }
+}

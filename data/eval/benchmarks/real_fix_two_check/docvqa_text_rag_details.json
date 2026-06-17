@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "docvqa",
+    "sample_id": "docvqa_49168",
+    "question": "What time is the ‘coffee break’?",
+    "gold_answer": "11:14 to 11:39 a.m.",
+    "gold_answers": "11:14 to 11:39 a.m.|11.14 to 11.39 a.m.",
+    "gold_page": 1,
+    "prediction": "咖啡休息时间是上午11点14分，持续到11点39分。[E1]\n\nFinal answer: 上午11点14分至11点39分\n来源：[page=1, chunk=docvqa_49168_p1_c0001]",
+    "raw_prediction": "咖啡休息时间是上午11点14分，持续到11点39分。[E1]\n\nFinal answer: 上午11点14分至11点39分\n来源：[page=1, chunk=docvqa_49168_p1_c0001]",
+    "extracted_answer": "上午11点14分至11点39分",
+    "normalized_answer": "11:14 to 11:39 a.m",
+    "mode": "text_rag",
+    "em": 1.0,
+    "anls": 1.0,
+    "latency_ms": 18688.767499999813,
+    "answer_match": 1.0,
+    "failure_label": "ok",
+    "route": "text_route",
+    "ocr_text_chars": 1099,
+    "ocr_box_count": 61,
+    "region_chunk_count": 0,
+    "evidence_count": 1,
+    "top_evidence_types": "text",
+    "top_evidence_ids": "docvqa_49168_p1_c0001",
+    "top_evidence_image_paths": "",
+    "top_region_page_bboxes": "",
+    "chart_question_type": "",
+    "chart_numbers": "",
+    "chart_labels": ""
+  }
+]

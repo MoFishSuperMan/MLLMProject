@@ -1,0 +1,47 @@
+[
+  {
+    "mode": "text_rag",
+    "em": 0.0,
+    "anls": 0.0,
+    "recall_at_1": 0.5,
+    "recall_at_5": 0.75,
+    "mrr": 0.625,
+    "citation_accuracy": 0.75,
+    "latency_ms": 3.2878250003705034,
+    "count": 4.0,
+    "case_success_rate": 0.75,
+    "retrieval_success_rate": 0.75,
+    "citation_success_rate": 0.75,
+    "answer_match_rate": 0.0
+  },
+  {
+    "mode": "mm_rag",
+    "em": 0.0,
+    "anls": 0.0,
+    "recall_at_1": 0.25,
+    "recall_at_5": 0.75,
+    "mrr": 0.5,
+    "citation_accuracy": 0.25,
+    "latency_ms": 1.6548499988857657,
+    "count": 4.0,
+    "case_success_rate": 0.25,
+    "retrieval_success_rate": 0.75,
+    "citation_success_rate": 0.25,
+    "answer_match_rate": 0.0
+  },
+  {
+    "mode": "auto",
+    "em": 0.0,
+    "anls": 0.0,
+    "recall_at_1": 0.25,
+    "recall_at_5": 0.75,
+    "mrr": 0.5,
+    "citation_accuracy": 0.25,
+    "latency_ms": 1.0972749996653874,
+    "count": 4.0,
+    "case_success_rate": 0.25,
+    "retrieval_success_rate": 0.75,
+    "citation_success_rate": 0.25,
+    "answer_match_rate": 0.0
+  }
+]

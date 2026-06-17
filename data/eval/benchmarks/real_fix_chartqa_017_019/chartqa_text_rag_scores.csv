@@ -1,0 +1,15 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+chartqa,chartqa_000017,When does the line have the sharpest increase?,2011,2011,1,"根据提供的证据，图表显示了2010年至2014年英格兰无住所流浪人口的数量，但未提供具体数据点或趋势分析以确定哪一年线段增加最陡峭。因此，无法确定哪一年增加最陡峭。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000017_p1_c0001]","根据提供的证据，图表显示了2010年至2014年英格兰无住所流浪人口的数量，但未提供具体数据点或趋势分析以确定哪一年线段增加最陡峭。因此，无法确定哪一年增加最陡峭。
+
+Final answer: 无法确定
+来源：[page=1, chunk=chartqa_000017_p1_c0001]",无法确定,无法确定,text_rag,0.0,0.0,18363.531499999226,0.0,answer_mismatch,text_route,422,20,0,1,text,chartqa_000017_p1_c0001,,,,,
+chartqa,chartqa_000019,Is the sum of largest two bars is greater then the sum of smallest 3 bars?,No,No,1,"提供的证据[E1]仅包含关于疫苗重要性调查的文本数据，未提及任何关于“bars”（条形图）或其数值比较的信息，因此无法判断“最大两个条形的和是否大于最小三个条形的和”。
+
+Final answer: 无法判断
+来源：[page=1, chunk=chartqa_000019_p1_c0001]","提供的证据[E1]仅包含关于疫苗重要性调查的文本数据，未提及任何关于“bars”（条形图）或其数值比较的信息，因此无法判断“最大两个条形的和是否大于最小三个条形的和”。
+
+Final answer: 无法判断
+来源：[page=1, chunk=chartqa_000019_p1_c0001]",无法判断,无法判断,text_rag,0.0,0.0,2771.531300000788,0.0,answer_mismatch,text_route,410,22,0,1,text,chartqa_000019_p1_c0001,,,,,

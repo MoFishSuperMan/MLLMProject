@@ -1,0 +1,5 @@
+﻿sample_id,route,em,anls,recall_at_1,recall_at_5,mrr,citation_accuracy,latency_ms,question_type,gold_type,gold_page,top1_page,retrieved_pages,cited_pages,retrieval_success,citation_success,answer_match,case_success,case_status,failure_label
+course_req_001,text_route,0.0,0.0,1.0,1.0,1.0,1.0,3.6527000011119526,text,text,1,1,1|6|4|11|9,1|6|4,1.0,1.0,0.0,1.0,success,answer_mismatch
+course_req_002,text_route,0.0,0.0,0.0,1.0,0.5,1.0,3.4515000006649643,text,text,3,4,4|3|7|2|8,4|3|7,1.0,1.0,0.0,1.0,success,rerank_miss
+course_req_003,text_route,0.0,0.0,0.0,0.0,0.0,0.0,2.97599999976228,metric,text,8,1,1|10|5|2|9,1|10|5,0.0,0.0,0.0,0.0,failure,retrieval_miss
+course_req_004,text_route,0.0,0.0,1.0,1.0,1.0,1.0,3.071099999942817,text,text,3,3,3|2|7|4|9,3|2|7,1.0,1.0,0.0,1.0,success,answer_mismatch

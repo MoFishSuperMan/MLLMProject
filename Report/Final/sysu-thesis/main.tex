@@ -1,0 +1,33 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+
+\documentclass[
+    fontset=fandol,
+    degree=bachelor
+]{sysuthesis}
+
+\input{sysusetup.tex}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+\input{docs/abstract.tex}
+\tableofcontents
+
+\mainmatter
+\input{bodys/chap01.tex}
+\input{bodys/chap02.tex}
+\input{bodys/chap03.tex}
+\input{bodys/chap04.tex}
+\input{bodys/chap05.tex}
+\input{bodys/chap06.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+
+\appendix
+\input{docs/complementary.tex}
+
+\end{document}

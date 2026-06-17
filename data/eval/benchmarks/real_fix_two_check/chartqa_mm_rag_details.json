@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000009",
+    "question": "How many more people felt inspired frequently than depressed frequently?",
+    "gold_answer": "0.03",
+    "gold_answers": "0.03",
+    "gold_page": 1,
+    "prediction": "根据图表，感到“Inspired”（受到启发）且“Frequently”（经常）的比例是16%，而感到“Depressed”（抑郁）且“Frequently”（经常）的比例是13%。因此，感到受到启发且经常发生的人比感到抑郁且经常发生的人多16% - 13% = 3个百分点 [E1]。\n\nFinal answer: 3\n来源：[page=1, chunk=chartqa_000009_p1_chart_region]",
+    "raw_prediction": "根据图表，感到“Inspired”（受到启发）且“Frequently”（经常）的比例是16%，而感到“Depressed”（抑郁）且“Frequently”（经常）的比例是13%。因此，感到受到启发且经常发生的人比感到抑郁且经常发生的人多16% - 13% = 3个百分点 [E1]。\n\nFinal answer: 3\n来源：[page=1, chunk=chartqa_000009_p1_chart_region]",
+    "extracted_answer": "3",
+    "normalized_answer": "0.03",
+    "mode": "mm_rag",
+    "em": 1.0,
+    "anls": 1.0,
+    "latency_ms": 5172.7176000003965,
+    "answer_match": 1.0,
+    "failure_label": "ok",
+    "route": "hybrid_route",
+    "ocr_text_chars": 515,
+    "ocr_box_count": 38,
+    "region_chunk_count": 1,
+    "evidence_count": 1,
+    "top_evidence_types": "chart_region",
+    "top_evidence_ids": "chartqa_000009_p1_chart_region",
+    "top_evidence_image_paths": "data\\eval\\benchmarks\\real_fix_two_regions\\chartqa\\chartqa_000009\\chartqa_000009_p1_chart_region.png",
+    "top_region_page_bboxes": "[0, 6, 840, 784]",
+    "chart_question_type": "difference",
+    "chart_numbers": "44|88|25|47|71|21|49|16|53|69|13|36|24|31|29|11|2018",
+    "chart_labels": "Social media users experience a mix of positive,|negative emotions while using these platforms|% of social media users who say|see content on social media that|makes them feel|Frequently|Sometimes|NET|Amused|Angry|Connected|Inspired|Depressed|Lonely|Note: Respondents who did not give an answer or gave other answers are not shown:|Source: Survey of U.S. adults conducted|29-June 11,2018.|Public Attitudes Toward Computer Algorithms\"|PEW RESEARCH CENTER|they"
+  }
+]

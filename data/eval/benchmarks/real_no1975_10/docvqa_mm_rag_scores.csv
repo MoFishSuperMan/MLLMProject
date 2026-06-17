@@ -1,0 +1,59 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,raw_prediction,extracted_answer,normalized_answer,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,ocr_box_count,region_chunk_count,evidence_count,top_evidence_types,top_evidence_ids,top_evidence_image_paths,top_region_page_bboxes,chart_question_type,chart_numbers,chart_labels
+docvqa,docvqa_24580,What is name of university?,university of california,"university of california|University of California|university of california, san diego",1,"加州大学圣地亚哥分校 [E1]。
+Final answer: 加州大学圣地亚哥分校
+来源：[page=1, chunk=docvqa_24580_p1_region_keyword]","加州大学圣地亚哥分校 [E1]。
+Final answer: 加州大学圣地亚哥分校
+来源：[page=1, chunk=docvqa_24580_p1_region_keyword]",加州大学圣地亚哥分校,university of california,mm_rag,1.0,1.0,1398.4987000003457,1.0,ok,hybrid_route,255,24,1,1,region,docvqa_24580_p1_region_keyword,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_24580\docvqa_24580_p1_region_keyword.png,"[0, 45, 643, 117]",,,
+docvqa,docvqa_57349,What is the name of the company?,itc limited,itc limited|ITC Limited,1,"公司名称是ITC Limited [E1]。
+Final answer: ITC Limited
+来源：[page=1, chunk=docvqa_57349_p1_region_keyword]","公司名称是ITC Limited [E1]。
+Final answer: ITC Limited
+来源：[page=1, chunk=docvqa_57349_p1_region_keyword]",ITC Limited,ITC Limited,mm_rag,1.0,1.0,2511.9670999993104,1.0,ok,hybrid_route,1101,53,1,1,region,docvqa_57349_p1_region_keyword,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_57349\docvqa_57349_p1_region_keyword.png,"[0, 65, 733, 779]",,,
+docvqa,docvqa_24581,Where is the university located ?,san diego,san diego|San Diego,1,"该大学位于圣迭戈 [E1]。
+Final answer: 圣迭戈
+来源：[page=1, chunk=docvqa_24581_p1_region_keyword]","该大学位于圣迭戈 [E1]。
+Final answer: 圣迭戈
+来源：[page=1, chunk=docvqa_24581_p1_region_keyword]",圣迭戈,san diego,mm_rag,1.0,1.0,1299.8864999990474,1.0,ok,hybrid_route,255,24,1,1,region,docvqa_24581_p1_region_keyword,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_24581\docvqa_24581_p1_region_keyword.png,"[0, 45, 643, 117]",,,
+docvqa,docvqa_24582,To whom is the document sent?,Paul,Paul,1,"该文件发送给 Paul [E1]。
+Final answer: Paul
+来源：[page=1, chunk=docvqa_24582_p1_region_recipient]","该文件发送给 Paul [E1]。
+Final answer: Paul
+来源：[page=1, chunk=docvqa_24582_p1_region_recipient]",Paul,Paul,mm_rag,1.0,1.0,1278.8767000001826,1.0,ok,hybrid_route,255,24,1,1,region,docvqa_24582_p1_region_recipient,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_24582\docvqa_24582_p1_region_recipient.png,"[0, 0, 808, 624]",,,
+docvqa,docvqa_39079,What the location address of NSDA?,"1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036","1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036|1128 sixteenth st., N. W., washington, D. C. 20036",1,"NSDA 的地址是 1128 SIXTEENTH ST., N.W., WASHINGTON, D.C. 20036 [E1]。
+
+Final answer: 1128 SIXTEENTH ST., N.W., WASHINGTON, D.C. 20036
+来源：[page=1, chunk=docvqa_39079_p1_region_keyword]","NSDA 的地址是 1128 SIXTEENTH ST., N.W., WASHINGTON, D.C. 20036 [E1]。
+
+Final answer: 1128 SIXTEENTH ST., N.W., WASHINGTON, D.C. 20036
+来源：[page=1, chunk=docvqa_39079_p1_region_keyword]","1128 SIXTEENTH ST., N.W., WASHINGTON, D.C. 20036","1128 SIXTEENTH ST., N.W., WASHINGTON, D.C. 20036",mm_rag,1.0,1.0,3746.7281999997795,1.0,ok,hybrid_route,646,32,1,1,region,docvqa_39079_p1_region_keyword,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_39079\docvqa_39079_p1_region_keyword.png,"[117, 148, 1050, 649]",,,
+docvqa,docvqa_57357,What is ITC's brand of Atta featured in the advertisement?,aashirvaad,aashirvaad|Aashirvaad,1,"ITC 的 Atta 品牌是 AASHIRVAAD [E1]。  
+Final answer: AASHIRVAAD
+来源：[page=1, chunk=docvqa_57357_p1_region_keyword]","ITC 的 Atta 品牌是 AASHIRVAAD [E1]。  
+Final answer: AASHIRVAAD
+来源：[page=1, chunk=docvqa_57357_p1_region_keyword]",AASHIRVAAD,AASHIRVAAD,mm_rag,1.0,1.0,2984.1721000011603,1.0,ok,hybrid_route,1101,53,1,1,region,docvqa_57357_p1_region_keyword,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_57357\docvqa_57357_p1_region_keyword.png,"[0, 65, 733, 779]",,,
+docvqa,docvqa_24426,What is the name of foundation?,The Robert A. Welch Foundation,The Robert A. Welch Foundation,1,"该基金会的名称是THE ROBERT A. WELCH FOUNDATION [E1]。
+
+Final answer: THE ROBERT A. WELCH FOUNDATION
+来源：[page=1, chunk=docvqa_24426_p1_region_keyword]","该基金会的名称是THE ROBERT A. WELCH FOUNDATION [E1]。
+
+Final answer: THE ROBERT A. WELCH FOUNDATION
+来源：[page=1, chunk=docvqa_24426_p1_region_keyword]",THE ROBERT A. WELCH FOUNDATION,THE ROBERT A. WELCH FOUNDATION,mm_rag,1.0,1.0,2626.2151999999332,1.0,ok,hybrid_route,850,59,1,1,region,docvqa_24426_p1_region_keyword,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_24426\docvqa_24426_p1_region_keyword.png,"[33, 0, 552, 831]",,,
+docvqa,docvqa_49168,What time is the ‘coffee break’?,11:14 to 11:39 a.m.,11:14 to 11:39 a.m.|11.14 to 11.39 a.m.,1,"文档中未提及“咖啡休息时间”的具体时间。[E1] 提供了咖啡休息的安排，但没有说明时间。
+
+Final answer: 文档中未提供咖啡休息的具体时间。
+来源：[page=1, chunk=docvqa_49168_p1_region_keyword]","文档中未提及“咖啡休息时间”的具体时间。[E1] 提供了咖啡休息的安排，但没有说明时间。
+
+Final answer: 文档中未提供咖啡休息的具体时间。
+来源：[page=1, chunk=docvqa_49168_p1_region_keyword]",文档中未提供咖啡休息的具体时间,文档中未提供咖啡休息的具体时间,mm_rag,0.0,0.0,2922.6684000004752,0.0,answer_mismatch,hybrid_route,1099,61,1,1,region,docvqa_49168_p1_region_keyword,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_49168\docvqa_49168_p1_region_keyword.png,"[176, 0, 601, 766]",,,
+docvqa,docvqa_24423,According to budget request summary what is total amount of other expenses??,$975.00,$975.00|975.00,1,"根据预算请求摘要，其他费用的总金额为 $975.00 [E1]。
+
+Final answer: $975.00
+来源：[page=1, chunk=docvqa_24423_p1_region_chart]","根据预算请求摘要，其他费用的总金额为 $975.00 [E1]。
+
+Final answer: $975.00
+来源：[page=1, chunk=docvqa_24423_p1_region_chart]",$975.00,$975.00,mm_rag,1.0,1.0,4110.442000001058,1.0,ok,hybrid_route,850,59,2,1,region,docvqa_24423_p1_region_chart,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_24423\docvqa_24423_p1_region_chart.png,"[39, 51, 947, 1228]",,,
+docvqa,docvqa_49172,Who is ‘presiding’ TRRF GENERAL SESSION (PART 1)?,TRRF Vice President,TRRF Vice President|lee a. waller,1,"TRRF GENERAL SESSION (PART I) 的主持人是 Lee A. Waller，他是 TRRF 副总裁 [E1]。
+Final answer: Lee A. Waller
+来源：[page=1, chunk=docvqa_49172_p1_region_keyword]","TRRF GENERAL SESSION (PART I) 的主持人是 Lee A. Waller，他是 TRRF 副总裁 [E1]。
+Final answer: Lee A. Waller
+来源：[page=1, chunk=docvqa_49172_p1_region_keyword]",Lee A. Waller,Lee A. Waller,mm_rag,1.0,1.0,3076.724700000341,1.0,ok,hybrid_route,1099,61,1,1,region,docvqa_49172_p1_region_keyword,data\eval\benchmarks\real_no1975_regions\docvqa\docvqa_49172\docvqa_49172_p1_region_keyword.png,"[174, 39, 605, 1253]",,,

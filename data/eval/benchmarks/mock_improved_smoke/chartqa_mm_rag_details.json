@@ -1,0 +1,31 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000000",
+    "question": "How many food item is shown in the bar graph?",
+    "gold_answer": "14",
+    "gold_answers": "14",
+    "gold_page": 1,
+    "prediction": "答案：根据检索到的证据，ChartQA region for question: How many food item is shown in the bar graph? Question type: count Chart page bbox: [0, 3, 847, 597] Candidate numbers: 1850, -2015, 1934, 0, 1900, ...\n来源：[page=1, chunk=chartqa_000000_p1_chart_region]",
+    "raw_prediction": "答案：根据检索到的证据，ChartQA region for question: How many food item is shown in the bar graph? Question type: count Chart page bbox: [0, 3, 847, 597] Candidate numbers: 1850, -2015, 1934, 0, 1900, ...\n来源：[page=1, chunk=chartqa_000000_p1_chart_region]",
+    "extracted_answer": "0",
+    "mode": "mm_rag",
+    "em": 0.0,
+    "anls": 0.0,
+    "latency_ms": 0.6048999994163751,
+    "answer_match": 0.0,
+    "failure_label": "answer_mismatch",
+    "route": "hybrid_route",
+    "ocr_text_chars": 454,
+    "ocr_box_count": 42,
+    "region_chunk_count": 1,
+    "evidence_count": 1,
+    "top_evidence_types": "chart_region",
+    "top_evidence_ids": "chartqa_000000_p1_chart_region",
+    "top_evidence_image_paths": "data\\eval\\benchmarks\\mock_improved_regions\\chartqa\\chartqa_000000\\chartqa_000000_p1_chart_region.png",
+    "top_region_page_bboxes": "[0, 3, 847, 597]",
+    "chart_question_type": "count",
+    "chart_numbers": "1850|-2015|1934|0|1900|100|103|103.13|102.45|87.37|85.27|83.73|82.2|68.48|64.71|57.6|55.36|42.48|25.56|18.81|20|2016",
+    "chart_labels": "Long-term|index in food commodities, 1850-2015, World, 1934|Our World|Data|Commodity price index in food items dating 1850-2015,|measured relative t0 real prices in 1900 (ie. 1900|100).|Lamb|103.|Corn|Barley|Rye|Beef|Wheat|Coffee|Tea|Peanuts|Palm oil|Pork|Rice"
+  }
+]

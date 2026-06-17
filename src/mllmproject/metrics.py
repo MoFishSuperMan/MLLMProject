@@ -58,25 +58,38 @@ def anls(prediction: str, gold: str, threshold: float = 0.5) -> float:
     return score if score >= threshold else 0.0
 
 
-def recall_at_k(retrieved_pages: list[int], gold_page: int | None, k: int) -> float:
-    if gold_page is None:
+def normalize_gold_pages(gold_page: int | None = None, gold_pages: list[int] | None = None) -> list[int]:
+    pages: list[int] = []
+    for page in gold_pages or []:
+        if page is not None and int(page) not in pages:
+            pages.append(int(page))
+    if gold_page is not None and int(gold_page) not in pages:
+        pages.append(int(gold_page))
+    return pages
+
+
+def recall_at_k(retrieved_pages: list[int], gold_page: int | None, k: int, gold_pages: list[int] | None = None) -> float:
+    targets = normalize_gold_pages(gold_page, gold_pages)
+    if not targets:
         return 0.0
-    return 1.0 if gold_page in retrieved_pages[:k] else 0.0
+    return 1.0 if any(page in retrieved_pages[:k] for page in targets) else 0.0
 
 
-def reciprocal_rank(retrieved_pages: list[int], gold_page: int | None) -> float:
-    if gold_page is None:
+def reciprocal_rank(retrieved_pages: list[int], gold_page: int | None, gold_pages: list[int] | None = None) -> float:
+    targets = set(normalize_gold_pages(gold_page, gold_pages))
+    if not targets:
         return 0.0
     for index, page in enumerate(retrieved_pages, start=1):
-        if page == gold_page:
+        if page in targets:
             return 1.0 / index
     return 0.0
 
 
-def citation_accuracy(cited_pages: list[int], gold_page: int | None) -> float:
-    if gold_page is None:
+def citation_accuracy(cited_pages: list[int], gold_page: int | None, gold_pages: list[int] | None = None) -> float:
+    targets = set(normalize_gold_pages(gold_page, gold_pages))
+    if not targets:
         return 0.0
-    return 1.0 if gold_page in cited_pages else 0.0
+    return 1.0 if any(page in targets for page in cited_pages) else 0.0
 
 
 def score_prediction(prediction: EvalPrediction) -> dict[str, Any]:
@@ -85,10 +98,10 @@ def score_prediction(prediction: EvalPrediction) -> dict[str, Any]:
         "route": prediction.route,
         "em": exact_match(prediction.predicted_answer, prediction.gold_answer),
         "anls": anls(prediction.predicted_answer, prediction.gold_answer),
-        "recall_at_1": recall_at_k(prediction.retrieved_pages, prediction.gold_page, 1),
-        "recall_at_5": recall_at_k(prediction.retrieved_pages, prediction.gold_page, 5),
-        "mrr": reciprocal_rank(prediction.retrieved_pages, prediction.gold_page),
-        "citation_accuracy": citation_accuracy(prediction.cited_pages, prediction.gold_page),
+        "recall_at_1": recall_at_k(prediction.retrieved_pages, prediction.gold_page, 1, prediction.gold_pages),
+        "recall_at_5": recall_at_k(prediction.retrieved_pages, prediction.gold_page, 5, prediction.gold_pages),
+        "mrr": reciprocal_rank(prediction.retrieved_pages, prediction.gold_page, prediction.gold_pages),
+        "citation_accuracy": citation_accuracy(prediction.cited_pages, prediction.gold_page, prediction.gold_pages),
         "latency_ms": prediction.latency_ms,
     }
 

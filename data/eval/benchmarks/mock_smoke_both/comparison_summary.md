@@ -1,0 +1,8 @@
+# DocVQA/ChartQA RAG Comparison
+
+| Dataset | Mode | Count | EM | ANLS | Answer Match | Latency ms |
+|---|---:|---:|---:|---:|---:|---:|
+| chartqa | mm_rag | 1 | 0.0000 | 0.0000 | 0.0000 | 0.30 |
+| chartqa | text_rag | 1 | 0.0000 | 0.0000 | 0.0000 | 0.23 |
+| docvqa | mm_rag | 1 | 0.0000 | 0.0000 | 0.0000 | 0.31 |
+| docvqa | text_rag | 1 | 0.0000 | 0.0000 | 0.0000 | 0.28 |

@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "chartqa",
+    "sample_id": "chartqa_000009",
+    "question": "How many more people felt inspired frequently than depressed frequently?",
+    "gold_answer": "0.03",
+    "gold_answers": "0.03",
+    "gold_page": 1,
+    "prediction": "根据证据[E1]，经常感到“受启发”的用户比例为16%，而经常感到“抑郁”的用户比例为13%。因此，感到受启发的用户比感到抑郁的用户多16% - 13% = 3个百分点。\n\nFinal answer: 3\n来源：[page=1, chunk=chartqa_000009_p1_c0001]",
+    "raw_prediction": "根据证据[E1]，经常感到“受启发”的用户比例为16%，而经常感到“抑郁”的用户比例为13%。因此，感到受启发的用户比感到抑郁的用户多16% - 13% = 3个百分点。\n\nFinal answer: 3\n来源：[page=1, chunk=chartqa_000009_p1_c0001]",
+    "extracted_answer": "3",
+    "normalized_answer": "0.03",
+    "mode": "text_rag",
+    "em": 1.0,
+    "anls": 1.0,
+    "latency_ms": 3048.536399999648,
+    "answer_match": 1.0,
+    "failure_label": "ok",
+    "route": "text_route",
+    "ocr_text_chars": 515,
+    "ocr_box_count": 38,
+    "region_chunk_count": 0,
+    "evidence_count": 1,
+    "top_evidence_types": "text",
+    "top_evidence_ids": "chartqa_000009_p1_c0001",
+    "top_evidence_image_paths": "",
+    "top_region_page_bboxes": "",
+    "chart_question_type": "",
+    "chart_numbers": "",
+    "chart_labels": ""
+  }
+]

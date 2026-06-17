@@ -12,7 +12,8 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from mllmproject.evaluation import label_failure, run_comparison, run_evaluation
+from mllmproject.evaluation import label_failure, normalize_gold_pages_from_sample, run_comparison, run_evaluation
+from mllmproject.metrics import citation_accuracy, recall_at_k, reciprocal_rank
 
 
 class EvaluationFrameworkTest(unittest.TestCase):
@@ -83,6 +84,12 @@ class EvaluationFrameworkTest(unittest.TestCase):
             ),
             "answer_mismatch",
         )
+
+    def test_metrics_accept_multiple_gold_pages(self) -> None:
+        self.assertEqual(recall_at_k([11, 4], gold_page=1, k=1, gold_pages=[1, 11]), 1.0)
+        self.assertEqual(reciprocal_rank([4, 10], gold_page=None, gold_pages=[10]), 0.5)
+        self.assertEqual(citation_accuracy([11], gold_page=1, gold_pages=[1, 11]), 1.0)
+        self.assertEqual(normalize_gold_pages_from_sample({"gold_page": 1, "gold_pages": [1, 11]}), [1, 11])
 
     def _write_fixture(self, root: Path) -> tuple[Path, Path]:
         doc = root / "demo.txt"

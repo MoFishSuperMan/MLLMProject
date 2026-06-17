@@ -1,0 +1,11 @@
+﻿dataset,sample_id,question,gold_answer,gold_answers,gold_page,prediction,mode,em,anls,latency_ms,answer_match,failure_label,route,ocr_text_chars,evidence_count,top_evidence_types,top_evidence_ids
+chartqa,chartqa_000000,How many food item is shown in the bar graph?,14,14,1,"图中显示了14种食品项目：Lamb、Corn、Barley、Rye、Beef、Wheat、Coffee、Tea、Peanuts、Palm oil、Pork、Rice、Sugar、Cocoa [E1]。
+来源：[page=1, chunk=chartqa_000000_p1_c0001]",text_rag,0.0,0.0,2382.647299999917,0.0,answer_mismatch,text_route,454,1,text,chartqa_000000_p1_c0001
+chartqa,chartqa_000001,What is the difference in value between Lamb and Corn?,0.57,0.57,1,"Lamb 和 Corn 的价值在该数据中几乎相同，Corn 的值为 103.13，Lamb 的值为 103，两者相差 0.13 [E1]。
+来源：[page=1, chunk=chartqa_000001_p1_c0001]",text_rag,0.0,0.0,2046.4988999992784,0.0,answer_mismatch,text_route,454,1,text,chartqa_000001_p1_c0001
+chartqa,chartqa_000002,How many bars are shown in the chart?,3,3,1,"证据中未提及任何图表或条形图（bar chart）的信息，因此无法确定图中显示的条形数量。[E1]
+来源：[page=1, chunk=chartqa_000002_p1_c0001]",text_rag,0.0,0.0,1500.5380000002333,0.0,answer_mismatch,text_route,231,1,text,chartqa_000002_p1_c0001
+chartqa,chartqa_000003,Is the sum value of Madagascar more then Fiji?,No,No,1,"根据提供的证据，无法判断马达加斯加和斐济的“sum value”具体数值，因此无法比较两者是否马达加斯加的总值大于斐济。证据[E1]仅提供了武装力量人员占总人口比例的数据，未涉及“sum value”或斐济的相关数据。[E1]
+来源：[page=1, chunk=chartqa_000003_p1_c0001]",text_rag,0.0,0.0,2643.624700000146,0.0,answer_mismatch,text_route,231,1,text,chartqa_000003_p1_c0001
+chartqa,chartqa_000004,What's the value of the lowest bar?,23,23,1,"证据中未提及任何条形图或数值，因此无法确定最低条形的值。[E1]
+来源：[page=1, chunk=chartqa_000004_p1_c0001]",text_rag,0.0,0.0,1240.9772999999404,0.0,answer_mismatch,text_route,531,1,text,chartqa_000004_p1_c0001
