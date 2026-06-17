@@ -81,12 +81,3 @@ Thumbs.db
 desktop.ini
 .idea/
 .vscode/
-
-
-.uv-cache/
-
-data/
-
-docs/
-
-output/

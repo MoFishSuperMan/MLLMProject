@@ -1,0 +1,44 @@
+\chapter{附录：运行与验收说明}
+
+\section{后端启动}
+
+真实模型联调时，可使用如下命令启动后端：
+
+\begin{lstlisting}
+$env:MLLMPROJECT_USE_REAL_MODELS="1"
+$env:MLLMPROJECT_QWEN3_MODEL_PATH="model"
+python -m uvicorn mllmproject.api:app --host 127.0.0.1 --port 8000
+\end{lstlisting}
+
+无 GPU 或不需要真实模型时，可使用默认 mock backend 运行前后端流程。
+
+\section{前端启动}
+
+\begin{lstlisting}
+cd frontend
+npm.cmd install
+npm.cmd run dev
+\end{lstlisting}
+
+浏览器访问 http://127.0.0.1:5173，即可使用上传、解析、知识库 chunk、PDF 预览和问答功能。
+
+\section{评测命令}
+
+\begin{lstlisting}
+python scripts/run_benchmark_eval.py --mode text-rag
+python scripts/run_benchmark_eval.py --mode mm-rag
+\end{lstlisting}
+
+评测结果保存到 data/eval/benchmarks/ 与 data/eval/results/。最终报告中的 20+20 结果来自仓库内已保存的评测输出。
+
+\section{提交物}
+
+本项目提交物包括：
+
+\begin{itemize}
+  \item 项目代码仓库与 README 运行说明。
+  \item React + FastAPI Web Demo。
+  \item 命令行评测脚本与实验结果。
+  \item 开题报告、期末报告与展示 PPT。
+  \item Demo 录屏材料。
+\end{itemize}
