@@ -11,7 +11,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from mllmproject.answer_extraction import extract_short_answer, normalize_entity_answer
+from mllmproject.answer_extraction import extract_short_answer, normalize_short_answer
 from mllmproject.chart_preprocess import build_chart_candidate, chart_region_content
 from mllmproject.chunking import chunk_pages
 from mllmproject.io_utils import ensure_dir, write_csv, write_json
@@ -57,7 +57,7 @@ class BenchmarkSample:
     metadata: dict[str, Any]
 
     @property
-    def gold_answer(self) -> str:
+    def reference_answer(self) -> str:
         return self.answers[0] if self.answers else ""
 
 
@@ -339,7 +339,7 @@ def run_mode(
     result, latency_ms = pipeline.answer(sample.question, mode=mode, top_k=top_k)
     raw_prediction = result.answer
     extracted_answer = extract_short_answer(raw_prediction, sample.question)
-    normalized_answer = normalize_for_gold(extracted_answer, sample.answers, sample.question)
+    normalized_answer = normalize_prediction(extracted_answer, sample.question)
     score = score_answer(normalized_answer, sample.answers, sample.question)
     failure_label = label_failure(result.evidences, score)
     chart_metadata = first_chart_metadata(result.evidences)
@@ -347,9 +347,9 @@ def run_mode(
         "dataset": sample.dataset,
         "sample_id": sample.sample_id,
         "question": sample.question,
-        "gold_answer": sample.gold_answer,
-        "gold_answers": "|".join(sample.answers),
-        "gold_page": 1,
+        "reference_answer": sample.reference_answer,
+        "reference_answers": "|".join(sample.answers),
+        "reference_page": 1,
         "prediction": raw_prediction,
         "raw_prediction": raw_prediction,
         "extracted_answer": extracted_answer,
@@ -380,9 +380,8 @@ def run_mode(
 def score_answer(prediction: str, answers: list[str], question: str = "") -> dict[str, float]:
     if not answers:
         return {"em": 0.0, "anls": 0.0, "answer_match": 0.0}
-    normalized_answers = [normalize_entity_answer(answer, question) for answer in answers]
-    em_score = max(exact_match(prediction, answer) for answer in normalized_answers)
-    anls_score = max(anls(prediction, answer) for answer in normalized_answers)
+    em_score = max(exact_match(prediction, answer) for answer in answers)
+    anls_score = max(anls(prediction, answer) for answer in answers)
     return {
         "em": float(em_score),
         "anls": float(anls_score),
@@ -390,90 +389,10 @@ def score_answer(prediction: str, answers: list[str], question: str = "") -> dic
     }
 
 
-def normalize_for_gold(prediction: str, answers: list[str], question: str = "") -> str:
-    normalized = normalize_entity_answer(prediction, question)
-    for answer in answers:
-        gold = normalize_entity_answer(answer, question)
-        if entity_substring_equivalent(normalized, gold, question):
-            return gold
-        if numeric_equivalent(normalized, gold, question):
-            return gold
-    return normalized
+def normalize_prediction(prediction: str, question: str = "") -> str:
+    """Apply answer-side cleanup without using reference answers."""
 
-
-def entity_substring_equivalent(prediction: str, gold: str, question: str = "") -> bool:
-    pred_key = compact_alnum(prediction)
-    gold_key = compact_alnum(gold)
-    if not pred_key or not gold_key or pred_key == gold_key:
-        return False
-    if len(gold_key) < 4:
-        return False
-    if gold_key not in pred_key:
-        return False
-    lowered = question.lower()
-    entity_hints = (
-        "advertise",
-        "advertised",
-        "advertisement",
-        "brand",
-        "company",
-        "name",
-        "product",
-        "title",
-        "whose",
-        "which",
-        "what is the name",
-    )
-    return any(hint in lowered for hint in entity_hints)
-
-
-def compact_alnum(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "", str(text).lower())
-
-
-def numeric_equivalent(prediction: str, gold: str, question: str = "") -> bool:
-    pred_number = first_number(prediction)
-    gold_number = first_number(gold)
-    if pred_number is None or gold_number is None:
-        return False
-    if abs(pred_number - gold_number) <= 1e-9:
-        return True
-    lowered = question.lower()
-    if any(hint in lowered for hint in ("percent", "percentage", "how many more", "how much more", "difference")):
-        if pred_number > 1 and 0 < gold_number <= 1 and abs((pred_number / 100.0) - gold_number) <= 1e-9:
-            return True
-        if gold_number > 1 and 0 < pred_number <= 1 and abs(pred_number - (gold_number / 100.0)) <= 1e-9:
-            return True
-    if relaxed_numeric_tolerance(question) and abs(pred_number - gold_number) <= 0.1 + 1e-9:
-        return True
-    return False
-
-
-def relaxed_numeric_tolerance(question: str = "") -> bool:
-    lowered = question.lower()
-    hints = (
-        "average",
-        "mean",
-        "round",
-        "approximately",
-        "about",
-        "estimate",
-        "value",
-        "difference",
-        "how many more",
-        "how much more",
-    )
-    return any(hint in lowered for hint in hints)
-
-
-def first_number(text: str) -> float | None:
-    match = re.search(r"[-+]?\d+(?:\.\d+)?", str(text))
-    if not match:
-        return None
-    try:
-        return float(match.group(0))
-    except ValueError:
-        return None
+    return normalize_short_answer(prediction)
 
 
 def label_failure(evidences: list[Any], score: dict[str, float]) -> str:
@@ -593,8 +512,8 @@ def main() -> None:
                     "dataset": sample.dataset,
                     "sample_id": sample.sample_id,
                     "question": sample.question,
-                    "gold_answers": sample.answers,
-                    "gold_page": 1,
+                    "reference_answers": sample.answers,
+                    "reference_page": 1,
                     "image_path": str(image_path),
                     "ocr_text_chars": len(ocr_text),
                     "ocr_box_count": len(ocr_result.boxes),

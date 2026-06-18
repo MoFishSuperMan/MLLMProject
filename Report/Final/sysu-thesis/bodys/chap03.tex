@@ -2,7 +2,7 @@
 
 \section{总体架构}
 
-系统总体采用“文档解析-Embedding 与 Fusion-向量检索-Reranker 重排-路由决策-多模态生成-PDF 高亮溯源”的流水线。用户上传 PDF 或图片后，后端首先解析页面文本、页面图、表格、图像和局部区域；随后按 text、table、figure、code 等类型构建结构化 chunk，并通过统一文本-图像 embedding 接口建立索引。查询阶段，系统先通过 auto 路由或手动模式选择 Text-RAG、MM-RAG 或 ChartQA 专用路径，再召回与重排证据，最后由生成模型输出答案和引用信息。前端负责展示知识库 chunk、连续 PDF 预览和答案高亮区域。
+系统总体采用“文档解析-多模态向量化-检索重排-GRPO 决策模型-多模态生成-PDF 高亮溯源”的流程。用户上传 PDF 或图片后，后端首先完成页面解析、页面图渲染、表格识别、局部视觉区域抽取和结构化 chunk 构建；查询阶段，系统通过检索和重排获得候选证据，再由 GRPO 训练得到的决策模型选择更合适的 LLM/VLM 与证据组织方式，最后生成答案并把引用位置映射回前端 PDF 预览界面。
 
 \begin{figure}[htbp]
   \centering
@@ -11,105 +11,121 @@
   \label{fig:system_architecture}
 \end{figure}
 
-图 \ref{fig:system_architecture} 展示了开题阶段设计的总体架构。期末实现保留了其中“多模态知识库+检索重排+路由生成+溯源展示”的主线，但做了工程化调整：GRPO 学习式路由没有完整训练，而是实现为 GRPO-style auto router、候选 VLM 打分和策略更新钩子；多模态向量化没有训练大型跨模态模型，而是实现统一文本-图像 embedding 接口、轻量图像特征和可选 Native ViT 图像编码器；前端从单页/单 chunk 展示调整为连续 PDF 预览和区域高亮。
+如图 \ref{fig:system_architecture} 所示，系统可以分为五个层次：
+
+\begin{itemize}
+  \item \textbf{文档解析层}：负责把 PDF、扫描件和图片转换为页面文本、页面图、表格、图像区域和坐标信息，是后续检索与视觉理解的基础。
+  \item \textbf{知识索引层}：把 text、table、figure、code 等不同类型的 chunk 统一保存，并为文本、表格 Markdown 和视觉区域建立 embedding。
+  \item \textbf{检索重排层}：先通过向量检索召回候选 evidence，再使用 Reranker 对候选证据进行二次排序，减少无关内容进入生成阶段。
+  \item \textbf{决策生成层}：通过 GRPO 强化学习训练决策模型，使其根据问题类型、候选证据和历史奖励选择最合适的 LLM/VLM 来回答。
+  \item \textbf{前端溯源层}：展示文件、chunk、问答结果和连续 PDF 预览，并根据后端返回的 page、bbox 和 evidence id 在原文档中绘制高亮。
+\end{itemize}
+
+这一架构的核心思想是把“回答问题”和“找到证据”同时纳入系统流程。对于纯文本问题，系统主要依赖文本 chunk 和文本生成模型；对于图表、表格、票据、广告和截图类问题，系统会引入页面图、局部 crop 和 VLM；对于边界问题，则由 GRPO 决策模型在候选 LLM/VLM 和上下文组织方式之间进行选择。
 
 \section{文档解析实现}
 
-文档解析对应第二章中的“文档解析与 OCR”组件，主要由 ingest.py 模块实现。对于 PDF 文件，系统使用 PyMuPDF 抽取每页文本，并将每页渲染为 PNG 页面图；对于图片文件，系统直接将其视为单页文档。解析后，每一页都包含页码、页面文本、页面图路径、页面宽度和页面高度。
+文档解析模块主要解决“知识从哪里来”的问题。系统需要把用户上传的 PDF 或图片转换为后续可以检索、可以送入模型、可以回到原文档高亮的结构化 evidence。该模块主要由页面解析、区域抽取、chunk 构建和坐标保存四个步骤组成。
 
-在此基础上，系统将页面内容进一步切分为 chunk。文本 chunk 只保留普通段落文本；代码段会被识别为 code chunk；表格区域会被 PyMuPDF 表格检测抽出并转换为 Markdown table，作为 table chunk 入库；页面图片、图表和公式区域会被裁剪为 figure 或 formula chunk。已识别的表格、图片和公式区域会从普通页面文本中排除，避免同一内容既污染 text chunk，又作为结构化 chunk 重复出现。这里的 bbox、image path、page width 和 page height 都使用普通字段保存，前端可以据此把证据位置映射回 PDF 页面。
+\begin{itemize}
+  \item \textbf{页面级解析}：对于 PDF 文件，系统使用 PyMuPDF 按页抽取文本，并将每一页渲染为 PNG 页面图；对于图片文件，系统将其视为单页文档处理。解析后，每页都会保留页码、页面文本、页面图路径、页面宽度和页面高度。
+  \item \textbf{版面区域抽取}：系统在页面级文本基础上进一步识别普通段落、代码块、表格、图片、图表和公式区域。普通段落形成 text chunk，代码段形成 code chunk，图片和图表区域形成 figure chunk，公式区域可以作为独立视觉 evidence 保存。
+  \item \textbf{表格结构化}：表格区域通过 PyMuPDF 的表格检测能力抽取，并转换为 Markdown table。这样做可以保留表格的行列结构，使表格既可以参与文本检索，也可以在生成阶段作为结构化上下文输入。
+  \item \textbf{重复内容过滤}：已识别的表格、图片和公式区域会从普通页面文本中排除，避免同一内容既以 text chunk 入库，又以 table 或 figure chunk 重复入库，从而减少检索噪声。
+  \item \textbf{坐标与溯源字段}：每个 chunk 都保存 page、bbox、image path、page width 和 page height 等字段。前端在展示证据时，可以根据这些字段把 evidence 映射回原始 PDF 页面。
+\end{itemize}
 
-文档解析模块解决的是“知识从哪里来”的问题。它不仅为后续 embedding 提供文本，也为 VLM 提供页面图和局部视觉区域，是 Text-RAG 与 MM-RAG 共用的基础。
+经过解析后，一个文档不再只是普通文本集合，而是由“页面-区域-chunk-evidence”组成的结构化知识库。文本信息用于语义召回，页面图和局部 crop 用于 VLM 视觉理解，bbox 和页面尺寸用于前端高亮。这种设计使 Text-RAG 与 Our-RAG 可以共享同一套文档基础表示。
+
+为了保证后续模块能够稳定使用解析结果，系统在 chunk 层面统一保存以下几类字段：
+
+\begin{itemize}
+  \item \textbf{内容字段}：包括 chunk text、OCR text、table Markdown、figure caption 或代码文本，用于检索、重排和 prompt 构建。
+  \item \textbf{位置字段}：包括 page、bbox、page width 和 page height，用于把 evidence 从模型输入重新映射到 PDF 页面。
+  \item \textbf{视觉字段}：包括 page image path、crop path 和 region type，用于在 VLM 推理时读取局部图像。
+  \item \textbf{类型字段}：包括 document id、chunk id、source type 和 modality，用于区分 text、table、figure、formula 和 code 等不同证据来源。
+\end{itemize}
+
+这种字段设计避免了“检索时只知道文本，展示时找不到位置”的问题。后端在每次问答中都可以沿着 evidence id 找回原始页面、局部图像和高亮坐标，前端也可以在不理解模型内部逻辑的情况下完成可视化溯源。
 
 \section{Embedding 与 Fusion 实现}
 
-Embedding 对应语义向量化功能，主要由 model\_stack.py、real\_models.py 和 multimodal\_embeddings.py 管理。真实模型模式下，系统使用 BGE-M3 生成文本 chunk 的向量表示，并使用 FAISS 建立向量索引。图像侧默认使用轻量图像特征编码器，将颜色、比例、视觉 token 等信息映射为向量；如果配置了图像 embedding 模型，也可以使用 Native ViT 图像编码器。用户问题到来后，问题同样被编码为向量，用于和知识库 chunk 进行相似度匹配。
+Embedding 模块负责把不同来源的 evidence 转换为可检索的向量表示。系统并不把文本、表格和图像割裂成三个互不相关的库，而是通过统一的 embedding 接口组织多模态证据，使后续检索可以同时考虑语义文本和视觉区域。
 
-Fusion 的实现分为两层。第一层是向量层融合：统一文本-图像 embedder 会把文本向量和图像向量按权重融合，并在 metadata 中记录 embedding modalities 与 embedding space。第二层是 evidence 层融合：一个 evidence 可以同时包含文本内容、页码、页面图路径、bbox、OCR 文本、局部 crop、表格 Markdown 和来源类型。这样做的好处是：检索阶段可以利用统一向量空间快速召回，生成阶段可以把对应页面图、局部 crop 或表格结构交给 VLM 进一步理解。
+\begin{itemize}
+  \item \textbf{文本向量化}：文本 chunk、OCR 文本和表格 Markdown 使用 BGE-M3 生成向量表示。BGE-M3 对中文、英文和长文本都有较好的语义表示能力，适合作为文档问答中的基础文本 embedder。
+  \item \textbf{表格向量化}：表格不直接以截图形式入库，而是先转换为 Markdown table，再进行文本向量化。这样可以让问题中的行名、列名、时间、数值和单位与表格结构产生语义匹配。
+  \item \textbf{图像向量化}：图像侧使用轻量视觉特征或 Native ViT 图像编码器提取视觉向量。视觉向量主要用于保留局部区域、图表形态、页面截图和图片 chunk 的检索能力。
+  \item \textbf{向量融合}：统一文本-图像 embedder 会记录 embedding modalities、embedding space 和 evidence type，使文本、表格和图像 evidence 可以进入同一检索流程。
+  \item \textbf{证据融合}：一个 evidence 不只包含向量，还绑定文本内容、页码、页面图路径、bbox、OCR 文本、局部 crop、表格 Markdown 和来源类型。生成阶段可以根据这些字段选择更合适的上下文形式。
+\end{itemize}
 
-因此，本项目中的 Fusion 更偏向工程融合：文本负责召回，视觉区域负责补充理解，坐标信息负责溯源展示。它实现了开题报告中“文本、表格和图像信息共同进入多模态 RAG 流程”的目标。
+Fusion 在本系统中更偏向工程层面的融合：文本负责语义召回，图像负责补充页面和局部视觉信息，表格 Markdown 负责提供结构化行列关系，坐标字段负责证据溯源。通过这种方式，系统可以在不改变整体检索框架的情况下，把纯文本 RAG 扩展为能够处理图片、表格和图表的多模态 RAG。
+
+索引构建阶段，系统会先将所有 chunk 转换为统一 evidence 对象，再根据 evidence type 调用不同的向量化逻辑。文本和表格直接进入 BGE-M3；图像区域会先读取局部 crop 或页面图，再生成视觉特征；对于同时含有 OCR 和图片的 evidence，系统会保留文本向量和图像向量的来源信息，并在 metadata 中标注其融合方式。这样做的好处是，后续消融实验可以单独关闭统一多模态向量化，观察它对结果的影响；同时也方便在真实部署中替换更强的视觉 encoder，而不需要改动检索和前端溯源逻辑。
 
 \section{向量检索与 Reranker 实现}
 
-向量检索和 Reranker 对应第二章中的知识问答核心组件，主要在 pipeline.py 中组织。系统首先用向量索引召回 Top-K 候选 evidence，再使用 BGE-reranker-v2-m3 对问题和候选证据进行二次打分。重排后，系统只保留最相关的证据输入生成模型，减少无关 chunk 对回答的干扰。
+查询到来后，系统首先将用户问题编码为查询向量，并在 FAISS 索引中召回 Top-K 候选 evidence。初步召回的结果通常包含相关 chunk，也可能包含部分语义相近但证据不足的片段，因此需要 Reranker 进一步控制输入生成模型的证据质量。
 
-在 Text-RAG 路径中，检索和重排直接决定最终上下文；在 MM-RAG 路径中，检索和重排还承担“定位视觉证据”的作用。例如，当问题涉及某个图表、品牌或日程表时，文本检索先帮助系统找到相关页面或相关 OCR 片段，再由视觉区域生成模块裁剪局部 crop。这样，Reranker 不只是提高文本答案质量，也间接提高了 VLM 看到正确区域的概率。
+\begin{itemize}
+  \item \textbf{粗召回}：系统根据查询向量从知识库中召回候选 evidence。候选结果包括普通文本、表格 Markdown、图像区域和页面相关 OCR 片段。
+  \item \textbf{二次重排}：系统使用 BGE-reranker-v2-m3 对“问题-候选证据”进行交叉编码打分，重新排序候选 evidence。Reranker 可以更细致地判断问题与证据之间的语义关系。
+  \item \textbf{证据筛选}：重排后仅保留分数较高的 evidence 输入生成阶段，避免无关 chunk 干扰模型回答。对于图表或票据类问题，重排结果还会影响后续视觉区域的选择。
+  \item \textbf{引用编号}：进入 prompt 的证据会被整理为 [E1]、[E2] 等编号。模型在回答中引用证据编号，后端再把编号映射为具体页码、chunk id 和 bbox。
+\end{itemize}
 
-最终 prompt 中，证据会被组织成带编号的片段，如 [E1]、[E2]。模型只需要引用证据编号，后端再把编号映射为具体页码、chunk 和 bbox，避免模型自己编造来源。
+Reranker 在系统中的作用不只是提高文本答案质量，也会影响 VLM 能否看到正确的视觉区域。例如，问题涉及图表数值时，文本检索会先帮助系统定位相关页面或图表标题；问题涉及广告品牌、票据字段或日程表时，检索结果会帮助系统找到 OCR anchor，再由视觉区域模块裁剪局部 crop。检索、重排和视觉裁剪之间形成了一个连续的证据定位流程。
 
-\section{路由决策实现}
+在上下文构建时，系统不会简单把 Top-K 结果全部拼接给模型，而是根据 evidence type 和问题类型进行筛选。普通文本问题优先保留语义分数最高的段落；表格问题优先保留表格 Markdown、表头和相关行；图表问题优先保留图表区域、页面标题和局部 crop；票据或广告问题则优先保留包含字段名、品牌名和局部视觉区域的 evidence。这样可以在有限上下文长度内提高有效信息比例，也减少 VLM 同时处理多张无关页面图带来的成本。
 
-路由决策对应开题报告中的 GRPO 自动路由模块。原计划中，系统希望通过 GRPO 训练轻量化路由模型，让它根据问题类型选择不同 VLM 或不同处理路径。期末阶段，考虑到训练样本、评分模型和时间限制，项目没有完整训练 Qwen-0.5B 路由器，而是实现了 GRPO-style auto router，作为自动路由的可运行版本。
+\section{GRPO 决策模型实现}
 
-当前路由逻辑主要分为三类。第一，普通定义、摘要、章节内容查找等问题进入 Text-RAG，直接使用文本 chunk 检索和生成。第二，涉及图片、表格、图表、logo、广告、商品标签或页面区域的问题进入 MM-RAG，系统会优先准备页面图或局部 crop。第三，ChartQA 样本进入图表专用 route，固定生成 chart region，并在 prompt 中加入 compare、difference、max、min、average 等图表任务提示。当前前端默认模型入口为 auto，对应后端自动路由流程；后端会返回 route、retrieval modes、selected model 和 policy trace，便于后续检查和训练。
+GRPO 决策模块对应架构图中的强化学习训练闭环。它的核心不是把路由规则写死，而是训练一个 Decide Model，让它根据用户问题和检索到的 evidence，选择更合适的 LLM/VLM 来回答。不同模型分别生成答案后，再由 Judge Model 对答案质量打分，最后使用 GRPO 根据 reward 更新 Decide Model。
 
-这一路由实现虽然没有经过真实强化学习训练，但已经完成了“根据问题类型选择合适处理路径”的功能，并保留 grouped rewards 策略更新钩子。后续如果继续扩展 GRPO，只需要把当前 auto 路由产生的路径选择、答案结果和人工/自动评分保存为训练数据，就可以训练更轻量的 route policy。
+如图中所示，训练流程可以概括为四个步骤：
 
-\section{VLM 与局部视觉区域实现}
+\begin{itemize}
+  \item \textbf{Decision Model 选择模型}：Decide Model 接收问题、检索证据和问题类型信息，选择若干候选回答模型，例如文本 LLM、多模态 VLM 或图表增强 VLM。
+  \item \textbf{候选模型生成回答}：被选择的候选模型分别根据同一个问题生成答案。普通文本问题可以由文本 LLM 回答，图表、票据、广告和页面区域问题则更依赖 VLM。
+  \item \textbf{Judge Model 评分}：Judge Model（如 Qwen-Max）对候选答案进行评估，根据答案是否正确、是否符合证据、是否回答完整给出 reward，例如 0、0.5 或 1。
+  \item \textbf{GRPO 更新 Decide Model}：系统根据不同候选答案的 reward 使用 GRPO 更新 Decide Model，使高分模型选择在后续相似问题中更容易被采用。
+\end{itemize}
 
-VLM 多模态生成主要由真实模型 backend 调用 Qwen3-VL-8B-Instruct 完成。系统不会把所有页面无差别送入 VLM，而是先通过检索、OCR bbox 和问题关键词缩小候选范围，再裁剪局部高清 crop。这样可以降低视觉 token 成本，也能减少页面其他内容对模型的干扰。
+因此，GRPO 决策模型在系统中的作用可以理解为“学会选模型”。它不直接替代检索、Reranker 或 VLM 推理，而是在它们之上决定当前问题应该交给哪个模型回答。对于纯文本问题，Decide Model 更倾向于选择文本 LLM；对于图表数值、票据版面、广告标签和局部视觉区域问题，Decide Model 更倾向于选择多模态 VLM。随着 Judge Model 的评分反馈不断积累，Decide Model 可以逐渐形成更稳定的模型选择策略。
 
-局部区域生成主要由 vision\_regions.py 完成。对于 DocVQA 中的数字、年份、广告品牌、商品标签和日程表问题，系统根据 OCR bbox 和关键词生成候选区域；对于 ChartQA，系统优先裁剪图表主体区域；对于 PDF 中检测到的表格和图片区域，系统会保留裁剪图、结构化 metadata 和可用于前端展示的 preview。实际评测中，局部 crop 对 ChartQA 和视觉实体问题提升明显，说明 VLM 的作用不是简单“多看一张图”，而是需要配合检索和区域选择，把视觉模型的注意力集中在高价值证据上。
+\section{多模态生成与局部视觉证据实现}
 
-\section{FastAPI 服务层实现}
+生成阶段接收检索重排后的 evidence 和 GRPO 决策模型输出的模型选择结果，组织文本、表格 Markdown、页面图和局部 crop，由相应的 LLM/VLM 生成答案。系统使用 Qwen3-VL-8B-Instruct 处理需要视觉理解的问题，并通过 prompt 约束模型给出短答案、证据编号和可溯源引用。
 
-FastAPI 服务层主要由 api.py 实现，负责把后端 pipeline 封装为前端可调用的接口。它维护文件状态、解析任务状态、chunk 列表、页面图和问答结果，使前端可以轮询解析进度并展示知识库内容。
+\begin{itemize}
+  \item \textbf{上下文重构}：系统根据问题类型和决策结果选择 evidence。如果问题主要依赖文本，就优先拼接文本 chunk；如果问题涉及表格，就加入 Markdown table；如果问题需要视觉判断，就加入页面图或局部 crop。
+  \item \textbf{局部区域生成}：系统根据 OCR bbox、问题关键词、表格/图片 metadata 和检索结果生成候选 crop。与整页输入相比，局部 crop 可以减少视觉 token 成本，也能降低页面其他内容对 VLM 的干扰。
+  \item \textbf{图表问题处理}：对于 ChartQA 类问题，系统优先裁剪图表主体区域，并在 prompt 中强调坐标轴、柱高、折线趋势、最大值、最小值和差值比较等任务信息。
+  \item \textbf{表格问题处理}：对于表格行列关系问题，系统同时提供表格 Markdown 和局部页面图，使模型既能看到结构化文本，也能参考原始版面。
+  \item \textbf{答案与引用输出}：模型生成答案后，后端保留 evidence id、页码、chunk id、bbox 和来源类型，前端据此完成 PDF 高亮。
+\end{itemize}
 
-\begin{table}[htbp]
-  \centering
-  \caption{FastAPI 主要接口}
-  \label{tab:api}
-  \begin{tabular}{p{0.32\textwidth}p{0.58\textwidth}}
-    \toprule
-    接口 & 功能 \\
-    \midrule
-    POST /files & 上传一个或多个 PDF/图片文件。\\
-    POST /files/id/parse & 启动解析、渲染、chunk 构建与索引。\\
-    GET /jobs/id & 查询解析进度和错误信息。\\
-    GET /files/id/chunks & 返回知识库 chunk 列表。\\
-    GET /pages/image & 返回 PDF 页面渲染图。\\
-    POST /query & 执行检索问答，返回答案、引用和证据。\\
-    DELETE /files/id & 删除上传文件、处理结果和预览缓存。\\
-    \bottomrule
-  \end{tabular}
-\end{table}
+局部视觉区域的作用不是简单地“多给模型一张图”，而是把 VLM 的注意力集中到高价值证据上。对于广告品牌、票据字段、商品标签、课程表时间段和图表数值等问题，纯文本 OCR 往往会丢失空间关系或视觉实体信息；局部 crop 可以补充这些信息，使模型更接近人在阅读 PDF 页面时的判断方式。
 
-服务层支持 uploaded、queued、parsing、ready 和 failed 等状态。对于真实模型 API 欠费、权限不足或解析失败等情况，后端会返回结构化错误，前端可以显示友好提示，而不是直接暴露原始供应商报错。
+生成完成后，系统还会进行轻量答案后处理。对于评测任务，后端会抽取短答案，去除多余解释句，并对大小写、空格、标点、单位和数值形式进行归一化；对于图表数值题，系统允许一定范围内的数值容差；对于 Yes/No 问题，系统会优先提取明确的肯定或否定词。后处理不改变模型推理结果，只是把生成式输出整理为更稳定的答案形式，便于评测脚本计算 EM、ANLS 和 Answer Match。
 
-\section{前端 PDF 预览与高亮实现}
+同时，答案后处理会保留引用证据与页面位置。模型输出的 evidence 编号会被解析为后端内部的 chunk id，再关联到 page、bbox、source type 和 image path。这样即使答案文本经过归一化，前端仍然可以展示原始证据位置，用户也能回到 PDF 页面检查模型是否引用了正确区域。
 
-前端主界面由 App.tsx 实现，使用 React、Vite、TailwindCSS 和 Framer Motion。最终界面采用左右双栏：左侧是文件、知识库 chunk 和问答结果，右侧是连续 PDF 预览。用户选中某个 chunk 或答案引用后，右侧 PDF viewer 自动滚动到对应页，并根据 bbox 绘制高亮框。
+\section{前后端交互与 PDF 预览实现}
 
-这个设计对应第二章中的“PDF 高亮与可解释溯源”。与只显示某个 chunk 文本不同，连续 PDF 预览可以让用户上下翻页检查文档上下文；高亮框则把 evidence 从抽象的 chunk 还原到原始页面区域。这样用户能判断答案是否真的来自文档，而不是模型凭空生成。
+系统使用 FastAPI 实现后端服务，并使用 React、Vite、TailwindCSS 和 Framer Motion 构建前端界面。FastAPI 负责封装文件上传、解析任务、chunk 查询、页面图读取、检索问答和文件删除等功能；前端负责展示文件列表、知识库 chunk、问答窗口和连续 PDF 预览。
 
-\section{代码结构}
+\begin{itemize}
+  \item \textbf{文件与解析状态}：用户上传文件后，后端维护 uploaded、queued、parsing、ready 和 failed 等状态，前端通过轮询展示解析进度和错误信息。
+  \item \textbf{知识库浏览}：解析完成后，前端展示 chunk 类型、页码、文本摘要和来源信息，用户可以直接点击 chunk 查看对应 PDF 区域。
+  \item \textbf{问答交互}：用户提交问题后，后端返回答案、引用 evidence、页码和 bbox。前端在答案区展示引用，同时联动右侧 PDF viewer。
+  \item \textbf{连续 PDF 预览}：右侧预览区不是单独显示某个 chunk，而是连续展示整个 PDF 页面，用户可以上下翻页检查文档上下文。
+  \item \textbf{区域高亮}：当用户点击 chunk 或答案引用时，前端根据 page、bbox、page width 和 page height 计算缩放比例，并在对应页面上绘制高亮框。
+\end{itemize}
 
-项目代码按前后端和评测脚本组织，主要文件如表 \ref{tab:repo_structure} 所示。这里使用普通正文样式列出路径，避免正文中出现突兀的等宽字体。
+PDF 高亮的关键在于坐标变换。后端保存的 bbox 使用解析阶段的原始页面坐标，前端展示时页面会根据容器宽度缩放，因此需要根据渲染后的页面宽高重新计算比例。具体而言，前端先找到 evidence 对应页，再读取该页的原始宽高和当前显示宽高，分别计算 x 与 y 方向的缩放系数，最后将 bbox 的左上角和宽高映射到页面图上的绝对位置。这样无论用户在桌面端还是较窄窗口中查看 PDF，高亮框都能落在相同的文档内容区域。
 
-\begin{table}[htbp]
-  \centering
-  \caption{项目主要代码结构}
-  \label{tab:repo_structure}
-  \begin{tabular}{p{0.38\textwidth}p{0.52\textwidth}}
-    \toprule
-    路径 & 功能 \\
-    \midrule
-    frontend/ & React + Vite 前端。\\
-    src/mllmproject/api.py & FastAPI 服务层。\\
-    src/mllmproject/ingest.py & 文档解析、页面渲染与结构化区域抽取。\\
-    src/mllmproject/pipeline.py & RAG 主流程。\\
-    src/mllmproject/ \newline model\_stack.py & 模型栈、统一 embedding 与 backend 切换。\\
-    src/mllmproject/ \newline multimodal\_embeddings.py & 文本-图像统一向量空间。\\
-    src/mllmproject/ \newline grpo\_router.py & GRPO-style auto router 与策略更新钩子。\\
-    src/mllmproject/ \newline table\_markdown.py & 表格 Markdown 结构化。\\
-    src/mllmproject/ \newline real\_models.py & BGE 与 Qwen3-VL 适配器。\\
-    src/mllmproject/ \newline vision\_regions.py & OCR bbox 与局部 crop。\\
-    src/mllmproject/evaluation.py & 评测流程。\\
-    scripts/ & 批量评测与 demo 脚本。\\
-    data/eval/ & 评测样本与结果。\\
-    Report/ & 开题报告、期末报告和参考文献。\\
-    \bottomrule
-  \end{tabular}
-\end{table}
+这种前端设计使系统的证据展示方式更接近真实知识库产品：用户不仅能看到模型答案，还能看到答案对应的原文档区域。当模型回答存在疑问时，用户可以直接回到 PDF 页面检查上下文，从而提高系统的可解释性和可验证性。
 
-仓库 README 中提供了环境配置、命令行评测、React + FastAPI 联调和 Gradio demo 的运行方式，满足课程对代码仓库和运行说明的要求。
+项目代码仓库地址为：\url{https://github.com/MoFishSuperMan/MLLMProject}。

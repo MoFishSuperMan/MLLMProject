@@ -113,6 +113,37 @@ const API_BASE = `${API_ORIGIN}/api/v1`;
 const FALLBACK_PAGE_ASPECT = "0.707";
 const PREVIEW_PAGE_ZOOM = 0.82;
 const CHAT_HISTORY_STORAGE_KEY = "mllmproject.chatHistory.v1";
+const DEMO_MODEL_OPTIONS: ModelOption[] = [
+  {
+    id: "auto",
+    label: "auto",
+    provider: "router",
+    description: "强化学习路由策略",
+    enabled: true,
+    is_default: true,
+  },
+  {
+    id: "demo_llama",
+    label: "LLaMA",
+    provider: "demo",
+    description: "演示模型选项",
+    enabled: true,
+  },
+  {
+    id: "demo_deepseek",
+    label: "DeepSeek",
+    provider: "demo",
+    description: "演示模型选项",
+    enabled: true,
+  },
+  {
+    id: "demo_qwen",
+    label: "Qwen",
+    provider: "demo",
+    description: "演示模型选项",
+    enabled: true,
+  },
+];
 
 async function apiJson<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, init);
@@ -308,6 +339,25 @@ function modelOptionLabel(model: Pick<ModelOption, "id" | "label"> | undefined) 
   return model.id === "auto" ? "auto" : model.label;
 }
 
+function mergeDemoModelOptions(apiModels: ModelOption[]) {
+  const byId = new Map<string, ModelOption>();
+  DEMO_MODEL_OPTIONS.forEach((model) => byId.set(model.id, model));
+  apiModels
+    .filter((model) => model.enabled)
+    .forEach((model) => {
+      if (model.id === "auto") {
+        byId.set("auto", { ...model, label: "auto", is_default: true });
+        return;
+      }
+      byId.set(model.id, model);
+    });
+  return DEMO_MODEL_OPTIONS.map((model) => byId.get(model.id) ?? model);
+}
+
+function backendModelId(modelId: string) {
+  return modelId.startsWith("demo_") ? "auto" : modelId;
+}
+
 function chunkTypeLabel(type: EvidenceType) {
   return {
     text: "文本",
@@ -374,30 +424,11 @@ function chunkDescription(chunk: EvidenceChunk) {
   return chunk.content;
 }
 
-function loadStoredChatTurns(): ChatTurn[] {
+function clearStoredChatTurns() {
   try {
-    const raw = window.localStorage.getItem(CHAT_HISTORY_STORAGE_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw) as ChatTurn[];
-    if (!Array.isArray(parsed)) return [];
-    return parsed.map((turn) => ({
-      ...turn,
-      selectedChunks: (turn.selectedChunks ?? []).map(normalizeChunk),
-      result: {
-        ...turn.result,
-        evidences: (turn.result?.evidences ?? []).map(normalizeChunk),
-      },
-    }));
+    window.localStorage.removeItem(CHAT_HISTORY_STORAGE_KEY);
   } catch {
-    return [];
-  }
-}
-
-function storeChatTurns(turns: ChatTurn[]) {
-  try {
-    window.localStorage.setItem(CHAT_HISTORY_STORAGE_KEY, JSON.stringify(turns.slice(-30)));
-  } catch {
-    // Chat history is helpful, but answering should not fail if storage is unavailable.
+    // Clearing old demo state should not block the app.
   }
 }
 
@@ -410,10 +441,10 @@ function App() {
   const [chunks, setChunks] = useState<EvidenceChunk[]>([]);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [focusedId, setFocusedId] = useState("");
-  const [models, setModels] = useState<ModelOption[]>([]);
+  const [models, setModels] = useState<ModelOption[]>(DEMO_MODEL_OPTIONS);
   const [modelId, setModelId] = useState("auto");
   const [answerResult, setAnswerResult] = useState<AnswerResult | null>(null);
-  const [chatTurns, setChatTurns] = useState<ChatTurn[]>(() => loadStoredChatTurns());
+  const [chatTurns, setChatTurns] = useState<ChatTurn[]>([]);
   const [activeChatId, setActiveChatId] = useState("");
   const [isThinking, setIsThinking] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
@@ -441,11 +472,8 @@ function App() {
   useEffect(() => {
     void loadModels();
     void refreshFiles();
+    clearStoredChatTurns();
   }, []);
-
-  useEffect(() => {
-    storeChatTurns(chatTurns);
-  }, [chatTurns]);
 
   useEffect(() => {
     if (!activeFileId && files.length) {
@@ -483,10 +511,8 @@ function App() {
   const loadModels = async () => {
     try {
       const data = await apiJson<{ models: ModelOption[] }>("/models");
-      const enabled = data.models.filter((item) => item.enabled);
-      setModels(enabled);
-      const defaultModel = enabled.find((item) => item.is_default) ?? enabled[0];
-      if (defaultModel) setModelId(defaultModel.id);
+      setModels(mergeDemoModelOptions(data.models));
+      setModelId("auto");
     } catch (error) {
       setErrorMessage(errorMessageFrom(error));
     }
@@ -650,7 +676,7 @@ function App() {
           question,
           file_ids: readyFiles.map((file) => file.file_id),
           selected_chunk_ids: selectedIds,
-          model: modelId,
+          model: backendModelId(modelId),
           mode: "auto",
           top_k: 5,
         }),
@@ -663,7 +689,7 @@ function App() {
       const turn: ChatTurn = {
         id: normalizedResult.answer_id,
         question,
-        model: normalizedResult.model_label || modelLabel,
+        model: modelId.startsWith("demo_") ? modelLabel : normalizedResult.model_label || modelLabel,
         selectedChunks,
         result: normalizedResult,
         createdAt: new Date().toISOString(),

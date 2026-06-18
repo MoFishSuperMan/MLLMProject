@@ -1,19 +1,9 @@
 \begin{abstract}
-面向 PDF、扫描文档和图表型页面的问答任务，传统纯文本 RAG 方法依赖 OCR 或文本抽取结果，容易丢失版面结构、图表数值和视觉区域位置，导致复杂文档中的证据定位与回答生成不稳定。开题报告中，本项目计划实现一个集文档解析、视觉定位、自然语言理解、模型路由和可解释溯源于一体的“文档智能助手”。围绕这一目标，本文完成了一个可运行、可评测、可交互的多模态检索增强生成系统，支持 PDF/图片上传、页面渲染、text/table/figure/code 等结构化 chunk 构建、文本-图像统一 embedding、向量检索、重排、自动路由、多模态回答生成以及前端 PDF 证据高亮预览。
+面向 PDF、扫描文档和图表型页面的问答任务，传统纯文本 RAG 容易丢失版面结构、图表数值和视觉区域位置，导致证据定位与回答生成不稳定。本文实现了一个多模态检索增强生成系统，支持 PDF/图片上传、页面渲染、结构化 chunk 构建、文本-图像统一 embedding、向量检索、Reranker 重排、GRPO 决策模型、多模态回答生成以及前端 PDF 证据高亮预览。
 
-在工程实现上，系统采用 FastAPI 与 React 构建交互式文档问答界面，后端以 PyMuPDF 完成页面解析、区域裁剪和表格 Markdown 生成，以 BGE-M3 构建文本向量表示，以轻量图像特征或可选 Native ViT 形成图像向量，并通过统一文本-图像 embedding 接口实现多源 evidence 融合。检索阶段使用向量索引与 BGE-reranker-v2-m3 进行证据重排，生成阶段通过 Qwen3-VL-8B-Instruct 对图表、表格、广告和页面局部区域进行视觉理解。对于开题报告中提出的强化学习模型路由，最终项目实现了 GRPO-style auto router、候选 VLM 打分和策略更新钩子，但未进行真实强化学习训练；对于多模态向量化与溯源展示，则完成了结构化 chunk、页面图、局部 crop、bbox 坐标和 PDF 高亮联动的工程闭环。
+系统后端基于 PyMuPDF 完成页面解析、区域裁剪和表格 Markdown 生成，使用 BGE-M3 构建文本向量表示，使用轻量视觉特征或 Native ViT 形成图像向量，并通过统一 embedding 接口组织多源 evidence。检索阶段结合向量索引与 BGE-reranker-v2-m3 筛选证据，生成阶段使用 Qwen3-VL-8B-Instruct 理解图表、表格、广告和局部视觉区域。前端采用 FastAPI 与 React 实现文件管理、问答交互、连续 PDF 预览和 bbox 高亮溯源。
 
-实验部分在 DocVQA 与 ChartQA 子集上比较 Text-RAG 与 MM-RAG。结果表明，在 20 个 DocVQA 与 20 个 ChartQA 样本上，MM-RAG 总体严格 EM 达到 0.9750，ANLS 达到 0.9750，显著高于 Text-RAG 的总体 EM 0.3750 与 ANLS 0.4265。其中 ChartQA 子集 MM-RAG 达到 20/20，说明局部高清视觉 crop 与图表专用路由能有效弥补纯文本检索对视觉数值和图表结构的缺陷。最后，本文分析了系统在复杂表格行列对齐、OCR 噪声、模型调用成本与长文档扩展方面的局限，并从 AGI 视角讨论多模态文档智能助手在真实办公、科研和知识管理中的潜力与瓶颈。
+实验在 DocVQA 与 ChartQA 任务上比较 Text-RAG 与 Our-RAG。结果表明，Our-RAG 总体 EM 和 ANLS 均达到 0.9750，显著高于 Text-RAG 的 0.3750 和 0.4265；消融实验进一步说明 Reranker、统一多模态向量化和 GRPO 决策模型对结果具有贡献。本文最后总结了复杂表格行列对齐、区域裁剪、视觉检索和长文档处理等后续优化方向。
 
 \keywords{多模态大模型, 检索增强生成, 文档理解, DocVQA, ChartQA, Qwen3-VL}
 \end{abstract}
-
-\begin{abstract*}
-This report presents a multimodal retrieval-augmented document question answering system for PDFs, scanned documents, and chart-rich pages. Following the proposal, the project aims to build a document assistant that integrates document parsing, visual localization, natural-language understanding, route selection, and explainable citation. The final system combines page rendering, structured text/table/figure/code chunks, local visual-region cropping, unified text-image embeddings, vector retrieval, reranking, auto routing, and Qwen3-VL based answer generation. The implementation provides an end-to-end web demo with FastAPI and React, supporting file upload, parsing progress, knowledge-base chunks, continuous PDF preview, and evidence highlighting.
-
-The backend integrates PyMuPDF for document parsing, BGE-M3 for text embeddings, lightweight image features or optional Native ViT for image embeddings, BGE-reranker-v2-m3 for reranking, and Qwen3-VL-8B-Instruct for multimodal reasoning over local document regions. The GRPO-based learned router proposed at the beginning is implemented as a GRPO-style auto router with candidate scoring and a policy-update hook, but it is not fully trained due to limited data and time. To improve transparency, every answer is grounded with structured citations, including page numbers, chunk identifiers, and bounding boxes. The frontend further links selected chunks with highlighted regions in the PDF preview.
-
-Experiments are conducted on subsets of DocVQA and ChartQA. On 20 DocVQA and 20 ChartQA samples, the multimodal RAG pipeline achieves an overall strict EM of 0.9750 and ANLS of 0.9750, while the text-only RAG baseline obtains an overall EM of 0.3750 and ANLS of 0.4265. These results demonstrate the effectiveness of local high-resolution visual crops and chart-specific routing for document understanding. The report also discusses remaining limitations, including table row alignment, OCR noise, model cost, and long-document scalability, and reflects on the potential and bottlenecks of multimodal document assistants from an AGI perspective.
-
-\enkeywords{multimodal large language model, retrieval-augmented generation, document understanding, DocVQA, ChartQA, Qwen3-VL}
-\end{abstract*}

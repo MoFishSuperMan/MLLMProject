@@ -1,0 +1,303 @@
+{"kind":"deck","id":"pr/llimm7","name":"Deck"}
+{"kind":"layout","layoutId":"de7a8ca6-4cc1-4dfd-97d9-84d4d48601c8","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"32f8340c-08d9-4d0c-8f01-0d91e3f01d8e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/y5jgv8","slide":1,"title":"多模态文档问答系统","textShapes":10}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":1,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/4nap4r65","slide":1,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/t83itgfm","slide":1,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/m58z25kb","slide":1,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/bq1oryts","slide":1,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":1,"text":"多模态文档问答系统","textPreview":"多模态文档问答系统","textChars":9,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/twra5gbq","slide":1,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":1,"text":"基于多模态 RAG 的 PDF / 图片文档理解助手","textPreview":"基于多模态 RAG 的 PDF / 图片文档理解助手","textChars":26,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/bm58z25k","slide":1,"bbox":[96,150,420,260]}
+{"kind":"textbox","id":"sh/val87ed8","slide":1,"text":"文档智能助手","textPreview":"文档智能助手","textChars":6,"textLines":1,"bbox":[130,180,350,54]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":1,"text":"上传 → 解析 → 检索重排 → GRPO 决策 → 生成答案 → PDF 高亮溯源","textPreview":"上传 → 解析 → 检索重排 → GRPO 决策 → 生成答案 → PDF 高亮溯源","textChars":42,"textLines":1,"bbox":[132,255,345,92]}
+{"kind":"shape","id":"sh/dcbulwva","slide":1,"bbox":[780,140,260,155]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":1,"text":"核心创新\n多模态分块\nGRPO 决策\n系统闭环","textPreview":"核心创新 | 多模态分块 | GRPO 决策 | 系统闭环","textChars":23,"textLines":4,"bbox":[794,152,232,137]}
+{"kind":"shape","id":"sh/vixczed8","slide":1,"bbox":[670,380,180,58]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":1,"text":"系统实现细节","textPreview":"系统实现细节","textChars":6,"textLines":1,"bbox":[682,396,156,24]}
+{"kind":"shape","id":"sh/donyd0z6","slide":1,"bbox":[900,380,180,58]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":1,"text":"代码仓库","textPreview":"代码仓库","textChars":4,"textLines":1,"bbox":[912,396,156,24]}
+{"kind":"shape","id":"sh/vu9knih4","slide":1,"bbox":[670,485,180,58]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":1,"text":"实验结果","textPreview":"实验结果","textChars":4,"textLines":1,"bbox":[682,501,156,24]}
+{"kind":"shape","id":"sh/adsji5sn","slide":1,"bbox":[900,485,180,58]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":1,"text":"反思与展望","textPreview":"反思与展望","textChars":5,"textLines":1,"bbox":[912,501,156,24]}
+{"kind":"shape","id":"sh/sji5snel","slide":1,"bbox":[520,282,140,128]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":1,"bbox":[653,403,14,14]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":1,"text":"来源：期末报告第 3、6 章","textPreview":"来源：期末报告第 3、6 章","textChars":14,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"notes","id":"nt/y5jgv8","slide":1,"text":"大家好，我展示的项目是面向 PDF 与图片文档的多模态理解问答系统。本系统从文档上传开始，依次完成页面解析、文本与视觉证据构建、向量检索、重排、GRPO 决策模型、答案生成和证据溯源展示，形成从后端模型 pipeline 到前端 PDF 预览界面的完整闭环。"}
+{"kind":"slide","id":"sl/qxdd1u","slide":2,"title":"表 2.1：相关技术组件与项目功能对应","textShapes":5}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":2,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":2,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/94fu18jq","slide":2,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":2,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":2,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":2,"text":"表 2.1：相关技术组件与项目功能对应","textPreview":"表 2.1：相关技术组件与项目功能对应","textChars":19,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":2,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":2,"text":"从开题方案到系统模块","textPreview":"从开题方案到系统模块","textChars":10,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/bulwval8","slide":2,"bbox":[940,170,230,120]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":2,"text":"结论：\n开题报告中的组件\n都有明确系统功能","textPreview":"结论： | 开题报告中的组件 | 都有明确系统功能","textChars":21,"textLines":3,"bbox":[954,182,202,102]}
+{"kind":"shape","id":"sh/p0bi9s36","slide":2,"bbox":[952,340,210,160]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":2,"text":"获取证据\n↓\n选择模型\n↓\n生成答案\n↓\n回到原文验证","textPreview":"获取证据 | ↓ | 选择模型 | ↓ | 生成答案 | ↓ | 回到原文验证","textChars":27,"textLines":7,"bbox":[984,358,150,128]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":2,"text":"来源：期末报告第 2 章，表 2.1","textPreview":"来源：期末报告第 2 章，表 2.1","textChars":18,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"table","id":"tb/6xkf6dcb","slide":2,"name":"","rows":7,"cols":2,"preview":"技术组件 | 功能与作用","bbox":[66,132,840,470]}
+{"kind":"notes","id":"nt/qxdd1u","slide":2,"text":"这一页直接放入报告第二章的表 2.1。系统不是单一模型，而是由文档解析与 OCR、Embedding 与 Fusion、向量检索与 Reranker、GRPO 决策模型、VLM 多模态生成和前端溯源预览共同组成。"}
+{"kind":"slide","id":"sl/pdoirs","slide":3,"title":"系统实现流程","textShapes":14}
+{"kind":"shape","id":"sh/re1w7mp0","slide":3,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":3,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/9knih4by","slide":3,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":3,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":3,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":3,"text":"系统实现流程","textPreview":"系统实现流程","textChars":6,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":3,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":3,"text":"第三章总体架构：回答问题 + 找到证据","textPreview":"第三章总体架构：回答问题 + 找到证据","textChars":19,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":3,"bbox":[48,205,205,155]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":3,"text":"文档解析","textPreview":"文档解析","textChars":4,"textLines":1,"bbox":[66,225,169,34]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":3,"text":"页面文本 / 页面图 / 表格 / 坐标","textPreview":"页面文本 / 页面图 / 表格 / 坐标","textChars":20,"textLines":1,"bbox":[66,275,169,58]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":3,"bbox":[255,282,39,0]}
+{"kind":"shape","id":"sh/0z61032l","slide":3,"bbox":[287,275,14,14]}
+{"kind":"shape","id":"sh/72x4nap4","slide":3,"bbox":[286,205,205,155]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":3,"text":"知识索引","textPreview":"知识索引","textChars":4,"textLines":1,"bbox":[304,225,169,34]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":3,"text":"text / table / figure / code 统一保存","textPreview":"text / table / figure / code 统一保存","textChars":33,"textLines":1,"bbox":[304,275,169,58]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":3,"bbox":[493,282,39,0]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":3,"bbox":[525,275,14,14]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":3,"bbox":[524,205,205,155]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":3,"text":"检索重排","textPreview":"检索重排","textChars":4,"textLines":1,"bbox":[542,225,169,34]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":3,"text":"向量召回 evidence + Reranker 二次排序","textPreview":"向量召回 evidence + Reranker 二次排序","textChars":29,"textLines":1,"bbox":[542,275,169,58]}
+{"kind":"shape","id":"sh/4r65wjud","slide":3,"bbox":[731,282,39,0]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":3,"bbox":[763,275,14,14]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":3,"bbox":[762,205,205,155]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":3,"text":"决策生成","textPreview":"决策生成","textChars":4,"textLines":1,"bbox":[780,225,169,34]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":3,"text":"GRPO 选择 LLM / VLM 与上下文","textPreview":"GRPO 选择 LLM / VLM 与上下文","textChars":22,"textLines":1,"bbox":[780,275,169,58]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":3,"bbox":[969,282,39,0]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":3,"bbox":[1001,275,14,14]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":3,"bbox":[1000,205,205,155]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":3,"text":"前端溯源","textPreview":"前端溯源","textChars":4,"textLines":1,"bbox":[1018,225,169,34]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":3,"text":"page + bbox + evidence id 高亮","textPreview":"page + bbox + evidence id 高亮","textChars":28,"textLines":1,"bbox":[1018,275,169,58]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":3,"bbox":[475,450,330,95]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":3,"text":"核心思想：\n回答问题的同时\n必须找到证据","textPreview":"核心思想： | 回答问题的同时 | 必须找到证据","textChars":20,"textLines":3,"bbox":[489,462,302,77]}
+{"kind":"textbox","id":"sh/1032lszq","slide":3,"text":"来源：期末报告第 3 章，总体架构","textPreview":"来源：期末报告第 3 章，总体架构","textChars":17,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"notes","id":"nt/pdoirs","slide":3,"text":"第三章给出的总体流程是“文档解析-多模态向量化-检索重排-GRPO 决策模型-多模态生成-PDF 高亮溯源”。这里最重要的点是：系统同时处理回答问题和找到证据，而不是只生成文本。"}
+{"kind":"slide","id":"sl/souiny","slide":4,"title":"多模态分块与 Fusion","textShapes":15}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":4,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/i5sneloj","slide":4,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":4,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":4,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/p4r65wju","slide":4,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":4,"text":"多模态分块与 Fusion","textPreview":"多模态分块与 Fusion","textChars":13,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":4,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":4,"text":"把 PDF / 图片变成可检索、可生成、可高亮的 evidence","textPreview":"把 PDF / 图片变成可检索、可生成、可高亮的 evidence","textChars":33,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/p8nqxs72","slide":4,"bbox":[70,155,220,315]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":4,"text":"PDF / 图片","textPreview":"PDF / 图片","textChars":8,"textLines":1,"bbox":[112,178,138,34]}
+{"kind":"textbox","id":"sh/83itgfml","slide":4,"text":"页面级解析\n区域抽取\n表格结构化\n坐标保存","textPreview":"页面级解析 | 区域抽取 | 表格结构化 | 坐标保存","textChars":21,"textLines":4,"bbox":[105,250,155,145]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":4,"bbox":[380,145,130,62]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":4,"text":"text","textPreview":"text","textChars":4,"textLines":1,"bbox":[392,163,106,24]}
+{"kind":"shape","id":"sh/x0nuxc3y","slide":4,"bbox":[530,145,130,62]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":4,"text":"table","textPreview":"table","textChars":5,"textLines":1,"bbox":[542,163,106,24]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":4,"bbox":[380,250,130,62]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":4,"text":"figure","textPreview":"figure","textChars":6,"textLines":1,"bbox":[392,268,106,24]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":4,"bbox":[530,250,130,62]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":4,"text":"formula","textPreview":"formula","textChars":7,"textLines":1,"bbox":[542,268,106,24]}
+{"kind":"shape","id":"sh/032lszqt","slide":4,"bbox":[455,355,130,62]}
+{"kind":"textbox","id":"sh/tovahoza","slide":4,"text":"code / crop","textPreview":"code / crop","textChars":11,"textLines":1,"bbox":[467,373,106,24]}
+{"kind":"shape","id":"sh/ixczed8v","slide":4,"bbox":[295,305,70,0]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":4,"bbox":[358,298,14,14]}
+{"kind":"shape","id":"sh/0fepkzup","slide":4,"bbox":[675,305,75,0]}
+{"kind":"shape","id":"sh/p0bi9s36","slide":4,"bbox":[743,298,14,14]}
+{"kind":"shape","id":"sh/i9s36hcr","slide":4,"bbox":[770,170,345,245]}
+{"kind":"textbox","id":"sh/bulwval8","slide":4,"text":"Fusion evidence","textPreview":"Fusion evidence","textChars":15,"textLines":1,"bbox":[808,194,270,32]}
+{"kind":"shape","id":"sh/0je9cvix","slide":4,"bbox":[815,258,8,8]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":4,"text":"文本负责语义召回","textPreview":"文本负责语义召回","textChars":8,"textLines":1,"bbox":[833,250,232,34]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":4,"bbox":[815,303,8,8]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":4,"text":"图像补充视觉信息","textPreview":"图像补充视觉信息","textChars":8,"textLines":1,"bbox":[833,295,232,34]}
+{"kind":"shape","id":"sh/hwfyxobm","slide":4,"bbox":[815,348,8,8]}
+{"kind":"textbox","id":"sh/obm58z25","slide":4,"text":"表格保留行列结构","textPreview":"表格保留行列结构","textChars":8,"textLines":1,"bbox":[833,340,232,34]}
+{"kind":"shape","id":"sh/zed8v6ps","slide":4,"bbox":[815,393,8,8]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":4,"text":"bbox 负责证据溯源","textPreview":"bbox 负责证据溯源","textChars":11,"textLines":1,"bbox":[833,385,232,34]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":4,"text":"来源：期末报告第 3 章，文档解析实现 / Embedding 与 Fusion 实现","textPreview":"来源：期末报告第 3 章，文档解析实现 / Embedding 与 Fusion 实现","textChars":43,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"notes","id":"nt/souiny","slide":4,"text":"报告第三章里说，文档解析模块主要解决“知识从哪里来”的问题。在 Fusion 部分，文本负责语义召回，图像负责补充页面和局部视觉信息，表格 Markdown 负责提供结构化行列关系，坐标字段负责证据溯源。"}
+{"kind":"slide","id":"sl/um4tr0","slide":5,"title":"GRPO 决策模型","textShapes":12}
+{"kind":"shape","id":"sh/al87ed8b","slide":5,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":5,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/orytsvu9","slide":5,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":5,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":5,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":5,"text":"GRPO 决策模型","textPreview":"GRPO 决策模型","textChars":9,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":5,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":5,"text":"让系统学会为不同问题选择合适模型","textPreview":"让系统学会为不同问题选择合适模型","textChars":16,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/65wjudg7","slide":5,"bbox":[96,235,210,112]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":5,"text":"Decide Model","textPreview":"Decide Model","textChars":12,"textLines":1,"bbox":[111,253,180,28]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":5,"text":"问题 + evidence + 类型","textPreview":"问题 + evidence + 类型","textChars":18,"textLines":1,"bbox":[112,291,178,38]}
+{"kind":"shape","id":"sh/yxobm58z","slide":5,"bbox":[390,140,210,112]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":5,"text":"候选 LLM/VLM","textPreview":"候选 LLM/VLM","textChars":10,"textLines":1,"bbox":[405,158,180,28]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":5,"text":"分别生成回答","textPreview":"分别生成回答","textChars":6,"textLines":1,"bbox":[406,196,178,38]}
+{"kind":"shape","id":"sh/9cvixcze","slide":5,"bbox":[685,235,210,112]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":5,"text":"Judge Model","textPreview":"Judge Model","textChars":11,"textLines":1,"bbox":[700,253,180,28]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":5,"text":"正确性 / 证据一致性 / 完整性","textPreview":"正确性 / 证据一致性 / 完整性","textChars":17,"textLines":1,"bbox":[701,291,178,38]}
+{"kind":"shape","id":"sh/gfmlkjm1","slide":5,"bbox":[390,432,210,112]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":5,"text":"GRPO Update","textPreview":"GRPO Update","textChars":11,"textLines":1,"bbox":[405,450,180,28]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":5,"text":"根据 reward 更新策略","textPreview":"根据 reward 更新策略","textChars":14,"textLines":1,"bbox":[406,488,178,38]}
+{"kind":"shape","id":"sh/4nap4r65","slide":5,"bbox":[305,280,85,-75]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":5,"bbox":[383,198,14,14]}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":5,"bbox":[600,205,85,75]}
+{"kind":"shape","id":"sh/twra5gbq","slide":5,"bbox":[678,273,14,14]}
+{"kind":"shape","id":"sh/4byhgn29","slide":5,"bbox":[790,350,-260,82]}
+{"kind":"shape","id":"sh/bq1oryts","slide":5,"bbox":[523,425,14,14]}
+{"kind":"shape","id":"sh/m58z25kb","slide":5,"bbox":[390,490,-185,-143]}
+{"kind":"shape","id":"sh/tsvu9kni","slide":5,"bbox":[198,340,14,14]}
+{"kind":"shape","id":"sh/47y1kre1","slide":5,"bbox":[950,185,250,180]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":5,"text":"作用：\n学会选模型\n文本题 / 图表题 / 局部视觉题\n走不同路径","textPreview":"作用： | 学会选模型 | 文本题 / 图表题 / 局部视觉题 | 走不同路径","textChars":33,"textLines":4,"bbox":[964,197,222,162]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":5,"text":"来源：期末报告第 3 章，GRPO 决策模型实现","textPreview":"来源：期末报告第 3 章，GRPO 决策模型实现","textChars":24,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"notes","id":"nt/um4tr0","slide":5,"text":"GRPO 决策模块对应第三章中的强化学习训练闭环。它的核心不是把路由规则写死，而是训练一个 Decide Model，让它根据用户问题和检索到的 evidence，选择更合适的 LLM/VLM 来回答。"}
+{"kind":"slide","id":"sl/oslz03","slide":6,"title":"系统实现细节与代码仓库","textShapes":13}
+{"kind":"shape","id":"sh/5gbq1ory","slide":6,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":6,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/nap4r65w","slide":6,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/cj6tovah","slide":6,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/54zidony","slide":6,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":6,"text":"系统实现细节与代码仓库","textPreview":"系统实现细节与代码仓库","textChars":11,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/nyd0z610","slide":6,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":6,"text":"FastAPI + React + PDF viewer + 评测脚本","textPreview":"FastAPI + React + PDF viewer + 评测脚本","textChars":35,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/1032lszq","slide":6,"bbox":[72,150,320,125]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":6,"text":"前端","textPreview":"前端","textChars":2,"textLines":1,"bbox":[90,166,90,26]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":6,"text":"React / Vite / TailwindCSS\n文件列表、chunk、问答窗口、PDF 预览","textPreview":"React / Vite / TailwindCSS | 文件列表、chunk、问答窗口、PDF 预览","textChars":49,"textLines":2,"bbox":[90,200,280,58]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":6,"bbox":[465,150,320,125]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":6,"text":"后端","textPreview":"后端","textChars":2,"textLines":1,"bbox":[483,166,90,26]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":6,"text":"FastAPI\n上传、解析任务、chunk 查询、页面图、问答、删除","textPreview":"FastAPI | 上传、解析任务、chunk 查询、页面图、问答、删除","textChars":34,"textLines":2,"bbox":[483,200,280,58]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":6,"bbox":[858,150,320,125]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":6,"text":"高亮","textPreview":"高亮","textChars":2,"textLines":1,"bbox":[876,166,90,26]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":6,"text":"后端 bbox\n按页面显示尺寸缩放映射到 PDF viewer","textPreview":"后端 bbox | 按页面显示尺寸缩放映射到 PDF viewer","textChars":31,"textLines":2,"bbox":[876,200,280,58]}
+{"kind":"shape","id":"sh/xczed8v6","slide":6,"bbox":[270,438,320,125]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":6,"text":"仓库","textPreview":"仓库","textChars":2,"textLines":1,"bbox":[288,454,90,26]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":6,"text":"报告、运行说明、核心模块、评测脚本与实验结果","textPreview":"报告、运行说明、核心模块、评测脚本与实验结果","textChars":22,"textLines":1,"bbox":[288,488,280,58]}
+{"kind":"shape","id":"sh/tsvu9kni","slide":6,"bbox":[665,438,320,125]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":6,"text":"评测","textPreview":"评测","textChars":2,"textLines":1,"bbox":[683,454,90,26]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":6,"text":"DocVQA / ChartQA\nText-RAG vs Our-RAG","textPreview":"DocVQA / ChartQA | Text-RAG vs Our-RAG","textChars":36,"textLines":2,"bbox":[683,488,280,58]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":6,"bbox":[392,210,73,0]}
+{"kind":"shape","id":"sh/tgfmlkjm","slide":6,"bbox":[458,203,14,14]}
+{"kind":"shape","id":"sh/mp0bi9s3","slide":6,"bbox":[785,210,73,0]}
+{"kind":"shape","id":"sh/bat47y1k","slide":6,"bbox":[851,203,14,14]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":6,"text":"来源：期末报告第 3 章，前后端交互与 PDF 预览实现","textPreview":"来源：期末报告第 3 章，前后端交互与 PDF 预览实现","textChars":28,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"notes","id":"nt/oslz03","slide":6,"text":"系统实现上，后端使用 FastAPI 封装文件上传、解析任务、chunk 查询、页面图读取、检索问答和文件删除等功能；前端使用 React、Vite、TailwindCSS 和 Framer Motion 构建文件列表、知识库 chunk、问答窗口和连续 PDF 预览。"}
+{"kind":"slide","id":"sl/xv5o53","slide":7,"title":"实验表 1：Text-RAG 与 Our-RAG 性能对比","textShapes":5}
+{"kind":"shape","id":"sh/sfil0rqd","slide":7,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":7,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":7,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":7,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/orytsvu9","slide":7,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/z61032ls","slide":7,"text":"实验表 1：Text-RAG 与 Our-RAG 性能对比","textPreview":"实验表 1：Text-RAG 与 Our-RAG 性能对比","textChars":29,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/al87ed8b","slide":7,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":7,"text":"定量实验结果：EM / ANLS / Answer Match","textPreview":"定量实验结果：EM / ANLS / Answer Match","textChars":31,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/vu9knih4","slide":7,"bbox":[808,420,220,90]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":7,"text":"结论 1：\nOur-RAG 在三项指标上\n明显优于 Text-RAG","textPreview":"结论 1： | Our-RAG 在三项指标上 | 明显优于 Text-RAG","textChars":34,"textLines":3,"bbox":[822,432,192,72]}
+{"kind":"shape","id":"sh/d0z61032","slide":7,"bbox":[1035,420,210,105]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":7,"text":"结论 2：\n多模态 evidence 补充\n图表、版面和视觉实体","textPreview":"结论 2： | 多模态 evidence 补充 | 图表、版面和视觉实体","textChars":32,"textLines":3,"bbox":[1049,432,182,87]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":7,"text":"来源：期末报告第 5 章，表 5.1","textPreview":"来源：期末报告第 5 章，表 5.1","textChars":18,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"chart","id":"ch/ytsvu9kn","slide":7,"name":"","chartType":"bar","bbox":[820,160,330,230]}
+{"kind":"table","id":"tb/5wjudg7a","slide":7,"name":"","rows":7,"cols":6,"preview":"Dataset | Model | EM | ANLS | Answer | Latency","bbox":[58,145,710,345]}
+{"kind":"notes","id":"nt/xv5o53","slide":7,"text":"这一页直接使用报告第五章的主实验表。Overall 的 EM 从 Text-RAG 的 0.3750 提升到 Our-RAG 的 0.9750，ANLS 从 0.4265 提升到 0.9750。结论是：多模态证据能够有效补充纯文本检索在图表、版面和视觉实体信息上的不足。"}
+{"kind":"slide","id":"sl/d0bwit","slide":8,"title":"实验表 2：消融实验与错误分析","textShapes":7}
+{"kind":"shape","id":"sh/gn29gr2p","slide":8,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":8,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":8,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":8,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":8,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":8,"text":"实验表 2：消融实验与错误分析","textPreview":"实验表 2：消融实验与错误分析","textChars":15,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/y90je9cv","slide":8,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":8,"text":"关键组件贡献 + 剩余误差来源","textPreview":"关键组件贡献 + 剩余误差来源","textChars":15,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":8,"bbox":[805,135,330,112]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":8,"text":"结论：\nReranker 与统一多模态向量化\n是关键因素；GRPO 优于硬规则","textPreview":"结论： | Reranker 与统一多模态向量化 | 是关键因素；GRPO 优于硬规则","textChars":39,"textLines":3,"bbox":[819,147,302,94]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":8,"bbox":[830,300,135,75]}
+{"kind":"textbox","id":"sh/lwval87e","slide":8,"text":"复杂表格\n行列定位","textPreview":"复杂表格 | 行列定位","textChars":9,"textLines":2,"bbox":[842,314,110,44]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":8,"bbox":[1010,300,135,75]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":8,"text":"局部 crop\n裁剪偏差","textPreview":"局部 crop | 裁剪偏差","textChars":12,"textLines":2,"bbox":[1022,314,110,44]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":8,"bbox":[920,430,135,75]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":8,"text":"答案格式\n波动","textPreview":"答案格式 | 波动","textChars":7,"textLines":2,"bbox":[932,444,110,44]}
+{"kind":"textbox","id":"sh/at47y1kr","slide":8,"text":"来源：期末报告第 5 章，表 5.2 与错误分析","textPreview":"来源：期末报告第 5 章，表 5.2 与错误分析","textChars":24,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"table","id":"tb/x0nuxc3y","slide":8,"name":"","rows":6,"cols":5,"preview":"Model | EM | ANLS | Answer | ΔEM","bbox":[58,145,700,305]}
+{"kind":"notes","id":"nt/d0bwit","slide":8,"text":"第二张表来自报告第五章的消融实验。完整 Our-RAG 的 EM 为 0.9750；替换为 Rule Decision 后下降到 0.9220；去掉 Reranker 后下降到 0.9030；去掉 Unified Embedding 后下降到 0.8950。错误主要来自证据定位、视觉理解和答案归一之间的细粒度偏差。"}
+{"kind":"slide","id":"sl/l4x4pc","slide":9,"title":"一分钟 Demo 视频","textShapes":10}
+{"kind":"shape","id":"sh/h0fepkzu","slide":9,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":9,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":9,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/orytsvu9","slide":9,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":9,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":9,"text":"一分钟 Demo 视频","textPreview":"一分钟 Demo 视频","textChars":11,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/z61032ls","slide":9,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":9,"text":"观看重点：答案与原文证据联动","textPreview":"观看重点：答案与原文证据联动","textChars":14,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/hk3q5o7q","slide":9,"bbox":[245,145,790,395]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":9,"bbox":[592,275,110,110]}
+{"kind":"textbox","id":"sh/svu9knih","slide":9,"text":"现场播放 1 分钟 demo","textPreview":"现场播放 1 分钟 demo","textChars":14,"textLines":1,"bbox":[420,442,440,40]}
+{"kind":"shape","id":"sh/za1gvy90","slide":9,"bbox":[130,170,100,30]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":9,"text":"上传","textPreview":"上传","textChars":2,"textLines":1,"bbox":[140,175,80,20]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":9,"bbox":[1050,170,100,30]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":9,"text":"解析","textPreview":"解析","textChars":2,"textLines":1,"bbox":[1060,175,80,20]}
+{"kind":"shape","id":"sh/zidonyd0","slide":9,"bbox":[130,505,100,30]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":9,"text":"chunk","textPreview":"chunk","textChars":5,"textLines":1,"bbox":[140,510,80,20]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":9,"bbox":[1050,505,100,30]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":9,"text":"提问","textPreview":"提问","textChars":2,"textLines":1,"bbox":[1060,510,80,20]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":9,"bbox":[520,575,100,30]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":9,"text":"route","textPreview":"route","textChars":5,"textLines":1,"bbox":[530,580,80,20]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":9,"bbox":[700,575,100,30]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":9,"text":"高亮","textPreview":"高亮","textChars":2,"textLines":1,"bbox":[710,580,80,20]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":9,"text":"Demo 流程：上传 -> 解析 -> chunk -> 提问 -> GRPO/auto route -> 答案 -> PDF 高亮","textPreview":"Demo 流程：上传 -> 解析 -> chunk -> 提问 -> GRPO/auto route -> 答案 -> PDF 高亮","textChars":66,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"notes","id":"nt/l4x4pc","slide":9,"text":"下面播放一分钟 Demo。请大家重点看系统流程是否闭环：上传文档后，系统完成自动解析并生成多模态 chunk；用户提问后，系统通过 GRPO/auto route 选择路径，返回答案和引用 evidence；最后在 PDF 预览中跳转到对应页面，并高亮来源区域。"}
+{"kind":"slide","id":"sl/ip3hzx","slide":10,"title":"反思：模型局限","textShapes":9}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":10,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":10,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/onyd0z61","slide":10,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/vahoza1g","slide":10,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/6tovahoz","slide":10,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":10,"text":"反思：模型局限","textPreview":"反思：模型局限","textChars":7,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/ovahoza1","slide":10,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":10,"text":"瓶颈不只在模型，也在证据定位","textPreview":"瓶颈不只在模型，也在证据定位","textChars":14,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/61032lsz","slide":10,"bbox":[95,150,930,58]}
+{"kind":"textbox","id":"sh/wval87ed","slide":10,"text":"1. 依赖 OCR、版面解析、向量检索、Reranker 和 VLM 多模块串联","textPreview":"1. 依赖 OCR、版面解析、向量检索、Reranker 和 VLM 多模块串联","textChars":40,"textLines":1,"bbox":[120,165,880,28]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":10,"bbox":[95,228,930,58]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":10,"text":"2. OCR 漏识别会导致 evidence 不完整","textPreview":"2. OCR 漏识别会导致 evidence 不完整","textChars":26,"textLines":1,"bbox":[120,243,880,28]}
+{"kind":"shape","id":"sh/7adsji5s","slide":10,"bbox":[95,306,930,58]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":10,"text":"3. bbox 偏移会影响前端高亮","textPreview":"3. bbox 偏移会影响前端高亮","textChars":17,"textLines":1,"bbox":[120,321,880,28]}
+{"kind":"shape","id":"sh/psfil0rq","slide":10,"bbox":[95,384,930,58]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":10,"text":"4. 检索召回不足会使 VLM 看不到关键区域","textPreview":"4. 检索召回不足会使 VLM 看不到关键区域","textChars":23,"textLines":1,"bbox":[120,399,880,28]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":10,"bbox":[95,462,930,58]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":10,"text":"5. 长程任务规划、跨文档持续记忆和多轮目标追踪仍有限","textPreview":"5. 长程任务规划、跨文档持续记忆和多轮目标追踪仍有限","textChars":27,"textLines":1,"bbox":[120,477,880,28]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":10,"bbox":[880,515,290,95]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":10,"text":"系统可以回答当前文档问题，\n但还不是长期维护目标的智能助理。","textPreview":"系统可以回答当前文档问题， | 但还不是长期维护目标的智能助理。","textChars":30,"textLines":2,"bbox":[894,527,262,77]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":10,"text":"来源：期末报告第 6 章，局限与未来工作","textPreview":"来源：期末报告第 6 章，局限与未来工作","textChars":20,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"notes","id":"nt/ip3hzx","slide":10,"text":"第六章指出，当前系统仍依赖 OCR、版面解析、向量检索、Reranker 和 VLM 等多个模块串联工作。每个模块的误差都会影响最终回答，例如 OCR 漏识别会导致 evidence 不完整，bbox 偏移会影响前端高亮，检索召回不足会使 VLM 看不到关键区域。"}
+{"kind":"slide","id":"sl/wkly2t","slide":11,"title":"展望：AGI 视角下的潜力与瓶颈","textShapes":13}
+{"kind":"shape","id":"sh/fil0rqd4","slide":11,"bbox":[28,18,1224,0]}
+{"kind":"shape","id":"sh/83itgfml","slide":11,"bbox":[28,702,1224,0]}
+{"kind":"shape","id":"sh/xobm58z2","slide":11,"bbox":[1160,36,14,14]}
+{"kind":"shape","id":"sh/m94fu18j","slide":11,"bbox":[1180,36,14,14]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":11,"bbox":[1200,36,14,14]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":11,"text":"展望：AGI 视角下的潜力与瓶颈","textPreview":"展望：AGI 视角下的潜力与瓶颈","textChars":16,"textLines":1,"bbox":[58,34,900,48]}
+{"kind":"shape","id":"sh/x0nuxc3y","slide":11,"bbox":[58,84,410,1]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":11,"text":"文档问答是通向通用智能助手的重要场景","textPreview":"文档问答是通向通用智能助手的重要场景","textChars":18,"textLines":1,"bbox":[58,91,980,26]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":11,"bbox":[450,190,360,175]}
+{"kind":"textbox","id":"sh/vixczed8","slide":11,"text":"AGI 文档助手","textPreview":"AGI 文档助手","textChars":8,"textLines":1,"bbox":[495,242,270,44]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":11,"bbox":[105,145,270,110]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":11,"text":"阅读","textPreview":"阅读","textChars":2,"textLines":1,"bbox":[125,161,230,28]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":11,"text":"PDF / 表格 / 图片 / 图表","textPreview":"PDF / 表格 / 图片 / 图表","textChars":18,"textLines":1,"bbox":[125,200,230,34]}
+{"kind":"shape","id":"sh/val87ed8","slide":11,"bbox":[375,200,75,75]}
+{"kind":"shape","id":"sh/6psfil0r","slide":11,"bbox":[443,268,14,14]}
+{"kind":"shape","id":"sh/dcbulwva","slide":11,"bbox":[895,145,270,110]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":11,"text":"定位","textPreview":"定位","textChars":2,"textLines":1,"bbox":[915,161,230,28]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":11,"text":"可靠证据与来源区域","textPreview":"可靠证据与来源区域","textChars":9,"textLines":1,"bbox":[915,200,230,34]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":11,"bbox":[895,200,-85,75]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":11,"bbox":[803,268,14,14]}
+{"kind":"shape","id":"sh/za1gvy90","slide":11,"bbox":[105,450,270,110]}
+{"kind":"textbox","id":"sh/svu9knih","slide":11,"text":"推理","textPreview":"推理","textChars":2,"textLines":1,"bbox":[125,466,230,28]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":11,"text":"比较、常识与跨页关系","textPreview":"比较、常识与跨页关系","textChars":10,"textLines":1,"bbox":[125,505,230,34]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":11,"bbox":[375,505,75,-230]}
+{"kind":"shape","id":"sh/zidonyd0","slide":11,"bbox":[443,268,14,14]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":11,"bbox":[895,450,270,110]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":11,"text":"验证","textPreview":"验证","textChars":2,"textLines":1,"bbox":[915,466,230,28]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":11,"text":"自我检查与持续学习","textPreview":"自我检查与持续学习","textChars":9,"textLines":1,"bbox":[915,505,230,34]}
+{"kind":"shape","id":"sh/3m94fu18","slide":11,"bbox":[895,505,-85,-230]}
+{"kind":"shape","id":"sh/9cvixcze","slide":11,"bbox":[803,268,14,14]}
+{"kind":"shape","id":"sh/gr2p8nqx","slide":11,"bbox":[488,440,300,132]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":11,"text":"未来方向：\n更强多模态基础模型\n视觉检索 / 自我验证\n持续学习的决策模型","textPreview":"未来方向： | 更强多模态基础模型 | 视觉检索 / 自我验证 | 持续学习的决策模型","textChars":37,"textLines":4,"bbox":[502,452,272,114]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":11,"text":"来源：期末报告第 6 章，AGI 视角下的潜力与瓶颈","textPreview":"来源：期末报告第 6 章，AGI 视角下的潜力与瓶颈","textChars":26,"textLines":1,"bbox":[58,688,960,18]}
+{"kind":"notes","id":"nt/wkly2t","slide":11,"text":"从 AGI 视角看，文档问答是通向更通用智能助手的重要场景之一。真实知识往往分布在 PDF、表格、图片、图表、扫描件和网页截图中，一个接近 AGI 的系统需要同时具备阅读、定位、比较、推理和溯源能力。"}

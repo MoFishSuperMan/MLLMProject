@@ -21,18 +21,43 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{qwen3vl}
-\BIBentryALTinterwordspacing
-{Qwen Team}, ``Qwen3-vl: Multimodal large language models for visual
-  understanding,'' 2025. [Online]. Available:
-  \url{https://github.com/QwenLM/Qwen3-VL}
-\BIBentrySTDinterwordspacing
-
 \bibitem{ragflow}
 \BIBentryALTinterwordspacing
 {Infinity Team}, ``Ragflow: Deep document understanding based open-source rag
   engine,'' 2024. [Online]. Available:
   \url{https://github.com/infiniflow/ragflow}
+\BIBentrySTDinterwordspacing
+
+\bibitem{guo2025raganythingallinoneragframework}
+\BIBentryALTinterwordspacing
+Z.~Guo, X.~Ren, L.~Xu, J.~Zhang, and C.~Huang, ``Rag-anything: All-in-one rag
+  framework,'' 2025. [Online]. Available:
+  \url{https://arxiv.org/abs/2510.12323}
+\BIBentrySTDinterwordspacing
+
+\bibitem{gao2025scaling}
+S.~Gao, S.~Zhao, X.~Jiang, L.~Duan, Y.~X. Chng, Q.-G. Chen, W.~Luo, K.~Zhang,
+  J.-W. Bian, and M.~Gong, ``Scaling beyond context: A survey of multimodal
+  retrieval-augmented generation for document understanding,'' \emph{arXiv
+  preprint arXiv:2510.15253}, 2025, arXiv:2510.15253v3, 20 Apr 2026.
+
+\bibitem{faysse2024colpali}
+M.~Faysse, H.~Sibille, T.~Wu, B.~Omrani, G.~Viaud, C.~Hudelot, and P.~Colombo,
+  ``Colpali: Efficient document retrieval with vision language models,''
+  \emph{arXiv preprint arXiv:2407.01449}, 2024, arXiv:2407.01449v6, 28 Feb
+  2025.
+
+\bibitem{wei2026deepseekocr2visualcausal}
+\BIBentryALTinterwordspacing
+H.~Wei, Y.~Sun, and Y.~Li, ``Deepseek-ocr 2: Visual causal flow,'' 2026.
+  [Online]. Available: \url{https://arxiv.org/abs/2601.20552}
+\BIBentrySTDinterwordspacing
+
+\bibitem{zhao2025efficientmotionawarevideomllm}
+\BIBentryALTinterwordspacing
+Z.~Zhao, Y.~Huo, T.~Yue, L.~Guo, H.~Lu, B.~Wang, W.~Chen, and J.~Liu,
+  ``Efficient motion-aware video mllm,'' 2025. [Online]. Available:
+  \url{https://arxiv.org/abs/2503.13016}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

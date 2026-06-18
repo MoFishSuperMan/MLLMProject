@@ -1,0 +1,38 @@
+Create a single 16:9 full-slide PowerPoint image in "hand-drawn whiteboard style".
+
+Style requirements:
+- Looks like a clean real whiteboard photographed for a technical presentation.
+- Warm off-white whiteboard background (#FAFAF5), subtle marker smudges, no watermark.
+- Main text in neat black handwritten Chinese marker style, with blue/red/orange/green marker accents.
+- Use hand-drawn boxes, arrows, underlines, circles, and 1-2 sticky notes.
+- Keep all Chinese text and numbers accurate, readable, and not crowded.
+- Do not add slide numbers.
+
+Slide title:
+实验表 1：Text-RAG 与 Our-RAG 性能对比
+
+Content to render:
+Draw a clear hand-drawn table on the left or center. The table must preserve these exact values:
+
+Dataset | Model | EM | ANLS | Answer Match | Avg. Latency(ms)
+DocVQA | Text-RAG | 0.5500 | 0.6230 | 0.6500 | 5697.80
+DocVQA | Our-RAG | 0.9500 | 0.9500 | 0.9500 | 3858.81
+ChartQA | Text-RAG | 0.2000 | 0.2300 | 0.2500 | 3451.81
+ChartQA | Our-RAG | 1.0000 | 1.0000 | 1.0000 | 3352.50
+Overall | Text-RAG | 0.3750 | 0.4265 | 0.4500 | 4574.81
+Overall | Our-RAG | 0.9750 | 0.9750 | 0.9750 | 3605.66
+
+On the right side, add a simple hand-drawn bar comparison:
+- Overall EM: Text-RAG 0.3750 vs Our-RAG 0.9750
+- Overall ANLS: Text-RAG 0.4265 vs Our-RAG 0.9750
+Use blue for Our-RAG and gray/black for Text-RAG.
+
+Add two short handwritten conclusion notes:
+1. Our-RAG 在 EM、ANLS、Answer Match 上均明显优于 Text-RAG。
+2. 多模态 evidence 补充了图表、版面和视觉实体信息。
+
+Composition:
+- Title at top-left.
+- Main table large and readable.
+- Bar comparison and conclusion notes on the right.
+- Moderate density; avoid tiny text.

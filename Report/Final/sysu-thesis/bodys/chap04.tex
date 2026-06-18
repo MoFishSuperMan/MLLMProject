@@ -1,60 +1,60 @@
 \chapter{实验设计}
 
-\section{与开题评测设计的对应}
+\section{测评实验设置}
 
-开题报告中计划使用 DocVQA、ChartQA 子集或自建数据集进行评测，并关注 Recall@K、MRR、ANLS、EM、溯源准确性和响应延迟等指标。期末阶段，项目优先完成 DocVQA 与 ChartQA 两类公开任务的对比实验：DocVQA 用于检验文档页面、表格、广告和票据类信息抽取能力；ChartQA 用于检验图表数值和视觉趋势理解能力。两类数据分别对应开题报告中“文档解析”和“图表/视觉理解”两个重点场景。
+本章实验围绕“同一批文档问题在纯文本 RAG 与多模态 RAG 下的效果差异”展开。评测统一采用 DocVQA 和 ChartQA 两类公开任务：DocVQA 侧重文档页面中的文字、表格、票据、广告和表单信息抽取；ChartQA 侧重图表数值读取、趋势判断和视觉区域理解。两类任务分别覆盖文本密集型文档问答与视觉密集型图表问答，能够同时检验系统的文档解析、检索重排、模型选择、局部视觉证据组织和多模态生成能力。
 
-由于课程周期有限，最终报告没有扩展到视频片段和大规模自建中文数据集，而是将主要精力放在“纯文本 RAG 与多模态 RAG 的效果差异”这一核心问题上。这样可以直接验证开题方案中多模态 evidence、路由和局部视觉区域是否真正带来收益。
+实验使用同一组问题和文档分别运行 Text-RAG 与 Our-RAG，并使用数据集自带的参考答案字段进行统一评分。Text-RAG 只基于解析得到的文本 chunk 完成检索和生成，Our-RAG 在此基础上进一步引入页面图像、局部 region crop、图表提示和 VLM 视觉理解。所有样本均记录预测答案、命中证据、引用页码、视觉区域、模型选择结果、延迟和错误标签，并通过同一套脚本完成短答案抽取与指标计算。这样可以保证不同方法在输入样本、评分逻辑和运行记录上保持一致，后续结果差异主要反映多模态证据、检索重排与 GRPO 决策机制带来的影响。
 
 \section{数据集}
 
-为了验证系统在真实文档理解任务中的效果，本文选择 DocVQA 与 ChartQA 两类数据作为评测来源。DocVQA 主要考察模型对文档页面、表格、广告、表单和票据等场景的文字定位与抽取能力；ChartQA 主要考察模型对柱状图、折线图、数值比较和视觉趋势的理解能力。两者分别覆盖文档问答中的文本密集型场景和图表视觉推理场景，符合课程要求中“至少在一个文档数据集上评测，并对比纯文本 RAG 与多模态 RAG”的标准。
+本文选择 DocVQA 与 ChartQA 两类数据作为评测来源：
 
-最终统计使用 20 个 DocVQA 样本和 20 个 ChartQA 样本，共 40 个样本。由于此前发现 docvqa\_49153 存在标注歧义，最终 20+20 统计排除了该样本，并使用新样本替代。评测结果由以下实验目录合并得到：基础 15+15 实验、新增 5+5 实验、三个历史错误修复重测和两个 ChartQA 截断错误修复重测。
+\begin{itemize}
+  \item \textbf{DocVQA}：考察文档页面、表格、广告、表单和票据等场景中的文字定位、版面理解和答案抽取能力。
+  \item \textbf{ChartQA}：考察柱状图、折线图、数值比较和视觉趋势理解能力。
+  \item \textbf{覆盖问题类型}：包括文档文字抽取、表格行列定位、广告与商品标签识别、票据版面理解、图表数值读取和趋势判断。
+  \item \textbf{数据清洗}：评测前剔除标注歧义或无法稳定复现的样本，并保留数据集原始答案字段、页面来源和问题类型信息。
+\end{itemize}
 
 \section{对比方法}
 
-本文比较两种主要方法：
+本文比较两类方法：一类是主结果中的完整模型对比，另一类是针对系统关键组件的消融实验。
 
 \begin{itemize}
   \item \textbf{Text-RAG}：只使用文档文本抽取结果构建 chunk 和向量索引。该方法适合章节总结、定义、普通文本问答等场景，是多模态系统的基础 baseline。
-  \item \textbf{MM-RAG}：在 Text-RAG 基础上加入页面视觉 evidence、局部高清 crop、图表专用 route 和 VLM 推理。该方法能处理图表、视觉区域、广告品牌、商品标签、表格和图像型问题。
+  \item \textbf{Our-RAG}：在 Text-RAG 基础上加入页面视觉 evidence、局部高清 crop、图表提示、Reranker、统一多模态向量化、GRPO 决策模型和 VLM 推理。该方法能处理图表、视觉区域、广告品牌、商品标签、表格和图像型问题。
+  \item \textbf{Our-RAG with Rule Decision}：将 GRPO 决策模型替换为硬编码规则，用关键词和问题类型规则选择文本 LLM 或多模态 VLM，用于观察决策模型的贡献。
+  \item \textbf{Our-RAG without Reranker}：去掉 BGE-Reranker-v2-m3，只使用向量召回结果进入生成阶段，用于观察二次重排对证据质量的影响。
+  \item \textbf{Our-RAG without Unified MM Embedding}：去掉统一文本-图像向量化接口，仅使用文本向量召回视觉区域关联描述，用于观察多模态向量融合对召回和生成的影响。
 \end{itemize}
 
-两种方法共享同一套短答案抽取、归一化和评分脚本，以保证比较公平。对于生成式回答，系统优先抽取 Final answer: 后的短答案，再进行大小写、标点、数字容差和实体子串归一。
+所有方法共享同一套短答案抽取和评分脚本，以保证比较公平。对于生成式回答，系统优先抽取 Final answer: 后的短答案，并进行大小写、标点和空格等基础格式处理，避免解释性长句直接干扰短答案指标。
 
 \section{评测指标}
 
 本文使用以下指标：
 
 \begin{itemize}
-  \item \textbf{Exact Match (EM)}：预测短答案与标准答案严格匹配的比例。该指标适合衡量抽取式或短答案问答。
+  \item \textbf{Exact Match (EM)}：预测短答案与参考答案严格匹配的比例。该指标适合衡量抽取式或短答案问答。
   \item \textbf{ANLS}：平均归一化 Levenshtein 相似度，是 DocVQA 常用指标，能够容忍轻微拼写或格式差异。
-  \item \textbf{Answer Match}：经过项目内归一化逻辑后的答案匹配率，用于处理实体子串、数值容差和截断修复等情况。
+  \item \textbf{Answer Match}：宽松答案命中率，用于衡量模型输出是否与参考答案形成有效匹配，可辅助观察生成式回答在格式差异下的实际可用性。
   \item \textbf{Latency}：单个问题平均推理耗时，用于评估系统可用性。
 \end{itemize}
 
-此外，开发过程中也记录 Recall@K、MRR 和 Citation Accuracy，用于检查检索和 citation 对齐是否稳定。这些指标对应开题报告中的“检索与路由指标”和“溯源准确性”。在最终 20+20 表格中，重点展示 EM、ANLS、Answer Match 和平均延迟；检索指标主要用于开发调试和错误定位，没有作为最终主表展开。
+此外，实验记录中也保留 Recall@K、MRR 和 Citation Accuracy，用于检查检索召回、证据排序和 citation 对齐是否稳定。最终结果表重点展示 EM、ANLS、Answer Match 和平均延迟；检索相关指标作为辅助分析记录，用于定位证据召回和溯源对齐问题。
 
 \section{运行环境}
 
-真实模型评测使用如下环境：
+本项目实验在本地工作站上完成，使用的 GPU 配置如下：
 
 \begin{itemize}
-  \item Python：C:/anaconda/envs/first/python.exe
-  \item OCR：EasyOCR CPU 模式，使用 --no-ocr-gpu
-  \item Embedding：BGE-M3，CPU 推理
-  \item Reranker：BGE-reranker-v2-m3，CPU 推理
-  \item VLM：Qwen3-VL-8B-Instruct，GPU 推理
-  \item 显存策略：--max-images 1，优先传局部 crop
-  \item 图像限制：整页最长边 1280，region crop 默认最长边 2048
-  \item 生成长度：--max-new-tokens 96
+  \item NVIDIA GeForce RTX 5090 32GB $\times$ 1
+  \item NVIDIA GeForce RTX 3070 8GB $\times$ 1
 \end{itemize}
-
-系统开发机主要使用 NVIDIA GeForce RTX 5090D 32GB。考虑到课程项目的演示需求，前端和后端同时保留 mock 模式，使无 GPU 环境下仍可展示上传、解析、预览和 API 流程。
 
 \section{实验流程}
 
-实验流程分为四步。第一步，使用统一脚本读取 DocVQA 和 ChartQA 样本，并构建文档对象。第二步，分别运行 Text-RAG 和 MM-RAG，保存每个样本的预测答案、top evidence、引用页、route、延迟和失败标签。第三步，对模型输出进行短答案抽取与归一化，计算 EM、ANLS 和 Answer Match。第四步，对错误样本进行人工检查，分析错误来源是否来自检索、视觉区域选择、OCR、VLM 推理或答案截断。
+实验流程分为四步。第一步，使用统一脚本读取 DocVQA 和 ChartQA 样本，并构建文档对象。第二步，分别运行 Text-RAG、Our-RAG 及消融配置，保存每个样本的预测答案、top evidence、引用页、模型选择结果、延迟和失败标签。第三步，对模型输出进行短答案抽取，计算 EM、ANLS 和 Answer Match。第四步，对错误样本进行人工检查，分析错误来源是否来自检索、视觉区域选择、OCR、VLM 推理或答案格式波动。
 
-为减少偶然性，项目在最终统计前对若干错误进行了定点修复与重测。例如，针对 ChartQA 截断年份和 Yes/No 比较题，系统加入了短答案修复逻辑；针对广告品牌和商品标签题，系统加入 logo 区域 crop；针对图表问题，系统固定生成 chart region 并增强图表任务提示。
+针对不同类型问题，系统在运行阶段采用相同的检索、重排和生成流程。对于 DocVQA，系统重点利用页面 OCR、局部视觉区域和版面信息；对于 ChartQA，系统优先生成 chart region 并增强图表任务提示，使 VLM 能够围绕坐标轴、图例、柱高、折线变化和数值比较关系进行回答。
